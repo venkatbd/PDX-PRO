@@ -1,7 +1,856 @@
 #Issue Age
 ##StackedElection
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "d7b40cae-0061-4eee-b707-78e2d0921fe9",
+    "SenderName": "XYZ Technology Company",
+    "SenderPlatformName": "XZY Platform",
+    "ReceiverName": "ABC Carrier",
+    "CreationDateTime": "2020-01-11T20:36:28.5369155Z",
+    "TestProductionCode": "Production",
+    "TransmissionTypeCode": "ChangesOnly",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": 53,
+      "CarrierName": "ABC Carrier"
+    },
+    "Employer": {
+      "EmployerPartyID": 3391,
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": 53,
+        "MasterAgreementNumber": 20991,
+        "CarrierID": 53
+      },
+      "EmployerName": "LDEx Associates",
+      "EmployerAddress": {
+        "FirstLineAddress": "8178 Front St",
+        "CityName": "St. Augustine",
+        "StateProvinceCode": "FL",
+        "PostalCode": 32209,
+        "CountryCode": "USA"
+      },
+      "Employee": {
+        "EmployeePartyID": 4318879,
+        "EmployeeSocialSecurityNumber": 897748123,
+        "EmployeeIdentifier": 813734,
+        "EmployeeName": {
+          "FirstName": "Laurie",
+          "LastName": "Shumer"
+        },
+        "EmployeeGenderCode": "Female",
+        "EmployeeBirthDate": "1990-01-01",
+        "MaritalStatusCode": "Unknown",
+        "EmployeeMailingAddress": {
+          "FirstLineAddress": "111 Allstate Drive",
+          "CityName": "Jacksonville",
+          "StateProvinceCode": "FL",
+          "PostalCode": 32277,
+          "CountryCode": "USA"
+        },
+        "EmployeeHomeAddress": {
+          "FirstLineAddress": "111 Allstate Drive",
+          "CityName": "Jacksonville",
+          "StateProvinceCode": "FL",
+          "PostalCode": 32277,
+          "CountryCode": "USA"
+        },
+        "EmploymentInformation": {
+          "OriginalHireDate": "2019-01-01",
+          "MostRecentHireDate": "2019-01-01",
+          "EmploymentTypeCode": "FullTime",
+          "EmploymentStatusCode": "Active",
+          "JobTitleText": "Manager",
+          "OccupationText": "Manager",
+          "WorkHoursQuantity": 40,
+          "WorkHoursFrequencyCode": "Weekly",
+          "WorkLocationText": "FLORIDA",
+          "PayrollDeductionFrequencyQuantity": 26,
+          "PayrollFrequencyQuantity": 26,
+          "EmploymentIncome": [
+            {
+              "IncomeTypeCode": "Salary",
+              "IncomeAmount": 80000,
+              "IncomeModeCode": "Annual",
+              "IncomeEffectiveDate": "2019-04-01"
+            },
+            {
+              "IncomeTypeCode": "BenefitSalary",
+              "IncomeAmount": 80000,
+              "IncomeModeCode": "Annual",
+              "IncomeEffectiveDate": "2019-04-01"
+            }
+          ]
+        },
+        "Event": [
+          {
+            "EventID": "CE4140267",
+            "EventTypeCode": "Coverage",
+            "EventTypeReasonCode": "OpenEnrollment",
+            "EventDate": "2020-01-10",
+            "TransactionDate": "2020-01-11"
+          },
+          {
+            "EventID": "EE2117336",
+            "EventTypeCode": "Employment",
+            "EventTypeReasonCode": "New",
+            "EventDate": "2020-01-10",
+            "TransactionDate": "2020-01-11"
+          },
+          {
+            "EventID": "CE4140273",
+            "EventTypeCode": "Coverage",
+            "EventTypeReasonCode": "OpenEnrollment",
+            "EventDate": "2020-01-11",
+            "TransactionDate": "2020-01-11"
+          },
+          {
+            "EventID": "EE2117344",
+            "EventTypeCode": "Demographic",
+            "EventTypeReasonCode": "DemographicChange",
+            "EventDate": "2020-01-11",
+            "TransactionDate": "2020-01-11"
+          }
+        ],
+        "EmployeeEventID": [
+          "EE2117336",
+          "EE2117344"
+        ],
+        "Dependent": {
+          "DependentPartyID": 4318880,
+          "DependentSocialSecurityNumber": 878782341,
+          "DependentName": {
+            "FirstName": "Christy",
+            "LastName": "Shumer"
+          },
+          "DependentRelationshipTypeCode": "Child",
+          "DependentGenderCode": "Female",
+          "DependentBirthDate": "2014-01-01"
+        },
+        "OtherParty": {
+          "OtherPartyID": 4318879,
+          "OtherPartySocialSecurityNumber": 897748123,
+          "OtherPartyPersonName": {
+            "FirstName": "Laurie",
+            "LastName": "Shumer"
+          },
+          "OtherPartyRelationshipTypeCode": "Self",
+          "OtherPartyTypeCode": "Person",
+          "OtherPartyGenderCode": "Female",
+          "OtherPartyBirthDate": "1990-01-01"
+        },
+        "BeneficiaryGroup": [
+          {
+            "BeneficiaryGroupID": 3265299,
+            "Beneficiary": {
+              "BeneficiaryPartyID": 4318879,
+              "BeneficiaryPartyTypeCode": "Employee",
+              "BeneficiaryPercent": 100,
+              "BeneficiaryTypeCode": "Primary"
+            }
+          },
+          {
+            "BeneficiaryGroupID": 3265298,
+            "Beneficiary": {
+              "BeneficiaryPartyID": 4318880,
+              "BeneficiaryPartyTypeCode": "Dependent",
+              "BeneficiaryPercent": 100,
+              "BeneficiaryTypeCode": "Primary"
+            }
+          }
+        ],
+        "Coverage": [
+          {
+            "CoverageID": 3265299,
+            "GroupPolicyNumber": "VI745",
+            "IndividualPolicyNumber": "G871233",
+            "BenefitPlanIdentifier": "GUL",
+            "BenefitClassIdentifier": 1,
+            "CoverageEffectiveDate": "2019-02-01",
+            "CoverageTierCode": "ChildOnly",
+            "BenefitCalculationMethodCode": "FlatAmount",
+            "BenefitAmount": 46730,
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 6,
+            "EmployerPremiumContributionAmount": 0,
+            "TotalPlanPremiumAmount": 6,
+            "PremiumModeQuantity": 26,
+            "PreTaxCode": "PostTax",
+            "BeneficiaryGroupID": 3265299,
+            "CarrierID": 53,
+            "CoverageInsured": {
+              "InsuredPartyID": 4318880,
+              "PrimaryInsuredIndicator": true,
+              "InsuredCoverageEffectiveDate": "2019-02-01"
+            },
+            "CoverageEventID": "CE4140267",
+            "CoverageRider": [
+              {
+                "CoverageRiderID": 1952878,
+                "RiderIdentifier": "GULBR"
+              },
+              {
+                "CoverageRiderID": 1952902,
+                "RiderIdentifier": "Death_Benefit_Option",
+                "BenefitAmount": 1,
+                "RiderOptionIdentifier": 1
+              },
+              {
+                "CoverageRiderID": 1952903,
+                "RiderIdentifier": "UW_Mode",
+                "RiderOptionIdentifier": "GI"
+              }
+            ]
+          },
+          {
+            "CoverageID": 3265298,
+            "GroupPolicyNumber": "VI745",
+            "IndividualPolicyNumber": "G871237",
+            "BenefitPlanIdentifier": "GUL",
+            "BenefitClassIdentifier": 1,
+            "CoverageEffectiveDate": "2019-02-01",
+            "CoverageTierCode": "Employee",
+            "BenefitCalculationMethodCode": "FlatAmount",
+            "BenefitAmount": 100000,
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 26.78,
+            "EmployerPremiumContributionAmount": 0,
+            "TotalPlanPremiumAmount": 26.78,
+            "PremiumModeQuantity": 26,
+            "PreTaxCode": "PostTax",
+            "BeneficiaryGroupID": 3265298,
+            "CarrierID": 53,
+            "CoverageInsured": {
+              "InsuredPartyID": 4318879,
+              "PrimaryInsuredIndicator": true,
+              "InsuredCoverageEffectiveDate": "2019-02-01"
+            },
+            "CoverageEventID": "CE4140267",
+            "CoverageRider": [
+              {
+                "CoverageRiderID": 1952841,
+                "RiderIdentifier": "GUADB",
+                "BenefitAmount": 5000,
+                "RiderUnitQuantity": 1,
+                "EmployeePremiumContributionAmount": 4.16,
+                "EmployerPremiumContributionAmount": 0
+              },
+              {
+                "CoverageRiderID": 1952842,
+                "RiderIdentifier": "GULTC",
+                "EmployeePremiumContributionAmount": 0.82,
+                "EmployerPremiumContributionAmount": 0
+              },
+              {
+                "CoverageRiderID": 1952843,
+                "RiderIdentifier": "GULBR"
+              },
+              {
+                "CoverageRiderID": 1952868,
+                "RiderIdentifier": "Death_Benefit_Option",
+                "BenefitAmount": 1,
+                "RiderOptionIdentifier": 1
+              },
+              {
+                "CoverageRiderID": 1952869,
+                "RiderIdentifier": "UW_Mode",
+                "RiderOptionIdentifier": "GI"
+              }
+            ]
+          },
+          {
+            "CoverageID": 3265302,
+            "GroupPolicyNumber": "VI745",
+            "BenefitPlanIdentifier": "GUL",
+            "BenefitClassIdentifier": 1,
+            "CoverageEffectiveDate": "2020-04-01",
+            "CoverageTierCode": "Employee",
+            "BenefitCalculationMethodCode": "FlatAmount",
+            "BenefitAmount": 50000,
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 12.74,
+            "EmployerPremiumContributionAmount": 0,
+            "TotalPlanPremiumAmount": 12.74,
+            "PremiumModeQuantity": 26,
+            "PreTaxCode": "PostTax",
+            "CarrierID": 53,
+            "CoverageInsured": {
+              "InsuredPartyID": 4318879,
+              "PrimaryInsuredIndicator": true,
+              "InsuredCoverageEffectiveDate": "2020-04-01"
+            },
+            "CoverageEventID": "CE4140273",
+            "CoverageRider": [
+              {
+                "CoverageRiderID": 1952949,
+                "RiderIdentifier": "GUADB"
+              },
+              {
+                "CoverageRiderID": 1952950,
+                "RiderIdentifier": "GULTC",
+                "EmployeePremiumContributionAmount": 1.28,
+                "EmployerPremiumContributionAmount": 0
+              },
+              {
+                "CoverageRiderID": 1952951,
+                "RiderIdentifier": "GULBR"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Audit": {
+      "AuditID": 191989,
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1,
+      "DependentRecordQuantity": 1,
+      "OtherPartyRecordQuantity": 1,
+      "BeneficiaryGroupRecordQuantity": 2,
+      "EventRecordQuantity": 4,
+      "CoverageRecordQuantity": 3,
+      "CoverageRiderRecordQuantity": 11
+    }
+  }
+}
+```
 ##Downgrade
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "4406bf73-060d-43a9-bea9-456d057a9d33",
+    "SenderName": "XYZ Technology Company",
+    "SenderPlatformName": "XYZ Platform",
+    "ReceiverName": "ABC Carrier",
+    "CreationDateTime": "2020-01-11T21:19:50.3670941Z",
+    "TestProductionCode": "Production",
+    "TransmissionTypeCode": "ChangesOnly",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": 53,
+      "CarrierName": "ABC Carrier"
+    },
+    "Employer": {
+      "EmployerPartyID": 3391,
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": 53,
+        "MasterAgreementNumber": 20991,
+        "CarrierID": 53
+      },
+      "EmployerName": "LDEx Associates",
+      "EmployerAddress": {
+        "FirstLineAddress": "8178 Front St",
+        "CityName": "St. Augustine",
+        "StateProvinceCode": "FL",
+        "PostalCode": 32209,
+        "CountryCode": "USA"
+      },
+      "Employee": {
+        "EmployeePartyID": 4318889,
+        "EmployeeSocialSecurityNumber": 897738168,
+        "EmployeeIdentifier": 813523,
+        "EmployeeName": {
+          "FirstName": "Roxanne",
+          "LastName": "McConnell"
+        },
+        "EmployeeGenderCode": "Female",
+        "EmployeeBirthDate": "1987-01-01",
+        "MaritalStatusCode": "Unknown",
+        "EmployeeMailingAddress": {
+          "FirstLineAddress": "111 Allstate Drive",
+          "CityName": "Jacksonville",
+          "StateProvinceCode": "FL",
+          "PostalCode": 32277,
+          "CountryCode": "USA"
+        },
+        "EmployeeHomeAddress": {
+          "FirstLineAddress": "872 Sunshine Blvd.",
+          "CityName": "Jacksonville",
+          "StateProvinceCode": "FL",
+          "PostalCode": 32277,
+          "CountryCode": "USA"
+        },
+        "EmploymentInformation": {
+          "OriginalHireDate": "2019-01-01",
+          "MostRecentHireDate": "2019-01-01",
+          "EmploymentTypeCode": "FullTime",
+          "EmploymentStatusCode": "Active",
+          "JobTitleText": "Manager",
+          "OccupationText": "Manager",
+          "WorkHoursQuantity": 40,
+          "WorkHoursFrequencyCode": "Weekly",
+          "WorkLocationText": "FLORIDA",
+          "PayrollDeductionFrequencyQuantity": 26,
+          "PayrollFrequencyQuantity": 26,
+          "EmploymentIncome": [
+            {
+              "IncomeTypeCode": "Salary",
+              "IncomeAmount": 80000,
+              "IncomeModeCode": "Annual",
+              "IncomeEffectiveDate": "2019-04-01"
+            },
+            {
+              "IncomeTypeCode": "BenefitSalary",
+              "IncomeAmount": 80000,
+              "IncomeModeCode": "Annual",
+              "IncomeEffectiveDate": "2019-04-01"
+            }
+          ]
+        },
+        "Event": [
+          {
+            "EventID": "CE4140275",
+            "EventTypeCode": "Coverage",
+            "EventTypeReasonCode": "OpenEnrollment",
+            "EventDate": "2020-01-11",
+            "TransactionDate": "2020-01-11"
+          },
+          {
+            "EventID": "EE2117345",
+            "EventTypeCode": "Employment",
+            "EventTypeReasonCode": "New",
+            "EventDate": "2020-01-11",
+            "TransactionDate": "2020-01-11"
+          }
+        ],
+        "EmployeeEventID": "EE2117345",
+        "Dependent": {
+          "DependentPartyID": 4318890,
+          "DependentSocialSecurityNumber": 878775639,
+          "DependentName": {
+            "FirstName": "Brittany",
+            "LastName": "McConnell"
+          },
+          "DependentRelationshipTypeCode": "Child",
+          "DependentGenderCode": "Female",
+          "DependentBirthDate": "2013-07-01"
+        },
+        "OtherParty": {
+          "OtherPartyID": 4318889,
+          "OtherPartySocialSecurityNumber": 897738168,
+          "OtherPartyPersonName": {
+            "FirstName": "Roxanne",
+            "LastName": "McConnell"
+          },
+          "OtherPartyRelationshipTypeCode": "Self",
+          "OtherPartyTypeCode": "Person",
+          "OtherPartyGenderCode": "Female",
+          "OtherPartyBirthDate": "1987-01-01",
+          "OtherPartyMailingAddress": {
+            "FirstLineAddress": "111 Allstate Drive",
+            "CityName": "Jacksonville",
+            "StateProvinceCode": "FL",
+            "PostalCode": 32277,
+            "CountryCode": "USA"
+          }
+        },
+        "BeneficiaryGroup": [
+          {
+            "BeneficiaryGroupID": 3265304,
+            "Beneficiary": {
+              "BeneficiaryPartyID": 4318889,
+              "BeneficiaryPartyTypeCode": "Employee",
+              "BeneficiaryPercent": 100,
+              "BeneficiaryTypeCode": "Primary"
+            }
+          },
+          {
+            "BeneficiaryGroupID": 3265303,
+            "Beneficiary": {
+              "BeneficiaryPartyID": 4318890,
+              "BeneficiaryPartyTypeCode": "Dependent",
+              "BeneficiaryPercent": 100,
+              "BeneficiaryTypeCode": "Primary"
+            }
+          }
+        ],
+        "Coverage": [
+          {
+            "CoverageID": 3265305,
+            "GroupPolicyNumber": "VI745",
+            "IndividualPolicyNumber": "G872378",
+            "BenefitPlanIdentifier": "GUL",
+            "BenefitClassIdentifier": 1,
+            "CoverageEffectiveDate": "2019-04-01",
+            "CoverageTerminationDate": "2020-03-31",
+            "CoverageTierCode": "Employee",
+            "BenefitCalculationMethodCode": "FlatAmount",
+            "BenefitAmount": 50000,
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 12.74,
+            "EmployerPremiumContributionAmount": 0,
+            "TotalPlanPremiumAmount": 12.74,
+            "PremiumModeQuantity": 26,
+            "PreTaxCode": "PostTax",
+            "CarrierID": 53,
+            "CoverageInsured": {
+              "InsuredPartyID": 4318889,
+              "PrimaryInsuredIndicator": true,
+              "InsuredCoverageEffectiveDate": "2019-04-01",
+              "InsuredCoverageTerminationDate": "2020-03-31"
+            },
+            "CoverageEventID": "CE4140275",
+            "CoverageRider": [
+              {
+                "CoverageRiderID": 1953057,
+                "RiderIdentifier": "GUADB"
+              },
+              {
+                "CoverageRiderID": 1953058,
+                "RiderIdentifier": "GULTC",
+                "EmployeePremiumContributionAmount": 1.28,
+                "EmployerPremiumContributionAmount": 0
+              },
+              {
+                "CoverageRiderID": 1953059,
+                "RiderIdentifier": "GULBR"
+              },
+              {
+                "CoverageRiderID": 1953084,
+                "RiderIdentifier": "Death_Benefit_Option",
+                "BenefitAmount": 1,
+                "RiderOptionIdentifier": 1
+              },
+              {
+                "CoverageRiderID": 1953085,
+                "RiderIdentifier": "UW_Mode",
+                "RiderOptionIdentifier": "GI"
+              }
+            ]
+          },
+          {
+            "CoverageID": 3265304,
+            "GroupPolicyNumber": "VI745",
+            "IndividualPolicyNumber": "G871233",
+            "BenefitPlanIdentifier": "GUL",
+            "BenefitClassIdentifier": 1,
+            "CoverageEffectiveDate": "2019-02-01",
+            "CoverageTierCode": "ChildOnly",
+            "BenefitCalculationMethodCode": "FlatAmount",
+            "BenefitAmount": 46730,
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 6,
+            "EmployerPremiumContributionAmount": 0,
+            "TotalPlanPremiumAmount": 6,
+            "PremiumModeQuantity": 26,
+            "PreTaxCode": "PostTax",
+            "BeneficiaryGroupID": 3265304,
+            "CarrierID": 53,
+            "CoverageInsured": {
+              "InsuredPartyID": 4318890,
+              "PrimaryInsuredIndicator": true,
+              "InsuredCoverageEffectiveDate": "2019-02-01"
+            },
+            "CoverageEventID": "CE4140275",
+            "CoverageRider": [
+              {
+                "CoverageRiderID": 1953023,
+                "RiderIdentifier": "GULBR"
+              },
+              {
+                "CoverageRiderID": 1953047,
+                "RiderIdentifier": "Death_Benefit_Option",
+                "BenefitAmount": 1,
+                "RiderOptionIdentifier": 1
+              },
+              {
+                "CoverageRiderID": 1953048,
+                "RiderIdentifier": "UW_Mode",
+                "RiderOptionIdentifier": "GI"
+              }
+            ]
+          },
+          {
+            "CoverageID": 3265303,
+            "GroupPolicyNumber": "VI745",
+            "IndividualPolicyNumber": "G871225",
+            "BenefitPlanIdentifier": "GUL",
+            "BenefitClassIdentifier": 1,
+            "CoverageEffectiveDate": "2018-02-01",
+            "CoverageTierCode": "Employee",
+            "BenefitCalculationMethodCode": "FlatAmount",
+            "BenefitAmount": 100000,
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 26.78,
+            "EmployerPremiumContributionAmount": 0,
+            "TotalPlanPremiumAmount": 26.78,
+            "PremiumModeQuantity": 26,
+            "PreTaxCode": "PostTax",
+            "BeneficiaryGroupID": 3265303,
+            "CarrierID": 53,
+            "CoverageInsured": {
+              "InsuredPartyID": 4318889,
+              "PrimaryInsuredIndicator": true,
+              "InsuredCoverageEffectiveDate": "2018-02-01"
+            },
+            "CoverageEventID": "CE4140275",
+            "CoverageRider": [
+              {
+                "CoverageRiderID": 1952986,
+                "RiderIdentifier": "GUADB",
+                "BenefitAmount": 5000,
+                "RiderUnitQuantity": 1,
+                "EmployeePremiumContributionAmount": 4.16,
+                "EmployerPremiumContributionAmount": 0
+              },
+              {
+                "CoverageRiderID": 1952987,
+                "RiderIdentifier": "GULTC",
+                "EmployeePremiumContributionAmount": 0.82,
+                "EmployerPremiumContributionAmount": 0
+              },
+              {
+                "CoverageRiderID": 1952988,
+                "RiderIdentifier": "GULBR"
+              },
+              {
+                "CoverageRiderID": 1953013,
+                "RiderIdentifier": "Death_Benefit_Option",
+                "BenefitAmount": 1,
+                "RiderOptionIdentifier": 1
+              },
+              {
+                "CoverageRiderID": 1953014,
+                "RiderIdentifier": "UW_Mode",
+                "RiderOptionIdentifier": "GI"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Audit": {
+      "AuditID": 191993,
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1,
+      "DependentRecordQuantity": 1,
+      "OtherPartyRecordQuantity": 1,
+      "BeneficiaryGroupRecordQuantity": 2,
+      "EventRecordQuantity": 2,
+      "CoverageRecordQuantity": 3,
+      "CoverageRiderRecordQuantity": 13
+    }
+  }
+}
+```
 ##Termination
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "930da5cf-8e9f-4358-abf0-8430a7939c97",
+    "SenderName": "XYZ Technology Company",
+    "SenderPlatformName": "XYZ Platform",
+    "ReceiverName": "ABC Carrier",
+    "CreationDateTime": "2020-01-11T21:31:36.0839980Z",
+    "TestProductionCode": "Production",
+    "TransmissionTypeCode": "ChangesOnly",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": 53,
+      "CarrierName": "ABC Carrier"
+    },
+    "Employer": {
+      "EmployerPartyID": 3391,
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": 53,
+        "MasterAgreementNumber": 20991,
+        "CarrierID": 53
+      },
+      "EmployerName": "LDEx Associates",
+      "EmployerAddress": {
+        "FirstLineAddress": "8178 Front St",
+        "CityName": "St. Augustine",
+        "StateProvinceCode": "FL",
+        "PostalCode": 32209,
+        "CountryCode": "USA"
+      },
+      "Employee": {
+        "EmployeePartyID": 4318891,
+        "EmployeeSocialSecurityNumber": 897737872,
+        "EmployeeIdentifier": 673789,
+        "EmployeeName": {
+          "FirstName": "Becky",
+          "LastName": "Nunez"
+        },
+        "EmployeeGenderCode": "Female",
+        "EmployeeBirthDate": "1989-03-21",
+        "MaritalStatusCode": "Unknown",
+        "EmployeeMailingAddress": {
+          "FirstLineAddress": "111 Allstate Drive",
+          "CityName": "Jacksonville",
+          "StateProvinceCode": "FL",
+          "PostalCode": 32277,
+          "CountryCode": "USA"
+        },
+        "EmployeeHomeAddress": {
+          "FirstLineAddress": "853 Gator Pkwy.",
+          "CityName": "Jacksonville",
+          "StateProvinceCode": "FL",
+          "PostalCode": 32277,
+          "CountryCode": "USA"
+        },
+        "EmploymentInformation": {
+          "OriginalHireDate": "2019-01-01",
+          "MostRecentHireDate": "2019-01-01",
+          "EmploymentTypeCode": "FullTime",
+          "EmploymentStatusCode": "Terminated",
+          "TerminationDate": "2020-01-05",
+          "JobTitleText": "Manager",
+          "OccupationText": "Manager",
+          "WorkHoursQuantity": 40,
+          "WorkHoursFrequencyCode": "Weekly",
+          "WorkLocationText": "FLORIDA",
+          "PayrollDeductionFrequencyQuantity": 26,
+          "PayrollFrequencyQuantity": 26,
+          "EmploymentIncome": [
+            {
+              "IncomeTypeCode": "Salary",
+              "IncomeAmount": 80000,
+              "IncomeModeCode": "Annual"
+            },
+            {
+              "IncomeTypeCode": "BenefitSalary",
+              "IncomeAmount": 80000,
+              "IncomeModeCode": "Annual"
+            }
+          ]
+        },
+        "Event": [
+          {
+            "EventID": "EE2117348",
+            "EventTypeCode": "Employment",
+            "EventTypeReasonCode": "Termination",
+            "EventDate": "2020-01-05",
+            "TransactionDate": "2020-01-11"
+          },
+          {
+            "EventID": "EE2117346",
+            "EventTypeCode": "Employment",
+            "EventTypeReasonCode": "New",
+            "EventDate": "2020-01-11",
+            "TransactionDate": "2020-01-11"
+          },
+          {
+            "EventID": "CE4140288",
+            "EventTypeCode": "Employment",
+            "EventTypeReasonCode": "Termination",
+            "EventDate": "2020-01-11",
+            "TransactionDate": "2020-01-11"
+          }
+        ],
+        "EmployeeEventID": [
+          "EE2117348",
+          "EE2117346"
+        ],
+        "Dependent": {
+          "DependentPartyID": 4318892,
+          "DependentSocialSecurityNumber": 878709898,
+          "DependentName": {
+            "FirstName": "Desiree",
+            "LastName": "Nunez"
+          },
+          "DependentRelationshipTypeCode": "Child",
+          "DependentGenderCode": "Female",
+          "DependentBirthDate": "2013-06-21"
+        },
+        "Coverage": [
+          {
+            "CoverageID": 3265306,
+            "GroupPolicyNumber": "VI745",
+            "IndividualPolicyNumber": "G871237",
+            "BenefitPlanIdentifier": "GUL",
+            "BenefitClassIdentifier": 1,
+            "CoverageEffectiveDate": "2019-02-01",
+            "CoverageTerminationDate": "2020-01-05",
+            "CoverageTierCode": "Employee",
+            "BenefitCalculationMethodCode": "FlatAmount",
+            "BenefitAmount": 100000,
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 26.78,
+            "EmployerPremiumContributionAmount": 0,
+            "TotalPlanPremiumAmount": 26.78,
+            "PremiumModeQuantity": 26,
+            "PreTaxCode": "PostTax",
+            "CarrierID": 53,
+            "CoverageInsured": {
+              "InsuredPartyID": 4318891,
+              "PrimaryInsuredIndicator": true,
+              "InsuredCoverageEffectiveDate": "2019-02-01",
+              "InsuredCoverageTerminationDate": "2020-01-05"
+            },
+            "CoverageEventID": "CE4140288"
+          },
+          {
+            "CoverageID": 3265307,
+            "GroupPolicyNumber": "VI745",
+            "IndividualPolicyNumber": "G871233",
+            "BenefitPlanIdentifier": "GUL",
+            "BenefitClassIdentifier": 1,
+            "CoverageEffectiveDate": "2019-02-01",
+            "CoverageTerminationDate": "2020-01-05",
+            "CoverageTierCode": "ChildOnly",
+            "BenefitCalculationMethodCode": "FlatAmount",
+            "BenefitAmount": 46730,
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 6,
+            "EmployerPremiumContributionAmount": 0,
+            "TotalPlanPremiumAmount": 6,
+            "PremiumModeQuantity": 26,
+            "PreTaxCode": "PostTax",
+            "CarrierID": 53,
+            "CoverageInsured": {
+              "InsuredPartyID": 4318892,
+              "PrimaryInsuredIndicator": true,
+              "InsuredCoverageEffectiveDate": "2019-02-01",
+              "InsuredCoverageTerminationDate": "2020-01-05"
+            },
+            "CoverageEventID": "CE4140288"
+          },
+          {
+            "CoverageID": 3265308,
+            "GroupPolicyNumber": "VI745",
+            "BenefitPlanIdentifier": "GUL",
+            "BenefitClassIdentifier": 1,
+            "CoverageEffectiveDate": "2020-04-01",
+            "CoverageTerminationDate": "2020-03-31",
+            "CoverageTierCode": "Employee",
+            "BenefitCalculationMethodCode": "FlatAmount",
+            "BenefitAmount": 50000,
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 12.74,
+            "EmployerPremiumContributionAmount": 0,
+            "TotalPlanPremiumAmount": 12.74,
+            "PremiumModeQuantity": 26,
+            "PreTaxCode": "PostTax",
+            "CarrierID": 53,
+            "CoverageInsured": {
+              "InsuredPartyID": 4318891,
+              "PrimaryInsuredIndicator": true,
+              "InsuredCoverageEffectiveDate": "2020-04-01",
+              "InsuredCoverageTerminationDate": "2020-03-31"
+            },
+            "CoverageEventID": "CE4140288"
+          }
+        ]
+      }
+    },
+    "Audit": {
+      "AuditID": 191994,
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1,
+      "DependentRecordQuantity": 1,
+      "OtherPartyRecordQuantity": 0,
+      "BeneficiaryGroupRecordQuantity": 0,
+      "EventRecordQuantity": 4,
+      "CoverageRecordQuantity": 3,
+      "CoverageRiderRecordQuantity": 0
+    }
+  }
+}
+```
 
 
 

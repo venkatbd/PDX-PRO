@@ -1,16 +1,1212 @@
 
 #BenificiaryEligibilityManagement
 ##NewHire
+
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "2020-08-06-16.24.25.063000",
+    "SenderName": "ADPSLC",
+    "SenderPlatformName": "CES 6.2",
+    "ReceiverName": "FMLCARRIER",
+    "CreationDateTime": "2020-08-06T16:24:25",
+    "TestProductionCode": "Test",
+    "TransmissionTypeCode": "FullFile",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": "FMLCARRIER_ID",
+      "CarrierName": "FMLCARRIER"
+    },
+    "Employer": {
+      "EmployerPartyID": "PartyID",
+      "FederalEmployerIdentificationNumber": "12-3456789",
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": "TBD",
+        "MasterAgreementNumber": "FML-123456",
+        "CarrierID": "MyCarrier_ID"
+      },
+      "EmployerName": "My Employer",
+      "EmployerAddress": {
+        "FirstLineAddress": "24490 Eureka Ave",
+        "CityName": "Warren",
+        "StateProvinceCode": "MI",
+        "PostalCode": 48091,
+        "CountryCode": "US"
+      },
+      "Employee": {
+        "EmployeePartyID": 211713,
+        "EmployeeSocialSecurityNumber": 999909999,
+        "EmployeeIdentifier": 985603,
+        "EmployeeName": {
+          "FirstName": "CAROLYN",
+          "LastName": "OWENSTEST"
+        },
+        "EmployeeGenderCode": "Female",
+        "EmployeeBirthDate": "1976-05-05",
+        "MaritalStatusCode": "Married",
+        "EmployeeHomePhone": 4695551212,
+        "EmployeeMailingAddress": {
+          "FirstLineAddress": "2402 Main Street",
+          "CityName": "AUSTIN",
+          "StateProvinceCode": "TX",
+          "PostalCode": 75082,
+          "CountryCode": "US"
+        },
+        "EmployeeEmail": "carolyn.owenstest@my_employer.com",
+        "EmploymentInformation": {
+          "OriginalHireDate": "2017-06-05",
+          "EmploymentTypeCode": "FullTime",
+          "EmploymentStatusCode": "Active",
+          "OccupationText": "RocketScientist",
+          "WorkHoursFrequencyCode": "Weekly",
+          "UnionIndicator": true,
+          "UnionLocalName": "AmalgamatedRocketScientists",
+          "UnionLocalNumber": 123,
+          "UnionMemberNumber": 10,
+          "Rule50_75Indicator": true,
+          "WorkStateCode": "TX",
+          "KeyEmployeeIndicator": true,
+          "EmploymentContact": {
+            "ContactTypeCode": "BenefitsCoordinator",
+            "ContactName": {
+              "PrefixCode": "Mr",
+              "FirstName": "Sam",
+              "LastName": "Smith",
+              "SuffixCode": "Jr"
+            },
+            "ContactSocialSecurityNumber": 987654321,
+            "ContactIdentifier": 123456,
+            "ContactEmail": "sam.smith@my_employer.com"
+          },
+          "EmploymentSchedule": {
+            "ScheduledHoursQuantity": 40,
+            "Last12MonthsWorkHoursQuantity": 2080,
+            "PerWeekWorkedHoursQuantity": 40,
+            "WorkSchedule": {
+              "WorkShiftCode": "First",
+              "WorkScheduleTypeCode": "Weekly",
+              "WeeklyWorkedHoursQuantity": 40
+            }
+          }
+        }
+      }
+    },
+    "Audit": {
+      "AuditID": "2020-08-06-16.24.25.063000",
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1
+    }
+  }
+}
+
+```
 ##DemographicChange
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "2020-08-06-16.24.25.063000",
+    "SenderName": "ADPSLC",
+    "SenderPlatformName": "CES 6.2",
+    "ReceiverName": "FMLCARRIER",
+    "CreationDateTime": "2020-08-06T16:24:25",
+    "TestProductionCode": "Test",
+    "TransmissionTypeCode": "FullFile",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": "FMLCARRIER_ID",
+      "CarrierName": "FMLCARRIER"
+    },
+    "Employer": {
+      "EmployerPartyID": "PartyID",
+      "FederalEmployerIdentificationNumber": "12-3456789",
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": "TBD",
+        "MasterAgreementNumber": "FML-123456",
+        "CarrierID": "MyCarrier_ID"
+      },
+      "EmployerName": "My Employer",
+      "EmployerAddress": {
+        "FirstLineAddress": "24490 Eureka Ave",
+        "CityName": "Warren",
+        "StateProvinceCode": "MI",
+        "PostalCode": 48091,
+        "CountryCode": "US"
+      },
+      "Employee": {
+        "EmployeePartyID": 211713,
+        "EmployeeSocialSecurityNumber": 999909999,
+        "EmployeeIdentifier": 985603,
+        "EmployeeName": {
+          "FirstName": "CAROLYN",
+          "LastName": "OWENSTEST"
+        },
+        "EmployeeGenderCode": "Female",
+        "EmployeeBirthDate": "1976-05-05",
+        "MaritalStatusCode": "Married",
+        "EmployeeHomePhone": 4695551212,
+        "EmployeeMobilePhone": 4696661212,
+        "EmployeeMailingAddress": {
+          "FirstLineAddress": "2402 Main Street",
+          "SecondLineAddress": "Apt 1A",
+          "CityName": "AUSTIN",
+          "StateProvinceCode": "TX",
+          "PostalCode": 75082,
+          "CountryCode": "US"
+        },
+        "EmployeeEmail": "carolyn.owenstest@my_employer.com",
+        "EmploymentInformation": {
+          "OriginalHireDate": "2017-06-05",
+          "EmploymentTypeCode": "FullTime",
+          "EmploymentStatusCode": "Active",
+          "OccupationText": "RocketScientist",
+          "WorkHoursFrequencyCode": "Weekly",
+          "UnionIndicator": true,
+          "UnionLocalName": "AmalgamatedRocketScientists",
+          "UnionLocalNumber": 123,
+          "UnionMemberNumber": 10,
+          "EmploymentInformationUserDefinedCategory": {
+            "CategoryName": "FMLA_Eligibile",
+            "CategoryValueString": true,
+            "CategoryTypeCode": "Reporting"
+          },
+          "Rule50_75Indicator": true,
+          "WorkStateCode": "TX",
+          "KeyEmployeeIndicator": true,
+          "EmploymentContact": {
+            "ContactTypeCode": "BenefitsCoordinator",
+            "ContactName": {
+              "PrefixCode": "Mr",
+              "FirstName": "Sam",
+              "LastName": "Smith",
+              "SuffixCode": "Jr"
+            },
+            "ContactSocialSecurityNumber": 987654321,
+            "ContactIdentifier": 123456,
+            "ContactEmail": "sam.smith@my_employer.com"
+          },
+          "EmploymentSchedule": {
+            "ScheduledHoursQuantity": 40,
+            "Last12MonthsWorkHoursQuantity": 2080,
+            "PerWeekWorkedHoursQuantity": 40,
+            "WorkSchedule": {
+              "WorkShiftCode": "First",
+              "WorkScheduleTypeCode": "Weekly",
+              "WeeklyWorkedHoursQuantity": 40
+            }
+          }
+        }
+      }
+    },
+    "Audit": {
+      "AuditID": "2020-08-06-16.24.25.063000",
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1
+    }
+  }
+}
+```
 ##EmploymentTermination
+
+```json
+<bem:Transmission xmlns:bem="https://ldex.limra.com/xsd/1.0/LDExBEM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ldex.limra.com/xsd/1.0/LDExBEM_1.3.2022.01.01.xsd">
+	<TransmissionGUID>2020-08-06-16.24.25.063000</TransmissionGUID>
+	<SenderName>ADPSLC</SenderName>
+	<SenderPlatformName>CES 6.2</SenderPlatformName>
+	<ReceiverName>FMLCARRIER</ReceiverName>
+	<CreationDateTime>2020-08-06T16:24:25</CreationDateTime>
+	<TestProductionCode>Test</TestProductionCode>
+	<TransmissionTypeCode>FullFile</TransmissionTypeCode>
+	<SchemaVersionIdentifier>1.3.2022.01.01</SchemaVersionIdentifier>
+	<Carrier>
+		<CarrierID>FMLCARRIER_ID</CarrierID>
+		<CarrierName>FMLCARRIER</CarrierName>
+	</Carrier>
+	<Employer>
+		<EmployerPartyID>PartyID</EmployerPartyID>
+		<FederalEmployerIdentificationNumber>12-3456789</FederalEmployerIdentificationNumber>
+		<CarrierMasterAgreementNumber>
+			<CarrierMasterAgreementNumberID>TBD</CarrierMasterAgreementNumberID>
+			<MasterAgreementNumber>FML-123456</MasterAgreementNumber>
+			<CarrierID>MyCarrier_ID</CarrierID>
+		</CarrierMasterAgreementNumber>
+		<EmployerName>My Employer</EmployerName>
+		<EmployerAddress>
+			<FirstLineAddress>24490 Eureka Ave</FirstLineAddress>
+			<CityName>Warren</CityName>
+			<StateProvinceCode>MI</StateProvinceCode>
+			<PostalCode>48091</PostalCode>
+			<CountryCode>US</CountryCode>
+		</EmployerAddress>
+		<Employee>
+			<EmployeePartyID>211713</EmployeePartyID>
+			<EmployeeSocialSecurityNumber>999909999</EmployeeSocialSecurityNumber>
+			<EmployeeIdentifier>985603</EmployeeIdentifier>
+			<EmployeeName>
+				<FirstName>CAROLYN</FirstName>
+				<LastName>OWENSTEST</LastName>
+			</EmployeeName>
+			<EmployeeGenderCode>Female</EmployeeGenderCode>
+			<EmployeeBirthDate>1976-05-05</EmployeeBirthDate>
+			<MaritalStatusCode>Married</MaritalStatusCode>
+			<EmployeeHomePhone>4695551212</EmployeeHomePhone>
+			<EmployeeMobilePhone>4696661212</EmployeeMobilePhone>
+			<EmployeeMailingAddress>
+				<FirstLineAddress>2402 Main Street</FirstLineAddress>
+				<SecondLineAddress>Apt 1A</SecondLineAddress>
+				<CityName>AUSTIN</CityName>
+				<StateProvinceCode>TX</StateProvinceCode>
+				<PostalCode>75082</PostalCode>
+				<CountryCode>US</CountryCode>
+			</EmployeeMailingAddress>
+			<EmployeeEmail>carolyn.owenstest@my_employer.com</EmployeeEmail>
+			<EmploymentInformation>
+				<OriginalHireDate>2017-06-05</OriginalHireDate>
+				<EmploymentTypeCode>FullTime</EmploymentTypeCode>
+				<!-- Added Termination Information -->
+				<EmploymentStatusCode>Terminated</EmploymentStatusCode>
+				<TerminationDate>2020-07-31</TerminationDate>
+				<TerminationReasonCode>Termination</TerminationReasonCode>
+				<OccupationText>RocketScientist</OccupationText>
+				<WorkHoursFrequencyCode>Weekly</WorkHoursFrequencyCode>
+				<UnionIndicator>true</UnionIndicator>
+				<UnionLocalName>AmalgamatedRocketScientists</UnionLocalName>
+				<UnionLocalNumber>123</UnionLocalNumber>
+				<UnionMemberNumber>10</UnionMemberNumber>
+				<EmploymentInformationUserDefinedCategory>
+					<CategoryName>FMLA_Eligibile</CategoryName>
+					<CategoryValueString>true</CategoryValueString>
+					<CategoryTypeCode>Reporting</CategoryTypeCode>
+				</EmploymentInformationUserDefinedCategory>
+				<Rule50_75Indicator>true</Rule50_75Indicator>
+				<WorkStateCode>TX</WorkStateCode>
+				<KeyEmployeeIndicator>true</KeyEmployeeIndicator>
+				<EmploymentContact>
+					<ContactTypeCode>BenefitsCoordinator</ContactTypeCode>
+					<ContactName>
+						<PrefixCode>Mr</PrefixCode>
+						<FirstName>Sam</FirstName>
+						<LastName>Smith</LastName>
+						<SuffixCode>Jr</SuffixCode>
+					</ContactName>
+					<ContactSocialSecurityNumber>987654321</ContactSocialSecurityNumber>
+					<ContactIdentifier>123456</ContactIdentifier>
+					<ContactEmail>sam.smith@my_employer.com</ContactEmail>
+				</EmploymentContact>
+				<EmploymentSchedule>
+					<ScheduledHoursQuantity>40.0</ScheduledHoursQuantity>
+					<Last12MonthsWorkHoursQuantity>2080.0</Last12MonthsWorkHoursQuantity>
+					<PerWeekWorkedHoursQuantity>40.0</PerWeekWorkedHoursQuantity>
+					<WorkSchedule>
+						<WorkShiftCode>First</WorkShiftCode>
+						<WorkScheduleTypeCode>Weekly</WorkScheduleTypeCode>
+						<WeeklyWorkedHoursQuantity>40.0</WeeklyWorkedHoursQuantity>
+					</WorkSchedule>
+				</EmploymentSchedule>
+			</EmploymentInformation>
+		</Employee>
+	</Employer>
+	<Audit>
+		<AuditID>2020-08-06-16.24.25.063000</AuditID>
+		<CarrierRecordQuantity>1</CarrierRecordQuantity>
+		<EmployerRecordQuantity>1</EmployerRecordQuantity>
+		<EmployeeRecordQuantity>1</EmployeeRecordQuantity>
+	</Audit>
+</bem:Transmission>
+```
 ##Rehire
+
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "2020-08-06-16.24.25.063000",
+    "SenderName": "ADPSLC",
+    "SenderPlatformName": "CES 6.2",
+    "ReceiverName": "FMLCARRIER",
+    "CreationDateTime": "2020-08-06T16:24:25",
+    "TestProductionCode": "Test",
+    "TransmissionTypeCode": "FullFile",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": "FMLCARRIER_ID",
+      "CarrierName": "FMLCARRIER"
+    },
+    "Employer": {
+      "EmployerPartyID": "PartyID",
+      "FederalEmployerIdentificationNumber": "12-3456789",
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": "TBD",
+        "MasterAgreementNumber": "FML-123456",
+        "CarrierID": "MyCarrier_ID"
+      },
+      "EmployerName": "My Employer",
+      "EmployerAddress": {
+        "FirstLineAddress": "24490 Eureka Ave",
+        "CityName": "Warren",
+        "StateProvinceCode": "MI",
+        "PostalCode": 48091,
+        "CountryCode": "US"
+      },
+      "Employee": {
+        "EmployeePartyID": 211713,
+        "EmployeeSocialSecurityNumber": 999909999,
+        "EmployeeIdentifier": 985603,
+        "EmployeeName": {
+          "FirstName": "CAROLYN",
+          "LastName": "OWENSTEST"
+        },
+        "EmployeeGenderCode": "Female",
+        "EmployeeBirthDate": "1976-05-05",
+        "MaritalStatusCode": "Married",
+        "EmployeeHomePhone": 4695551212,
+        "EmployeeMobilePhone": 4696661212,
+        "EmployeeMailingAddress": {
+          "FirstLineAddress": "2402 Main Street",
+          "SecondLineAddress": "Apt 1A",
+          "CityName": "AUSTIN",
+          "StateProvinceCode": "TX",
+          "PostalCode": 75082,
+          "CountryCode": "US"
+        },
+        "EmployeeEmail": "carolyn.owenstest@my_employer.com",
+        "EmploymentInformation": {
+          "OriginalHireDate": "2017-06-05",
+          "EmploymentTypeCode": "FullTime",
+          "EmploymentStatusCode": "Terminated",
+          "TerminationDate": "2020-07-31",
+          "TerminationReasonCode": "Termination",
+          "OccupationText": "RocketScientist",
+          "WorkHoursFrequencyCode": "Weekly",
+          "UnionIndicator": true,
+          "UnionLocalName": "AmalgamatedRocketScientists",
+          "UnionLocalNumber": 123,
+          "UnionMemberNumber": 10,
+          "EmploymentInformationUserDefinedCategory": {
+            "CategoryName": "FMLA_Eligibile",
+            "CategoryValueString": true,
+            "CategoryTypeCode": "Reporting"
+          },
+          "Rule50_75Indicator": true,
+          "WorkStateCode": "TX",
+          "KeyEmployeeIndicator": true,
+          "EmploymentContact": {
+            "ContactTypeCode": "BenefitsCoordinator",
+            "ContactName": {
+              "PrefixCode": "Mr",
+              "FirstName": "Sam",
+              "LastName": "Smith",
+              "SuffixCode": "Jr"
+            },
+            "ContactSocialSecurityNumber": 987654321,
+            "ContactIdentifier": 123456,
+            "ContactEmail": "sam.smith@my_employer.com"
+          },
+          "EmploymentSchedule": {
+            "ScheduledHoursQuantity": 40,
+            "Last12MonthsWorkHoursQuantity": 2080,
+            "PerWeekWorkedHoursQuantity": 40,
+            "WorkSchedule": {
+              "WorkShiftCode": "First",
+              "WorkScheduleTypeCode": "Weekly",
+              "WeeklyWorkedHoursQuantity": 40
+            }
+          }
+        }
+      }
+    },
+    "Audit": {
+      "AuditID": "2020-08-06-16.24.25.063000",
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1
+    }
+  }
+}
+```
 ##NewHireRehire
+
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "2020-08-06-16.24.25.063000",
+    "SenderName": "ADPSLC",
+    "SenderPlatformName": "CES 6.2",
+    "ReceiverName": "FMLCARRIER",
+    "CreationDateTime": "2020-08-06T16:24:25",
+    "TestProductionCode": "Test",
+    "TransmissionTypeCode": "FullFile",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": "FMLCARRIER_ID",
+      "CarrierName": "FMLCARRIER"
+    },
+    "Employer": {
+      "EmployerPartyID": "PartyID",
+      "FederalEmployerIdentificationNumber": "12-3456789",
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": "TBD",
+        "MasterAgreementNumber": "FML-123456",
+        "CarrierID": "MyCarrier_ID"
+      },
+      "EmployerName": "My Employer",
+      "EmployerAddress": {
+        "FirstLineAddress": "24490 Eureka Ave",
+        "CityName": "Warren",
+        "StateProvinceCode": "MI",
+        "PostalCode": 48091,
+        "CountryCode": "US"
+      },
+      "Employee": {
+        "EmployeePartyID": 211713,
+        "EmployeeSocialSecurityNumber": 999909999,
+        "EmployeeIdentifier": 985603,
+        "EmployeeName": {
+          "FirstName": "CAROLYN",
+          "LastName": "OWENSTEST"
+        },
+        "EmployeeGenderCode": "Female",
+        "EmployeeBirthDate": "1976-05-05",
+        "MaritalStatusCode": "Married",
+        "EmployeeHomePhone": 4695551212,
+        "EmployeeMailingAddress": {
+          "FirstLineAddress": "2402 Main Street",
+          "CityName": "AUSTIN",
+          "StateProvinceCode": "TX",
+          "PostalCode": 75082,
+          "CountryCode": "US"
+        },
+        "EmployeeEmail": "carolyn.owenstest@my_employer.com",
+        "EmploymentInformation": {
+          "OriginalHireDate": "2017-06-05",
+          "MostRecentHireDate": "2020-08-01",
+          "EmploymentTypeCode": "FullTime",
+          "EmploymentStatusCode": "Active",
+          "OccupationText": "RocketScientist",
+          "WorkHoursFrequencyCode": "Weekly",
+          "UnionIndicator": true,
+          "UnionLocalName": "AmalgamatedRocketScientists",
+          "UnionLocalNumber": 123,
+          "UnionMemberNumber": 10,
+          "Rule50_75Indicator": true,
+          "WorkStateCode": "TX",
+          "KeyEmployeeIndicator": true,
+          "EmploymentContact": {
+            "ContactTypeCode": "BenefitsCoordinator",
+            "ContactName": {
+              "PrefixCode": "Mr",
+              "FirstName": "Sam",
+              "LastName": "Smith",
+              "SuffixCode": "Jr"
+            },
+            "ContactSocialSecurityNumber": 987654321,
+            "ContactIdentifier": 123456,
+            "ContactEmail": "sam.smith@my_employer.com"
+          },
+          "EmploymentSchedule": {
+            "ScheduledHoursQuantity": 40,
+            "Last12MonthsWorkHoursQuantity": 1213.33,
+            "PerWeekWorkedHoursQuantity": 40,
+            "WorkSchedule": {
+              "WorkShiftCode": "First",
+              "WorkScheduleTypeCode": "Weekly",
+              "WeeklyWorkedHoursQuantity": 40
+            }
+          }
+        }
+      }
+    },
+    "Audit": {
+      "AuditID": "2020-08-06-16.24.25.063000",
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1
+    }
+  }
+}
+```
+
+
 ##DemographicChange
+
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "2020-08-06-16.24.25.063000",
+    "SenderName": "ADPSLC",
+    "SenderPlatformName": "CES 6.2",
+    "ReceiverName": "EAPCARRIER",
+    "CreationDateTime": "2020-08-06T16:24:25",
+    "TestProductionCode": "Test",
+    "TransmissionTypeCode": "FullFile",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": "EAPCARRIER_ID",
+      "CarrierName": "EAPCARRIER"
+    },
+    "Employer": {
+      "EmployerPartyID": "PartyID",
+      "FederalEmployerIdentificationNumber": "34-5678901",
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": "TBD",
+        "MasterAgreementNumber": "EAP-123456",
+        "CarrierID": "MyCarrier_ID"
+      },
+      "EmployerName": "My Employer",
+      "EmployerAddress": {
+        "FirstLineAddress": "24490 Eureka Ave",
+        "CityName": "Warren",
+        "StateProvinceCode": "MI",
+        "PostalCode": 48091,
+        "CountryCode": "US"
+      },
+      "Employee": [
+        {
+          "EmployeePartyID": 211713,
+          "EmployeeSocialSecurityNumber": 999909999,
+          "EmployeeIdentifier": 985603,
+          "EmployeeName": {
+            "FirstName": "CAROLYN",
+            "MiddleName": "BETSY",
+            "LastName": "OWENSTEST"
+          },
+          "EmployeeGenderCode": "Female",
+          "EmployeeBirthDate": "1976-05-05",
+          "MaritalStatusCode": "Married",
+          "EmployeeHomePhone": 4695551212,
+          "EmployeeMobilePhone": 4691011234,
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "PO Box 820467",
+            "CityName": "AUSTIN",
+            "StateProvinceCode": "TX",
+            "PostalCode": "75082-0467",
+            "CountryCode": "US"
+          },
+          "EmployeeHomeAddress": {
+            "FirstLineAddress": "2402 Main Street",
+            "CityName": "AUSTIN",
+            "StateProvinceCode": "TX",
+            "PostalCode": "75082-1234",
+            "CountryCode": "US"
+          },
+          "EmployeeEmail": "carolyn.owenstest@my_employer.com",
+          "EmploymentInformation": {
+            "OriginalHireDate": "2017-06-05",
+            "EmploymentTypeCode": "FullTime",
+            "EmploymentStatusCode": "Active",
+            "OccupationText": "RocketScientist",
+            "WorkHoursFrequencyCode": "Weekly"
+          }
+        },
+        {
+          "EmployeePartyID": 916061,
+          "EmployeeSocialSecurityNumber": 111101111,
+          "EmployeeIdentifier": 569842,
+          "EmployeeName": {
+            "FirstName": "COOPER",
+            "MiddleName": "D",
+            "LastName": "HERNANDEZTEST"
+          },
+          "EmployeeGenderCode": "Male",
+          "EmployeeBirthDate": "1992-06-13",
+          "MaritalStatusCode": "Married",
+          "EmployeeHomePhone": 6830001234,
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "2409 Main Street",
+            "SecondLineAddress": "Apt 3B",
+            "CityName": "TALAHASSEE",
+            "StateProvinceCode": "FL",
+            "PostalCode": "33844-1234",
+            "CountryCode": "US"
+          },
+          "EmployeeEmail": "cooper.hernandeztest@myemployer.com",
+          "EmploymentInformation": {
+            "OriginalHireDate": "2016-06-13",
+            "ExemptCode": "Nonexempt",
+            "EmploymentTypeCode": "PerDiem",
+            "EmploymentStatusCode": "Active",
+            "OccupationText": "KitchenStaff",
+            "WorkHoursFrequencyCode": "Weekly"
+          }
+        }
+      ]
+    },
+    "Audit": {
+      "AuditID": "2020-08-06-16.24.25.063000",
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 2
+    }
+  }
+}
+```
 ##EmploymentTermination
+
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "2020-08-06-16.24.25.063000",
+    "SenderName": "ADPSLC",
+    "SenderPlatformName": "CES 6.2",
+    "ReceiverName": "EAPCARRIER",
+    "CreationDateTime": "2020-08-06T16:24:25",
+    "TestProductionCode": "Test",
+    "TransmissionTypeCode": "FullFile",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": "EAPCARRIER_ID",
+      "CarrierName": "EAPCARRIER"
+    },
+    "Employer": {
+      "EmployerPartyID": "PartyID",
+      "FederalEmployerIdentificationNumber": "34-5678901",
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": "TBD",
+        "MasterAgreementNumber": "EAP-123456",
+        "CarrierID": "MyCarrier_ID"
+      },
+      "EmployerName": "My Employer",
+      "EmployerAddress": {
+        "FirstLineAddress": "24490 Eureka Ave",
+        "CityName": "Warren",
+        "StateProvinceCode": "MI",
+        "PostalCode": 48091,
+        "CountryCode": "US"
+      },
+      "Employee": [
+        {
+          "EmployeePartyID": 211713,
+          "EmployeeSocialSecurityNumber": 999909999,
+          "EmployeeIdentifier": 985603,
+          "EmployeeName": {
+            "FirstName": "CAROLYN",
+            "MiddleName": "BETSY",
+            "LastName": "OWENSTEST"
+          },
+          "EmployeeGenderCode": "Female",
+          "EmployeeBirthDate": "1976-05-05",
+          "MaritalStatusCode": "Married",
+          "EmployeeHomePhone": 4695551212,
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "PO Box 820467",
+            "CityName": "AUSTIN",
+            "StateProvinceCode": "TX",
+            "PostalCode": "75082-0467",
+            "CountryCode": "US"
+          },
+          "EmployeeHomeAddress": {
+            "FirstLineAddress": "2402 Main Street",
+            "CityName": "AUSTIN",
+            "StateProvinceCode": "TX",
+            "PostalCode": 75082,
+            "CountryCode": "US"
+          },
+          "EmployeeEmail": "carolyn.owenstest@my_employer.com",
+          "EmploymentInformation": {
+            "OriginalHireDate": "2017-06-05",
+            "EmploymentTypeCode": "FullTime",
+            "EmploymentStatusCode": "Terminated",
+            "TerminationDate": "2020-07-31",
+            "TerminationReasonCode": "Termination",
+            "OccupationText": "RocketScientist",
+            "WorkHoursFrequencyCode": "Weekly"
+          }
+        },
+        {
+          "EmployeePartyID": 916061,
+          "EmployeeSocialSecurityNumber": 111101111,
+          "EmployeeIdentifier": 569842,
+          "EmployeeName": {
+            "FirstName": "COOPER",
+            "MiddleName": "D",
+            "LastName": "HERNANDEZTEST"
+          },
+          "EmployeeGenderCode": "Male",
+          "EmployeeBirthDate": "1992-06-13",
+          "MaritalStatusCode": "Married",
+          "EmployeeHomePhone": 6830001234,
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "2409 Main Street",
+            "CityName": "TALAHASSEE",
+            "StateProvinceCode": "FL",
+            "PostalCode": 33844,
+            "CountryCode": "US"
+          },
+          "EmployeeEmail": "cooper.hernandeztest@myemployer.com",
+          "EmploymentInformation": {
+            "OriginalHireDate": "2016-06-13",
+            "MostRecentHireDate": "2020-08-01",
+            "AdjustedServiceDate": "2016-06-13",
+            "ExemptCode": "Nonexempt",
+            "EmploymentTypeCode": "PerDiem",
+            "EmploymentStatusCode": "Terminated",
+            "TerminationDate": "2020-07-21",
+            "TerminationReasonCode": "Death",
+            "OccupationText": "KitchenStaff",
+            "WorkHoursFrequencyCode": "Weekly"
+          }
+        }
+      ]
+    },
+    "Audit": {
+      "AuditID": "2020-08-06-16.24.25.063000",
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 2
+    }
+  }
+}
+```
 ##NewHireRehire
+
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "2020-08-06-16.24.25.063000",
+    "SenderName": "ADPSLC",
+    "SenderPlatformName": "CES 6.2",
+    "ReceiverName": "EAPCARRIER",
+    "CreationDateTime": "2020-08-06T16:24:25",
+    "TestProductionCode": "Test",
+    "TransmissionTypeCode": "FullFile",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": "EAPCARRIER_ID",
+      "CarrierName": "EAPCARRIER"
+    },
+    "Employer": {
+      "EmployerPartyID": "PartyID",
+      "FederalEmployerIdentificationNumber": "34-5678901",
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": "TBD",
+        "MasterAgreementNumber": "EAP-123456",
+        "CarrierID": "MyCarrier_ID"
+      },
+      "EmployerName": "My Employer",
+      "EmployerAddress": {
+        "FirstLineAddress": "24490 Eureka Ave",
+        "CityName": "Warren",
+        "StateProvinceCode": "MI",
+        "PostalCode": 48091,
+        "CountryCode": "US"
+      },
+      "Employee": [
+        {
+          "EmployeePartyID": 211713,
+          "EmployeeSocialSecurityNumber": 999909999,
+          "EmployeeIdentifier": 985603,
+          "EmployeeName": {
+            "FirstName": "CAROLYN",
+            "MiddleName": "BETSY",
+            "LastName": "OWENSTEST"
+          },
+          "EmployeeGenderCode": "Female",
+          "EmployeeBirthDate": "1976-05-05",
+          "MaritalStatusCode": "Married",
+          "EmployeeHomePhone": 4695551212,
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "PO Box 820467",
+            "CityName": "AUSTIN",
+            "StateProvinceCode": "TX",
+            "PostalCode": "75082-0467",
+            "CountryCode": "US"
+          },
+          "EmployeeHomeAddress": {
+            "FirstLineAddress": "2402 Main Street",
+            "CityName": "AUSTIN",
+            "StateProvinceCode": "TX",
+            "PostalCode": 75082,
+            "CountryCode": "US"
+          },
+          "EmployeeEmail": "carolyn.owenstest@my_employer.com",
+          "EmploymentInformation": {
+            "OriginalHireDate": "2017-06-05",
+            "EmploymentTypeCode": "FullTime",
+            "EmploymentStatusCode": "Terminated",
+            "TerminationDate": "2020-07-31",
+            "TerminationReasonCode": "Termination",
+            "OccupationText": "RocketScientist",
+            "WorkHoursFrequencyCode": "Weekly"
+          }
+        },
+        {
+          "EmployeePartyID": 916061,
+          "EmployeeSocialSecurityNumber": 111101111,
+          "EmployeeIdentifier": 569842,
+          "EmployeeName": {
+            "FirstName": "COOPER",
+            "MiddleName": "D",
+            "LastName": "HERNANDEZTEST"
+          },
+          "EmployeeGenderCode": "Male",
+          "EmployeeBirthDate": "1992-06-13",
+          "MaritalStatusCode": "Married",
+          "EmployeeHomePhone": 6830001234,
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "2409 Main Street",
+            "CityName": "TALAHASSEE",
+            "StateProvinceCode": "FL",
+            "PostalCode": 33844,
+            "CountryCode": "US"
+          },
+          "EmployeeEmail": "cooper.hernandeztest@myemployer.com",
+          "EmploymentInformation": {
+            "OriginalHireDate": "2016-06-13",
+            "MostRecentHireDate": "2020-08-01",
+            "AdjustedServiceDate": "2016-06-13",
+            "ExemptCode": "Nonexempt",
+            "EmploymentTypeCode": "PerDiem",
+            "EmploymentStatusCode": "Terminated",
+            "TerminationDate": "2020-07-21",
+            "TerminationReasonCode": "Death",
+            "OccupationText": "KitchenStaff",
+            "WorkHoursFrequencyCode": "Weekly"
+          }
+        }
+      ]
+    },
+    "Audit": {
+      "AuditID": "2020-08-06-16.24.25.063000",
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 2
+    }
+  }
+}
+```
 ##DemographicChange
+
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "2020-08-06-16.24.25.063000",
+    "SenderName": "ADPSLC",
+    "SenderPlatformName": "CES 6.2",
+    "ReceiverName": "EAPCARRIER",
+    "CreationDateTime": "2020-08-06T16:24:25",
+    "TestProductionCode": "Test",
+    "TransmissionTypeCode": "FullFile",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": "EAPCARRIER_ID",
+      "CarrierName": "EAPCARRIER"
+    },
+    "Employer": {
+      "EmployerPartyID": "PartyID",
+      "FederalEmployerIdentificationNumber": "34-5678901",
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": "TBD",
+        "MasterAgreementNumber": "EAP-123456",
+        "CarrierID": "MyCarrier_ID"
+      },
+      "EmployerName": "My Employer",
+      "EmployerAddress": {
+        "FirstLineAddress": "24490 Eureka Ave",
+        "CityName": "Warren",
+        "StateProvinceCode": "MI",
+        "PostalCode": 48091,
+        "CountryCode": "US"
+      },
+      "Employee": [
+        {
+          "EmployeePartyID": 211713,
+          "EmployeeSocialSecurityNumber": 999909999,
+          "EmployeeIdentifier": 985603,
+          "EmployeeName": {
+            "FirstName": "CAROLYN",
+            "MiddleName": "BETSY",
+            "LastName": "OWENSTEST"
+          },
+          "EmployeeGenderCode": "Female",
+          "EmployeeBirthDate": "1976-05-05",
+          "MaritalStatusCode": "Married",
+          "EmployeeHomePhone": 4695551212,
+          "EmployeeMobilePhone": 4691011234,
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "PO Box 820467",
+            "CityName": "AUSTIN",
+            "StateProvinceCode": "TX",
+            "PostalCode": "75082-0467",
+            "CountryCode": "US"
+          },
+          "EmployeeHomeAddress": {
+            "FirstLineAddress": "2402 Main Street",
+            "CityName": "AUSTIN",
+            "StateProvinceCode": "TX",
+            "PostalCode": "75082-1234",
+            "CountryCode": "US"
+          },
+          "EmployeeEmail": "carolyn.owenstest@my_employer.com",
+          "EmploymentInformation": {
+            "OriginalHireDate": "2017-06-05",
+            "EmploymentTypeCode": "FullTime",
+            "EmploymentStatusCode": "Active",
+            "OccupationText": "RocketScientist",
+            "WorkHoursFrequencyCode": "Weekly"
+          }
+        },
+        {
+          "EmployeePartyID": 916061,
+          "EmployeeSocialSecurityNumber": 111101111,
+          "EmployeeIdentifier": 569842,
+          "EmployeeName": {
+            "FirstName": "COOPER",
+            "MiddleName": "D",
+            "LastName": "HERNANDEZTEST"
+          },
+          "EmployeeGenderCode": "Male",
+          "EmployeeBirthDate": "1992-06-13",
+          "MaritalStatusCode": "Married",
+          "EmployeeHomePhone": 6830001234,
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "2409 Main Street",
+            "SecondLineAddress": "Apt 3B",
+            "CityName": "TALAHASSEE",
+            "StateProvinceCode": "FL",
+            "PostalCode": "33844-1234",
+            "CountryCode": "US"
+          },
+          "EmployeeEmail": "cooper.hernandeztest@myemployer.com",
+          "EmploymentInformation": {
+            "OriginalHireDate": "2016-06-13",
+            "ExemptCode": "Nonexempt",
+            "EmploymentTypeCode": "PerDiem",
+            "EmploymentStatusCode": "Active",
+            "OccupationText": "KitchenStaff",
+            "WorkHoursFrequencyCode": "Weekly"
+          }
+        }
+      ]
+    },
+    "Audit": {
+      "AuditID": "2020-08-06-16.24.25.063000",
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 2
+    }
+  }
+}
+```
 ##EmploymentTermination
+
+```json
+<bem:Transmission xmlns:bem="https://ldex.limra.com/xsd/1.0/LDExBEM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ldex.limra.com/xsd/1.0/LDExBEM_1.3.2022.01.01.xsd">
+	<TransmissionGUID>2020-08-06-16.24.25.063000</TransmissionGUID>
+	<SenderName>ADPSLC</SenderName>
+	<SenderPlatformName>CES 6.2</SenderPlatformName>
+	<ReceiverName>EAPCARRIER</ReceiverName>
+	<CreationDateTime>2020-08-06T16:24:25</CreationDateTime>
+	<TestProductionCode>Test</TestProductionCode>
+	<TransmissionTypeCode>FullFile</TransmissionTypeCode>
+	<SchemaVersionIdentifier>1.3.2022.01.01</SchemaVersionIdentifier>
+	<Carrier>
+		<CarrierID>EAPCARRIER_ID</CarrierID>
+		<CarrierName>EAPCARRIER</CarrierName>
+	</Carrier>
+	<Employer>
+		<EmployerPartyID>PartyID</EmployerPartyID>
+		<FederalEmployerIdentificationNumber>34-5678901</FederalEmployerIdentificationNumber>
+		<CarrierMasterAgreementNumber>
+			<CarrierMasterAgreementNumberID>TBD</CarrierMasterAgreementNumberID>
+			<MasterAgreementNumber>EAP-123456</MasterAgreementNumber>
+			<CarrierID>MyCarrier_ID</CarrierID>
+		</CarrierMasterAgreementNumber>
+		<EmployerName>My Employer</EmployerName>
+		<EmployerAddress>
+			<FirstLineAddress>24490 Eureka Ave</FirstLineAddress>
+			<CityName>Warren</CityName>
+			<StateProvinceCode>MI</StateProvinceCode>
+			<PostalCode>48091</PostalCode>
+			<CountryCode>US</CountryCode>
+		</EmployerAddress>
+		<Employee>
+			<EmployeePartyID>211713</EmployeePartyID>
+			<EmployeeSocialSecurityNumber>999909999</EmployeeSocialSecurityNumber>
+			<EmployeeIdentifier>985603</EmployeeIdentifier>
+			<EmployeeName>
+				<FirstName>CAROLYN</FirstName>
+				<MiddleName>BETSY</MiddleName>
+				<LastName>OWENSTEST</LastName>
+			</EmployeeName>
+			<EmployeeGenderCode>Female</EmployeeGenderCode>
+			<EmployeeBirthDate>1976-05-05</EmployeeBirthDate>
+			<MaritalStatusCode>Married</MaritalStatusCode>
+			<EmployeeHomePhone>4695551212</EmployeeHomePhone>
+			<EmployeeMailingAddress>
+				<FirstLineAddress>PO Box 820467</FirstLineAddress>
+				<CityName>AUSTIN</CityName>
+				<StateProvinceCode>TX</StateProvinceCode>
+				<PostalCode>75082-0467</PostalCode>
+				<CountryCode>US</CountryCode>
+			</EmployeeMailingAddress>
+			<EmployeeHomeAddress>
+				<FirstLineAddress>2402 Main Street</FirstLineAddress>
+				<CityName>AUSTIN</CityName>
+				<StateProvinceCode>TX</StateProvinceCode>
+				<PostalCode>75082</PostalCode>
+				<CountryCode>US</CountryCode>
+			</EmployeeHomeAddress>
+			<EmployeeEmail>carolyn.owenstest@my_employer.com</EmployeeEmail>
+			<EmploymentInformation>
+				<OriginalHireDate>2017-06-05</OriginalHireDate>
+				<EmploymentTypeCode>FullTime</EmploymentTypeCode>
+				<!-- Add Termination Information -->
+				<EmploymentStatusCode>Terminated</EmploymentStatusCode>
+				<TerminationDate>2020-07-31</TerminationDate>
+				<TerminationReasonCode>Termination</TerminationReasonCode>
+				<OccupationText>RocketScientist</OccupationText>
+				<WorkHoursFrequencyCode>Weekly</WorkHoursFrequencyCode>
+			</EmploymentInformation>
+		</Employee>
+		<Employee>
+			<EmployeePartyID>916061</EmployeePartyID>
+			<EmployeeSocialSecurityNumber>111101111</EmployeeSocialSecurityNumber>
+			<EmployeeIdentifier>569842</EmployeeIdentifier>
+			<EmployeeName>
+				<FirstName>COOPER</FirstName>
+				<MiddleName>D</MiddleName>
+				<LastName>HERNANDEZTEST</LastName>
+			</EmployeeName>
+			<EmployeeGenderCode>Male</EmployeeGenderCode>
+			<EmployeeBirthDate>1992-06-13</EmployeeBirthDate>
+			<MaritalStatusCode>Married</MaritalStatusCode>
+			<EmployeeHomePhone>6830001234</EmployeeHomePhone>
+			<EmployeeMailingAddress>
+				<FirstLineAddress>2409 Main Street</FirstLineAddress>
+				<CityName>TALAHASSEE</CityName>
+				<StateProvinceCode>FL</StateProvinceCode>
+				<PostalCode>33844</PostalCode>
+				<CountryCode>US</CountryCode>
+			</EmployeeMailingAddress>
+			<EmployeeEmail>cooper.hernandeztest@myemployer.com</EmployeeEmail>
+			<EmploymentInformation>
+				<OriginalHireDate>2016-06-13</OriginalHireDate>
+				<MostRecentHireDate>2020-08-01</MostRecentHireDate>
+				<AdjustedServiceDate>2016-06-13</AdjustedServiceDate>
+				<ExemptCode>Nonexempt</ExemptCode>
+				<EmploymentTypeCode>PerDiem</EmploymentTypeCode>
+				<EmploymentStatusCode>Terminated</EmploymentStatusCode>
+				<!-- Add Termination Information -->
+				<TerminationDate>2020-07-21</TerminationDate>
+				<TerminationReasonCode>Death</TerminationReasonCode>
+				<OccupationText>KitchenStaff</OccupationText>
+				<WorkHoursFrequencyCode>Weekly</WorkHoursFrequencyCode>
+			</EmploymentInformation>
+		</Employee>
+	</Employer>
+	<Audit>
+		<AuditID>2020-08-06-16.24.25.063000</AuditID>
+		<CarrierRecordQuantity>1</CarrierRecordQuantity>
+		<EmployerRecordQuantity>1</EmployerRecordQuantity>
+		<EmployeeRecordQuantity>2</EmployeeRecordQuantity>
+	</Audit>
+</bem:Transmission>
+```
 ##ServiceAdministrationTermination
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "2020-06-06-16.24.25.063000",
+    "SenderName": "ADPSLC",
+    "SenderPlatformName": "CES 6.2",
+    "ReceiverName": "PFLCARRIER",
+    "CreationDateTime": "2020-06-06T16:24:25",
+    "TestProductionCode": "Test",
+    "TransmissionTypeCode": "FullFile",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": "PFLCARRIER_ID",
+      "CarrierName": "PFLCARRIER"
+    },
+    "Employer": {
+      "EmployerPartyID": 8745612,
+      "FederalEmployerIdentificationNumber": "12-3456789",
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": "TBD",
+        "MasterAgreementNumber": "PFL-123456",
+        "CarrierID": "PFLCARRIER_ID"
+      },
+      "EmployerName": "My Employer",
+      "EmployerAddress": {
+        "FirstLineAddress": "555 West Street",
+        "CityName": "San Jose",
+        "StateProvinceCode": "CA",
+        "PostalCode": 94088,
+        "CountryCode": "US"
+      },
+      "Employee": {
+        "EmployeePartyID": 211713,
+        "EmployeeSocialSecurityNumber": 999909998,
+        "EmployeeIdentifier": 985603,
+        "EmployeeName": {
+          "FirstName": "CAROLYN",
+          "LastName": "SMITH"
+        },
+        "EmployeeGenderCode": "Female",
+        "EmployeeBirthDate": "1976-05-05",
+        "MaritalStatusCode": "Married",
+        "EmployeeHomePhone": 4695551212,
+        "EmployeeMobilePhone": 4696661212,
+        "EmployeeMailingAddress": {
+          "FirstLineAddress": "2402 Main Street",
+          "SecondLineAddress": "Apt 1A",
+          "CityName": "Cupertino",
+          "StateProvinceCode": "CA",
+          "PostalCode": 95014,
+          "CountryCode": "US"
+        },
+        "EmployeeEmail": "carolyn.owens@my_employer.com",
+        "EmploymentInformation": {
+          "OriginalHireDate": "2017-06-05",
+          "EmploymentTypeCode": "FullTime",
+          "EmploymentStatusCode": "Active",
+          "OccupationText": "RocketScientist",
+          "WorkHoursFrequencyCode": "Weekly",
+          "UnionIndicator": true,
+          "UnionLocalName": "AmalgamatedRocketScientists",
+          "UnionLocalNumber": 123,
+          "UnionMemberNumber": 10,
+          "Rule50_75Indicator": true,
+          "WorkStateCode": "CA",
+          "KeyEmployeeIndicator": true
+        },
+        "Event": {
+          "EventID": 12345,
+          "EventTypeCode": "Coverage",
+          "EventTypeReasonCode": "VoluntaryCancel",
+          "EventDate": "2020-05-10"
+        },
+        "Coverage": {
+          "CoverageID": 876543,
+          "GroupPolicyNumber": 302321,
+          "ProductTypeCode": "PFL",
+          "BenefitPlanIdentifier": "PFL01",
+          "BenefitClassIdentifier": 1,
+          "BillGroupIdentifier": 10331,
+          "CoverageEffectiveDate": "2020-01-01",
+          "CoverageTerminationDate": "2020-05-31",
+          "CarrierID": "PFLCARRIER_ID",
+          "CoverageInsured": {
+            "InsuredPartyID": 211713,
+            "PrimaryInsuredIndicator": true,
+            "InsuredCoverageEffectiveDate": "2020-01-01",
+            "InsuredCoverageTerminationDate": "2020-05-31"
+          },
+          "CoverageEventID": 12345
+        }
+      }
+    },
+    "Audit": {
+      "AuditID": "2020-06-06-16.24.25.063000",
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1,
+      "EventRecordQuantity": 1,
+      "CoverageRecordQuantity": 1
+    }
+  }
+}
+```
 
 
 

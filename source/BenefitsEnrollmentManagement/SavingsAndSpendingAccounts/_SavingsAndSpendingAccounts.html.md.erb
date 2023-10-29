@@ -1,6 +1,606 @@
-##SavingsandSpendingAccounts
-###NewElection
-###ChangeElection
-###ExistingCoverageCancelationTermination
+#SavingsandSpendingAccounts
+##NewElection
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "f63b0b96-1fe1-4325-81ef-ae4412bf4665",
+    "SenderName": "SELERIX",
+    "SenderPlatformName": "BenSelect",
+    "ReceiverName": "Optum",
+    "CreationDateTime": "2020-07-30T20:11:38.5369773Z",
+    "TestProductionCode": "Test",
+    "TransmissionTypeCode": "ChangesOnly",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": 46,
+      "CarrierName": "OptumHealth Bank"
+    },
+    "Employer": {
+      "EmployerPartyID": 1597,
+      "FederalEmployerIdentificationNumber": 456789999,
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": 46,
+        "MasterAgreementNumber": "US878234",
+        "CarrierID": 46
+      },
+      "EmployerName": "National Health ACA",
+      "EmployerAddress": {
+        "FirstLineAddress": "2851 Craig Dr.",
+        "CityName": "McKinney",
+        "StateProvinceCode": "TX",
+        "PostalCode": 75070,
+        "CountryCode": "USA"
+      },
+      "Employee": {
+        "EmployeePartyID": 1801408,
+        "EmployeeSocialSecurityNumber": 998780394,
+        "EmployeeIdentifier": 80395,
+        "EmployeeName": {
+          "FirstName": "Vivian",
+          "LastName": "Blunt"
+        },
+        "EmployeeGenderCode": "Female",
+        "EmployeeBirthDate": "1940-03-15",
+        "MaritalStatusCode": "Unknown",
+        "EmployeeMailingAddress": {
+          "FirstLineAddress": "2 N Erman Hwy",
+          "CityName": "Denver",
+          "StateProvinceCode": "CO",
+          "PostalCode": 80203,
+          "CountryCode": "USA"
+        },
+        "EmployeeHomeAddress": {
+          "FirstLineAddress": "2 N Erman Hwy",
+          "CityName": "Denver",
+          "StateProvinceCode": "CO",
+          "PostalCode": 80203,
+          "CountryCode": "USA"
+        },
+        "EmployeeWorkAddress": {
+          "FirstLineAddress": "6 Main St.",
+          "CityName": "Denver",
+          "StateProvinceCode": "CO",
+          "PostalCode": 98343,
+          "CountryCode": "USA"
+        },
+        "EmployeeEmail": "Vivian.Blunt@demo-me.com",
+        "EmploymentInformation": {
+          "OriginalHireDate": "1983-04-11",
+          "MostRecentHireDate": "1983-04-11",
+          "EmploymentTypeCode": "FullTime",
+          "EmploymentStatusCode": "Active",
+          "JobTitleText": "Nurse-Charge",
+          "OccupationText": "Nurse-Charge",
+          "WorkLocationText": "COLORADO",
+          "PayrollDeductionFrequencyQuantity": 24,
+          "PayrollFrequencyQuantity": 26,
+          "EmploymentIncome": [
+            {
+              "IncomeTypeCode": "Salary",
+              "IncomeAmount": 51625,
+              "IncomeModeCode": "Annual",
+              "IncomeEffectiveDate": "1997-09-29"
+            },
+            {
+              "IncomeTypeCode": "BenefitSalary",
+              "IncomeAmount": 51625,
+              "IncomeModeCode": "Annual",
+              "IncomeEffectiveDate": "1997-09-29"
+            }
+          ]
+        },
+        "EnrollmentInformation": {
+          "EnrollmentInformationID": 1007820,
+          "EnrollmentMethodCode": "HumanResources",
+          "EnrollmentCityName": "Denver",
+          "EnrollmentStateProvinceCode": "CO"
+        },
+        "Event": [
+          {
+            "EventID": "EE758067",
+            "EventTypeCode": "Employment",
+            "EventTypeReasonCode": "Unknown",
+            "EventDate": "2020-06-24",
+            "TransactionDate": "2020-06-24"
+          },
+          {
+            "EventID": "CE2921619",
+            "EventTypeCode": "Coverage",
+            "EventTypeReasonCode": "OpenEnrollment",
+            "EventDate": "2020-06-24",
+            "TransactionDate": "2020-06-24"
+          }
+        ],
+        "EmployeeEventID": "EE758067",
+        "Producer": {
+          "ProducerPartyID": 15,
+          "ProducerFirstName": "Lyle",
+          "ProducerLastName": "Griffin",
+          "ProducerLicense": {
+            "ProducerLicenseID": "0_15",
+            "ProducerLicenseTypeCode": "LifeHealth",
+            "ProducerLicenseStateProvinceCode": "CO",
+            "ProducerLicenseNumber": "LG_LIC"
+          }
+        },
+        "Coverage": {
+          "CoverageID": 2427302,
+          "GroupPolicyNumber": 87898,
+          "ProductTypeCode": "SavingsSpendingAccounts",
+          "BenefitPlanIdentifier": "HSA",
+          "BenefitClassIdentifier": 1,
+          "BillGroupIdentifier": 1,
+          "CoverageEffectiveDate": "2020-10-01",
+          "CoverageTierCode": "Employee",
+          "EmployeeContributionCode": "EmployeePartial",
+          "EmployeePremiumContributionAmount": 180,
+          "EmployerPremiumContributionAmount": 50,
+          "TotalPlanPremiumAmount": 230,
+          "PremiumModeQuantity": 24,
+          "PreTaxCode": "PreTax",
+          "CarrierID": 46,
+          "CoverageInsured": {
+            "InsuredPartyID": 1801408,
+            "PrimaryInsuredIndicator": true,
+            "InsuredCoverageEffectiveDate": "2020-10-01"
+          },
+          "CoverageEventID": "CE2921619",
+          "CoverageQuestionAnswer": [
+            {
+              "CoverageQuestionAnswerID": 1000871,
+              "QuestionIdentifier": "OHB_045_0130_Verification_Code",
+              "AnswerText": "Jones",
+              "AnswerPartyID": 1801408
+            },
+            {
+              "CoverageQuestionAnswerID": 1000872,
+              "QuestionIdentifier": "OHB_045_0130_Card2",
+              "AnswerIndicator": false,
+              "AnswerPartyID": 1801408
+            },
+            {
+              "CoverageQuestionAnswerID": 1000885,
+              "QuestionIdentifier": "OHB_045_0130_HDHP_Carrier",
+              "AnswerText": "United Healthcare",
+              "AnswerPartyID": 1801408
+            },
+            {
+              "CoverageQuestionAnswerID": 1000886,
+              "QuestionIdentifier": "OHB_045_0130_HDHP_Group_Number",
+              "AnswerText": 123456,
+              "AnswerPartyID": 1801408
+            },
+            {
+              "CoverageQuestionAnswerID": 1000887,
+              "QuestionIdentifier": "OHB_045_0130_HDHP_Through_ER",
+              "AnswerIndicator": true,
+              "AnswerPartyID": 1801408
+            },
+            {
+              "CoverageQuestionAnswerID": 1000888,
+              "QuestionIdentifier": "OHB_045_0130_HDHP_MemberID",
+              "AnswerText": "None",
+              "AnswerPartyID": 1801408
+            },
+            {
+              "CoverageQuestionAnswerID": 1000889,
+              "QuestionIdentifier": "OHB_045_0130_HDHP_Eff",
+              "AnswerText": "10/1/2020 12:00:00 AM",
+              "AnswerPartyID": 1801408
+            },
+            {
+              "CoverageQuestionAnswerID": 1000890,
+              "QuestionIdentifier": "OHB_045_0130_HDHP_Tier",
+              "AnswerText": "Family",
+              "AnswerPartyID": 1801408
+            },
+            {
+              "CoverageQuestionAnswerID": 1000891,
+              "QuestionIdentifier": "OHB_045_0130_HDHP_Employer",
+              "AnswerText": "National Health ACA",
+              "AnswerPartyID": 1801408
+            },
+            {
+              "CoverageQuestionAnswerID": 1000893,
+              "QuestionIdentifier": "OHB_045_0130_HDHP_IdentificationNo",
+              "AnswerText": 879987872,
+              "AnswerPartyID": 1801408
+            },
+            {
+              "CoverageQuestionAnswerID": 1000894,
+              "QuestionIdentifier": "OHB_045_0130_HDHP_IssueState",
+              "AnswerText": "GA",
+              "AnswerPartyID": 1801408
+            },
+            {
+              "CoverageQuestionAnswerID": 1000895,
+              "QuestionIdentifier": "OHB_045_0130_Identification_Type",
+              "AnswerText": "DL",
+              "AnswerPartyID": 1801408
+            },
+            {
+              "CoverageQuestionAnswerID": 1000897,
+              "QuestionIdentifier": "OHB_045_0130_DepositAmt",
+              "AnswerText": 0,
+              "AnswerPartyID": 1801408
+            },
+            {
+              "CoverageQuestionAnswerID": 1000898,
+              "QuestionIdentifier": "OHB_045_0130_OpeningDepositEnclosed",
+              "AnswerIndicator": false,
+              "AnswerPartyID": 1801408
+            }
+          ],
+          "CoverageCommissionSplit": {
+            "CarrierProducerNumberID": "46_15",
+            "CompensationSplitPercent": 100
+          },
+          "EnrollmentInformationID": 1007820,
+          "CoverageContribution": {
+            "ContributionLimitTypeCode": "Single",
+            "PlanYearEmployeeContributionAmount": 4320,
+            "PlanYearEmployerContributionAmount": 1200,
+            "ToDateEmployeeContributionAmount": 0,
+            "ToDateEmployerContributionAmount": 0,
+            "ContributionsRemainingQuantity": 24
+          }
+        }
+      }
+    },
+    "Audit": {
+      "AuditID": 21946,
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1,
+      "DependentRecordQuantity": 0,
+      "OtherPartyRecordQuantity": 0,
+      "BeneficiaryGroupRecordQuantity": 0,
+      "EventRecordQuantity": 2,
+      "CoverageRecordQuantity": 1,
+      "CoverageRiderRecordQuantity": 0
+    }
+  }
+}
+```
+
+
+##ChangeElection
+
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "f26e1b60-ad0c-47cd-946a-3ed08c044401",
+    "SenderName": "SELERIX",
+    "SenderPlatformName": "BenSelect",
+    "ReceiverName": "Optum",
+    "CreationDateTime": "2020-07-30T20:17:29.5656795Z",
+    "TestProductionCode": "Test",
+    "TransmissionTypeCode": "ChangesOnly",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": 22,
+      "CarrierName": "Flex America"
+    },
+    "Employer": {
+      "EmployerPartyID": 1597,
+      "FederalEmployerIdentificationNumber": 456789999,
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": 22,
+        "MasterAgreementNumber": "",
+        "CarrierID": 22
+      },
+      "EmployerName": "National Health ACA",
+      "EmployerAddress": {
+        "FirstLineAddress": "2851 Craig Dr.",
+        "CityName": "McKinney",
+        "StateProvinceCode": "TX",
+        "PostalCode": 75070,
+        "CountryCode": "USA"
+      },
+      "Employee": {
+        "EmployeePartyID": 1801316,
+        "EmployeeSocialSecurityNumber": 998781568,
+        "EmployeeIdentifier": 81569,
+        "EmployeeName": {
+          "FirstName": "Bertha",
+          "LastName": "Bachus"
+        },
+        "EmployeeGenderCode": "Female",
+        "EmployeeBirthDate": "1960-02-23",
+        "MaritalStatusCode": "Married",
+        "EmployeeMailingAddress": {
+          "FirstLineAddress": "1102 N Ralph Hwy",
+          "CityName": "Salt Lake City",
+          "StateProvinceCode": "UT",
+          "PostalCode": 84114,
+          "CountryCode": "USA"
+        },
+        "EmployeeHomeAddress": {
+          "FirstLineAddress": "1102 N Ralph Hwy",
+          "CityName": "Salt Lake City",
+          "StateProvinceCode": "UT",
+          "PostalCode": 84114,
+          "CountryCode": "USA"
+        },
+        "EmployeeWorkAddress": {
+          "FirstLineAddress": "34 Main St.",
+          "CityName": "Salt Lake City",
+          "StateProvinceCode": "UT",
+          "PostalCode": 87348,
+          "CountryCode": "USA"
+        },
+        "EmployeeEmail": "Bertha.Bachus@demo-me.com",
+        "EmploymentInformation": {
+          "OriginalHireDate": "1978-06-03",
+          "MostRecentHireDate": "1978-06-03",
+          "EmploymentTypeCode": "FullTime",
+          "EmploymentStatusCode": "Active",
+          "JobTitleText": "Rad Tech",
+          "OccupationText": "Rad Tech",
+          "WorkLocationText": "UTAH",
+          "PayrollDeductionFrequencyQuantity": 24,
+          "PayrollFrequencyQuantity": 26,
+          "EmploymentIncome": [
+            {
+              "IncomeTypeCode": "Salary",
+              "IncomeAmount": 41600,
+              "IncomeModeCode": "Annual",
+              "IncomeEffectiveDate": "1978-06-03"
+            },
+            {
+              "IncomeTypeCode": "BenefitSalary",
+              "IncomeAmount": 41600,
+              "IncomeModeCode": "Annual",
+              "IncomeEffectiveDate": "1978-06-03"
+            }
+          ]
+        },
+        "EnrollmentInformation": {
+          "EnrollmentInformationID": 1009480,
+          "EnrollmentMethodCode": "HumanResources",
+          "EnrollmentCityName": "Salt Lake City",
+          "EnrollmentStateProvinceCode": "UT"
+        },
+        "Event": {
+          "EventID": "CE2921626",
+          "EventTypeCode": "Coverage",
+          "EventTypeReasonCode": "LossOfSpousesBenefitEligibility",
+          "EventDate": "2020-06-26",
+          "TransactionDate": "2020-06-26"
+        },
+        "Producer": {
+          "ProducerPartyID": 15,
+          "ProducerFirstName": "Lyle",
+          "ProducerLastName": "Griffin",
+          "ProducerLicense": {
+            "ProducerLicenseID": "0_15",
+            "ProducerLicenseTypeCode": "LifeHealth",
+            "ProducerLicenseStateProvinceCode": "UT",
+            "ProducerLicenseNumber": "LG_LIC"
+          }
+        },
+        "Coverage": {
+          "CoverageID": 2427308,
+          "GroupPolicyNumber": 2348752,
+          "ProductTypeCode": "SavingsSpendingAccounts",
+          "BenefitPlanIdentifier": "DFSA",
+          "BenefitClassIdentifier": 1,
+          "BillGroupIdentifier": 1,
+          "OriginalCoverageEffectiveDate": "2019-10-01",
+          "CoverageEffectiveDate": "2020-07-01",
+          "CoverageTierCode": "Employee",
+          "BenefitCalculationMethodCode": "FlatAmount",
+          "BenefitAmount": 1025,
+          "EmployeeContributionCode": "EmployeePartial",
+          "EmployeePremiumContributionAmount": 25,
+          "EmployerPremiumContributionAmount": 1.5,
+          "TotalPlanPremiumAmount": 26.5,
+          "PremiumModeQuantity": 24,
+          "PreTaxCode": "PreTax",
+          "CarrierID": 22,
+          "CoverageInsured": {
+            "InsuredPartyID": 1801316,
+            "PrimaryInsuredIndicator": true,
+            "InsuredCoverageEffectiveDate": "2019-10-01"
+          },
+          "CoverageEventID": "CE2921626",
+          "CoverageCommissionSplit": {
+            "CarrierProducerNumberID": "22_15",
+            "CompensationSplitPercent": 100
+          },
+          "EnrollmentInformationID": 1009480,
+          "CoverageContribution": {
+            "ContributionLimitTypeCode": "Single",
+            "PlanYearEmployeeContributionAmount": 600,
+            "PlanYearEmployerContributionAmount": 36,
+            "ToDateEmployeeContributionAmount": 475,
+            "ToDateEmployerContributionAmount": 28.5,
+            "ContributionsRemainingQuantity": 5
+          }
+        }
+      }
+    },
+    "Audit": {
+      "AuditID": 21949,
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1,
+      "DependentRecordQuantity": 0,
+      "OtherPartyRecordQuantity": 0,
+      "BeneficiaryGroupRecordQuantity": 0,
+      "EventRecordQuantity": 1,
+      "CoverageRecordQuantity": 1,
+      "CoverageRiderRecordQuantity": 0
+    }
+  }
+}
+```
+##ExistingCoverageCancelationTermination
+
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "9824059f-374a-428c-b4da-881cc14807ca",
+    "SenderName": "SELERIX",
+    "SenderPlatformName": "BenSelect",
+    "ReceiverName": "Optum",
+    "CreationDateTime": "2020-07-30T20:50:32.0071625Z",
+    "TestProductionCode": "Test",
+    "TransmissionTypeCode": "ChangesOnly",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": 22,
+      "CarrierName": "Flex America"
+    },
+    "Employer": {
+      "EmployerPartyID": 1597,
+      "FederalEmployerIdentificationNumber": 456789999,
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": 22,
+        "MasterAgreementNumber": "",
+        "CarrierID": 22
+      },
+      "EmployerName": "National Health ACA",
+      "EmployerAddress": {
+        "FirstLineAddress": "2851 Craig Dr.",
+        "CityName": "McKinney",
+        "StateProvinceCode": "TX",
+        "PostalCode": 75070,
+        "CountryCode": "USA"
+      },
+      "Employee": {
+        "EmployeePartyID": 1801424,
+        "EmployeeSocialSecurityNumber": 998780796,
+        "EmployeeIdentifier": 80797,
+        "EmployeeName": {
+          "FirstName": "Laura",
+          "LastName": "Bonner"
+        },
+        "EmployeeGenderCode": "Female",
+        "EmployeeBirthDate": "1949-09-09",
+        "MaritalStatusCode": "Unknown",
+        "EmployeeMailingAddress": {
+          "FirstLineAddress": "7 S Helmuth St",
+          "CityName": "Baton Rouge",
+          "StateProvinceCode": "LA",
+          "PostalCode": 70804,
+          "CountryCode": "USA"
+        },
+        "EmployeeHomeAddress": {
+          "FirstLineAddress": "7 S Helmuth St",
+          "CityName": "Baton Rouge",
+          "StateProvinceCode": "LA",
+          "PostalCode": 70804,
+          "CountryCode": "USA"
+        },
+        "EmployeeWorkAddress": {
+          "FirstLineAddress": "987 Main St.",
+          "CityName": "Baton Rouge",
+          "StateProvinceCode": "LA",
+          "PostalCode": 87348,
+          "CountryCode": "USA"
+        },
+        "EmployeeEmail": "Laura.Bonner@demo-me.com",
+        "EmploymentInformation": {
+          "OriginalHireDate": "1981-08-17",
+          "MostRecentHireDate": "1981-08-17",
+          "EmploymentTypeCode": "FullTime",
+          "EmploymentStatusCode": "Terminated",
+          "TerminationDate": "2020-06-28",
+          "TerminationReasonCode": "Layoff",
+          "JobTitleText": "RN",
+          "OccupationText": "RN",
+          "WorkLocationText": "LOUISIANA",
+          "PayrollDeductionFrequencyQuantity": 24,
+          "PayrollFrequencyQuantity": 26,
+          "EmploymentIncome": [
+            {
+              "IncomeTypeCode": "Salary",
+              "IncomeAmount": 31200,
+              "IncomeModeCode": "Annual",
+              "IncomeEffectiveDate": "1981-08-17"
+            },
+            {
+              "IncomeTypeCode": "BenefitSalary",
+              "IncomeAmount": 31200,
+              "IncomeModeCode": "Annual",
+              "IncomeEffectiveDate": "1981-08-17"
+            }
+          ]
+        },
+        "EnrollmentInformation": {
+          "EnrollmentInformationID": 1007055,
+          "EnrollmentMethodCode": "InternetOrSelfService"
+        },
+        "Event": {
+          "EventID": "EE758860",
+          "EventTypeCode": "Employment",
+          "EventTypeReasonCode": "Termination",
+          "EventDate": "2020-06-28",
+          "TransactionDate": "2020-06-30"
+        },
+        "EmployeeEventID": "EE758860",
+        "Producer": {
+          "ProducerPartyID": 15,
+          "ProducerFirstName": "Lyle",
+          "ProducerLastName": "Griffin"
+        },
+        "Coverage": {
+          "CoverageID": 2424454,
+          "GroupPolicyNumber": 2348752,
+          "ProductTypeCode": "SavingsSpendingAccounts",
+          "BenefitPlanIdentifier": "HFSA",
+          "BenefitClassIdentifier": 1,
+          "BillGroupIdentifier": 1,
+          "CoverageEffectiveDate": "2019-10-01",
+          "CoverageTerminationDate": "2020-06-28",
+          "CoverageTierCode": "Employee",
+          "BenefitCalculationMethodCode": "FlatAmount",
+          "BenefitAmount": 300,
+          "EmployeeContributionCode": "EmployeePaid",
+          "EmployeePremiumContributionAmount": 12.5,
+          "EmployerPremiumContributionAmount": 0,
+          "TotalPlanPremiumAmount": 12.5,
+          "PremiumModeQuantity": 24,
+          "PreTaxCode": "PreTax",
+          "CarrierID": 22,
+          "CoverageInsured": {
+            "InsuredPartyID": 1801424,
+            "PrimaryInsuredIndicator": true,
+            "InsuredCoverageEffectiveDate": "2019-10-01",
+            "InsuredCoverageTerminationDate": "2020-06-28"
+          },
+          "CoverageEventID": "EE758860",
+          "CoverageCommissionSplit": {
+            "CarrierProducerNumberID": "22_15",
+            "CompensationSplitPercent": 100
+          },
+          "EnrollmentInformationID": 1007055,
+          "CoverageContribution": {
+            "ContributionLimitTypeCode": "Single",
+            "PlanYearEmployeeContributionAmount": 300,
+            "PlanYearEmployerContributionAmount": 0,
+            "ToDateEmployeeContributionAmount": 237.5,
+            "ToDateEmployerContributionAmount": 0,
+            "ContributionsRemainingQuantity": 5
+          }
+        }
+      }
+    },
+    "Audit": {
+      "AuditID": 21953,
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1,
+      "DependentRecordQuantity": 0,
+      "OtherPartyRecordQuantity": 0,
+      "BeneficiaryGroupRecordQuantity": 0,
+      "EventRecordQuantity": 1,
+      "CoverageRecordQuantity": 1,
+      "CoverageRiderRecordQuantity": 0
+    }
+  }
+}
+```
 
 

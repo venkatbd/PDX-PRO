@@ -1,5 +1,1342 @@
 #CoverageTermination
 ##CarrierInitiated-EmployeeCancelsTerminatesCoverage
+
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "c9fcc147-2b65-48cb-925c-9f898a381818",
+    "SenderName": "XYZ Carrier",
+    "SenderPlatformName": "XYZ System",
+    "ReceiverName": "ABC Tech Partner",
+    "CreationDateTime": "2020-03-27T21:56:36.2619791Z",
+    "TestProductionCode": "Test",
+    "TransmissionTypeCode": "FullFile",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": 1234,
+      "CarrierName": "XYZ Carrier"
+    },
+    "Employer": {
+      "EmployerPartyID": 1010,
+      "FederalEmployerIdentificationNumber": "99-9999999",
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": "AS-M009-87700",
+        "MasterAgreementNumber": "M009-87700",
+        "CarrierID": 1234
+      },
+      "EmployerName": "Supermarket GoodTimes",
+      "EmployerAddress": {
+        "FirstLineAddress": "1234 Food Street",
+        "CityName": "Oklahoma City",
+        "StateProvinceCode": "OK",
+        "PostalCode": 73112
+      },
+      "Employee": {
+        "EmployeePartyID": 1774744,
+        "EmployeeSocialSecurityNumber": "998-70-4567",
+        "EmployeeIdentifier": "CC.1",
+        "EmployeeName": {
+          "FirstName": "Don",
+          "LastName": "Quixote"
+        },
+        "EmployeeGenderCode": "Male",
+        "EmployeeBirthDate": "1897-04-01",
+        "MaritalStatusCode": "Married",
+        "EmployeeTobaccoUseCode": "N",
+        "EmployeeHomePhone": 8005257897,
+        "EmployeeWorkPhone": 4051234567,
+        "EmployeeMobilePhone": 8005257897,
+        "EmployeeMailingAddress": {
+          "FirstLineAddress": "412 Calle Violete",
+          "CityName": "Alcala De Henares",
+          "StateProvinceCode": "OK",
+          "PostalCode": 74135
+        },
+        "EmployeeHomeAddress": {
+          "FirstLineAddress": "412 Calle Violete",
+          "CityName": "Alcala De Henares",
+          "StateProvinceCode": "OK",
+          "PostalCode": 74135
+        },
+        "EmployeeWorkAddress": {
+          "FirstLineAddress": "7412 Sweat Shop Lane",
+          "CityName": "Ada",
+          "StateProvinceCode": "OK",
+          "PostalCode": 74820
+        },
+        "EmployeeEmail": "DonQ@sweatshops.com",
+        "EmployeeAlternateEmail": "DonQ@sweatshops.com",
+        "EmploymentInformation": {
+          "OriginalHireDate": "2019-07-20",
+          "MostRecentHireDate": "2019-07-20",
+          "ExemptCode": "Exempt",
+          "EmploymentTypeCode": "FullTime",
+          "EmploymentStatusCode": "Terminated",
+          "JobTitleText": "Spanish Cultural Teacher",
+          "OccupationText": "Spanish Cultural Teacher",
+          "WorkHoursQuantity": 40,
+          "WorkHoursFrequencyCode": "Weekly",
+          "WorkLocationText": "Corporate",
+          "PayrollDeductionFrequencyQuantity": 26,
+          "PayrollFrequencyQuantity": 26,
+          "EmploymentIncome": {
+            "IncomeTypeCode": "Salary",
+            "IncomeAmount": 50000,
+            "IncomeModeCode": "Annual",
+            "IncomeEffectiveDate": "2019-07-20"
+          }
+        },
+        "Event": {
+          "EventID": "CCEVT001",
+          "EventTypeCode": "Coverage",
+          "EventTypeReasonCode": "Termination",
+          "EventDate": "2020-04-24",
+          "TransactionDate": "2020-04-24"
+        },
+        "EmployeeEventID": "EEEVT001",
+        "Coverage": {
+          "CoverageID": "COV001",
+          "GroupPolicyNumber": 219524,
+          "ProductTypeCode": "Hospital",
+          "BenefitPlanIdentifier": "Hospital Indemnity",
+          "BenefitClassIdentifier": 1,
+          "BenefitSubClassIdentifier": 3,
+          "BillGroupIdentifier": 1,
+          "OriginalCoverageEffectiveDate": "2019-08-20",
+          "CoverageEffectiveDate": "2019-08-20",
+          "CoverageTierCode": "Employee",
+          "BenefitCalculationMethodCode": "FlatAmount",
+          "BenefitAmount": 5000,
+          "EmployeeContributionCode": "EmployeePaid",
+          "EmployeePremiumContributionAmount": 2,
+          "EmployerPremiumContributionAmount": 0,
+          "TotalPlanPremiumAmount": 2,
+          "PaymentMethodCode": "PayrollDeduction",
+          "PremiumModeQuantity": 26,
+          "PreTaxCode": "PreTax",
+          "TobaccoUseIndicator": false,
+          "TakeOverCoverageIndicator": false,
+          "CarrierID": 1234,
+          "ElectedCoverage": {
+            "ElectedCoverageTierCode": "Employee",
+            "ElectedBenefitCalculationMethodCode": "FlatAmount",
+            "ElectedBenefitAmount": 2500,
+            "ElectedBenefitFactor": 0,
+            "ElectedEmployeeContributionCode": "EmployeePaid",
+            "ElectedTotalPlanPremiumAmount": 1,
+            "ElectedCoverageInsured": {
+              "InsuredPartyID": 1522222,
+              "PrimaryInsuredIndicator": false,
+              "TobaccoUseIndicator": false,
+              "InsuredCoverageEffectiveDate": "2019-08-20"
+            }
+          },
+          "CoverageInsured": {
+            "InsuredPartyID": 1522222,
+            "PrimaryInsuredIndicator": false,
+            "TobaccoUseIndicator": false,
+            "InsuredCoverageEffectiveDate": "2019-08-20"
+          },
+          "CoverageEventID": "COVID001"
+        }
+      }
+    },
+    "Audit": {
+      "AuditID": "Audit1234",
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1,
+      "DependentRecordQuantity": 0,
+      "OtherPartyRecordQuantity": 0,
+      "BeneficiaryGroupRecordQuantity": 0,
+      "EventRecordQuantity": 1,
+      "CoverageRecordQuantity": 1,
+      "CoverageRiderRecordQuantity": 0,
+      "EmployeeFormRecordQuantity": 0
+    }
+  }
+}
+```
 ##OpenEnrollmentCoverageTerminations
+
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "2020-05-15-11.36.42.895000",
+    "SenderName": "ADPSLC",
+    "SenderPlatformName": "CES 6.2",
+    "ReceiverName": "MYCARRIER",
+    "CreationDateTime": "2020-05-15T11:36:42",
+    "TestProductionCode": "Test",
+    "TransmissionTypeCode": "FullFile",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": "MYCARRIER_ID",
+      "CarrierName": "MYCARRIER"
+    },
+    "Employer": {
+      "EmployerPartyID": "PARTYID",
+      "FederalEmployerIdentificationNumber": "12-3456789",
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": "TBD",
+        "MasterAgreementNumber": "INT-123456",
+        "CarrierID": "MYCARRIER_ID"
+      },
+      "EmployerName": "My Employer",
+      "EmployerAddress": {
+        "FirstLineAddress": "24490 Eureka Ave",
+        "CityName": "Warren",
+        "StateProvinceCode": "MI",
+        "PostalCode": 48091,
+        "CountryCode": "US"
+      },
+      "Employee": [
+        {
+          "EmployeePartyID": 123456,
+          "EmployeeSocialSecurityNumber": 111101111,
+          "EmployeeIdentifier": 916061,
+          "EmployeeName": {
+            "FirstName": "COOPER",
+            "MiddleName": "D",
+            "LastName": "HERNANDEZ"
+          },
+          "EmployeeGenderCode": "Male",
+          "EmployeeBirthDate": "1992-06-13",
+          "MaritalStatusCode": "Single",
+          "EmployeeHomePhone": 6830001234,
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "2409 Main Street",
+            "CityName": "TALAHASSEE",
+            "StateProvinceCode": "FL",
+            "PostalCode": 33844,
+            "CountryCode": "US"
+          },
+          "EmployeeAlternateEmail": "cooper.hernandez@myemployer.com",
+          "EmploymentInformation": {
+            "OriginalHireDate": "2016-06-13",
+            "EmploymentTypeCode": "FullTime",
+            "EmploymentStatusCode": "Active",
+            "EmploymentIncome": {
+              "IncomeTypeCode": "Salary",
+              "IncomeAmount": 43680,
+              "IncomeModeCode": "Annual",
+              "IncomeEffectiveDate": "2018-04-01"
+            }
+          },
+          "Event": {
+            "EventID": "E916061O001",
+            "EventTypeCode": "Coverage",
+            "EventTypeReasonCode": "VoluntaryCancel",
+            "EventDate": "2020-05-15"
+          },
+          "Coverage": {
+            "CoverageID": "O001",
+            "GroupPolicyNumber": "R1234567",
+            "ProductTypeCode": "Accident",
+            "BenefitPlanIdentifier": 815,
+            "CoverageEffectiveDate": "2019-07-01",
+            "CoverageTerminationDate": "2020-05-15",
+            "CoverageTierCode": "Employee",
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 32.53,
+            "TotalPlanPremiumAmount": 32.53,
+            "PaymentMethodCode": "PayrollDeduction",
+            "PremiumModeQuantity": 12,
+            "CarrierID": "MYCARRIER_ID",
+            "CoverageInsured": {
+              "InsuredPartyID": 123456,
+              "PrimaryInsuredIndicator": true,
+              "InsuredCoverageEffectiveDate": "2019-07-01",
+              "InsuredCoverageTerminationDate": "2020-05-31"
+            },
+            "CoverageEventID": "E916061O001",
+            "CoverageTransactionDate": "2020-06-01"
+          }
+        },
+        {
+          "EmployeePartyID": 123457,
+          "EmployeeSocialSecurityNumber": 111101111,
+          "EmployeeIdentifier": 916062,
+          "EmployeeName": {
+            "FirstName": "JOHNSON",
+            "MiddleName": "D",
+            "LastName": "JAMES"
+          },
+          "EmployeeGenderCode": "Male",
+          "EmployeeBirthDate": "1992-08-12",
+          "MaritalStatusCode": "Single",
+          "EmployeeHomePhone": 6830009999,
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "48 West Street",
+            "CityName": "TALAHASSEE",
+            "StateProvinceCode": "FL",
+            "PostalCode": 33844,
+            "CountryCode": "US"
+          },
+          "EmployeeAlternateEmail": "johnson.james@myemployer.com",
+          "EmploymentInformation": {
+            "OriginalHireDate": "2016-06-13",
+            "EmploymentTypeCode": "FullTime",
+            "EmploymentStatusCode": "Active",
+            "EmploymentIncome": {
+              "IncomeTypeCode": "Salary",
+              "IncomeAmount": 43680,
+              "IncomeModeCode": "Annual",
+              "IncomeEffectiveDate": "2018-04-01"
+            }
+          },
+          "Event": {
+            "EventID": "E916061Q009",
+            "EventTypeCode": "Coverage",
+            "EventTypeReasonCode": "Cancellation",
+            "EventDate": "2020-05-15"
+          },
+          "Coverage": {
+            "CoverageID": "Q002",
+            "GroupPolicyNumber": "R1234567",
+            "ProductTypeCode": "CriticalIllness",
+            "BenefitPlanIdentifier": 796,
+            "CoverageEffectiveDate": "2019-07-01",
+            "CoverageTerminationDate": "2020-05-31",
+            "BenefitAmount": 20000,
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 9.8,
+            "TotalPlanPremiumAmount": 9.8,
+            "PaymentMethodCode": "PayrollDeduction",
+            "PremiumModeQuantity": 12,
+            "CarrierID": "MYCARRIER_ID",
+            "CoverageInsured": {
+              "InsuredPartyID": 123457,
+              "PrimaryInsuredIndicator": true,
+              "InsuredCoverageEffectiveDate": "2019-07-01",
+              "InsuredCoverageTerminationDate": "2020-05-31"
+            },
+            "CoverageEventID": "E916061Q009",
+            "CoverageTransactionDate": "2020-06-01"
+          }
+        },
+        {
+          "EmployeePartyID": 916063,
+          "EmployeeSocialSecurityNumber": 111101111,
+          "EmployeeIdentifier": 123458,
+          "EmployeeName": {
+            "FirstName": "Miller",
+            "MiddleName": "T",
+            "LastName": "Bob"
+          },
+          "EmployeeGenderCode": "Male",
+          "EmployeeBirthDate": "1970-06-13",
+          "MaritalStatusCode": "Single",
+          "EmployeeHomePhone": 6835554444,
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "89 East Main Street",
+            "CityName": "TALAHASSEE",
+            "StateProvinceCode": "FL",
+            "PostalCode": 33844,
+            "CountryCode": "US"
+          },
+          "EmployeeAlternateEmail": "bob.miller@myemployer.com",
+          "EmploymentInformation": {
+            "OriginalHireDate": "2016-06-14",
+            "EmploymentTypeCode": "FullTime",
+            "EmploymentStatusCode": "Active",
+            "EmploymentIncome": {
+              "IncomeTypeCode": "Salary",
+              "IncomeAmount": 43680,
+              "IncomeModeCode": "Annual",
+              "IncomeEffectiveDate": "2018-04-01"
+            }
+          },
+          "Event": {
+            "EventID": "E916061O099",
+            "EventTypeCode": "Coverage",
+            "EventTypeReasonCode": "ChildNoLongerEligible",
+            "EventDate": "2020-05-15"
+          },
+          "EmployeeEventID": "E916061O099",
+          "Dependent": [
+            {
+              "DependentPartyID": 111111111,
+              "DependentSocialSecurityNumber": 100020000,
+              "DependentIdentifier": 1,
+              "DependentName": {
+                "FirstName": "Peggy",
+                "LastName": "Miller"
+              },
+              "DependentRelationshipTypeCode": "Spouse",
+              "DependentGenderCode": "Female",
+              "DependentBirthDate": "1976-09-16",
+              "DisabilityIndicator": false
+            },
+            {
+              "DependentPartyID": 111121111,
+              "DependentSocialSecurityNumber": 111121111,
+              "DependentIdentifier": 2,
+              "DependentName": {
+                "FirstName": "Penny",
+                "LastName": "Miller"
+              },
+              "DependentRelationshipTypeCode": "Child",
+              "DependentGenderCode": "Female",
+              "DependentBirthDate": "2013-05-08",
+              "DisabilityIndicator": false
+            },
+            {
+              "DependentPartyID": 111131111,
+              "DependentSocialSecurityNumber": 111131111,
+              "DependentIdentifier": 3,
+              "DependentName": {
+                "FirstName": "Corey",
+                "LastName": "Miller"
+              },
+              "DependentRelationshipTypeCode": "Child",
+              "DependentGenderCode": "Male",
+              "DependentBirthDate": "1994-06-11",
+              "DisabilityIndicator": false,
+              "DependentEventID": "E916061O099"
+            }
+          ],
+          "Coverage": {
+            "CoverageID": "O001",
+            "GroupPolicyNumber": "R1234567",
+            "ProductTypeCode": "Accident",
+            "BenefitPlanIdentifier": 815,
+            "CoverageEffectiveDate": "2019-07-01",
+            "CoverageTierCode": "EmployeeFamily",
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 32.53,
+            "TotalPlanPremiumAmount": 32.53,
+            "PaymentMethodCode": "PayrollDeduction",
+            "PremiumModeQuantity": 12,
+            "CarrierID": "MYCARRIER_ID",
+            "CoverageInsured": [
+              {
+                "InsuredPartyID": 916063,
+                "PrimaryInsuredIndicator": true,
+                "InsuredCoverageEffectiveDate": "2019-07-01"
+              },
+              {
+                "InsuredPartyID": 111111111,
+                "PrimaryInsuredIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-07-01"
+              },
+              {
+                "InsuredPartyID": 111121111,
+                "PrimaryInsuredIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-07-01"
+              },
+              {
+                "InsuredPartyID": 111131111,
+                "PrimaryInsuredIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-07-01",
+                "InsuredCoverageTerminationDate": "2020-05-31"
+              }
+            ],
+            "CoverageEventID": "E916061O099",
+            "CoverageTransactionDate": "2020-06-01"
+          }
+        },
+        {
+          "EmployeePartyID": 1772641,
+          "EmployeeSocialSecurityNumber": 998700290,
+          "EmployeeIdentifier": 291,
+          "EmployeeName": {
+            "FirstName": "Nina",
+            "LastName": "McCain"
+          },
+          "EmployeeGenderCode": "Female",
+          "EmployeeBirthDate": "1974-10-03",
+          "MaritalStatusCode": "Married",
+          "EmployeeHomePhone": 6017588466,
+          "EmployeeWorkPhone": 6019145568,
+          "EmployeeMobilePhone": 6012183447,
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "6 N Glyn Hwy",
+            "CityName": "Jackson",
+            "StateProvinceCode": "MS",
+            "PostalCode": 39215
+          },
+          "EmployeeHomeAddress": {
+            "FirstLineAddress": "6 N Glyn Hwy",
+            "CityName": "Jackson",
+            "StateProvinceCode": "MS",
+            "PostalCode": 39215
+          },
+          "EmployeeWorkAddress": {
+            "FirstLineAddress": "31 Riverside Plaza",
+            "CityName": "Jackson",
+            "StateProvinceCode": "MS",
+            "PostalCode": 81898
+          },
+          "EmployeeEmail": "Nina.McCain@demo-me.com",
+          "EmploymentInformation": {
+            "OriginalHireDate": "2017-08-18",
+            "MostRecentHireDate": "2017-08-18",
+            "EmploymentTypeCode": "FullTime",
+            "EmploymentStatusCode": "Active",
+            "JobTitleText": "Assistant Director of Nursing",
+            "OccupationText": "Assistant Director of Nursing",
+            "WorkLocationText": "Mississippi Medical Center",
+            "PayrollDeductionFrequencyQuantity": 26,
+            "PayrollFrequencyQuantity": 26,
+            "EmploymentIncome": {
+              "IncomeTypeCode": "BenefitSalary",
+              "IncomeAmount": 60000,
+              "IncomeModeCode": "Annual",
+              "IncomeEffectiveDate": "2018-04-01"
+            }
+          },
+          "Event": [
+            {
+              "EventID": "EE735236",
+              "EventTypeCode": "Coverage",
+              "EventTypeReasonCode": "VoluntaryCancel",
+              "EventDate": "2020-05-15"
+            },
+            {
+              "EventID": "EE735999",
+              "EventTypeCode": "Coverage",
+              "EventTypeReasonCode": "LossOfSpousesBenefitEligibility",
+              "EventDate": "2020-05-15"
+            }
+          ],
+          "Dependent": {
+            "DependentPartyID": 1772642,
+            "DependentSocialSecurityNumber": 998763918,
+            "DependentName": {
+              "FirstName": "Ken",
+              "LastName": "McCain"
+            },
+            "DependentRelationshipTypeCode": "Spouse",
+            "DependentGenderCode": "Male",
+            "DependentBirthDate": "1965-09-28",
+            "DependentEventID": "EE735999"
+          },
+          "Coverage": [
+            {
+              "CoverageID": 1111111,
+              "ProductTypeCode": "Life",
+              "BenefitPlanIdentifier": "VOLLIFE",
+              "BenefitClassIdentifier": 1,
+              "BenefitSubClassIdentifier": "",
+              "BillGroupIdentifier": 101,
+              "BillSubGroupIdentifier": 765,
+              "CoverageEffectiveDate": "2019-06-01",
+              "CoverageTerminationDate": "2020-05-31",
+              "CoverageTierCode": "Employee",
+              "BenefitCalculationMethodCode": "FlatAmount",
+              "BenefitAmount": 50000,
+              "BenefitFactor": 0,
+              "EmployeeContributionCode": "EmployeePaid",
+              "EmployeePremiumContributionAmount": 9.83,
+              "EmployerPremiumContributionAmount": 0,
+              "TotalPlanPremiumAmount": 9.83,
+              "BenefitEarningsAmount": 0,
+              "BenefitModeQuantity": 0,
+              "PaymentMethodCode": "PayrollDeduction",
+              "PremiumModeQuantity": 26,
+              "PreTaxCode": "PreTax",
+              "IssueAgeQuantity": 0,
+              "TobaccoUseIndicator": true,
+              "TakeOverCoverageIndicator": true,
+              "CarrierID": "MYCARRIER_ID",
+              "ElectedCoverage": {
+                "ElectedCoverageTierCode": "Employee",
+                "ElectedBenefitCalculationMethodCode": "FlatAmount",
+                "ElectedBenefitAmount": 100000,
+                "ElectedBenefitFactor": 0,
+                "ElectedEmployeeContributionCode": "EmployeePaid",
+                "ElectedEmployeePremiumContributionAmount": 19.66,
+                "ElectedEmployerPremiumContributionAmount": 0,
+                "ElectedTotalPlanPremiumAmount": 19.66,
+                "ElectedCoverageInsured": {
+                  "InsuredPartyID": 1772641,
+                  "PrimaryInsuredIndicator": true,
+                  "TobaccoUseIndicator": true,
+                  "InsuredCoverageEffectiveDate": "2019-04-05",
+                  "InsuredCoverageTerminationDate": "2020-05-31"
+                }
+              },
+              "CoverageInsured": {
+                "InsuredPartyID": 1772641,
+                "PrimaryInsuredIndicator": true,
+                "InsuredCoverageEffectiveDate": "2019-04-05",
+                "InsuredCoverageTerminationDate": "2020-05-31"
+              },
+              "CoverageEventID": "EE735236",
+              "CoverageTransactionDate": "2020-06-01"
+            },
+            {
+              "CoverageID": 2222222,
+              "ProductTypeCode": "Life",
+              "BenefitPlanIdentifier": "SPLIFE",
+              "BenefitClassIdentifier": 2,
+              "BillGroupIdentifier": 101,
+              "BillSubGroupIdentifier": 766,
+              "CoverageEffectiveDate": "2019-04-05",
+              "CoverageTerminationDate": "2020-05-31",
+              "CoverageTierCode": "SpouseOnly",
+              "BenefitCalculationMethodCode": "FlatAmount",
+              "BenefitAmount": 10000,
+              "BenefitFactor": 0,
+              "EmployeeContributionCode": "EmployeePaid",
+              "EmployeePremiumContributionAmount": 8.72,
+              "EmployerPremiumContributionAmount": 0,
+              "TotalPlanPremiumAmount": 8.72,
+              "BenefitEarningsAmount": 0,
+              "BenefitModeQuantity": 0,
+              "PreTaxCode": "PreTax",
+              "IssueAgeQuantity": 0,
+              "TobaccoUseIndicator": false,
+              "TakeOverCoverageIndicator": true,
+              "CarrierID": 9803,
+              "ElectedCoverage": {
+                "ElectedCoverageTierCode": "SpouseOnly",
+                "ElectedBenefitCalculationMethodCode": "FlatAmount",
+                "ElectedBenefitAmount": 200000,
+                "ElectedBenefitFactor": 0,
+                "ElectedEmployeeContributionCode": "EmployeePaid",
+                "ElectedEmployeePremiumContributionAmount": 17.44,
+                "ElectedEmployerPremiumContributionAmount": 0,
+                "ElectedTotalPlanPremiumAmount": 17.44,
+                "ElectedCoverageInsured": {
+                  "InsuredPartyID": 1772642,
+                  "PrimaryInsuredIndicator": false,
+                  "TobaccoUseIndicator": false,
+                  "InsuredCoverageEffectiveDate": "2019-04-05",
+                  "InsuredCoverageTerminationDate": "2020-05-31"
+                }
+              },
+              "CoverageInsured": {
+                "InsuredPartyID": 1772642,
+                "PrimaryInsuredIndicator": false,
+                "TobaccoUseIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-04-05",
+                "InsuredCoverageTerminationDate": "2020-05-31"
+              },
+              "CoverageEventID": "EE735999",
+              "CoverageTransactionDate": "2020-06-01"
+            }
+          ]
+        }
+      ]
+    },
+    "Audit": {
+      "AuditID": "2020-05-15-11.36.42.895000",
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 5,
+      "DependentRecordQuantity": 4,
+      "EventRecordQuantity": 7,
+      "CoverageRecordQuantity": 5
+    }
+  }
+}
+```
 ##OpenEnrollmentCoverageTerminations-legal
+
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "2019-08-07-21.24.25.063000",
+    "SenderName": "ABC Tech Partner",
+    "SenderPlatformName": "ABC Platform",
+    "ReceiverName": "MYCARRIER",
+    "CreationDateTime": "2019-08-07T21:24:25",
+    "TestProductionCode": "Test",
+    "TransmissionTypeCode": "FullFile",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": 123456,
+      "CarrierName": "MYCARRIER"
+    },
+    "Employer": {
+      "EmployerPartyID": "PARTYID",
+      "FederalEmployerIdentificationNumber": "12-3456789",
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": "TBD",
+        "MasterAgreementNumber": "INT-123456",
+        "CarrierID": 123456
+      },
+      "EmployerName": "MyEmployer",
+      "EmployerAddress": {
+        "FirstLineAddress": "24490 Eureka Ave",
+        "CityName": "Warren",
+        "StateProvinceCode": "MI",
+        "PostalCode": 48091,
+        "CountryCode": "US"
+      },
+      "Employee": {
+        "EmployeePartyID": 211713,
+        "EmployeeSocialSecurityNumber": 999909999,
+        "EmployeeIdentifier": 211713,
+        "EmployeeName": {
+          "FirstName": "CAROLYN",
+          "LastName": "OWENSTEST"
+        },
+        "EmployeeGenderCode": "Female",
+        "EmployeeBirthDate": "1976-05-05",
+        "MaritalStatusCode": "Married",
+        "EmployeeHomePhone": 4694547050,
+        "EmployeeMailingAddress": {
+          "FirstLineAddress": "2402 Main Street",
+          "CityName": "AUSTIN",
+          "StateProvinceCode": "TX",
+          "PostalCode": 75082,
+          "CountryCode": "US"
+        },
+        "EmploymentInformation": {
+          "OriginalHireDate": "2017-06-05",
+          "EmploymentTypeCode": "FullTime",
+          "EmploymentStatusCode": "Active",
+          "EmploymentIncome": {
+            "IncomeTypeCode": "Salary",
+            "IncomeAmount": 48672,
+            "IncomeModeCode": "Annual",
+            "IncomeEffectiveDate": "2018-04-01"
+          }
+        },
+        "Event": {
+          "EventID": "E211713O001",
+          "EventTypeCode": "Coverage",
+          "EventTypeReasonCode": "Termination",
+          "EventDate": "2019-06-07"
+        },
+        "EmployeeEventID": "E211713O001",
+        "Dependent": [
+          {
+            "DependentPartyID": 999919999,
+            "DependentSocialSecurityNumber": 999919999,
+            "DependentIdentifier": 1,
+            "DependentName": {
+              "FirstName": "CARRIE",
+              "MiddleName": "K",
+              "LastName": "OWENSTEST"
+            },
+            "DependentRelationshipTypeCode": "Child",
+            "DependentGenderCode": "Female",
+            "DependentBirthDate": "2007-07-27",
+            "DisabilityIndicator": false
+          },
+          {
+            "DependentPartyID": 999929999,
+            "DependentSocialSecurityNumber": 999929999,
+            "DependentIdentifier": 2,
+            "DependentName": {
+              "FirstName": "CELESTE",
+              "MiddleName": "K",
+              "LastName": "OWENSTEST"
+            },
+            "DependentRelationshipTypeCode": "Child",
+            "DependentGenderCode": "Female",
+            "DependentBirthDate": "2009-11-29",
+            "DisabilityIndicator": false
+          },
+          {
+            "DependentPartyID": 999939999,
+            "DependentSocialSecurityNumber": 999939999,
+            "DependentIdentifier": 3,
+            "DependentName": {
+              "FirstName": "COLE",
+              "LastName": "OWENSTEST"
+            },
+            "DependentRelationshipTypeCode": "Spouse",
+            "DependentGenderCode": "Male",
+            "DependentBirthDate": "1977-09-01",
+            "DisabilityIndicator": false
+          }
+        ],
+        "Coverage": {
+          "CoverageID": "O001",
+          "GroupPolicyNumber": "R1234567",
+          "ProductTypeCode": "Accident",
+          "BenefitPlanIdentifier": 815,
+          "CoverageEffectiveDate": "2019-03-04",
+          "CoverageTerminationDate": "2019-05-31",
+          "CoverageTierCode": "EmployeeFamily",
+          "EmployeeContributionCode": "EmployeePaid",
+          "EmployeePremiumContributionAmount": 32.53,
+          "TotalPlanPremiumAmount": 32.53,
+          "PaymentMethodCode": "PayrollDeduction",
+          "PremiumModeQuantity": 12,
+          "CarrierID": 123456,
+          "CoverageInsured": [
+            {
+              "InsuredPartyID": 211713,
+              "PrimaryInsuredIndicator": true,
+              "InsuredCoverageEffectiveDate": "2019-03-04",
+              "InsuredCoverageTerminationDate": "2019-05-31"
+            },
+            {
+              "InsuredPartyID": 999919999,
+              "PrimaryInsuredIndicator": false,
+              "InsuredCoverageEffectiveDate": "2019-03-04",
+              "InsuredCoverageTerminationDate": "2019-05-31"
+            },
+            {
+              "InsuredPartyID": 999929999,
+              "PrimaryInsuredIndicator": false,
+              "InsuredCoverageEffectiveDate": "2019-03-04",
+              "InsuredCoverageTerminationDate": "2019-05-31"
+            },
+            {
+              "InsuredPartyID": 999939999,
+              "PrimaryInsuredIndicator": false,
+              "InsuredCoverageEffectiveDate": "2019-03-04",
+              "InsuredCoverageTerminationDate": "2019-05-31"
+            }
+          ],
+          "CoverageEventID": "E211713O001",
+          "CoverageRider": {
+            "CoverageRiderID": "LEGALEESPS",
+            "RiderIdentifier": "LEGALEESPSPREMIUM",
+            "RiderName": "Legal Employee and Spouse Rider",
+            "CoverageTierCode": "EmployeeSpouse",
+            "BenefitAmount": 60000,
+            "PreTaxCode": "PostTax",
+            "EmployeePremiumContributionAmount": 3.31,
+            "EmployerPremiumContributionAmount": 0
+          },
+          "CoverageTransactionDate": "2019-06-10"
+        }
+      }
+    },
+    "Audit": {
+      "AuditID": "2019-08-07-21.24.25.063000",
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1,
+      "DependentRecordQuantity": 3,
+      "EventRecordQuantity": 1,
+      "CoverageRecordQuantity": 1,
+      "CoverageRiderRecordQuantity": 1
+    }
+  }
+}
+```
 ##QLEPerpetualEnrollmentCoverageTerminations
+
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "2019-08-07-21.24.25.063000",
+    "SenderName": "ABC Tech Partner",
+    "SenderPlatformName": "ABC Platform",
+    "ReceiverName": "MYCARRIER",
+    "CreationDateTime": "2019-08-07T21:24:25",
+    "TestProductionCode": "Test",
+    "TransmissionTypeCode": "FullFile",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": 123456,
+      "CarrierName": "MYCARRIER"
+    },
+    "Employer": {
+      "EmployerPartyID": "PARTYID",
+      "FederalEmployerIdentificationNumber": "12-3456789",
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": "TBD",
+        "MasterAgreementNumber": "INT-123456",
+        "CarrierID": 123456
+      },
+      "EmployerName": "MyEmployer",
+      "EmployerAddress": {
+        "FirstLineAddress": "24490 Eureka Ave",
+        "CityName": "Warren",
+        "StateProvinceCode": "MI",
+        "PostalCode": 48091,
+        "CountryCode": "US"
+      },
+      "Employee": {
+        "EmployeePartyID": 211713,
+        "EmployeeSocialSecurityNumber": 999909999,
+        "EmployeeIdentifier": 211713,
+        "EmployeeName": {
+          "FirstName": "CAROLYN",
+          "LastName": "OWENSTEST"
+        },
+        "EmployeeGenderCode": "Female",
+        "EmployeeBirthDate": "1976-05-05",
+        "MaritalStatusCode": "Married",
+        "EmployeeHomePhone": 4694547050,
+        "EmployeeMailingAddress": {
+          "FirstLineAddress": "2402 Main Street",
+          "CityName": "AUSTIN",
+          "StateProvinceCode": "TX",
+          "PostalCode": 75082,
+          "CountryCode": "US"
+        },
+        "EmploymentInformation": {
+          "OriginalHireDate": "2017-06-05",
+          "EmploymentTypeCode": "FullTime",
+          "EmploymentStatusCode": "Active",
+          "EmploymentIncome": {
+            "IncomeTypeCode": "Salary",
+            "IncomeAmount": 48672,
+            "IncomeModeCode": "Annual",
+            "IncomeEffectiveDate": "2018-04-01"
+          }
+        },
+        "Event": {
+          "EventID": "E211713O001",
+          "EventTypeCode": "Coverage",
+          "EventTypeReasonCode": "Termination",
+          "EventDate": "2019-06-07"
+        },
+        "EmployeeEventID": "E211713O001",
+        "Dependent": [
+          {
+            "DependentPartyID": 999919999,
+            "DependentSocialSecurityNumber": 999919999,
+            "DependentIdentifier": 1,
+            "DependentName": {
+              "FirstName": "CARRIE",
+              "MiddleName": "K",
+              "LastName": "OWENSTEST"
+            },
+            "DependentRelationshipTypeCode": "Child",
+            "DependentGenderCode": "Female",
+            "DependentBirthDate": "2007-07-27",
+            "DisabilityIndicator": false
+          },
+          {
+            "DependentPartyID": 999929999,
+            "DependentSocialSecurityNumber": 999929999,
+            "DependentIdentifier": 2,
+            "DependentName": {
+              "FirstName": "CELESTE",
+              "MiddleName": "K",
+              "LastName": "OWENSTEST"
+            },
+            "DependentRelationshipTypeCode": "Child",
+            "DependentGenderCode": "Female",
+            "DependentBirthDate": "2009-11-29",
+            "DisabilityIndicator": false
+          },
+          {
+            "DependentPartyID": 999939999,
+            "DependentSocialSecurityNumber": 999939999,
+            "DependentIdentifier": 3,
+            "DependentName": {
+              "FirstName": "COLE",
+              "LastName": "OWENSTEST"
+            },
+            "DependentRelationshipTypeCode": "Spouse",
+            "DependentGenderCode": "Male",
+            "DependentBirthDate": "1977-09-01",
+            "DisabilityIndicator": false
+          }
+        ],
+        "Coverage": {
+          "CoverageID": "O001",
+          "GroupPolicyNumber": "R1234567",
+          "ProductTypeCode": "Accident",
+          "BenefitPlanIdentifier": 815,
+          "CoverageEffectiveDate": "2019-03-04",
+          "CoverageTerminationDate": "2019-05-31",
+          "CoverageTierCode": "EmployeeFamily",
+          "EmployeeContributionCode": "EmployeePaid",
+          "EmployeePremiumContributionAmount": 32.53,
+          "TotalPlanPremiumAmount": 32.53,
+          "PaymentMethodCode": "PayrollDeduction",
+          "PremiumModeQuantity": 12,
+          "CarrierID": 123456,
+          "CoverageInsured": [
+            {
+              "InsuredPartyID": 211713,
+              "PrimaryInsuredIndicator": true,
+              "InsuredCoverageEffectiveDate": "2019-03-04",
+              "InsuredCoverageTerminationDate": "2019-05-31"
+            },
+            {
+              "InsuredPartyID": 999919999,
+              "PrimaryInsuredIndicator": false,
+              "InsuredCoverageEffectiveDate": "2019-03-04",
+              "InsuredCoverageTerminationDate": "2019-05-31"
+            },
+            {
+              "InsuredPartyID": 999929999,
+              "PrimaryInsuredIndicator": false,
+              "InsuredCoverageEffectiveDate": "2019-03-04",
+              "InsuredCoverageTerminationDate": "2019-05-31"
+            },
+            {
+              "InsuredPartyID": 999939999,
+              "PrimaryInsuredIndicator": false,
+              "InsuredCoverageEffectiveDate": "2019-03-04",
+              "InsuredCoverageTerminationDate": "2019-05-31"
+            }
+          ],
+          "Transmission": {
+            "TransmissionGUID": "2020-05-15-11.36.42.895000",
+            "SenderName": "XYZ Tech Company",
+            "SenderPlatformName": "XYZ Platform",
+            "ReceiverName": "MYCARRIER",
+            "CreationDateTime": "2020-05-15T11:36:42",
+            "TestProductionCode": "Test",
+            "TransmissionTypeCode": "FullFile",
+            "SchemaVersionIdentifier": "1.3.2022.01.01",
+            "Carrier": {
+              "CarrierID": "MYCARRIER_ID",
+              "CarrierName": "MYCARRIER"
+            },
+            "Employer": {
+              "EmployerPartyID": "PARTYID",
+              "FederalEmployerIdentificationNumber": "12-3456789",
+              "CarrierMasterAgreementNumber": {
+                "CarrierMasterAgreementNumberID": "TBD",
+                "MasterAgreementNumber": "INT-123456",
+                "CarrierID": "MYCARRIER_ID"
+              },
+              "EmployerName": "My Employer",
+              "EmployerAddress": {
+                "FirstLineAddress": "24490 Eureka Ave",
+                "CityName": "Warren",
+                "StateProvinceCode": "MI",
+                "PostalCode": 48091,
+                "CountryCode": "US"
+              },
+              "Employee": [
+                {
+                  "EmployeePartyID": 991951,
+                  "EmployeeSocialSecurityNumber": 111101111,
+                  "EmployeeIdentifier": 9168971,
+                  "EmployeeName": {
+                    "FirstName": "DAVID",
+                    "MiddleName": "D",
+                    "LastName": "HERNANDEZ"
+                  },
+                  "EmployeeGenderCode": "Male",
+                  "EmployeeBirthDate": "1992-06-13",
+                  "MaritalStatusCode": "Divorced",
+                  "EmployeeHomePhone": 6830001234,
+                  "EmployeeMailingAddress": {
+                    "FirstLineAddress": "2425 Main Street",
+                    "CityName": "TALAHASSEE",
+                    "StateProvinceCode": "FL",
+                    "PostalCode": 33844,
+                    "CountryCode": "US"
+                  },
+                  "EmployeeEmail": "cooper.hernandez@myemployer.com",
+                  "EmploymentInformation": {
+                    "OriginalHireDate": "2016-06-13",
+                    "EmploymentTypeCode": "FullTime",
+                    "EmploymentStatusCode": "Active",
+                    "EmploymentIncome": {
+                      "IncomeTypeCode": "Salary",
+                      "IncomeAmount": 43680,
+                      "IncomeModeCode": "Annual",
+                      "IncomeEffectiveDate": "2018-04-01"
+                    }
+                  },
+                  "Event": [
+                    {
+                      "EventID": "E916998",
+                      "EventTypeCode": "Demographic",
+                      "EventTypeReasonCode": "DivorceLegalSeparation",
+                      "EventDate": "2020-05-15"
+                    },
+                    {
+                      "EventID": "E916998001",
+                      "EventTypeCode": "Coverage",
+                      "EventTypeReasonCode": "QualifyingLifeEventEnrollment",
+                      "EventDate": "2020-05-15"
+                    }
+                  ],
+                  "EmployeeEventID": "E916998",
+                  "Dependent": [
+                    {
+                      "DependentPartyID": 111111997,
+                      "DependentSocialSecurityNumber": 100020007,
+                      "DependentIdentifier": 91,
+                      "DependentName": {
+                        "FirstName": "JANET",
+                        "LastName": "HERNANDEZ"
+                      },
+                      "DependentRelationshipTypeCode": "Spouse",
+                      "DependentGenderCode": "Female",
+                      "DependentBirthDate": "1986-09-16",
+                      "DisabilityIndicator": false,
+                      "DependentEventID": "E916998"
+                    },
+                    {
+                      "DependentPartyID": 111121998,
+                      "DependentSocialSecurityNumber": 111121119,
+                      "DependentIdentifier": 92,
+                      "DependentName": {
+                        "FirstName": "SHERRY",
+                        "LastName": "HERNANDEZ"
+                      },
+                      "DependentRelationshipTypeCode": "Child",
+                      "DependentGenderCode": "Female",
+                      "DependentBirthDate": "2013-05-08",
+                      "DisabilityIndicator": false
+                    },
+                    {
+                      "DependentPartyID": 111131999,
+                      "DependentSocialSecurityNumber": 111131119,
+                      "DependentIdentifier": 93,
+                      "DependentName": {
+                        "FirstName": "MARTIN",
+                        "LastName": "HERNANDEZ"
+                      },
+                      "DependentRelationshipTypeCode": "Child",
+                      "DependentGenderCode": "Male",
+                      "DependentBirthDate": "2007-11-11",
+                      "DisabilityIndicator": false
+                    }
+                  ],
+                  "Coverage": {
+                    "CoverageID": "O001",
+                    "GroupPolicyNumber": "R1234567",
+                    "ProductTypeCode": "Accident",
+                    "BenefitPlanIdentifier": 815,
+                    "CoverageEffectiveDate": "2019-07-01",
+                    "CoverageTierCode": "EmployeeFamily",
+                    "EmployeeContributionCode": "EmployeePaid",
+                    "EmployeePremiumContributionAmount": 32.53,
+                    "TotalPlanPremiumAmount": 32.53,
+                    "PaymentMethodCode": "PayrollDeduction",
+                    "PremiumModeQuantity": 12,
+                    "CarrierID": "MYCARRIER_ID",
+                    "CoverageInsured": [
+                      {
+                        "InsuredPartyID": 991951,
+                        "PrimaryInsuredIndicator": true,
+                        "InsuredCoverageEffectiveDate": "2019-07-01"
+                      },
+                      {
+                        "InsuredPartyID": 111111997,
+                        "PrimaryInsuredIndicator": false,
+                        "InsuredCoverageEffectiveDate": "2019-07-01",
+                        "InsuredCoverageTerminationDate": "2020-05-31"
+                      },
+                      {
+                        "InsuredPartyID": 111121998,
+                        "PrimaryInsuredIndicator": false,
+                        "InsuredCoverageEffectiveDate": "2019-07-01"
+                      },
+                      {
+                        "InsuredPartyID": 111131999,
+                        "PrimaryInsuredIndicator": false,
+                        "InsuredCoverageEffectiveDate": "2019-07-01"
+                      }
+                    ],
+                    "CoverageEventID": "E916998001",
+                    "CoverageTransactionDate": "2020-06-01"
+                  }
+                },
+                {
+                  "EmployeePartyID": 1772641,
+                  "EmployeeSocialSecurityNumber": 998700290,
+                  "EmployeeIdentifier": 291,
+                  "EmployeeName": {
+                    "FirstName": "Nina",
+                    "LastName": "McCain"
+                  },
+                  "EmployeeGenderCode": "Female",
+                  "EmployeeBirthDate": "1974-10-03",
+                  "MaritalStatusCode": "Married",
+                  "EmployeeHomePhone": 6017588466,
+                  "EmployeeWorkPhone": 6019145568,
+                  "EmployeeMobilePhone": 6012183447,
+                  "EmployeeMailingAddress": {
+                    "FirstLineAddress": "6 N Glyn Hwy",
+                    "CityName": "Jackson",
+                    "StateProvinceCode": "MS",
+                    "PostalCode": 39215
+                  },
+                  "EmployeeHomeAddress": {
+                    "FirstLineAddress": "6 N Glyn Hwy",
+                    "CityName": "Jackson",
+                    "StateProvinceCode": "MS",
+                    "PostalCode": 39215
+                  },
+                  "EmployeeWorkAddress": {
+                    "FirstLineAddress": "31 Riverside Plaza",
+                    "CityName": "Jackson",
+                    "StateProvinceCode": "MS",
+                    "PostalCode": 81898
+                  },
+                  "EmployeeEmail": "Nina.McCain@demo-me.com",
+                  "EmploymentInformation": {
+                    "OriginalHireDate": "2017-08-18",
+                    "MostRecentHireDate": "2017-08-18",
+                    "EmploymentTypeCode": "FullTime",
+                    "EmploymentStatusCode": "Active",
+                    "JobTitleText": "Assistant Director of Nursing",
+                    "OccupationText": "Assistant Director of Nursing",
+                    "WorkLocationText": "Mississippi Medical Center",
+                    "PayrollDeductionFrequencyQuantity": 26,
+                    "PayrollFrequencyQuantity": 26,
+                    "EmploymentIncome": {
+                      "IncomeTypeCode": "BenefitSalary",
+                      "IncomeAmount": 60000,
+                      "IncomeModeCode": "Annual",
+                      "IncomeEffectiveDate": "2018-04-01"
+                    }
+                  },
+                  "Event": {
+                    "EventID": "EE735236",
+                    "EventTypeCode": "Coverage",
+                    "EventTypeReasonCode": "VoluntaryCancel",
+                    "EventDate": "2020-05-15"
+                  },
+                  "Dependent": {
+                    "DependentPartyID": 1772642,
+                    "DependentSocialSecurityNumber": 998763918,
+                    "DependentName": {
+                      "FirstName": "Ken",
+                      "LastName": "McCain"
+                    },
+                    "DependentRelationshipTypeCode": "Spouse",
+                    "DependentGenderCode": "Male",
+                    "DependentBirthDate": "1965-09-28"
+                  },
+                  "Coverage": [
+                    {
+                      "CoverageID": 1111111,
+                      "ProductTypeCode": "Life",
+                      "BenefitPlanIdentifier": "VOLLIFE",
+                      "BenefitClassIdentifier": 1,
+                      "BenefitSubClassIdentifier": "",
+                      "BillGroupIdentifier": 101,
+                      "BillSubGroupIdentifier": 765,
+                      "CoverageEffectiveDate": "2019-06-01",
+                      "CoverageTerminationDate": "2020-05-31",
+                      "CoverageTierCode": "Employee",
+                      "BenefitCalculationMethodCode": "FlatAmount",
+                      "BenefitAmount": 50000,
+                      "BenefitFactor": 0,
+                      "EmployeeContributionCode": "EmployeePaid",
+                      "EmployeePremiumContributionAmount": 9.83,
+                      "EmployerPremiumContributionAmount": 0,
+                      "TotalPlanPremiumAmount": 9.83,
+                      "BenefitEarningsAmount": 0,
+                      "BenefitModeQuantity": 0,
+                      "PaymentMethodCode": "PayrollDeduction",
+                      "PremiumModeQuantity": 26,
+                      "PreTaxCode": "PreTax",
+                      "IssueAgeQuantity": 0,
+                      "TobaccoUseIndicator": true,
+                      "TakeOverCoverageIndicator": true,
+                      "CarrierID": "MYCARRIER_ID",
+                      "ElectedCoverage": {
+                        "ElectedCoverageTierCode": "Employee",
+                        "ElectedBenefitCalculationMethodCode": "FlatAmount",
+                        "ElectedBenefitAmount": 100000,
+                        "ElectedBenefitFactor": 0,
+                        "ElectedEmployeeContributionCode": "EmployeePaid",
+                        "ElectedEmployeePremiumContributionAmount": 19.66,
+                        "ElectedEmployerPremiumContributionAmount": 0,
+                        "ElectedTotalPlanPremiumAmount": 19.66,
+                        "ElectedCoverageInsured": {
+                          "InsuredPartyID": 1772641,
+                          "PrimaryInsuredIndicator": true,
+                          "TobaccoUseIndicator": true,
+                          "InsuredCoverageEffectiveDate": "2019-04-05",
+                          "InsuredCoverageTerminationDate": "2020-05-31"
+                        }
+                      },
+                      "CoverageInsured": {
+                        "InsuredPartyID": 1772641,
+                        "PrimaryInsuredIndicator": true,
+                        "InsuredCoverageEffectiveDate": "2019-04-05",
+                        "InsuredCoverageTerminationDate": "2020-05-31"
+                      },
+                      "CoverageEventID": "EE735236",
+                      "CoverageTransactionDate": "2020-06-01"
+                    },
+                    {
+                      "CoverageID": 2222222,
+                      "ProductTypeCode": "Life",
+                      "BenefitPlanIdentifier": "SPLIFE",
+                      "BenefitClassIdentifier": 2,
+                      "BillGroupIdentifier": 101,
+                      "BillSubGroupIdentifier": 766,
+                      "CoverageEffectiveDate": "2019-04-05",
+                      "CoverageTerminationDate": "2020-05-31",
+                      "CoverageTierCode": "SpouseOnly",
+                      "BenefitCalculationMethodCode": "FlatAmount",
+                      "BenefitAmount": 10000,
+                      "BenefitFactor": 0,
+                      "EmployeeContributionCode": "EmployeePaid",
+                      "EmployeePremiumContributionAmount": 8.72,
+                      "EmployerPremiumContributionAmount": 0,
+                      "TotalPlanPremiumAmount": 8.72,
+                      "BenefitEarningsAmount": 0,
+                      "BenefitModeQuantity": 0,
+                      "PreTaxCode": "PreTax",
+                      "IssueAgeQuantity": 0,
+                      "TobaccoUseIndicator": false,
+                      "TakeOverCoverageIndicator": true,
+                      "CarrierID": 9803,
+                      "ElectedCoverage": {
+                        "ElectedCoverageTierCode": "SpouseOnly",
+                        "ElectedBenefitCalculationMethodCode": "FlatAmount",
+                        "ElectedBenefitAmount": 200000,
+                        "ElectedBenefitFactor": 0,
+                        "ElectedEmployeeContributionCode": "EmployeePaid",
+                        "ElectedEmployeePremiumContributionAmount": 17.44,
+                        "ElectedEmployerPremiumContributionAmount": 0,
+                        "ElectedTotalPlanPremiumAmount": 17.44,
+                        "ElectedCoverageInsured": {
+                          "InsuredPartyID": 1772642,
+                          "PrimaryInsuredIndicator": false,
+                          "TobaccoUseIndicator": false,
+                          "InsuredCoverageEffectiveDate": "2019-04-05",
+                          "InsuredCoverageTerminationDate": "2020-05-31"
+                        }
+                      },
+                      "CoverageInsured": {
+                        "InsuredPartyID": 1772642,
+                        "PrimaryInsuredIndicator": false,
+                        "TobaccoUseIndicator": false,
+                        "InsuredCoverageEffectiveDate": "2019-04-05",
+                        "InsuredCoverageTerminationDate": "2020-05-31"
+                      },
+                      "CoverageEventID": "EE735236",
+                      "CoverageTransactionDate": "2020-06-01"
+                    }
+                  ]
+                }
+              ]
+            },
+            "Audit": {
+              "AuditID": "2020-05-15-11.36.42.895000",
+              "CarrierRecordQuantity": 1,
+              "EmployerRecordQuantity": 1,
+              "EmployeeRecordQuantity": 2,
+              "DependentRecordQuantity": 4,
+              "EventRecordQuantity": 3,
+              "CoverageRecordQuantity": 3
+            }
+          },
+          "CoverageEventID": "E211713O001",
+          "CoverageRider": {
+            "CoverageRiderID": "LEGALEESPS",
+            "RiderIdentifier": "LEGALEESPSPREMIUM",
+            "RiderName": "Legal Employee and Spouse Rider",
+            "CoverageTierCode": "EmployeeSpouse",
+            "BenefitAmount": 60000,
+            "PreTaxCode": "PostTax",
+            "EmployeePremiumContributionAmount": 3.31,
+            "EmployerPremiumContributionAmount": 0
+          },
+          "CoverageTransactionDate": "2019-06-10"
+        }
+      }
+    },
+    "Audit": {
+      "AuditID": "2019-08-07-21.24.25.063000",
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1,
+      "DependentRecordQuantity": 3,
+      "EventRecordQuantity": 1,
+      "CoverageRecordQuantity": 1,
+      "CoverageRiderRecordQuantity": 1
+    }
+  }
+}
+```

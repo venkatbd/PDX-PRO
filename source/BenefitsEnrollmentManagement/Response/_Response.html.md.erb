@@ -45,18 +45,326 @@
 }
 ```
 ##InvalidSender
+
+```json
+{
+  "TransmissionResponse": {
+    "TransmissionGUID": "e034ec87-abe4-4fad-ac8d-d2549e6232b6",
+    "TransmissionStatusCode": "Failure",
+    "CreationDateTime": "2001-12-31T12:00:00",
+    "TransmissionRemark": {
+      "EntityCode": "Transmission",
+      "EntityReferenceID": "T123456789",
+      "FieldName": "SenderName",
+      "RemarkStatusCode": "Error",
+      "MessageTypeCode": "InvalidSender",
+      "MessageText": "SenderName is Invalid"
+    }
+  }
+}
+```
 ##MemberLevel
+```json
+{
+  "TransmissionResponse": {
+    "TransmissionGUID": "TransmissionGUID",
+    "TransmissionStatusCode": "Partial",
+    "CreationDateTime": "2001-12-31T12:00:00",
+    "TransactionDetail": {
+      "EmployerPartyID": 1520,
+      "EmployeePartyID": 1772641,
+      "TransactionRemark": {
+        "EntityCode": "Coverage",
+        "EntityReferenceID": "C123456",
+        "FieldName": "ProductTypeCode",
+        "RemarkStatusCode": "Error",
+        "MessageText": "ProductTypeCode is missing"
+      }
+    }
+  }
+}
+```
 ##MemberLevelCoverageChange
+```json
+{
+  "TransmissionResponse": {
+    "TransmissionGUID": "942f0d58-4775-49a3-8ae2-6056e5e858c6",
+    "TransmissionStatusCode": "Failure",
+    "CreationDateTime": "2019-05-10T12:00:00",
+    "TransactionDetail": {
+      "EmployerPartyID": 1520,
+      "EmployeePartyID": 1772641,
+      "TransactionRemark": {
+        "EntityCode": "EmploymentInformation",
+        "EntityReferenceID": "EmploymentInformation",
+        "FieldName": "EmploymentStatusCode",
+        "RemarkStatusCode": "Error",
+        "MessageText": "Employee has been terminated and is no longer active. Unable to process coverage changes."
+      }
+    }
+  }
+}
+```
 ##MemberLevelMultiRemarks
+```json
+{
+  "TransmissionResponse": {
+    "TransmissionGUID": "TransmissionGUID",
+    "TransmissionStatusCode": "Partial",
+    "CreationDateTime": "2001-12-31T12:00:00",
+    "TransactionDetail": [
+      {
+        "EmployerPartyID": 1234,
+        "EmployeePartyID": 98456,
+        "TransactionRemark": [
+          {
+            "EntityCode": "EmploymentInformation",
+            "EntityReferenceID": 98456,
+            "FieldName": "JobTitleText",
+            "RemarkStatusCode": "Warning",
+            "MessageText": "JobTitleText is missing"
+          },
+          {
+            "EntityCode": "Coverage",
+            "EntityReferenceID": "C987456",
+            "FieldName": "BenefitPlanIDentifier",
+            "RemarkStatusCode": "Error",
+            "MessageText": "BenefitPlanIdentifier is missing"
+          }
+        ]
+      },
+      {
+        "EmployerPartyID": 1234,
+        "EmployeePartyID": 99200,
+        "TransactionRemark": [
+          {
+            "EntityCode": "EmploymentInformation",
+            "EntityReferenceID": 99200,
+            "FieldName": "JobTitleText",
+            "RemarkStatusCode": "Warning",
+            "MessageText": "JobTitleText is missing"
+          },
+          {
+            "EntityCode": "Coverage",
+            "EntityReferenceID": "C123456",
+            "FieldName": "BenefitPlanIDentifier",
+            "RemarkStatusCode": "Error",
+            "MessageText": "BenefitPlanIdentifier is missing"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
 ##MemberLevelSalaryChange
+```json
+{
+  "TransmissionResponse": {
+    "TransmissionGUID": "TransmissionGUID",
+    "TransmissionStatusCode": "Partial",
+    "CreationDateTime": "2001-12-31T12:00:00",
+    "TransactionDetail": {
+      "EmployerPartyID": "",
+      "EmployeePartyID": "",
+      "TransactionRemark": {
+        "EntityCode": "EmploymentIncome",
+        "EntityReferenceID": "EmployeePartyID",
+        "FieldName": "IncomeTypeCode",
+        "RemarkStatusCode": "Error",
+        "MessageTypeCode": "InvalidCode",
+        "MessageText": "IncomeTypeCode is unknown"
+      }
+    }
+  }
+}
+```
 ##SchemaValidation
+```json
+{
+  "TransmissionResponse": {
+    "TransmissionGUID": "e034ec87-abe4-4fad-ac8d-d2549e6232b6",
+    "TransmissionStatusCode": "Failure",
+    "CreationDateTime": "2001-12-31T12:00:00",
+    "TransmissionRemark": {
+      "EntityCode": "Transmission",
+      "EntityReferenceID": "99a2f078-10fc-45d0-60b99a6eafad",
+      "RemarkStatusCode": "Error",
+      "MessageTypeCode": "SchemaNotSupported",
+      "MessageText": "Schema version is not supported. Please resend using a compatible schema version."
+    }
+  }
+}
+```
 ##TransmissionSuccess
+```json
+{
+  "TransmissionResponse": {
+    "TransmissionGUID": "e034ec87-abe4-4fad-ac8d-d2549e6232b6",
+    "TransmissionStatusCode": "Success",
+    "CreationDateTime": "2001-12-31T12:00:00"
+  }
+}
+```
 ##UnableToCancelOrTerminateCoverage
+```json
+{
+  "TransmissionResponse": {
+    "TransmissionGUID": "c3bbe592-3a44-4004-bdaf-82bb7f02d62f",
+    "TransmissionStatusCode": "Failure",
+    "CreationDateTime": "2022-03-29T15:12:14Z",
+    "TransactionDetail": {
+      "EmployerPartyID": "ER123456",
+      "EmployeePartyID": "EE987456",
+      "TransactionRemark": {
+        "EntityCode": "Coverage",
+        "EntityReferenceID": "COV56980",
+        "RemarkStatusCode": "Error",
+        "MessageTypeCode": "UnableToCancelOrTerminateCoverage"
+      }
+    },
+    "Audit": {
+      "AuditID": "A1234569",
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1,
+      "CoverageRecordQuantity": 1
+    }
+  }
+}
+```
 ##UnableToProcessBeneficiaryChange
+```json
+{
+  "TransmissionResponse": {
+    "TransmissionGUID": "c3bbe592-3a44-4004-bdaf-82bb7f02d62f",
+    "TransmissionStatusCode": "Failure",
+    "CreationDateTime": "2022-03-29T15:12:14Z",
+    "TransactionDetail": {
+      "EmployerPartyID": "ER123456",
+      "EmployeePartyID": "EE987456",
+      "TransactionRemark": {
+        "EntityCode": "Beneficiary",
+        "EntityReferenceID": "BEN123",
+        "RemarkStatusCode": "Error",
+        "MessageTypeCode": "UnableToProcessBeneficiaryChange"
+      }
+    },
+    "Audit": {
+      "AuditID": "A1234569",
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1,
+      "BeneficiaryGroupRecordQuantity": 1,
+      "CoverageRecordQuantity": 1
+    }
+  }
+}
+```
 ##UnableToProcessCoverageDecrease
+```json
+{
+  "TransmissionResponse": {
+    "TransmissionGUID": "c3bbe592-3a44-4004-bdaf-82bb7f02d62f",
+    "TransmissionStatusCode": "Failure",
+    "CreationDateTime": "2022-03-29T15:12:14Z",
+    "TransactionDetail": {
+      "EmployerPartyID": "ER123456",
+      "EmployeePartyID": "EE987456",
+      "TransactionRemark": {
+        "EntityCode": "Coverage",
+        "EntityReferenceID": "COV123456",
+        "RemarkStatusCode": "Error",
+        "MessageTypeCode": "UnableToProcessCoverageDecrease"
+      }
+    },
+    "Audit": {
+      "AuditID": "A1234569",
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1,
+      "CoverageRecordQuantity": 1
+    }
+  }
+}
+```
 ##UnableToProcessCoverageIncrease
+```json
+{
+  "TransmissionResponse": {
+    "TransmissionGUID": "c3bbe592-3a44-4004-bdaf-82bb7f02d62f",
+    "TransmissionStatusCode": "Failure",
+    "CreationDateTime": "2022-03-29T15:12:14Z",
+    "TransactionDetail": {
+      "EmployerPartyID": "ER123456",
+      "EmployeePartyID": "EE987456",
+      "TransactionRemark": {
+        "EntityCode": "Coverage",
+        "EntityReferenceID": "COV123456",
+        "RemarkStatusCode": "Error",
+        "MessageTypeCode": "UnableToProcessCoverageIncrease",
+        "MessageText": "Coverage increase exceeds plan limits"
+      }
+    },
+    "Audit": {
+      "AuditID": "A1234569",
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1,
+      "CoverageRecordQuantity": 1
+    }
+  }
+}
+```
 ##UnableToProcessDemographicChange
+```json
+{
+  "TransmissionResponse": {
+    "TransmissionGUID": "c3bbe592-3a44-4004-bdaf-82bb7f02d62f",
+    "TransmissionStatusCode": "Failure",
+    "CreationDateTime": "2022-03-29T15:12:14Z",
+    "TransactionDetail": {
+      "EmployerPartyID": "ER123456",
+      "EmployeePartyID": "EE987456",
+      "TransactionRemark": {
+        "EntityCode": "Employee",
+        "EntityReferenceID": "EE987456",
+        "RemarkStatusCode": "Error",
+        "MessageTypeCode": "UnableToProcessDemographicChange"
+      }
+    },
+    "Audit": {
+      "AuditID": "A1234569",
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1,
+      "CoverageRecordQuantity": 1
+    }
+  }
+}
+```
 ##UnableToReinstateCoverage
+```json
+{
+  "TransmissionResponse": {
+    "TransmissionGUID": "c3bbe592-3a44-4004-bdaf-82bb7f02d62f",
+    "TransmissionStatusCode": "Failure",
+    "CreationDateTime": "2022-03-29T15:12:14Z",
+    "TransactionDetail": {
+      "EmployerPartyID": "ER123456",
+      "EmployeePartyID": "EE987456",
+      "TransactionRemark": {
+        "EntityCode": "Coverage",
+        "EntityReferenceID": "COV89756",
+        "RemarkStatusCode": "Error",
+        "MessageTypeCode": "UnableToReinstateCoverage",
+        "MessageText": "Coverage cannot be reinstated without more details"
+      }
+    },
+    "Audit": {
+      "AuditID": "A1234569",
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1,
+      "CoverageRecordQuantity": 1
+    }
+  }
+}
+```
 
 
 

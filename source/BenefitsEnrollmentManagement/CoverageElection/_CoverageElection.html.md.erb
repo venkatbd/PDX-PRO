@@ -1,10 +1,2865 @@
 #CoverageElection
 ##NewHireCoverageElections
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "c9fcc147-2b65-48cb-925c-9f898a381815",
+    "SenderName": "XYZ Benefit Administrator",
+    "SenderPlatformName": "XYZplatform.com",
+    "ReceiverName": "ABC Insurance Company",
+    "CreationDateTime": "2001-12-17T09:30:47Z",
+    "TestProductionCode": "Production",
+    "TransmissionTypeCode": "ChangesOnly",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": "U7435",
+      "CarrierName": "ABC Insurance Company"
+    },
+    "Employer": {
+      "EmployerPartyID": 8675309,
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": "",
+        "MasterAgreementNumber": "P678945",
+        "CarrierID": "U7435"
+      },
+      "EmployerName": "SLC Inc.",
+      "EmployerAddress": {
+        "FirstLineAddress": "1725 Slough Avenue",
+        "CityName": "Scranton",
+        "StateProvinceCode": "PA",
+        "PostalCode": 50322,
+        "CountryCode": "USA"
+      },
+      "Employee": [
+        {
+          "EmployeePartyID": 45,
+          "EmployeeSocialSecurityNumber": "998-70-0423",
+          "EmployeeIdentifier": 42,
+          "EmployeeName": {
+            "FirstName": "Sylvia",
+            "LastName": "Baldwin"
+          },
+          "EmployeeGenderCode": "Female",
+          "EmployeeBirthDate": "2000-02-08",
+          "MaritalStatusCode": "Married",
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "4 Thresa Blvd",
+            "CityName": "Atlanta",
+            "StateProvinceCode": "GA",
+            "PostalCode": 30334,
+            "CountryCode": "USA"
+          },
+          "EmploymentInformation": {
+            "OriginalHireDate": "2018-08-27",
+            "EmploymentTypeCode": "FullTime",
+            "EmploymentStatusCode": "Active",
+            "EmploymentIncome": {
+              "IncomeTypeCode": "Salary",
+              "IncomeAmount": 10000,
+              "IncomeModeCode": "BiWeekly26PerYear",
+              "IncomeEffectiveDate": "2018-08-27"
+            }
+          },
+          "Event": {
+            "EventID": 123,
+            "EventTypeCode": "Coverage",
+            "EventTypeReasonCode": "NewHireEnrollment",
+            "EventDate": "2018-08-27"
+          },
+          "EmployeeEventID": 123,
+          "Coverage": [
+            {
+              "CoverageID": 2397070,
+              "IndividualPolicyNumber": "P123344",
+              "ProductTypeCode": "Life",
+              "BenefitPlanIdentifier": "BlueCross BlueShield Life",
+              "CoverageEffectiveDate": "2019-09-01",
+              "CoverageTierCode": "Employee",
+              "BenefitCalculationMethodCode": "FlatAmount",
+              "BenefitAmount": 20000,
+              "BenefitEarningsEffectiveDate": "2019-09-01",
+              "CarrierID": "U7435",
+              "CoverageInsured": {
+                "InsuredPartyID": 45,
+                "PrimaryInsuredIndicator": true,
+                "InsuredCoverageEffectiveDate": "2019-09-01"
+              },
+              "CoverageEventID": 123
+            },
+            {
+              "CoverageID": 2397071,
+              "IndividualPolicyNumber": "P123345",
+              "ProductTypeCode": "CriticalIllness",
+              "BenefitPlanIdentifier": "BlueCross CI",
+              "CoverageEffectiveDate": "2019-09-01",
+              "CoverageTierCode": "Employee",
+              "BenefitCalculationMethodCode": "FlatAmount",
+              "BenefitAmount": 20000,
+              "BenefitEarningsEffectiveDate": "2019-09-01",
+              "CarrierID": "U7435",
+              "CoverageInsured": {
+                "InsuredPartyID": 45,
+                "PrimaryInsuredIndicator": true,
+                "InsuredCoverageEffectiveDate": "2019-09-01"
+              },
+              "CoverageEventID": 123,
+              "CoverageTransactionDate": "2019-08-29"
+            },
+            {
+              "CoverageID": 2397072,
+              "IndividualPolicyNumber": "P123346",
+              "ProductTypeCode": "Hospital",
+              "BenefitPlanIdentifier": "BlueCross Hospital",
+              "CoverageEffectiveDate": "2019-09-01",
+              "CoverageTierCode": "Employee",
+              "BenefitCalculationMethodCode": "FlatAmount",
+              "BenefitAmount": 10000,
+              "BenefitEarningsEffectiveDate": "2019-09-01",
+              "CarrierID": "U7435",
+              "CoverageInsured": {
+                "InsuredPartyID": 45,
+                "PrimaryInsuredIndicator": true,
+                "InsuredCoverageEffectiveDate": "2019-09-01"
+              },
+              "CoverageEventID": 123,
+              "CoverageTransactionDate": "2019-08-29"
+            }
+          ]
+        },
+        {
+          "EmployeePartyID": 35,
+          "EmployeeSocialSecurityNumber": "999-70-0423",
+          "EmployeeIdentifier": 32,
+          "EmployeeName": {
+            "FirstName": "Tracey",
+            "LastName": "Horne"
+          },
+          "EmployeeGenderCode": "Female",
+          "EmployeeBirthDate": "2001-02-08",
+          "MaritalStatusCode": "Married",
+          "EmployeeTobaccoUseCode": "N",
+          "EmployeeHomePhone": 8006257897,
+          "EmployeeWorkPhone": 4061234567,
+          "EmployeeMobilePhone": 8006257897,
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "9 Thresa Blvd",
+            "CityName": "Atlanta",
+            "StateProvinceCode": "GA",
+            "PostalCode": 30334
+          },
+          "EmployeeHomeAddress": {
+            "FirstLineAddress": "9 Thresa Blvd",
+            "CityName": "Atlanta",
+            "StateProvinceCode": "GA",
+            "PostalCode": 30334
+          },
+          "EmployeeWorkAddress": {
+            "FirstLineAddress": "62 Salt Mine Way",
+            "CityName": "Salt Lake City",
+            "StateProvinceCode": "UT",
+            "PostalCode": 84044
+          },
+          "EmployeeEmail": "t.horne@homeemail.com",
+          "EmployeeAlternateEmail": "t.horne@saltmine2.com",
+          "EmploymentInformation": {
+            "OriginalHireDate": "2018-06-27",
+            "MostRecentHireDate": "2018-06-27",
+            "ExemptCode": "Exempt",
+            "EmploymentTypeCode": "FullTime",
+            "EmploymentStatusCode": "Active",
+            "JobTitleText": "Custodial Engineer",
+            "OccupationText": "Custodial Engineer",
+            "WorkHoursQuantity": 40,
+            "WorkHoursFrequencyCode": "Weekly",
+            "WorkLocationText": "Corporate",
+            "PayrollDeductionFrequencyQuantity": 26,
+            "PayrollFrequencyQuantity": 26,
+            "UnionIndicator": false,
+            "EmploymentIncome": {
+              "IncomeTypeCode": "BenefitSalary",
+              "IncomeAmount": 90000,
+              "IncomeModeCode": "Annual",
+              "IncomeEffectiveDate": "2019-03-20"
+            }
+          },
+          "Event": {
+            "EventID": "NHEVT1235",
+            "EventTypeCode": "Coverage",
+            "EventTypeReasonCode": "NewHireEnrollment",
+            "EventDate": "2018-08-27",
+            "TransactionDate": "2018-08-27"
+          },
+          "EmployeeEventID": "NHEVT1235",
+          "Coverage": {
+            "CoverageID": 2397070,
+            "GroupPolicyNumber": "P123344",
+            "ProductTypeCode": "Life",
+            "BenefitPlanIdentifier": "BlueCross BlueShield Life",
+            "BenefitClassIdentifier": 1,
+            "BenefitSubClassIdentifier": 3,
+            "BillGroupIdentifier": 1,
+            "CoverageEffectiveDate": "2019-09-01",
+            "BenefitCalculationMethodCode": "FlatAmount",
+            "BenefitAmount": 20000,
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 3.31,
+            "EmployerPremiumContributionAmount": 0,
+            "TotalPlanPremiumAmount": 3.31,
+            "PaymentMethodCode": "PayrollDeduction",
+            "PremiumModeQuantity": 26,
+            "PreTaxCode": "PostTax",
+            "TobaccoUseIndicator": false,
+            "TakeOverCoverageIndicator": false,
+            "CarrierID": "U7435",
+            "CoverageInsured": {
+              "InsuredPartyID": 35,
+              "PrimaryInsuredIndicator": true,
+              "TobaccoUseIndicator": false,
+              "InsuredCoverageEffectiveDate": "2019-09-01"
+            },
+            "CoverageEventID": "NHEVT1235",
+            "CoverageTransactionDate": "2018-08-27"
+          }
+        },
+        {
+          "EmployeePartyID": 25,
+          "EmployeeSocialSecurityNumber": "888-70-0423",
+          "EmployeeIdentifier": 22,
+          "EmployeeName": {
+            "FirstName": "Janet",
+            "LastName": "Johnson"
+          },
+          "EmployeeGenderCode": "Female",
+          "EmployeeBirthDate": "2000-02-10",
+          "MaritalStatusCode": "Married",
+          "EmployeeTobaccoUseCode": "N",
+          "EmployeeHomePhone": 8005288897,
+          "EmployeeWorkPhone": 4051238887,
+          "EmployeeMobilePhone": 8005288897,
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "4 James Blvd",
+            "CityName": "Atlanta",
+            "StateProvinceCode": "GA",
+            "PostalCode": 30334
+          },
+          "EmployeeHomeAddress": {
+            "FirstLineAddress": "4 James Blvd",
+            "CityName": "Atlanta",
+            "StateProvinceCode": "GA",
+            "PostalCode": 30334
+          },
+          "EmployeeWorkAddress": {
+            "FirstLineAddress": "62 Salt Mine Way",
+            "CityName": "Salt Lake City",
+            "StateProvinceCode": "UT",
+            "PostalCode": 84044
+          },
+          "EmployeeEmail": "s.johnson@homeemail.com",
+          "EmployeeAlternateEmail": "j.johnson@saltmine.com",
+          "EmploymentInformation": {
+            "OriginalHireDate": "2018-05-27",
+            "MostRecentHireDate": "2018-05-27",
+            "ExemptCode": "Exempt",
+            "EmploymentTypeCode": "FullTime",
+            "EmploymentStatusCode": "Active",
+            "JobTitleText": "Custodial Engineer",
+            "OccupationText": "Custodial Engineer",
+            "WorkHoursQuantity": 40,
+            "WorkHoursFrequencyCode": "Weekly",
+            "WorkLocationText": "Corporate",
+            "PayrollDeductionFrequencyQuantity": 26,
+            "PayrollFrequencyQuantity": 26,
+            "UnionIndicator": false,
+            "EmploymentIncome": {
+              "IncomeTypeCode": "BenefitSalary",
+              "IncomeAmount": 80000,
+              "IncomeModeCode": "Annual",
+              "IncomeEffectiveDate": "2019-03-20"
+            }
+          },
+          "Event": {
+            "EventID": "NHEVT1237",
+            "EventTypeCode": "Coverage",
+            "EventTypeReasonCode": "NewHireEnrollment",
+            "EventDate": "2018-08-27",
+            "TransactionDate": "2018-08-27"
+          },
+          "EmployeeEventID": "NHEVT1237",
+          "Dependent": {
+            "DependentPartyID": 1522222,
+            "DependentSocialSecurityNumber": "997-87-8712",
+            "DependentIdentifier": "",
+            "DependentName": {
+              "FirstName": "Roger",
+              "LastName": "Johnson"
+            },
+            "DependentRelationshipTypeCode": "Spouse",
+            "DependentGenderCode": "Male",
+            "DependentBirthDate": "1970-10-01",
+            "DependentHomePhone": 2153888587,
+            "DependentWorkPhone": 6328888745,
+            "DependentMobilePhone": 2014588885,
+            "DependentMailingAddress": {
+              "FirstLineAddress": "4 James Blvd",
+              "SecondLineAddress": "Apt 4",
+              "ThirdLineAddress": "Box 3",
+              "CityName": "Atlanta",
+              "StateProvinceCode": "GA",
+              "PostalCode": 30334,
+              "CountryCode": "USA"
+            },
+            "DependentHomeEmail": "roger@homememail.com",
+            "DisabilityIndicator": false,
+            "StudentStatusCode": "PartTime",
+            "DependentTobaccoUseCode": "N"
+          },
+          "Coverage": [
+            {
+              "CoverageID": 2397088,
+              "GroupPolicyNumber": "P123344",
+              "ProductTypeCode": "Life",
+              "BenefitPlanIdentifier": "BlueCross BlueShield Life",
+              "BenefitClassIdentifier": 1,
+              "BenefitSubClassIdentifier": 3,
+              "BillGroupIdentifier": 1,
+              "CoverageEffectiveDate": "2019-09-01",
+              "BenefitCalculationMethodCode": "FlatAmount",
+              "BenefitAmount": 20000,
+              "EmployeeContributionCode": "EmployeePaid",
+              "EmployeePremiumContributionAmount": 3.31,
+              "EmployerPremiumContributionAmount": 0,
+              "TotalPlanPremiumAmount": 3.31,
+              "PaymentMethodCode": "PayrollDeduction",
+              "PremiumModeQuantity": 26,
+              "PreTaxCode": "PostTax",
+              "TobaccoUseIndicator": true,
+              "TakeOverCoverageIndicator": true,
+              "CarrierID": "U7435",
+              "CoverageInsured": {
+                "InsuredPartyID": 25,
+                "PrimaryInsuredIndicator": true,
+                "TobaccoUseIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-09-01"
+              },
+              "CoverageEventID": "NHEVT1337"
+            },
+            {
+              "CoverageID": 2397088,
+              "GroupPolicyNumber": "P123344",
+              "ProductTypeCode": "Life",
+              "BenefitPlanIdentifier": "BlueCross BlueShield Life",
+              "BenefitClassIdentifier": 1,
+              "BenefitSubClassIdentifier": 3,
+              "BillGroupIdentifier": 1,
+              "CoverageEffectiveDate": "2019-09-01",
+              "BenefitCalculationMethodCode": "FlatAmount",
+              "BenefitAmount": 10000,
+              "EmployeeContributionCode": "EmployeePaid",
+              "EmployeePremiumContributionAmount": 2.21,
+              "EmployerPremiumContributionAmount": 0,
+              "TotalPlanPremiumAmount": 2.21,
+              "PaymentMethodCode": "PayrollDeduction",
+              "PremiumModeQuantity": 26,
+              "PreTaxCode": "PostTax",
+              "TobaccoUseIndicator": false,
+              "TakeOverCoverageIndicator": false,
+              "CarrierID": "U7435",
+              "CoverageInsured": {
+                "InsuredPartyID": 1522222,
+                "PrimaryInsuredIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-09-01"
+              },
+              "CoverageEventID": "NHEVT1337"
+            },
+            {
+              "CoverageID": 2397078,
+              "GroupPolicyNumber": "P123345",
+              "ProductTypeCode": "CriticalIllness",
+              "BenefitPlanIdentifier": "BlueCross CI",
+              "BenefitClassIdentifier": 1,
+              "BenefitSubClassIdentifier": 3,
+              "BillGroupIdentifier": 1,
+              "CoverageEffectiveDate": "2019-09-01",
+              "BenefitCalculationMethodCode": "FlatAmount",
+              "BenefitAmount": 20000,
+              "EmployeeContributionCode": "EmployeePaid",
+              "EmployeePremiumContributionAmount": 3.31,
+              "EmployerPremiumContributionAmount": 0,
+              "TotalPlanPremiumAmount": 3.31,
+              "PaymentMethodCode": "PayrollDeduction",
+              "PremiumModeQuantity": 26,
+              "PreTaxCode": "PostTax",
+              "TobaccoUseIndicator": 0,
+              "TakeOverCoverageIndicator": 0,
+              "BeneficiaryGroupID": 1773200,
+              "CarrierID": "U7435",
+              "CoverageInsured": {
+                "InsuredPartyID": 25,
+                "PrimaryInsuredIndicator": true,
+                "TobaccoUseIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-09-01"
+              },
+              "CoverageEventID": "NHEVT2237"
+            },
+            {
+              "CoverageID": 2397071,
+              "GroupPolicyNumber": "P123345",
+              "ProductTypeCode": "CriticalIllness",
+              "BenefitPlanIdentifier": "BlueCross CI",
+              "BenefitClassIdentifier": 1,
+              "BenefitSubClassIdentifier": 3,
+              "BillGroupIdentifier": 1,
+              "CoverageEffectiveDate": "2019-09-01",
+              "BenefitCalculationMethodCode": "FlatAmount",
+              "BenefitAmount": 15000,
+              "EmployeeContributionCode": "EmployeePaid",
+              "EmployeePremiumContributionAmount": 3,
+              "EmployerPremiumContributionAmount": 0,
+              "TotalPlanPremiumAmount": 3,
+              "PaymentMethodCode": "PayrollDeduction",
+              "PremiumModeQuantity": 26,
+              "PreTaxCode": "PostTax",
+              "TobaccoUseIndicator": false,
+              "TakeOverCoverageIndicator": false,
+              "BeneficiaryGroupID": 1773200,
+              "CarrierID": "U7435",
+              "CoverageInsured": {
+                "InsuredPartyID": 1522222,
+                "PrimaryInsuredIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-09-01"
+              },
+              "CoverageEventID": "NHEVT2237"
+            }
+          ]
+        },
+        {
+          "EmployeePartyID": 105,
+          "EmployeeSocialSecurityNumber": "998-70-777",
+          "EmployeeIdentifier": 992,
+          "EmployeeName": {
+            "FirstName": "Amanda",
+            "LastName": "Baldwin"
+          },
+          "EmployeeGenderCode": "Female",
+          "EmployeeBirthDate": "2002-02-08",
+          "MaritalStatusCode": "Married",
+          "EmployeeTobaccoUseCode": "N",
+          "EmployeeHomePhone": 8005257777,
+          "EmployeeWorkPhone": 4051234667,
+          "EmployeeMobilePhone": 8005257557,
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "12 10th Ave",
+            "CityName": "Atlanta",
+            "StateProvinceCode": "GA",
+            "PostalCode": 30334
+          },
+          "EmployeeHomeAddress": {
+            "FirstLineAddress": "12 10th Ave",
+            "CityName": "Atlanta",
+            "StateProvinceCode": "GA",
+            "PostalCode": 30334
+          },
+          "EmployeeWorkAddress": {
+            "FirstLineAddress": "62 Salt Mine Way",
+            "CityName": "Salt Lake City",
+            "StateProvinceCode": "UT",
+            "PostalCode": 84044
+          },
+          "EmployeeEmail": "amandabaldwin@homeemail.com",
+          "EmployeeAlternateEmail": "s.baldwin@saltmine2.com",
+          "EmploymentInformation": {
+            "OriginalHireDate": "2018-08-27",
+            "MostRecentHireDate": "2018-08-27",
+            "ExemptCode": "Exempt",
+            "EmploymentTypeCode": "FullTime",
+            "EmploymentStatusCode": "Active",
+            "JobTitleText": "Custodial Engineer",
+            "OccupationText": "Custodial Engineer",
+            "WorkHoursQuantity": 40,
+            "WorkHoursFrequencyCode": "Weekly",
+            "WorkLocationText": "Corporate",
+            "PayrollDeductionFrequencyQuantity": 26,
+            "PayrollFrequencyQuantity": 26,
+            "UnionIndicator": false,
+            "EmploymentIncome": {
+              "IncomeTypeCode": "BenefitSalary",
+              "IncomeAmount": 80000,
+              "IncomeModeCode": "Annual",
+              "IncomeEffectiveDate": "2019-03-20"
+            }
+          },
+          "Event": {
+            "EventID": "NHEVT1239",
+            "EventTypeCode": "Coverage",
+            "EventTypeReasonCode": "NewHireEnrollment",
+            "EventDate": "2018-08-27",
+            "TransactionDate": "2018-08-27"
+          },
+          "EmployeeEventID": "NHEVT1239",
+          "Coverage": [
+            {
+              "CoverageID": 2397071,
+              "GroupPolicyNumber": "P123344",
+              "ProductTypeCode": "Life",
+              "BenefitPlanIdentifier": "BlueCross BlueShield Life",
+              "BenefitClassIdentifier": 1,
+              "BenefitSubClassIdentifier": 3,
+              "BillGroupIdentifier": 1,
+              "CoverageEffectiveDate": "2019-09-01",
+              "CoverageTierCode": "Employee",
+              "BenefitCalculationMethodCode": "FlatAmount",
+              "BenefitAmount": 20000,
+              "EmployeeContributionCode": "EmployeePaid",
+              "EmployeePremiumContributionAmount": 3.31,
+              "EmployerPremiumContributionAmount": 0,
+              "TotalPlanPremiumAmount": 3.31,
+              "PaymentMethodCode": "PayrollDeduction",
+              "PremiumModeQuantity": 26,
+              "PreTaxCode": "PostTax",
+              "TobaccoUseIndicator": true,
+              "TakeOverCoverageIndicator": true,
+              "CarrierID": "U7435",
+              "ElectedCoverage": {
+                "ElectedBenefitCalculationMethodCode": "FlatAmount",
+                "ElectedBenefitAmount": 50000,
+                "ElectedEmployeeContributionCode": "EmployeePaid",
+                "ElectedTotalPlanPremiumAmount": 3.31,
+                "ElectedCoverageInsured": {
+                  "InsuredPartyID": 105,
+                  "PrimaryInsuredIndicator": true,
+                  "InsuredCoverageEffectiveDate": "2019-09-01"
+                }
+              },
+              "CoverageInsured": {
+                "InsuredPartyID": 105,
+                "PrimaryInsuredIndicator": true,
+                "TobaccoUseIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-09-01"
+              },
+              "CoverageEventID": "NHEVT1339",
+              "CoverageTransactionDate": "2018-08-27"
+            },
+            {
+              "CoverageID": 23970799,
+              "GroupPolicyNumber": "P123345",
+              "ProductTypeCode": "CriticalIllness",
+              "BenefitPlanIdentifier": "BlueCross CI",
+              "BenefitClassIdentifier": 1,
+              "BenefitSubClassIdentifier": 3,
+              "BillGroupIdentifier": 1,
+              "CoverageEffectiveDate": "2019-09-01",
+              "CoverageTierCode": "Employee",
+              "BenefitCalculationMethodCode": "FlatAmount",
+              "BenefitAmount": 20000,
+              "EmployeeContributionCode": "EmployeePaid",
+              "EmployeePremiumContributionAmount": 3.31,
+              "EmployerPremiumContributionAmount": 0,
+              "TotalPlanPremiumAmount": 3.31,
+              "PaymentMethodCode": "PayrollDeduction",
+              "PremiumModeQuantity": 26,
+              "PreTaxCode": "PostTax",
+              "TobaccoUseIndicator": false,
+              "TakeOverCoverageIndicator": false,
+              "CarrierID": "U7435",
+              "ElectedCoverage": {
+                "ElectedBenefitCalculationMethodCode": "FlatAmount",
+                "ElectedBenefitAmount": 20000,
+                "ElectedEmployeeContributionCode": "EmployeePaid",
+                "ElectedTotalPlanPremiumAmount": 3.31,
+                "ElectedCoverageInsured": {
+                  "InsuredPartyID": 105,
+                  "PrimaryInsuredIndicator": true,
+                  "InsuredCoverageEffectiveDate": "2019-09-01"
+                }
+              },
+              "CoverageInsured": {
+                "InsuredPartyID": 105,
+                "PrimaryInsuredIndicator": true,
+                "TobaccoUseIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-09-01"
+              },
+              "CoverageEventID": "NHEVT2239",
+              "CoverageTransactionDate": "2018-08-27"
+            },
+            {
+              "CoverageID": 239707888,
+              "GroupPolicyNumber": "P123346",
+              "ProductTypeCode": "Hospital",
+              "BenefitPlanIdentifier": "BlueCross Hospital",
+              "BenefitClassIdentifier": 1,
+              "BenefitSubClassIdentifier": 3,
+              "BillGroupIdentifier": 1,
+              "CoverageEffectiveDate": "2019-09-01",
+              "CoverageTierCode": "Employee",
+              "BenefitCalculationMethodCode": "FlatAmount",
+              "BenefitAmount": 20000,
+              "EmployeeContributionCode": "EmployeePaid",
+              "EmployeePremiumContributionAmount": 3.31,
+              "EmployerPremiumContributionAmount": 0,
+              "TotalPlanPremiumAmount": 3.31,
+              "PaymentMethodCode": "PayrollDeduction",
+              "PremiumModeQuantity": 26,
+              "PreTaxCode": "PostTax",
+              "TobaccoUseIndicator": false,
+              "TakeOverCoverageIndicator": false,
+              "CarrierID": "U7435",
+              "ElectedCoverage": {
+                "ElectedBenefitCalculationMethodCode": "FlatAmount",
+                "ElectedBenefitAmount": 20000,
+                "ElectedEmployeeContributionCode": "EmployeePaid",
+                "ElectedTotalPlanPremiumAmount": 3.31,
+                "ElectedCoverageInsured": {
+                  "InsuredPartyID": 105,
+                  "PrimaryInsuredIndicator": true,
+                  "InsuredCoverageEffectiveDate": "2019-09-01"
+                }
+              },
+              "CoverageInsured": {
+                "InsuredPartyID": 105,
+                "PrimaryInsuredIndicator": true,
+                "TobaccoUseIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-09-01"
+              },
+              "CoverageEventID": "NHEVT2239",
+              "CoverageTransactionDate": "2018-08-27"
+            }
+          ]
+        },
+        {
+          "EmployeePartyID": 225,
+          "EmployeeSocialSecurityNumber": "118-10-0423",
+          "EmployeeIdentifier": 2225,
+          "EmployeeName": {
+            "FirstName": "Cupid",
+            "LastName": "Valentine"
+          },
+          "EmployeeGenderCode": "Female",
+          "EmployeeBirthDate": "20020-02-10",
+          "MaritalStatusCode": "Married",
+          "EmployeeTobaccoUseCode": "N",
+          "EmployeeHomePhone": 80066657897,
+          "EmployeeWorkPhone": 4051987567,
+          "EmployeeMobilePhone": 8002527897,
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "P.O. Box 999",
+            "CityName": "Atlanta",
+            "StateProvinceCode": "GA",
+            "PostalCode": 30334
+          },
+          "EmployeeHomeAddress": {
+            "FirstLineAddress": "99 Cupid Lane",
+            "CityName": "Atlanta",
+            "StateProvinceCode": "GA",
+            "PostalCode": 30334
+          },
+          "EmployeeWorkAddress": {
+            "FirstLineAddress": "62 Salt Mine Way",
+            "CityName": "Salt Lake City",
+            "StateProvinceCode": "UT",
+            "PostalCode": 84044
+          },
+          "EmployeeEmail": "cupidvalentine@homeemail.com",
+          "EmployeeAlternateEmail": "c.valentine@saltmine.com",
+          "EmploymentInformation": {
+            "OriginalHireDate": "2018-05-27",
+            "MostRecentHireDate": "2018-05-27",
+            "ExemptCode": "Exempt",
+            "EmploymentTypeCode": "FullTime",
+            "EmploymentStatusCode": "Active",
+            "JobTitleText": "Head Custodial Engineer",
+            "OccupationText": "Head Custodial Engineer",
+            "WorkHoursQuantity": 40,
+            "WorkHoursFrequencyCode": "Weekly",
+            "WorkLocationText": "Corporate",
+            "PayrollDeductionFrequencyQuantity": 26,
+            "PayrollFrequencyQuantity": 26,
+            "UnionIndicator": false,
+            "EmploymentIncome": {
+              "IncomeTypeCode": "BenefitSalary",
+              "IncomeAmount": 100000,
+              "IncomeModeCode": "Annual",
+              "IncomeEffectiveDate": "2019-03-20"
+            }
+          },
+          "Event": {
+            "EventID": "NHEVT1255",
+            "EventTypeCode": "Coverage",
+            "EventTypeReasonCode": "NewHireEnrollment",
+            "EventDate": "2018-08-27",
+            "TransactionDate": "2018-08-27"
+          },
+          "EmployeeEventID": "NHEVT1255",
+          "Coverage": [
+            {
+              "CoverageID": 239709999,
+              "GroupPolicyNumber": "P123344",
+              "ProductTypeCode": "Life",
+              "BenefitPlanIdentifier": "BlueCross BlueShield Life",
+              "BenefitClassIdentifier": 1,
+              "BenefitSubClassIdentifier": 3,
+              "BillGroupIdentifier": 1,
+              "OriginalCoverageEffectiveDate": "2019-09-01",
+              "CoverageEffectiveDate": "2019-09-01",
+              "BenefitCalculationMethodCode": "FlatAmount",
+              "BenefitAmount": 20000,
+              "EmployeeContributionCode": "EmployeePaid",
+              "EmployeePremiumContributionAmount": 3.31,
+              "EmployerPremiumContributionAmount": 0,
+              "TotalPlanPremiumAmount": 3.31,
+              "PaymentMethodCode": "PayrollDeduction",
+              "PremiumModeQuantity": 26,
+              "PreTaxCode": "PostTax",
+              "TobaccoUseIndicator": true,
+              "TakeOverCoverageIndicator": true,
+              "CarrierID": "U7435",
+              "ElectedCoverage": {
+                "ElectedBenefitCalculationMethodCode": "FlatAmount",
+                "ElectedBenefitAmount": 50000,
+                "ElectedEmployeeContributionCode": "EmployeePaid",
+                "ElectedTotalPlanPremiumAmount": 3.31,
+                "ElectedCoverageInsured": {
+                  "InsuredPartyID": 225,
+                  "PrimaryInsuredIndicator": true,
+                  "InsuredCoverageEffectiveDate": "2019-09-01"
+                }
+              },
+              "CoverageInsured": {
+                "InsuredPartyID": 225,
+                "PrimaryInsuredIndicator": true,
+                "TobaccoUseIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-09-01"
+              },
+              "CoverageEventID": "NHEVT1255",
+              "CoverageTransactionDate": "2018-08-27"
+            },
+            {
+              "CoverageID": 2397071999,
+              "GroupPolicyNumber": "P123345",
+              "ProductTypeCode": "CriticalIllness",
+              "BenefitPlanIdentifier": "BlueCross CI",
+              "BenefitClassIdentifier": 1,
+              "BenefitSubClassIdentifier": 3,
+              "BillGroupIdentifier": 1,
+              "CoverageEffectiveDate": "2019-09-01",
+              "BenefitCalculationMethodCode": "FlatAmount",
+              "BenefitAmount": 20000,
+              "EmployeeContributionCode": "EmployeePaid",
+              "EmployeePremiumContributionAmount": 3.31,
+              "EmployerPremiumContributionAmount": 0,
+              "TotalPlanPremiumAmount": 3.31,
+              "PaymentMethodCode": "PayrollDeduction",
+              "PremiumModeQuantity": 26,
+              "PreTaxCode": "PostTax",
+              "TobaccoUseIndicator": false,
+              "TakeOverCoverageIndicator": false,
+              "CarrierID": "U7435",
+              "ElectedCoverage": {
+                "ElectedBenefitCalculationMethodCode": "FlatAmount",
+                "ElectedBenefitAmount": 20000,
+                "ElectedEmployeeContributionCode": "EmployeePaid",
+                "ElectedTotalPlanPremiumAmount": 3.31,
+                "ElectedCoverageInsured": {
+                  "InsuredPartyID": 225,
+                  "PrimaryInsuredIndicator": true,
+                  "InsuredCoverageEffectiveDate": "2019-09-01"
+                }
+              },
+              "CoverageInsured": {
+                "InsuredPartyID": 225,
+                "PrimaryInsuredIndicator": true,
+                "TobaccoUseIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-09-01"
+              },
+              "CoverageEventID": "NHEVT1255",
+              "CoverageTransactionDate": "2018-08-27"
+            },
+            {
+              "CoverageID": 2397072,
+              "GroupPolicyNumber": "P123346",
+              "ProductTypeCode": "Hospital",
+              "BenefitPlanIdentifier": "BlueCross Hospital",
+              "BenefitClassIdentifier": 1,
+              "BenefitSubClassIdentifier": 3,
+              "BillGroupIdentifier": 1,
+              "CoverageEffectiveDate": "2019-09-01",
+              "BenefitCalculationMethodCode": "FlatAmount",
+              "BenefitAmount": 20000,
+              "EmployeeContributionCode": "EmployeePaid",
+              "EmployeePremiumContributionAmount": 3.31,
+              "EmployerPremiumContributionAmount": 0,
+              "TotalPlanPremiumAmount": 3.31,
+              "PaymentMethodCode": "PayrollDeduction",
+              "PremiumModeQuantity": 26,
+              "PreTaxCode": "PostTax",
+              "TobaccoUseIndicator": false,
+              "TakeOverCoverageIndicator": false,
+              "CarrierID": "U7435",
+              "ElectedCoverage": {
+                "ElectedBenefitCalculationMethodCode": "FlatAmount",
+                "ElectedBenefitAmount": 20000,
+                "ElectedEmployeeContributionCode": "EmployeePaid",
+                "ElectedTotalPlanPremiumAmount": 3.31,
+                "ElectedCoverageInsured": {
+                  "InsuredPartyID": 225,
+                  "PrimaryInsuredIndicator": true,
+                  "InsuredCoverageEffectiveDate": "2019-09-01"
+                }
+              },
+              "CoverageInsured": {
+                "InsuredPartyID": 225,
+                "PrimaryInsuredIndicator": true,
+                "TobaccoUseIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-09-01"
+              },
+              "CoverageEventID": "NHEVT1255",
+              "CoverageTransactionDate": "2018-08-27"
+            }
+          ]
+        },
+        {
+          "EmployeePartyID": 1774744,
+          "EmployeeSocialSecurityNumber": 998704567,
+          "EmployeeIdentifier": 91023,
+          "EmployeeName": {
+            "FirstName": "Don",
+            "LastName": "Quixote"
+          },
+          "EmployeeGenderCode": "Male",
+          "EmployeeBirthDate": "1987-04-01",
+          "MaritalStatusCode": "Married",
+          "EmployeeTobaccoUseCode": "N",
+          "EmployeeHomePhone": 8005257897,
+          "EmployeeWorkPhone": 4051234567,
+          "EmployeeMobilePhone": 8005257897,
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "412 Calle Violete",
+            "CityName": "Alcala De Henares",
+            "StateProvinceCode": "OK",
+            "PostalCode": 74135
+          },
+          "EmployeeHomeAddress": {
+            "FirstLineAddress": "412 Calle Violete",
+            "CityName": "Alcala De Henares",
+            "StateProvinceCode": "OK",
+            "PostalCode": 74135
+          },
+          "EmployeeWorkAddress": {
+            "FirstLineAddress": "62 Salt Mine Way",
+            "CityName": "Salt Lake City",
+            "StateProvinceCode": "UT",
+            "PostalCode": 84044
+          },
+          "EmployeeEmail": "DonQuixote@homeemail.com",
+          "EmployeeAlternateEmail": "DonQ@saltmine.com",
+          "EmploymentInformation": {
+            "OriginalHireDate": "2019-07-20",
+            "MostRecentHireDate": "2019-07-20",
+            "ExemptCode": "Exempt",
+            "EmploymentTypeCode": "PartTime",
+            "EmploymentStatusCode": "Active",
+            "JobTitleText": "Spanish Cultural Teacher",
+            "OccupationText": "Spanish Cultural Teacher",
+            "WorkHoursQuantity": 20,
+            "WorkHoursFrequencyCode": "Weekly",
+            "WorkLocationText": "Corporate",
+            "PayrollDeductionFrequencyQuantity": 26,
+            "PayrollFrequencyQuantity": 26,
+            "UnionIndicator": false,
+            "EmploymentIncome": {
+              "IncomeTypeCode": "BenefitSalary",
+              "IncomeAmount": 20000,
+              "IncomeModeCode": "Annual",
+              "IncomeEffectiveDate": "2019-07-20"
+            }
+          },
+          "Event": {
+            "EventID": "NHEVT111",
+            "EventTypeCode": "Coverage",
+            "EventTypeReasonCode": "NewHireEnrollment",
+            "EventDate": "2019-07-24",
+            "TransactionDate": "2019-07-24"
+          },
+          "EmployeeEventID": "NHEVT111",
+          "Dependent": [
+            {
+              "DependentPartyID": 1522222,
+              "DependentSocialSecurityNumber": "997-87-8712",
+              "DependentName": {
+                "FirstName": "Billy",
+                "LastName": "Idol"
+              },
+              "DependentRelationshipTypeCode": "Spouse",
+              "DependentGenderCode": "Male",
+              "DependentBirthDate": "1957-02-23",
+              "DependentHomePhone": 9183893348,
+              "DependentMailingAddress": {
+                "FirstLineAddress": "29 Thresa Blvd",
+                "CityName": "Atlanta",
+                "StateProvinceCode": "GA",
+                "PostalCode": 30334
+              },
+              "DependentHomeEmail": "bill.idol@gmail.com",
+              "DisabilityIndicator": false
+            },
+            {
+              "DependentPartyID": 1522223,
+              "DependentSocialSecurityNumber": "997-87-8747",
+              "DependentName": {
+                "FirstName": "Jose",
+                "LastName": "Cuervo"
+              },
+              "DependentRelationshipTypeCode": "Child",
+              "DependentGenderCode": "Male",
+              "DependentBirthDate": "1958-03-21",
+              "DependentHomePhone": 9183893348,
+              "DependentMailingAddress": {
+                "FirstLineAddress": "29 Thresa Blvd",
+                "CityName": "Atlanta",
+                "StateProvinceCode": "GA",
+                "PostalCode": 30334
+              },
+              "DependentHomeEmail": "jose.c@aol.com",
+              "DisabilityIndicator": false
+            }
+          ],
+          "Coverage": {
+            "CoverageID": 2397070,
+            "GroupPolicyNumber": 219524,
+            "ProductTypeCode": "Hospital",
+            "BenefitPlanIdentifier": "Hospital Indemnity",
+            "BenefitClassIdentifier": 1,
+            "BenefitSubClassIdentifier": 3,
+            "BillGroupIdentifier": 1,
+            "CoverageEffectiveDate": "2019-07-23",
+            "BenefitCalculationMethodCode": "FlatAmount",
+            "BenefitAmount": 5000,
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 1.18,
+            "EmployerPremiumContributionAmount": 0,
+            "TotalPlanPremiumAmount": 1.18,
+            "PaymentMethodCode": "PayrollDeduction",
+            "PremiumModeQuantity": 26,
+            "PreTaxCode": "PostTax",
+            "TobaccoUseIndicator": false,
+            "TakeOverCoverageIndicator": false,
+            "CarrierID": "U7435",
+            "ElectedCoverage": {
+              "ElectedBenefitCalculationMethodCode": "FlatAmount",
+              "ElectedBenefitAmount": 8000,
+              "ElectedEmployeeContributionCode": "EmployeePaid",
+              "ElectedEmployeePremiumContributionAmount": 2.28,
+              "ElectedEmployerPremiumContributionAmount": 0,
+              "ElectedTotalPlanPremiumAmount": 2.28,
+              "ElectedCoverageInsured": [
+                {
+                  "InsuredPartyID": 1522222,
+                  "PrimaryInsuredIndicator": false,
+                  "InsuredCoverageEffectiveDate": "2019-07-25",
+                  "InsuredCoverageTerminationDate": "2019-12-31"
+                },
+                {
+                  "InsuredPartyID": 1522223,
+                  "PrimaryInsuredIndicator": false,
+                  "InsuredCoverageEffectiveDate": "2019-07-25",
+                  "InsuredCoverageTerminationDate": "2019-12-31"
+                }
+              ]
+            },
+            "CoverageInsured": [
+              {
+                "InsuredPartyID": 1522222,
+                "PrimaryInsuredIndicator": false,
+                "TobaccoUseIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-07-25",
+                "InsuredCoverageTerminationDate": "2019-12-31"
+              },
+              {
+                "InsuredPartyID": 1522223,
+                "PrimaryInsuredIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-07-25",
+                "InsuredCoverageTerminationDate": "2019-12-31"
+              }
+            ],
+            "CoverageEventID": "NHEVT111",
+            "CoverageTransactionDate": "2019-07-24"
+          }
+        }
+      ]
+    },
+    "Audit": {
+      "AuditID": "2019-08-12-11.36.42.895000",
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 6,
+      "DependentRecordQuantity": 4,
+      "EventRecordQuantity": 5,
+      "CoverageRecordQuantity": 15
+    }
+  }
+}
+```
 ##NewHireCoverageElections-Legal
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "c9fcc147-2b65-48cb-925c-9f898a381815",
+    "SenderName": "ABC Tech Partner",
+    "SenderPlatformName": "ABC Platform",
+    "ReceiverName": "XYZ Carrier",
+    "CreationDateTime": "2019-07-23T21:56:36.2619791Z",
+    "TestProductionCode": "Production",
+    "TransmissionTypeCode": "ChangesOnly",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": 1234,
+      "CarrierName": "XYZ Carrier"
+    },
+    "Employer": {
+      "EmployerPartyID": 9999,
+      "FederalEmployerIdentificationNumber": "99-9999999",
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": "AS-M009-87788",
+        "MasterAgreementNumber": "M009-87788",
+        "CarrierID": 1234
+      },
+      "EmployerName": "Sweet Insurance 4 U",
+      "EmployerAddress": {
+        "FirstLineAddress": "3345 East 45th Street",
+        "CityName": "Oklahoma City",
+        "StateProvinceCode": "OK",
+        "PostalCode": 73112
+      },
+      "Employee": {
+        "EmployeePartyID": 45,
+        "EmployeeSocialSecurityNumber": "998-70-0423",
+        "EmployeeIdentifier": 42,
+        "EmployeeName": {
+          "FirstName": "Sylvia",
+          "LastName": "Baldwin"
+        },
+        "EmployeeGenderCode": "Female",
+        "EmployeeBirthDate": "2000-02-08",
+        "MaritalStatusCode": "Married",
+        "EmployeeTobaccoUseCode": "N",
+        "EmployeeHomePhone": 8005257897,
+        "EmployeeWorkPhone": 4051234567,
+        "EmployeeMobilePhone": 8005257897,
+        "EmployeeMailingAddress": {
+          "FirstLineAddress": "4 Thresa Blvd",
+          "CityName": "Atlanta",
+          "StateProvinceCode": "GA",
+          "PostalCode": 30334
+        },
+        "EmployeeHomeAddress": {
+          "FirstLineAddress": "4 Thresa Blvd",
+          "CityName": "Atlanta",
+          "StateProvinceCode": "GA",
+          "PostalCode": 30334
+        },
+        "EmployeeWorkAddress": {
+          "FirstLineAddress": "62 Salt Mine Way",
+          "CityName": "Salt Lake City",
+          "StateProvinceCode": "UT",
+          "PostalCode": 84044
+        },
+        "EmployeeEmail": "s.baldwin@saltmine.com",
+        "EmployeeAlternateEmail": "s.baldwin@saltmine2.com",
+        "EmploymentInformation": {
+          "OriginalHireDate": "2018-08-27",
+          "MostRecentHireDate": "2018-08-27",
+          "ExemptCode": "Exempt",
+          "EmploymentTypeCode": "FullTime",
+          "EmploymentStatusCode": "Active",
+          "JobTitleText": "Head Custodial Engineer",
+          "OccupationText": "Head Custodial Engineer",
+          "WorkHoursQuantity": 40,
+          "WorkHoursFrequencyCode": "Weekly",
+          "WorkLocationText": "Corporate",
+          "PayrollDeductionFrequencyQuantity": 26,
+          "PayrollFrequencyQuantity": 26,
+          "UnionIndicator": false,
+          "EmploymentIncome": {
+            "IncomeTypeCode": "BenefitSalary",
+            "IncomeAmount": 100000,
+            "IncomeModeCode": "Annual",
+            "IncomeEffectiveDate": "2019-03-20"
+          }
+        },
+        "Event": {
+          "EventID": "NHEVT1234",
+          "EventTypeCode": "Coverage",
+          "EventTypeReasonCode": "NewHireEnrollment",
+          "EventDate": "2018-08-27",
+          "TransactionDate": "2018-08-27"
+        },
+        "EmployeeEventID": "NHEVT1234",
+        "Coverage": [
+          {
+            "CoverageID": 2397070,
+            "GroupPolicyNumber": "P123344",
+            "ProductTypeCode": "Life",
+            "BenefitPlanIdentifier": "BlueCross BlueShield Life",
+            "BenefitClassIdentifier": 1,
+            "BenefitSubClassIdentifier": 3,
+            "BillGroupIdentifier": 1,
+            "OriginalCoverageEffectiveDate": "2019-09-01",
+            "CoverageEffectiveDate": "2019-09-01",
+            "CoverageTierCode": "Employee",
+            "BenefitCalculationMethodCode": "FlatAmount",
+            "BenefitAmount": 20000,
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 3.31,
+            "EmployerPremiumContributionAmount": 0,
+            "TotalPlanPremiumAmount": 3.31,
+            "PaymentMethodCode": "PayrollDeduction",
+            "PremiumModeQuantity": 26,
+            "PreTaxCode": "PostTax",
+            "TobaccoUseIndicator": true,
+            "TakeOverCoverageIndicator": true,
+            "CarrierID": 1234,
+            "ElectedCoverage": {
+              "ElectedBenefitCalculationMethodCode": "FlatAmount",
+              "ElectedBenefitAmount": 50000,
+              "ElectedEmployeeContributionCode": "EmployeePaid",
+              "ElectedTotalPlanPremiumAmount": 3.31,
+              "ElectedCoverageInsured": {
+                "InsuredPartyID": 45,
+                "PrimaryInsuredIndicator": true,
+                "InsuredCoverageEffectiveDate": "2019-09-01"
+              }
+            },
+            "CoverageInsured": {
+              "InsuredPartyID": 45,
+              "PrimaryInsuredIndicator": true,
+              "TobaccoUseIndicator": false,
+              "InsuredCoverageEffectiveDate": "2019-09-01"
+            },
+            "CoverageEventID": "NHEVT1334",
+            "CoverageTransactionDate": "2018-08-27"
+          },
+          {
+            "CoverageID": 2397071,
+            "GroupPolicyNumber": "P123345",
+            "ProductTypeCode": "CriticalIllness",
+            "BenefitPlanIdentifier": "BlueCross CI",
+            "BenefitClassIdentifier": 1,
+            "BenefitSubClassIdentifier": 3,
+            "BillGroupIdentifier": 1,
+            "OriginalCoverageEffectiveDate": "2019-09-01",
+            "CoverageEffectiveDate": "2019-09-01",
+            "CoverageTierCode": "Employee",
+            "BenefitCalculationMethodCode": "FlatAmount",
+            "BenefitAmount": 20000,
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 3.31,
+            "EmployerPremiumContributionAmount": 0,
+            "TotalPlanPremiumAmount": 3.31,
+            "PaymentMethodCode": "PayrollDeduction",
+            "PremiumModeQuantity": 26,
+            "PreTaxCode": "PostTax",
+            "TobaccoUseIndicator": false,
+            "TakeOverCoverageIndicator": false,
+            "CarrierID": 1234,
+            "ElectedCoverage": {
+              "ElectedBenefitCalculationMethodCode": "FlatAmount",
+              "ElectedBenefitAmount": 20000,
+              "ElectedEmployeeContributionCode": "EmployeePaid",
+              "ElectedTotalPlanPremiumAmount": 3.31,
+              "ElectedCoverageInsured": {
+                "InsuredPartyID": 45,
+                "PrimaryInsuredIndicator": true,
+                "InsuredCoverageEffectiveDate": "2019-09-01"
+              }
+            },
+            "CoverageInsured": {
+              "InsuredPartyID": 45,
+              "PrimaryInsuredIndicator": true,
+              "TobaccoUseIndicator": false,
+              "InsuredCoverageEffectiveDate": "2019-09-01"
+            },
+            "CoverageEventID": "NHEVT2234",
+            "CoverageTransactionDate": "2018-08-27"
+          },
+          {
+            "CoverageID": 2397072,
+            "GroupPolicyNumber": "P123346",
+            "ProductTypeCode": "Hospital",
+            "BenefitPlanIdentifier": "BlueCross Hospital",
+            "BenefitClassIdentifier": 1,
+            "BenefitSubClassIdentifier": 3,
+            "BillGroupIdentifier": 1,
+            "OriginalCoverageEffectiveDate": "2019-09-01",
+            "CoverageEffectiveDate": "2019-09-01",
+            "CoverageTierCode": "Employee",
+            "BenefitCalculationMethodCode": "FlatAmount",
+            "BenefitAmount": 20000,
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 3.31,
+            "EmployerPremiumContributionAmount": 0,
+            "TotalPlanPremiumAmount": 3.31,
+            "PaymentMethodCode": "PayrollDeduction",
+            "PremiumModeQuantity": 26,
+            "PreTaxCode": "PostTax",
+            "TobaccoUseIndicator": false,
+            "TakeOverCoverageIndicator": false,
+            "CarrierID": 1234,
+            "ElectedCoverage": {
+              "ElectedBenefitCalculationMethodCode": "FlatAmount",
+              "ElectedBenefitAmount": 20000,
+              "ElectedEmployeeContributionCode": "EmployeePaid",
+              "ElectedTotalPlanPremiumAmount": 3.31,
+              "ElectedCoverageInsured": {
+                "InsuredPartyID": 45,
+                "PrimaryInsuredIndicator": true,
+                "InsuredCoverageEffectiveDate": "2019-09-01"
+              }
+            },
+            "CoverageInsured": {
+              "InsuredPartyID": 45,
+              "PrimaryInsuredIndicator": true,
+              "TobaccoUseIndicator": false,
+              "InsuredCoverageEffectiveDate": "2019-09-01"
+            },
+            "CoverageEventID": "NHEVT2234",
+            "CoverageTransactionDate": "2018-08-27"
+          },
+          {
+            "CoverageID": 2397074,
+            "GroupPolicyNumber": "P123345",
+            "ProductTypeCode": "LifestyleBenefits",
+            "BenefitPlanIdentifier": "LEG123",
+            "BenefitClassIdentifier": 1,
+            "BenefitSubClassIdentifier": 3,
+            "BillGroupIdentifier": 1,
+            "OriginalCoverageEffectiveDate": "2019-09-01",
+            "CoverageEffectiveDate": "2019-09-01",
+            "CoverageTierCode": "Employee",
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 3.31,
+            "EmployerPremiumContributionAmount": 0,
+            "TotalPlanPremiumAmount": 3.31,
+            "PaymentMethodCode": "PayrollDeduction",
+            "PremiumModeQuantity": 26,
+            "PreTaxCode": "PostTax",
+            "TobaccoUseIndicator": false,
+            "TakeOverCoverageIndicator": false,
+            "CarrierID": 1234,
+            "CoverageInsured": {
+              "InsuredPartyID": 45,
+              "PrimaryInsuredIndicator": true,
+              "TobaccoUseIndicator": false,
+              "InsuredCoverageEffectiveDate": "2019-09-01"
+            },
+            "CoverageEventID": "NHEVT1334",
+            "CoverageTransactionDate": "2019-08-27"
+          }
+        ]
+      }
+    },
+    "Audit": {
+      "AuditID": "Audit1234",
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1,
+      "DependentRecordQuantity": 0,
+      "OtherPartyRecordQuantity": 0,
+      "BeneficiaryGroupRecordQuantity": 0,
+      "EventRecordQuantity": 1,
+      "CoverageRecordQuantity": 4,
+      "CoverageRiderRecordQuantity": 0
+    }
+  }
+}
+```
 ##OpenEnrollmentCoverageElections
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "2019-08-12-11.36.42.895000",
+    "SenderName": "ADPSLC",
+    "SenderPlatformName": "CES 6.2",
+    "ReceiverName": "MYCARRIER",
+    "CreationDateTime": "2019-08-12T11:36:42",
+    "TestProductionCode": "Test",
+    "TransmissionTypeCode": "FullFile",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": "MYCARRIER_ID",
+      "CarrierName": "MYCARRIER"
+    },
+    "Employer": {
+      "EmployerPartyID": "PARTYID",
+      "FederalEmployerIdentificationNumber": "12-3456789",
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": "TBD",
+        "MasterAgreementNumber": "INT-123456",
+        "CarrierID": "MYCARRIER_ID"
+      },
+      "EmployerName": "My Employer",
+      "EmployerAddress": {
+        "FirstLineAddress": "24490 Eureka Ave",
+        "CityName": "Warren",
+        "StateProvinceCode": "MI",
+        "PostalCode": 48091,
+        "CountryCode": "US"
+      },
+      "Employee": [
+        {
+          "EmployeePartyID": 123456,
+          "EmployeeSocialSecurityNumber": 111101111,
+          "EmployeeIdentifier": 916061,
+          "EmployeeName": {
+            "FirstName": "COOPER",
+            "MiddleName": "D",
+            "LastName": "HERNANDEZ"
+          },
+          "EmployeeGenderCode": "Male",
+          "EmployeeBirthDate": "1992-06-13",
+          "MaritalStatusCode": "Single",
+          "EmployeeHomePhone": 6830001234,
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "2409 Main Street",
+            "CityName": "TALAHASSEE",
+            "StateProvinceCode": "FL",
+            "PostalCode": 33844,
+            "CountryCode": "US"
+          },
+          "EmployeeAlternateEmail": "cooper.hernandez@myemployer.com",
+          "EmploymentInformation": {
+            "OriginalHireDate": "2016-06-13",
+            "EmploymentTypeCode": "FullTime",
+            "EmploymentStatusCode": "Active",
+            "EmploymentIncome": {
+              "IncomeTypeCode": "Salary",
+              "IncomeAmount": 43680,
+              "IncomeModeCode": "Annual",
+              "IncomeEffectiveDate": "2018-04-01"
+            }
+          },
+          "Event": {
+            "EventID": "E916061O001",
+            "EventTypeCode": "Coverage",
+            "EventTypeReasonCode": "OpenEnrollment",
+            "EventDate": "2019-06-07"
+          },
+          "Coverage": {
+            "CoverageID": "O001",
+            "GroupPolicyNumber": "R1234567",
+            "ProductTypeCode": "Accident",
+            "BenefitPlanIdentifier": 815,
+            "CoverageEffectiveDate": "2019-07-01",
+            "CoverageTierCode": "Employee",
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 32.53,
+            "TotalPlanPremiumAmount": 32.53,
+            "PaymentMethodCode": "PayrollDeduction",
+            "PremiumModeQuantity": 12,
+            "CarrierID": "MYCARRIER_ID",
+            "CoverageInsured": {
+              "InsuredPartyID": 123456,
+              "PrimaryInsuredIndicator": true,
+              "InsuredCoverageEffectiveDate": "2019-07-01"
+            },
+            "CoverageEventID": "E916061O001",
+            "CoverageTransactionDate": "2019-06-10"
+          }
+        },
+        {
+          "EmployeePartyID": 123457,
+          "EmployeeSocialSecurityNumber": 111101111,
+          "EmployeeIdentifier": 916062,
+          "EmployeeName": {
+            "FirstName": "JOHNSON",
+            "MiddleName": "D",
+            "LastName": "JAMES"
+          },
+          "EmployeeGenderCode": "Male",
+          "EmployeeBirthDate": "1992-08-12",
+          "MaritalStatusCode": "Single",
+          "EmployeeHomePhone": 6830009999,
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "48 West Street",
+            "CityName": "TALAHASSEE",
+            "StateProvinceCode": "FL",
+            "PostalCode": 33844,
+            "CountryCode": "US"
+          },
+          "EmployeeAlternateEmail": "johnson.james@myemployer.com",
+          "EmploymentInformation": {
+            "OriginalHireDate": "2016-06-13",
+            "EmploymentTypeCode": "FullTime",
+            "EmploymentStatusCode": "Active",
+            "EmploymentIncome": {
+              "IncomeTypeCode": "Salary",
+              "IncomeAmount": 43680,
+              "IncomeModeCode": "Annual",
+              "IncomeEffectiveDate": "2018-04-01"
+            }
+          },
+          "Event": {
+            "EventID": "E916061Q009",
+            "EventTypeCode": "Coverage",
+            "EventTypeReasonCode": "OpenEnrollment",
+            "EventDate": "2019-06-07"
+          },
+          "Coverage": {
+            "CoverageID": "Q002",
+            "GroupPolicyNumber": "R1234567",
+            "ProductTypeCode": "CriticalIllness",
+            "BenefitPlanIdentifier": 796,
+            "CoverageEffectiveDate": "2019-07-01",
+            "BenefitAmount": 20000,
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 9.8,
+            "TotalPlanPremiumAmount": 9.8,
+            "PaymentMethodCode": "PayrollDeduction",
+            "PremiumModeQuantity": 12,
+            "CarrierID": "MYCARRIER_ID",
+            "CoverageInsured": {
+              "InsuredPartyID": 123457,
+              "PrimaryInsuredIndicator": true,
+              "InsuredCoverageEffectiveDate": "2019-07-01"
+            },
+            "CoverageEventID": "E916061Q009",
+            "CoverageTransactionDate": "2019-06-10"
+          }
+        },
+        {
+          "EmployeePartyID": 916063,
+          "EmployeeSocialSecurityNumber": 111101111,
+          "EmployeeIdentifier": 123458,
+          "EmployeeName": {
+            "FirstName": "Miller",
+            "MiddleName": "T",
+            "LastName": "Bob"
+          },
+          "EmployeeGenderCode": "Male",
+          "EmployeeBirthDate": "1990-06-13",
+          "MaritalStatusCode": "Single",
+          "EmployeeHomePhone": 6835554444,
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "89 East Main Street",
+            "CityName": "TALAHASSEE",
+            "StateProvinceCode": "FL",
+            "PostalCode": 33844,
+            "CountryCode": "US"
+          },
+          "EmployeeAlternateEmail": "bob.miller@myemployer.com",
+          "EmploymentInformation": {
+            "OriginalHireDate": "2016-06-14",
+            "EmploymentTypeCode": "FullTime",
+            "EmploymentStatusCode": "Active",
+            "EmploymentIncome": {
+              "IncomeTypeCode": "Salary",
+              "IncomeAmount": 43680,
+              "IncomeModeCode": "Annual",
+              "IncomeEffectiveDate": "2018-04-01"
+            }
+          },
+          "Event": {
+            "EventID": "E916061O099",
+            "EventTypeCode": "Coverage",
+            "EventTypeReasonCode": "OpenEnrollment",
+            "EventDate": "2019-06-07"
+          },
+          "EmployeeEventID": "E916061O099",
+          "Dependent": [
+            {
+              "DependentPartyID": 111111111,
+              "DependentSocialSecurityNumber": 100020000,
+              "DependentIdentifier": 1,
+              "DependentName": {
+                "FirstName": "Peggy",
+                "LastName": "Miller"
+              },
+              "DependentRelationshipTypeCode": "Spouse",
+              "DependentGenderCode": "Female",
+              "DependentBirthDate": "1986-09-16",
+              "DisabilityIndicator": false
+            },
+            {
+              "DependentPartyID": 111121111,
+              "DependentSocialSecurityNumber": 111121111,
+              "DependentIdentifier": 2,
+              "DependentName": {
+                "FirstName": "Penny",
+                "LastName": "Miller"
+              },
+              "DependentRelationshipTypeCode": "Child",
+              "DependentGenderCode": "Female",
+              "DependentBirthDate": "2013-05-08",
+              "DisabilityIndicator": false
+            },
+            {
+              "DependentPartyID": 111131111,
+              "DependentSocialSecurityNumber": 111131111,
+              "DependentIdentifier": 3,
+              "DependentName": {
+                "FirstName": "Corey",
+                "LastName": "Miller"
+              },
+              "DependentRelationshipTypeCode": "Child",
+              "DependentGenderCode": "Male",
+              "DependentBirthDate": "2007-11-11",
+              "DisabilityIndicator": false
+            }
+          ],
+          "Coverage": {
+            "CoverageID": "O001",
+            "GroupPolicyNumber": "R1234567",
+            "ProductTypeCode": "Accident",
+            "BenefitPlanIdentifier": 815,
+            "CoverageEffectiveDate": "2019-07-01",
+            "CoverageTierCode": "EmployeeFamily",
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 32.53,
+            "TotalPlanPremiumAmount": 32.53,
+            "PaymentMethodCode": "PayrollDeduction",
+            "PremiumModeQuantity": 12,
+            "CarrierID": "MYCARRIER_ID",
+            "CoverageInsured": [
+              {
+                "InsuredPartyID": 916063,
+                "PrimaryInsuredIndicator": true,
+                "InsuredCoverageEffectiveDate": "2019-07-01"
+              },
+              {
+                "InsuredPartyID": 111111111,
+                "PrimaryInsuredIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-07-01"
+              },
+              {
+                "InsuredPartyID": 111121111,
+                "PrimaryInsuredIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-07-01"
+              },
+              {
+                "InsuredPartyID": 111131111,
+                "PrimaryInsuredIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-07-01"
+              }
+            ],
+            "CoverageEventID": "E916061O099",
+            "CoverageTransactionDate": "2019-06-10"
+          }
+        },
+        {
+          "EmployeePartyID": 1772641,
+          "EmployeeSocialSecurityNumber": 998700290,
+          "EmployeeIdentifier": 291,
+          "EmployeeName": {
+            "FirstName": "Nina",
+            "LastName": "McCain"
+          },
+          "EmployeeGenderCode": "Female",
+          "EmployeeBirthDate": "1974-10-03",
+          "MaritalStatusCode": "Married",
+          "EmployeeHomePhone": 6017588466,
+          "EmployeeWorkPhone": 6019145568,
+          "EmployeeMobilePhone": 6012183447,
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "6 N Glyn Hwy",
+            "CityName": "Jackson",
+            "StateProvinceCode": "MS",
+            "PostalCode": 39215
+          },
+          "EmployeeHomeAddress": {
+            "FirstLineAddress": "6 N Glyn Hwy",
+            "CityName": "Jackson",
+            "StateProvinceCode": "MS",
+            "PostalCode": 39215
+          },
+          "EmployeeWorkAddress": {
+            "FirstLineAddress": "31 Riverside Plaza",
+            "CityName": "Jackson",
+            "StateProvinceCode": "MS",
+            "PostalCode": 81898
+          },
+          "EmployeeEmail": "Nina.McCain@demo-me.com",
+          "EmploymentInformation": {
+            "OriginalHireDate": "2017-08-18",
+            "MostRecentHireDate": "2017-08-18",
+            "EmploymentTypeCode": "FullTime",
+            "EmploymentStatusCode": "Active",
+            "JobTitleText": "Assistant Director of Nursing",
+            "OccupationText": "Assistant Director of Nursing",
+            "WorkLocationText": "Mississippi Medical Center",
+            "PayrollDeductionFrequencyQuantity": 26,
+            "PayrollFrequencyQuantity": 26,
+            "EmploymentIncome": {
+              "IncomeTypeCode": "BenefitSalary",
+              "IncomeAmount": 60000,
+              "IncomeModeCode": "Annual",
+              "IncomeEffectiveDate": "2018-04-01"
+            }
+          },
+          "Event": {
+            "EventID": "EE735236",
+            "EventTypeCode": "Coverage",
+            "EventTypeReasonCode": "OpenEnrollment",
+            "EventDate": "2019-06-07",
+            "TransactionDate": "2019-06-10"
+          },
+          "Dependent": {
+            "DependentPartyID": 1772642,
+            "DependentSocialSecurityNumber": 998763918,
+            "DependentName": {
+              "FirstName": "Ken",
+              "LastName": "McCain"
+            },
+            "DependentRelationshipTypeCode": "Spouse",
+            "DependentGenderCode": "Male",
+            "DependentBirthDate": "1965-09-28"
+          },
+          "Coverage": [
+            {
+              "CoverageID": 1111111,
+              "ProductTypeCode": "Life",
+              "BenefitPlanIdentifier": "VOLLIFE",
+              "BenefitClassIdentifier": 1,
+              "BenefitSubClassIdentifier": "",
+              "BillGroupIdentifier": 101,
+              "BillSubGroupIdentifier": 765,
+              "CoverageEffectiveDate": "2019-07-01",
+              "CoverageTierCode": "Employee",
+              "BenefitCalculationMethodCode": "FlatAmount",
+              "BenefitAmount": 50000,
+              "BenefitFactor": 0,
+              "EmployeeContributionCode": "EmployeePaid",
+              "EmployeePremiumContributionAmount": 9.83,
+              "EmployerPremiumContributionAmount": 0,
+              "TotalPlanPremiumAmount": 9.83,
+              "BenefitEarningsAmount": 0,
+              "BenefitModeQuantity": 0,
+              "PaymentMethodCode": "PayrollDeduction",
+              "PremiumModeQuantity": 26,
+              "PreTaxCode": "PreTax",
+              "IssueAgeQuantity": 0,
+              "TobaccoUseIndicator": true,
+              "TakeOverCoverageIndicator": true,
+              "CarrierID": "MYCARRIER_ID",
+              "ElectedCoverage": {
+                "ElectedCoverageTierCode": "Employee",
+                "ElectedBenefitCalculationMethodCode": "FlatAmount",
+                "ElectedBenefitAmount": 100000,
+                "ElectedBenefitFactor": 0,
+                "ElectedEmployeeContributionCode": "EmployeePaid",
+                "ElectedEmployeePremiumContributionAmount": 19.66,
+                "ElectedEmployerPremiumContributionAmount": 0,
+                "ElectedTotalPlanPremiumAmount": 19.66,
+                "ElectedCoverageInsured": {
+                  "InsuredPartyID": 1772641,
+                  "PrimaryInsuredIndicator": true,
+                  "TobaccoUseIndicator": true,
+                  "InsuredCoverageEffectiveDate": "2019-07-01"
+                }
+              },
+              "CoverageInsured": {
+                "InsuredPartyID": 1772641,
+                "PrimaryInsuredIndicator": true,
+                "InsuredCoverageEffectiveDate": "2019-07-01"
+              },
+              "CoverageEventID": "EE735236",
+              "CoverageTransactionDate": "2019-07-10"
+            },
+            {
+              "CoverageID": 2222222,
+              "ProductTypeCode": "Life",
+              "BenefitPlanIdentifier": "SPLIFE",
+              "BenefitClassIdentifier": 2,
+              "BillGroupIdentifier": 101,
+              "BillSubGroupIdentifier": 766,
+              "CoverageEffectiveDate": "2019-07-01",
+              "CoverageTierCode": "SpouseOnly",
+              "BenefitCalculationMethodCode": "FlatAmount",
+              "BenefitAmount": 10000,
+              "BenefitFactor": 0,
+              "EmployeeContributionCode": "EmployeePaid",
+              "EmployeePremiumContributionAmount": 8.72,
+              "EmployerPremiumContributionAmount": 0,
+              "TotalPlanPremiumAmount": 8.72,
+              "BenefitEarningsAmount": 0,
+              "BenefitModeQuantity": 0,
+              "PreTaxCode": "PreTax",
+              "IssueAgeQuantity": 0,
+              "TobaccoUseIndicator": false,
+              "TakeOverCoverageIndicator": true,
+              "CarrierID": 9803,
+              "ElectedCoverage": {
+                "ElectedCoverageTierCode": "SpouseOnly",
+                "ElectedBenefitCalculationMethodCode": "FlatAmount",
+                "ElectedBenefitAmount": 200000,
+                "ElectedBenefitFactor": 0,
+                "ElectedEmployeeContributionCode": "EmployeePaid",
+                "ElectedEmployeePremiumContributionAmount": 17.44,
+                "ElectedEmployerPremiumContributionAmount": 0,
+                "ElectedTotalPlanPremiumAmount": 17.44,
+                "ElectedCoverageInsured": {
+                  "InsuredPartyID": 1772642,
+                  "PrimaryInsuredIndicator": false,
+                  "TobaccoUseIndicator": false,
+                  "InsuredCoverageEffectiveDate": "2019-07-01"
+                }
+              },
+              "CoverageInsured": {
+                "InsuredPartyID": 1772642,
+                "PrimaryInsuredIndicator": false,
+                "TobaccoUseIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-07-01"
+              },
+              "CoverageEventID": "EE735236",
+              "CoverageTransactionDate": "2019-07-10"
+            }
+          ]
+        }
+      ]
+    },
+    "Audit": {
+      "AuditID": "2019-08-12-11.36.42.895000",
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 4,
+      "DependentRecordQuantity": 4,
+      "EventRecordQuantity": 4,
+      "CoverageRecordQuantity": 5
+    }
+  }
+}
+```
 ##OpenEnrollmentCoverageElections-IDTheft
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "2019-08-12-11.36.42.895000",
+    "SenderName": "ABC Tech Partner",
+    "SenderPlatformName": "ABC Platform",
+    "ReceiverName": "MYCARRIER",
+    "CreationDateTime": "2019-08-12T11:36:42",
+    "TestProductionCode": "Test",
+    "TransmissionTypeCode": "FullFile",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": 123456,
+      "CarrierName": "MYCARRIER"
+    },
+    "Employer": {
+      "EmployerPartyID": "PARTYID",
+      "FederalEmployerIdentificationNumber": "12-3456789",
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": "TBD",
+        "MasterAgreementNumber": "INT-123456",
+        "CarrierID": 123456
+      },
+      "EmployerName": "My Employer",
+      "EmployerAddress": {
+        "FirstLineAddress": "24490 Eureka Ave",
+        "CityName": "Warren",
+        "StateProvinceCode": "MI",
+        "PostalCode": 48091,
+        "CountryCode": "US"
+      },
+      "Employee": {
+        "EmployeePartyID": 916061,
+        "EmployeeSocialSecurityNumber": 111101111,
+        "EmployeeIdentifier": 916061,
+        "EmployeeName": {
+          "FirstName": "COOPER",
+          "MiddleName": "D",
+          "LastName": "HERNANDEZTEST"
+        },
+        "EmployeeGenderCode": "Male",
+        "EmployeeBirthDate": "1992-06-13",
+        "MaritalStatusCode": "Single",
+        "EmployeeHomePhone": 6830001234,
+        "EmployeeMailingAddress": {
+          "FirstLineAddress": "2409 Main Street",
+          "CityName": "TALAHASSEE",
+          "StateProvinceCode": "FL",
+          "PostalCode": 33844,
+          "CountryCode": "US"
+        },
+        "EmployeeEmail": "cooper.hernandeztest@myemployer.com",
+        "EmploymentInformation": {
+          "OriginalHireDate": "2016-06-13",
+          "EmploymentTypeCode": "FullTime",
+          "EmploymentStatusCode": "Active",
+          "EmploymentIncome": {
+            "IncomeTypeCode": "Salary",
+            "IncomeAmount": 43680,
+            "IncomeModeCode": "Annual",
+            "IncomeEffectiveDate": "2018-04-01"
+          }
+        },
+        "Event": {
+          "EventID": "E916061O001",
+          "EventTypeCode": "Coverage",
+          "EventTypeReasonCode": "OpenEnrollment",
+          "EventDate": "2019-06-07"
+        },
+        "Coverage": [
+          {
+            "CoverageID": "O001",
+            "GroupPolicyNumber": "R1234567",
+            "ProductTypeCode": "Accident",
+            "BenefitPlanIdentifier": 815,
+            "CoverageEffectiveDate": "2019-07-01",
+            "CoverageTierCode": "Employee",
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 32.53,
+            "TotalPlanPremiumAmount": 32.53,
+            "PaymentMethodCode": "PayrollDeduction",
+            "PremiumModeQuantity": 12,
+            "CarrierID": 123456,
+            "CoverageInsured": {
+              "InsuredPartyID": 916061,
+              "PrimaryInsuredIndicator": true,
+              "InsuredCoverageEffectiveDate": "2019-07-01"
+            },
+            "CoverageEventID": "E916061O001",
+            "CoverageTransactionDate": "2019-06-10"
+          },
+          {
+            "CoverageID": "O002",
+            "GroupPolicyNumber": "R1234567",
+            "ProductTypeCode": "LifestyleBenefits",
+            "BenefitPlanIdentifier": "IDTHEFT001",
+            "CoverageEffectiveDate": "2019-07-01",
+            "CoverageTierCode": "Employee",
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 12.5,
+            "PaymentMethodCode": "PayrollDeduction",
+            "PremiumModeQuantity": 12,
+            "CarrierID": 123456,
+            "CoverageInsured": {
+              "InsuredPartyID": 916061,
+              "PrimaryInsuredIndicator": true,
+              "InsuredCoverageEffectiveDate": "2019-07-01"
+            },
+            "CoverageEventID": "E916061O001",
+            "CoverageTransactionDate": "2019-11-10"
+          }
+        ]
+      }
+    },
+    "Audit": {
+      "AuditID": "2019-08-12-11.36.42.895000",
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1,
+      "EventRecordQuantity": 1,
+      "CoverageRecordQuantity": 2
+    }
+  }
+}
+```
 ##OpenEnrollmentCoverageElections-Medical
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "2019-08-12-11.36.42.895000",
+    "SenderName": "ADPSLC",
+    "SenderPlatformName": "CES 6.2",
+    "ReceiverName": "MYCARRIER",
+    "CreationDateTime": "2019-08-12T11:36:42",
+    "TestProductionCode": "Test",
+    "TransmissionTypeCode": "FullFile",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": "MYCARRIER_ID",
+      "CarrierName": "MYCARRIER"
+    },
+    "Employer": {
+      "EmployerPartyID": "PARTYID",
+      "FederalEmployerIdentificationNumber": "12-3456789",
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": "TBD",
+        "MasterAgreementNumber": "INT-123456",
+        "CarrierID": "MYCARRIER_ID"
+      },
+      "EmployerName": "My Employer",
+      "EmployerAddress": {
+        "FirstLineAddress": "24490 Eureka Ave",
+        "CityName": "Warren",
+        "StateProvinceCode": "MI",
+        "PostalCode": 48091,
+        "CountryCode": "US"
+      },
+      "Employee": [
+        {
+          "EmployeePartyID": 67891,
+          "EmployeeSocialSecurityNumber": 678912345,
+          "EmployeeIdentifier": 67891,
+          "EmployeeName": {
+            "FirstName": "Test",
+            "MiddleName": "Middle",
+            "LastName": "EEOnly",
+            "SuffixCode": "PHD"
+          },
+          "EmployeeGenderCode": "Male",
+          "EmployeeBirthDate": "1970-01-01",
+          "MaritalStatusCode": "Married",
+          "EmployeeTobaccoUseCode": "N",
+          "EmployeeHomePhone": 1234567890,
+          "EmployeeWorkPhone": 2345678901,
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "123 Main",
+            "SecondLineAddress": "Apt. 1",
+            "CityName": "Any City",
+            "StateProvinceCode": "MN",
+            "PostalCode": 1234,
+            "CountryCode": "USA"
+          },
+          "EmployeeHomeAddress": {
+            "FirstLineAddress": "123 Main",
+            "SecondLineAddress": "Apt. 1",
+            "CityName": "Any City",
+            "StateProvinceCode": "MN",
+            "PostalCode": 1234,
+            "CountryCode": "USA"
+          },
+          "EmployeeWorkAddress": {
+            "FirstLineAddress": "987 Main",
+            "SecondLineAddress": "Suite 104",
+            "CityName": "Any City",
+            "StateProvinceCode": "MN",
+            "PostalCode": 54321,
+            "CountryCode": "USA"
+          },
+          "EmployeeEmail": "anyemail@gmail.com",
+          "EmploymentInformation": {
+            "OriginalHireDate": "2020-06-01",
+            "MostRecentHireDate": "2020-06-01",
+            "AdjustedServiceDate": "2015-06-01",
+            "EmploymentTypeCode": "FullTime",
+            "EmploymentStatusCode": "Active",
+            "JobTitleText": "Test One",
+            "OccupationText": "Test One",
+            "WorkHoursQuantity": 40,
+            "WorkHoursFrequencyCode": "Weekly",
+            "WorkLocationText": "Division A",
+            "PayrollDeductionFrequencyQuantity": 26,
+            "PayrollFrequencyQuantity": 26,
+            "EmploymentIncome": [
+              {
+                "IncomeTypeCode": "Salary",
+                "IncomeAmount": 100000,
+                "IncomeModeCode": "Annual",
+                "IncomeEffectiveDate": "2020-06-01"
+              },
+              {
+                "IncomeTypeCode": "BenefitSalary",
+                "IncomeAmount": 100000,
+                "IncomeModeCode": "Annual",
+                "IncomeEffectiveDate": "2020-06-01"
+              }
+            ]
+          },
+          "Coverage": {
+            "CoverageID": 2420385,
+            "GroupPolicyNumber": 1234567,
+            "ProductTypeCode": "Medical",
+            "BenefitPlanIdentifier": "OAP",
+            "BenefitClassIdentifier": 1,
+            "BillGroupIdentifier": 1,
+            "ClaimSubGroupIdentifier": "oa001",
+            "CoverageEffectiveDate": "2020-07-01",
+            "CoverageTierCode": "Employee",
+            "EmployeeContributionCode": "EmployeePartial",
+            "EmployeePremiumContributionAmount": 100,
+            "EmployerPremiumContributionAmount": 100,
+            "TotalPlanPremiumAmount": 200,
+            "PremiumModeQuantity": 12,
+            "PreTaxCode": "PostTax",
+            "CarrierID": 123,
+            "CoverageInsured": {
+              "InsuredPartyID": 67891,
+              "PrimaryInsuredIndicator": true,
+              "TobaccoUseIndicator": true,
+              "InsuredCoverageEffectiveDate": "2020-07-01"
+            }
+          }
+        },
+        {
+          "EmployeePartyID": 34567,
+          "EmployeeSocialSecurityNumber": 345678912,
+          "EmployeeIdentifier": 34567,
+          "EmployeeName": {
+            "FirstName": "Test",
+            "MiddleName": "Middle",
+            "LastName": "EEMultiCH",
+            "SuffixCode": "PHD"
+          },
+          "EmployeeGenderCode": "Male",
+          "EmployeeBirthDate": "1970-01-01",
+          "MaritalStatusCode": "Married",
+          "EmployeeTobaccoUseCode": "N",
+          "EmployeeHomePhone": 1234567890,
+          "EmployeeWorkPhone": 2345678901,
+          "EmployeeMailingAddress": {
+            "FirstLineAddress": "123 Main",
+            "SecondLineAddress": "Apt. 1",
+            "CityName": "Any City",
+            "StateProvinceCode": "MN",
+            "PostalCode": 1234,
+            "CountryCode": "USA"
+          },
+          "EmployeeHomeAddress": {
+            "FirstLineAddress": "123 Main",
+            "SecondLineAddress": "Apt. 1",
+            "CityName": "Any City",
+            "StateProvinceCode": "MN",
+            "PostalCode": 1234,
+            "CountryCode": "USA"
+          },
+          "EmployeeWorkAddress": {
+            "FirstLineAddress": "987 Main",
+            "SecondLineAddress": "Suite 104",
+            "CityName": "Any City",
+            "StateProvinceCode": "MN",
+            "PostalCode": 54321,
+            "CountryCode": "USA"
+          },
+          "EmployeeEmail": "anyemail@gmail.com",
+          "EmploymentInformation": {
+            "OriginalHireDate": "2020-06-01",
+            "MostRecentHireDate": "2020-06-01",
+            "AdjustedServiceDate": "2015-06-01",
+            "EmploymentTypeCode": "FullTime",
+            "EmploymentStatusCode": "Active",
+            "JobTitleText": "Test One",
+            "OccupationText": "Test One",
+            "WorkHoursQuantity": 40,
+            "WorkHoursFrequencyCode": "Weekly",
+            "WorkLocationText": "Division A",
+            "PayrollDeductionFrequencyQuantity": 26,
+            "PayrollFrequencyQuantity": 26,
+            "EmploymentIncome": [
+              {
+                "IncomeTypeCode": "Salary",
+                "IncomeAmount": 100000,
+                "IncomeModeCode": "Annual",
+                "IncomeEffectiveDate": "2020-06-01"
+              },
+              {
+                "IncomeTypeCode": "BenefitSalary",
+                "IncomeAmount": 100000,
+                "IncomeModeCode": "Annual",
+                "IncomeEffectiveDate": "2020-06-01"
+              }
+            ]
+          },
+          "Dependent": [
+            {
+              "DependentPartyID": 345671,
+              "DependentSocialSecurityNumber": 345678913,
+              "DependentName": {
+                "FirstName": "ChildOne",
+                "LastName": "EEMultiCH"
+              },
+              "DependentRelationshipTypeCode": "Child",
+              "DependentGenderCode": "Male",
+              "DependentBirthDate": "2010-05-01",
+              "DisabilityIndicator": true,
+              "StudentStatusCode": "FullTime",
+              "DependentTobaccoUseCode": "N"
+            },
+            {
+              "DependentPartyID": 345672,
+              "DependentSocialSecurityNumber": 345678914,
+              "DependentName": {
+                "FirstName": "ChildTwo",
+                "LastName": "EEMultiCH"
+              },
+              "DependentRelationshipTypeCode": "Child",
+              "DependentGenderCode": "Male",
+              "DependentBirthDate": "2010-05-01",
+              "DisabilityIndicator": true,
+              "StudentStatusCode": "FullTime",
+              "DependentTobaccoUseCode": "N"
+            },
+            {
+              "DependentPartyID": 345673,
+              "DependentSocialSecurityNumber": 345678915,
+              "DependentName": {
+                "FirstName": "ChildThree",
+                "LastName": "EEMultiCH"
+              },
+              "DependentRelationshipTypeCode": "Child",
+              "DependentGenderCode": "Male",
+              "DependentBirthDate": "2010-05-01",
+              "DisabilityIndicator": true,
+              "StudentStatusCode": "FullTime",
+              "DependentTobaccoUseCode": "N"
+            }
+          ],
+          "Coverage": {
+            "CoverageID": 2420385,
+            "GroupPolicyNumber": 1234567,
+            "ProductTypeCode": "Medical",
+            "BenefitPlanIdentifier": "OAP",
+            "BenefitClassIdentifier": 1,
+            "BillGroupIdentifier": 1,
+            "ClaimSubGroupIdentifier": "oa001",
+            "CoverageEffectiveDate": "2020-07-01",
+            "CoverageTierCode": "EmployeeChildren",
+            "EmployeeContributionCode": "EmployeePartial",
+            "EmployeePremiumContributionAmount": 100,
+            "EmployerPremiumContributionAmount": 100,
+            "TotalPlanPremiumAmount": 200,
+            "PremiumModeQuantity": 12,
+            "PreTaxCode": "PostTax",
+            "CarrierID": 123,
+            "CoverageInsured": [
+              {
+                "InsuredPartyID": 34567,
+                "PrimaryInsuredIndicator": true,
+                "TobaccoUseIndicator": true,
+                "InsuredCoverageEffectiveDate": "2020-07-01"
+              },
+              {
+                "InsuredPartyID": 345671,
+                "PrimaryInsuredIndicator": false,
+                "TobaccoUseIndicator": false,
+                "InsuredCoverageEffectiveDate": "2020-07-01"
+              },
+              {
+                "InsuredPartyID": 345672,
+                "PrimaryInsuredIndicator": false,
+                "TobaccoUseIndicator": false,
+                "InsuredCoverageEffectiveDate": "2020-07-01"
+              },
+              {
+                "InsuredPartyID": 345673,
+                "PrimaryInsuredIndicator": false,
+                "TobaccoUseIndicator": false,
+                "InsuredCoverageEffectiveDate": "2020-07-01"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "Audit": {
+      "AuditID": "2019-08-12-11.36.42.895000",
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1
+    }
+  }
+}
+```
 ##QualifyingLifeEventCoverageElections
+
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "9999106c-c731-466a-8235-3377985285yz",
+    "SenderName": "XYZ Benefit Administrator",
+    "SenderPlatformName": "XYZplatform.com",
+    "ReceiverName": "ABC Insurance Company",
+    "CreationDateTime": "2001-12-17T09:30:47Z",
+    "TestProductionCode": "Production",
+    "TransmissionTypeCode": "ChangesOnly",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": "U7435",
+      "CarrierName": "ABC Insurance Company"
+    },
+    "Employer": {
+      "EmployerPartyID": 1520,
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": 80122606,
+        "MasterAgreementNumber": 80122606,
+        "CarrierID": 80122606
+      },
+      "EmployerName": "Demo Health LDEx",
+      "EmployerAddress": {
+        "FirstLineAddress": "31 Riverside Plaza",
+        "CityName": "Jackson",
+        "StateProvinceCode": "MS",
+        "PostalCode": 81898,
+        "CountryCode": "USA"
+      },
+      "Employee": {
+        "EmployeePartyID": 1772669,
+        "EmployeeSocialSecurityNumber": 998701592,
+        "EmployeeIdentifier": 291,
+        "EmployeeName": {
+          "PrefixCode": "Mrs",
+          "FirstName": "Hannah",
+          "LastName": "Holley"
+        },
+        "EmployeeGenderCode": "Female",
+        "EmployeeBirthDate": "1984-05-03",
+        "MaritalStatusCode": "Married",
+        "EmployeeHomePhone": 6017589472,
+        "EmployeeWorkPhone": 6019142649,
+        "EmployeeMobilePhone": 6012189602,
+        "EmployeeMailingAddress": {
+          "FirstLineAddress": "5 Pennsylvania Rd",
+          "CityName": "Jackson",
+          "StateProvinceCode": "MS",
+          "PostalCode": 39215,
+          "CountryCode": "USA"
+        },
+        "EmployeeHomeAddress": {
+          "FirstLineAddress": "5 Pennsylvania Rd",
+          "CityName": "Jackson",
+          "StateProvinceCode": "MS",
+          "PostalCode": 39215,
+          "CountryCode": "USA"
+        },
+        "EmployeeWorkAddress": {
+          "FirstLineAddress": "31 Riverside Plaza",
+          "CityName": "Jackson",
+          "StateProvinceCode": "MS",
+          "PostalCode": 81898,
+          "CountryCode": "USA"
+        },
+        "EmployeeEmail": "hannah.holley@demo-me.com",
+        "EmploymentInformation": {
+          "OriginalHireDate": "2017-08-18",
+          "ExemptCode": "Exempt",
+          "EmploymentTypeCode": "FullTime",
+          "EmploymentStatusCode": "Active",
+          "JobTitleText": "Nurse II",
+          "WorkLocationText": "Mississippi Medical Center",
+          "PayrollDeductionFrequencyQuantity": 26,
+          "PayrollFrequencyQuantity": 26,
+          "EmploymentIncome": {
+            "IncomeTypeCode": "BenefitSalary",
+            "IncomeAmount": 50000,
+            "IncomeModeCode": "Annual",
+            "IncomeEffectiveDate": "2017-08-18"
+          }
+        },
+        "Event": {
+          "EventID": 98765,
+          "EventTypeCode": "Demographic",
+          "EventTypeReasonCode": "Marriage",
+          "EventDate": "2019-03-22"
+        },
+        "EmployeeEventID": 98765,
+        "Dependent": [
+          {
+            "DependentPartyID": 177266901,
+            "DependentSocialSecurityNumber": "998-76-3918",
+            "DependentIdentifier": 41263918,
+            "DependentName": {
+              "FirstName": "Ken",
+              "LastName": "Holley"
+            },
+            "DependentRelationshipTypeCode": "Spouse",
+            "DependentGenderCode": "Male",
+            "DependentBirthDate": "1985-09-28",
+            "DependentMailingAddress": {
+              "FirstLineAddress": "6 N Glyn Hwy",
+              "CityName": "Jackson",
+              "StateProvinceCode": "MS",
+              "PostalCode": 39215,
+              "CountryCode": "USA"
+            },
+            "DisabilityIndicator": false
+          },
+          {
+            "DependentPartyID": 177266902,
+            "DependentSocialSecurityNumber": "998-76-3923",
+            "DependentIdentifier": 41263923,
+            "DependentName": {
+              "FirstName": "Marvin",
+              "LastName": "Holley"
+            },
+            "DependentRelationshipTypeCode": "Child",
+            "DependentGenderCode": "Male",
+            "DependentBirthDate": "2015-03-20",
+            "DependentMailingAddress": {
+              "FirstLineAddress": "6 N Glyn Hwy",
+              "CityName": "Jackson",
+              "StateProvinceCode": "MS",
+              "PostalCode": 39215,
+              "CountryCode": "USA"
+            },
+            "DisabilityIndicator": false
+          }
+        ],
+        "BeneficiaryGroup": {
+          "BeneficiaryGroupID": 1112233,
+          "Beneficiary": {
+            "BeneficiaryPartyID": 41263918,
+            "BeneficiaryPartyTypeCode": "Employee",
+            "BeneficiaryPercent": 100,
+            "BeneficiaryTypeCode": "Primary"
+          }
+        },
+        "Coverage": [
+          {
+            "CoverageID": 2397498,
+            "GroupPolicyNumber": "tbd",
+            "IndividualPolicyNumber": "tbd",
+            "ProductTypeCode": "Hospital",
+            "BenefitPlanIdentifier": "tbd",
+            "BenefitClassIdentifier": "tbd",
+            "BenefitSubClassIdentifier": "tbd",
+            "OriginalCoverageEffectiveDate": "2019-04-01",
+            "CoverageEffectiveDate": "2019-04-01",
+            "CoverageTierCode": "Employee",
+            "BenefitEarningsAmount": 0,
+            "BenefitModeQuantity": 0,
+            "PreTaxCode": "PreTax",
+            "IssueAgeQuantity": 0,
+            "TobaccoUseIndicator": false,
+            "TakeOverCoverageIndicator": false,
+            "EnrollerProducerPartyID": "tbd",
+            "BeneficiaryGroupID": "tbd",
+            "CarrierID": "U7435",
+            "CoverageInsured": [
+              {
+                "InsuredPartyID": 1772669,
+                "PrimaryInsuredIndicator": true,
+                "TobaccoUseIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-04-01"
+              },
+              {
+                "InsuredPartyID": 177266901,
+                "PrimaryInsuredIndicator": true,
+                "TobaccoUseIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-04-01"
+              },
+              {
+                "InsuredPartyID": 177266902,
+                "PrimaryInsuredIndicator": true,
+                "TobaccoUseIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-04-01"
+              }
+            ],
+            "CoverageEventID": 98765
+          },
+          {
+            "CoverageID": 2397499,
+            "GroupPolicyNumber": "tbd",
+            "IndividualPolicyNumber": "tbd",
+            "ProductTypeCode": "STD",
+            "BenefitPlanIdentifier": "tbd",
+            "BenefitClassIdentifier": "tbd",
+            "BenefitSubClassIdentifier": "tbd",
+            "OriginalCoverageEffectiveDate": "2019-04-01",
+            "CoverageEffectiveDate": "2019-04-01",
+            "CoverageTierCode": "Employee",
+            "BenefitEarningsAmount": 0,
+            "BenefitModeQuantity": 0,
+            "PreTaxCode": "PostTax",
+            "IssueAgeQuantity": 0,
+            "TobaccoUseIndicator": false,
+            "TakeOverCoverageIndicator": false,
+            "EnrollerProducerPartyID": "tbd",
+            "BeneficiaryGroupID": "tbd",
+            "CarrierID": "U7435",
+            "CoverageInsured": {
+              "InsuredPartyID": 1772669,
+              "PrimaryInsuredIndicator": true,
+              "TobaccoUseIndicator": false,
+              "InsuredCoverageEffectiveDate": "2019-04-01"
+            },
+            "CoverageEventID": 98765
+          },
+          {
+            "CoverageID": 2397500,
+            "GroupPolicyNumber": "tbd",
+            "IndividualPolicyNumber": "tbd",
+            "ProductTypeCode": "LTD",
+            "BenefitPlanIdentifier": "tbd",
+            "BenefitClassIdentifier": "tbd",
+            "BenefitSubClassIdentifier": "tbd",
+            "OriginalCoverageEffectiveDate": "2019-04-01",
+            "CoverageEffectiveDate": "2019-04-01",
+            "CoverageTierCode": "Employee",
+            "BenefitEarningsAmount": 0,
+            "BenefitModeQuantity": 0,
+            "PreTaxCode": "PostTax",
+            "IssueAgeQuantity": 0,
+            "TobaccoUseIndicator": false,
+            "TakeOverCoverageIndicator": false,
+            "EnrollerProducerPartyID": "tbd",
+            "BeneficiaryGroupID": "tbd",
+            "CarrierID": "U7435",
+            "CoverageInsured": {
+              "InsuredPartyID": 1772669,
+              "PrimaryInsuredIndicator": true,
+              "TobaccoUseIndicator": false,
+              "InsuredCoverageEffectiveDate": "2019-04-01"
+            },
+            "CoverageEventID": 98765
+          },
+          {
+            "CoverageID": 2397501,
+            "GroupPolicyNumber": "tbd",
+            "IndividualPolicyNumber": "tbd",
+            "ProductTypeCode": "Life",
+            "BenefitPlanIdentifier": "tbd",
+            "BenefitClassIdentifier": "tbd",
+            "BenefitSubClassIdentifier": "tbd",
+            "OriginalCoverageEffectiveDate": "2019-04-01",
+            "CoverageEffectiveDate": "2019-04-01",
+            "CoverageTierCode": "Employee",
+            "BenefitEarningsAmount": 0,
+            "BenefitModeQuantity": 0,
+            "PreTaxCode": "PostTax",
+            "IssueAgeQuantity": 0,
+            "TobaccoUseIndicator": false,
+            "TakeOverCoverageIndicator": false,
+            "EnrollerProducerPartyID": "tbd",
+            "BeneficiaryGroupID": "tbd",
+            "CarrierID": "U7435",
+            "CoverageInsured": {
+              "InsuredPartyID": 1772669,
+              "PrimaryInsuredIndicator": true,
+              "TobaccoUseIndicator": false,
+              "InsuredCoverageEffectiveDate": "2019-04-01"
+            },
+            "CoverageEventID": 98765
+          },
+          {
+            "CoverageID": 2397502,
+            "GroupPolicyNumber": "tbd",
+            "IndividualPolicyNumber": "tbd",
+            "ProductTypeCode": "Life",
+            "BenefitPlanIdentifier": "tbd",
+            "BenefitClassIdentifier": "tbd",
+            "BenefitSubClassIdentifier": "tbd",
+            "OriginalCoverageEffectiveDate": "2019-04-01",
+            "CoverageEffectiveDate": "2019-04-01",
+            "CoverageTierCode": "Employee",
+            "BenefitEarningsAmount": 0,
+            "BenefitModeQuantity": 0,
+            "PreTaxCode": "PostTax",
+            "IssueAgeQuantity": 0,
+            "TobaccoUseIndicator": false,
+            "TakeOverCoverageIndicator": false,
+            "EnrollerProducerPartyID": "tbd",
+            "BeneficiaryGroupID": "tbd",
+            "CarrierID": "U7435",
+            "CoverageInsured": {
+              "InsuredPartyID": 1772669,
+              "PrimaryInsuredIndicator": true,
+              "TobaccoUseIndicator": false,
+              "InsuredCoverageEffectiveDate": "2019-04-01"
+            },
+            "CoverageEventID": 98765
+          },
+          {
+            "CoverageID": 2397503,
+            "GroupPolicyNumber": "tbd",
+            "IndividualPolicyNumber": "tbd",
+            "ProductTypeCode": "Life",
+            "BenefitPlanIdentifier": "tbd",
+            "BenefitClassIdentifier": "tbd",
+            "BenefitSubClassIdentifier": "tbd",
+            "OriginalCoverageEffectiveDate": "2019-04-01",
+            "CoverageEffectiveDate": "2019-04-01",
+            "CoverageTierCode": "SpouseOnly",
+            "BenefitEarningsAmount": 0,
+            "BenefitModeQuantity": 0,
+            "PreTaxCode": "PostTax",
+            "IssueAgeQuantity": 0,
+            "TobaccoUseIndicator": false,
+            "TakeOverCoverageIndicator": false,
+            "EnrollerProducerPartyID": "tbd",
+            "BeneficiaryGroupID": "tbd",
+            "CarrierID": "U7435",
+            "CoverageInsured": {
+              "InsuredPartyID": 177266901,
+              "PrimaryInsuredIndicator": true,
+              "TobaccoUseIndicator": false,
+              "InsuredCoverageEffectiveDate": "2019-04-01"
+            },
+            "CoverageEventID": 98765
+          },
+          {
+            "CoverageID": 2397504,
+            "GroupPolicyNumber": "tbd",
+            "IndividualPolicyNumber": "tbd",
+            "ProductTypeCode": "Life",
+            "BenefitPlanIdentifier": "tbd",
+            "BenefitClassIdentifier": "tbd",
+            "BenefitSubClassIdentifier": "tbd",
+            "OriginalCoverageEffectiveDate": "2019-04-01",
+            "CoverageEffectiveDate": "2019-04-01",
+            "CoverageTierCode": "ChildOnly",
+            "BenefitEarningsAmount": 0,
+            "BenefitModeQuantity": 0,
+            "PreTaxCode": "PostTax",
+            "IssueAgeQuantity": 0,
+            "TobaccoUseIndicator": false,
+            "TakeOverCoverageIndicator": false,
+            "EnrollerProducerPartyID": "tbd",
+            "BeneficiaryGroupID": "tbd",
+            "CarrierID": "U7435",
+            "CoverageInsured": {
+              "InsuredPartyID": 177266902,
+              "PrimaryInsuredIndicator": true,
+              "TobaccoUseIndicator": false,
+              "InsuredCoverageEffectiveDate": "2019-04-01"
+            },
+            "CoverageEventID": 98765,
+            "CoverageDeduction": {
+              "DeductionTypeCode": "Life",
+              "DeductionAmount": 0.23,
+              "DeductionFrequencyQuantity": 26
+            }
+          },
+          {
+            "CoverageID": 2397505,
+            "GroupPolicyNumber": "tbd",
+            "IndividualPolicyNumber": "tbd",
+            "ProductTypeCode": "Accident",
+            "BenefitPlanIdentifier": "tbd",
+            "BenefitClassIdentifier": "tbd",
+            "BenefitSubClassIdentifier": "tbd",
+            "OriginalCoverageEffectiveDate": "2019-04-01",
+            "CoverageEffectiveDate": "2019-04-01",
+            "CoverageTierCode": "EmployeeFamily",
+            "BenefitEarningsAmount": 0,
+            "BenefitModeQuantity": 0,
+            "PreTaxCode": "PostTax",
+            "IssueAgeQuantity": 0,
+            "TobaccoUseIndicator": false,
+            "TakeOverCoverageIndicator": false,
+            "EnrollerProducerPartyID": "tbd",
+            "BeneficiaryGroupID": "tbd",
+            "CarrierID": "U7435",
+            "CoverageInsured": [
+              {
+                "InsuredPartyID": 1772669,
+                "PrimaryInsuredIndicator": true,
+                "TobaccoUseIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-04-01"
+              },
+              {
+                "InsuredPartyID": 177266901,
+                "PrimaryInsuredIndicator": true,
+                "TobaccoUseIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-04-01"
+              },
+              {
+                "InsuredPartyID": 177266902,
+                "PrimaryInsuredIndicator": true,
+                "TobaccoUseIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-04-01"
+              }
+            ],
+            "CoverageEventID": 98765,
+            "CoverageDeduction": {
+              "DeductionTypeCode": "AccidentalDeath&amp;Dismemberment",
+              "DeductionAmount": 7.16,
+              "DeductionFrequencyQuantity": 26
+            }
+          },
+          {
+            "CoverageID": 2397506,
+            "GroupPolicyNumber": "tbd",
+            "IndividualPolicyNumber": "tbd",
+            "ProductTypeCode": "CriticalIllness",
+            "BenefitPlanIdentifier": "tbd",
+            "BenefitClassIdentifier": "tbd",
+            "BenefitSubClassIdentifier": "tbd",
+            "OriginalCoverageEffectiveDate": "2019-04-01",
+            "CoverageEffectiveDate": "2019-04-01",
+            "CoverageTierCode": "Employee",
+            "BenefitEarningsAmount": 0,
+            "BenefitModeQuantity": 0,
+            "PreTaxCode": "PostTax",
+            "IssueAgeQuantity": 0,
+            "TobaccoUseIndicator": false,
+            "TakeOverCoverageIndicator": false,
+            "EnrollerProducerPartyID": "tbd",
+            "BeneficiaryGroupID": "tbd",
+            "CarrierID": "U7435",
+            "CoverageInsured": {
+              "InsuredPartyID": 1772669,
+              "PrimaryInsuredIndicator": true,
+              "TobaccoUseIndicator": false,
+              "InsuredCoverageEffectiveDate": "2019-04-01"
+            },
+            "CoverageEventID": 98765,
+            "CoverageDeduction": {
+              "DeductionTypeCode": "Hospitalization",
+              "DeductionAmount": 7.8,
+              "DeductionFrequencyQuantity": 26
+            }
+          },
+          {
+            "CoverageID": 2397507,
+            "GroupPolicyNumber": "tbd",
+            "IndividualPolicyNumber": "tbd",
+            "ProductTypeCode": "CriticalIllness",
+            "BenefitPlanIdentifier": "tbd",
+            "BenefitClassIdentifier": "tbd",
+            "BenefitSubClassIdentifier": "tbd",
+            "OriginalCoverageEffectiveDate": "2019-04-01",
+            "CoverageEffectiveDate": "2019-04-01",
+            "CoverageTierCode": "SpouseOnly",
+            "BenefitEarningsAmount": 0,
+            "BenefitModeQuantity": 0,
+            "PreTaxCode": "PostTax",
+            "IssueAgeQuantity": 0,
+            "TobaccoUseIndicator": false,
+            "TakeOverCoverageIndicator": false,
+            "EnrollerProducerPartyID": "tbd",
+            "BeneficiaryGroupID": "tbd",
+            "CarrierID": "U7435",
+            "CoverageInsured": [
+              {
+                "InsuredPartyID": 1772669,
+                "PrimaryInsuredIndicator": true,
+                "TobaccoUseIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-04-01"
+              },
+              {
+                "InsuredPartyID": 177266901,
+                "PrimaryInsuredIndicator": true,
+                "TobaccoUseIndicator": false,
+                "InsuredCoverageEffectiveDate": "2019-04-01"
+              }
+            ],
+            "CoverageEventID": 98765,
+            "CoverageDeduction": {
+              "DeductionTypeCode": "Hospitalization",
+              "DeductionAmount": 13.52,
+              "DeductionFrequencyQuantity": 26
+            }
+          },
+          {
+            "CoverageID": 2397554,
+            "GroupPolicyNumber": "tbd",
+            "IndividualPolicyNumber": "tbd",
+            "ProductTypeCode": "Dental",
+            "BenefitPlanIdentifier": "tbd",
+            "BenefitClassIdentifier": "tbd",
+            "BenefitSubClassIdentifier": "tbd",
+            "OriginalCoverageEffectiveDate": "2019-04-01",
+            "CoverageEffectiveDate": "2019-04-01",
+            "CoverageTierCode": "EmployeeSpouse",
+            "BenefitEarningsAmount": 0,
+            "BenefitModeQuantity": 0,
+            "PreTaxCode": "PreTax",
+            "IssueAgeQuantity": 0,
+            "TobaccoUseIndicator": false,
+            "TakeOverCoverageIndicator": false,
+            "EnrollerProducerPartyID": "tbd",
+            "BeneficiaryGroupID": "tbd",
+            "CarrierID": "U7435",
+            "CoverageInsured": {
+              "InsuredPartyID": 1772669,
+              "PrimaryInsuredIndicator": true,
+              "TobaccoUseIndicator": false,
+              "InsuredCoverageEffectiveDate": "2019-04-01"
+            },
+            "CoverageEventID": 98765,
+            "CoverageDeduction": {
+              "DeductionTypeCode": "Dental",
+              "DeductionAmount": 18.18,
+              "DeductionFrequencyQuantity": 26
+            }
+          }
+        ]
+      }
+    },
+    "Audit": {
+      "AuditID": 10001,
+      "CarrierRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1,
+      "DependentRecordQuantity": 2,
+      "OtherPartyRecordQuantity": 0,
+      "BeneficiaryGroupRecordQuantity": 1,
+      "EventRecordQuantity": 1,
+      "CoverageRecordQuantity": 12,
+      "CoverageRiderRecordQuantity": 0
+    }
+  }
+}
+```
 ##QualifyingLifeEventCoverageElections-IDTheft
+
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "2019-08-12-11.36.42.895000",
+    "SenderName": "ABC Tech Partner",
+    "SenderPlatformName": "ABC Platform",
+    "ReceiverName": "MYCARRIER",
+    "CreationDateTime": "2019-08-12T11:36:42",
+    "TestProductionCode": "Test",
+    "TransmissionTypeCode": "FullFile",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": 123456,
+      "CarrierName": "MYCARRIER"
+    },
+    "Employer": {
+      "EmployerPartyID": "PARTYID",
+      "FederalEmployerIdentificationNumber": "12-3456789",
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": "TBD",
+        "MasterAgreementNumber": "INT-123456",
+        "CarrierID": 123456
+      },
+      "EmployerName": "My Employer",
+      "EmployerAddress": {
+        "FirstLineAddress": "24490 Eureka Ave",
+        "CityName": "Warren",
+        "StateProvinceCode": "MI",
+        "PostalCode": 48091,
+        "CountryCode": "US"
+      },
+      "Employee": {
+        "EmployeePartyID": 916061,
+        "EmployeeSocialSecurityNumber": 111101111,
+        "EmployeeIdentifier": 916061,
+        "EmployeeName": {
+          "FirstName": "COOPER",
+          "MiddleName": "D",
+          "LastName": "HERNANDEZTEST"
+        },
+        "EmployeeGenderCode": "Male",
+        "EmployeeBirthDate": "1992-06-13",
+        "MaritalStatusCode": "Married",
+        "EmployeeHomePhone": 6830001234,
+        "EmployeeMailingAddress": {
+          "FirstLineAddress": "2409 Main Street",
+          "CityName": "TALAHASSEE",
+          "StateProvinceCode": "FL",
+          "PostalCode": 33844,
+          "CountryCode": "US"
+        },
+        "EmployeeEmail": "cooper.hernandeztest@myemployer.com",
+        "EmploymentInformation": {
+          "OriginalHireDate": "2016-06-13",
+          "EmploymentTypeCode": "FullTime",
+          "EmploymentStatusCode": "Active",
+          "EmploymentIncome": {
+            "IncomeTypeCode": "Salary",
+            "IncomeAmount": 43680,
+            "IncomeModeCode": "Annual",
+            "IncomeEffectiveDate": "2018-04-01"
+          }
+        },
+        "Event": [
+          {
+            "EventID": "E916061",
+            "EventTypeCode": "Demographic",
+            "EventTypeReasonCode": "Marriage",
+            "EventDate": "2019-06-07"
+          },
+          {
+            "EventID": "E916061O001",
+            "EventTypeCode": "Coverage",
+            "EventTypeReasonCode": "QualifyingLifeEventEnrollment",
+            "EventDate": "2019-06-07"
+          }
+        ],
+        "EmployeeEventID": "E916061",
+        "Dependent": [
+          {
+            "DependentPartyID": 111111111,
+            "DependentSocialSecurityNumber": 100020000,
+            "DependentIdentifier": 1,
+            "DependentName": {
+              "FirstName": "PEGGY",
+              "LastName": "HERNANDEZTEST"
+            },
+            "DependentRelationshipTypeCode": "Spouse",
+            "DependentGenderCode": "Female",
+            "DependentBirthDate": "1986-09-16",
+            "DisabilityIndicator": false
+          },
+          {
+            "DependentPartyID": 111121111,
+            "DependentSocialSecurityNumber": 111121111,
+            "DependentIdentifier": 2,
+            "DependentName": {
+              "FirstName": "PENNY",
+              "LastName": "HERNANDEZTEST"
+            },
+            "DependentRelationshipTypeCode": "Child",
+            "DependentGenderCode": "Female",
+            "DependentBirthDate": "2013-05-08",
+            "DisabilityIndicator": false
+          },
+          {
+            "DependentPartyID": 111131111,
+            "DependentSocialSecurityNumber": 111131111,
+            "DependentIdentifier": 3,
+            "DependentName": {
+              "FirstName": "COREY",
+              "LastName": "HERNANDEZTEST"
+            },
+            "DependentRelationshipTypeCode": "Child",
+            "DependentGenderCode": "Male",
+            "DependentBirthDate": "2007-11-11",
+            "DisabilityIndicator": false
+          }
+        ],
+        "Coverage": {
+          "CoverageID": "O001",
+          "GroupPolicyNumber": "R1234567",
+          "ProductTypeCode": "Accident",
+          "BenefitPlanIdentifier": 815,
+          "CoverageEffectiveDate": "2019-07-01",
+          "CoverageTierCode": "EmployeeFamily",
+          "EmployeeContributionCode": "EmployeePaid",
+          "EmployeePremiumContributionAmount": 32.53,
+          "TotalPlanPremiumAmount": 32.53,
+          "PaymentMethodCode": "PayrollDeduction",
+          "PremiumModeQuantity": 12,
+          "CarrierID": 123456,
+          "CoverageInsured": [
+            {
+              "InsuredPartyID": 916061,
+              "PrimaryInsuredIndicator": true,
+              "InsuredCoverageEffectiveDate": "2019-07-01"
+            },
+            {
+              "InsuredPartyID": 111111111,
+              "PrimaryInsuredIndicator": false,
+              "InsuredCoverageEffectiveDate": "2019-07-01"
+            },
+            {
+              "InsuredPartyID": 111121111,
+              "PrimaryInsuredIndicator": false,
+              "InsuredCoverageEffectiveDate": "2019-07-01"
+            },
+            {
+              "InsuredPartyID": 111131111,
+              "PrimaryInsuredIndicator": false,
+              "InsuredCoverageEffectiveDate": "2019-07-01"
+            }
+          ],
+          "CoverageEventID": "E916061O001",
+          "CoverageRider": {
+            "CoverageRiderID": "IDTHEFTEESPS",
+            "RiderIdentifier": "IDTHEFTEESPSPREMIUM",
+            "RiderName": "ID Theft Employee and Spouse Rider",
+            "CoverageTierCode": "EmployeeSpouse",
+            "BenefitAmount": 60000,
+            "PreTaxCode": "PostTax",
+            "EmployeePremiumContributionAmount": 3.31,
+            "EmployerPremiumContributionAmount": 0
+          },
+          "CoverageTransactionDate": "2019-06-10"
+        }
+      }
+    },
+    "Audit": {
+      "AuditID": "2019-08-12-11.36.42.895000",
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1,
+      "DependentRecordQuantity": 3,
+      "EventRecordQuantity": 2,
+      "CoverageRecordQuantity": 1,
+      "CoverageRiderRecordQuantity": 1
+    }
+  }
+}
+```
 
 

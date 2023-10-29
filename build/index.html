@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>PDX APIS</title>
+    <title>API Documentation</title>
 
     <style media="screen">
       .highlight table td { padding: 5px; }
@@ -284,11 +284,11 @@
     </style>
     <link href="stylesheets/screen-9c19b03a.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-966d6edc.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all-b12a2749.js"></script>
+      <script src="javascripts/all_nosearch-18c3ed8e.js"></script>
 
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;php&quot;]">
+  <body class="index" data-languages="[]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -297,20 +297,37 @@
     </a>
     <div class="toc-wrapper">
       <img src="images/logo-5ce5ae27.png" class="logo" alt="" />
-        <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="php">php</a>
-        </div>
-        <div class="search">
-          <input type="text" class="search" id="input-search" placeholder="Search">
-        </div>
-        <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#bem" class="toc-h1 toc-link" data-title="BEM">BEM</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post" class="toc-h2 toc-link" data-title="POST">POST</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#eois" class="toc-h1 toc-link" data-title="EOIS">EOIS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-2" class="toc-h2 toc-link" data-title="POST">POST</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#rsp" class="toc-h1 toc-link" data-title="RSP">RSP</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-3" class="toc-h2 toc-link" data-title="POST">POST</a>
+                  </li>
+              </ul>
+          </li>
           <li>
             <a href="#benifitsenrollmentmanagement" class="toc-h1 toc-link" data-title="BenifitsEnrollmentManagement">BenifitsEnrollmentManagement</a>
               <ul class="toc-list-h2">
+                  <li>
+                    <a href="#overview" class="toc-h2 toc-link" data-title="Overview">Overview</a>
+                  </li>
                   <li>
                     <a href="#post" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
                   </li>
@@ -324,33 +341,243 @@
           </li>
           <li>
             <a href="#bem-api-specs" class="toc-h1 toc-link" data-title="BEM API Specs">BEM API Specs</a>
+          </li>
+          <li>
+            <a href="#benificiarymanagement" class="toc-h1 toc-link" data-title="BenificiaryManagement">BenificiaryManagement</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#benificiarymanagement" class="toc-h2 toc-link" data-title="BenificiaryManagement">BenificiaryManagement</a>
+                    <a href="#beneficiaryadd" class="toc-h2 toc-link" data-title="BeneficiaryAdd">BeneficiaryAdd</a>
                   </li>
                   <li>
-                    <a href="#benificiaryeligibilitymanagement" class="toc-h2 toc-link" data-title="BenificiaryEligibilityManagement">BenificiaryEligibilityManagement</a>
+                    <a href="#beneficiarychange" class="toc-h2 toc-link" data-title="BeneficiaryChange">BeneficiaryChange</a>
                   </li>
                   <li>
-                    <a href="#coveragechanges" class="toc-h2 toc-link" data-title="CoverageChanges">CoverageChanges</a>
+                    <a href="#beneficiaryallocationchange" class="toc-h2 toc-link" data-title="BeneficiaryAllocationChange">BeneficiaryAllocationChange</a>
                   </li>
                   <li>
-                    <a href="#coverageelection" class="toc-h2 toc-link" data-title="CoverageElection">CoverageElection</a>
+                    <a href="#beneficiarytypechange" class="toc-h2 toc-link" data-title="BeneficiaryTypeChange">BeneficiaryTypeChange</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#benificiaryeligibilitymanagement" class="toc-h1 toc-link" data-title="BenificiaryEligibilityManagement">BenificiaryEligibilityManagement</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#newhire" class="toc-h2 toc-link" data-title="NewHire">NewHire</a>
                   </li>
                   <li>
-                    <a href="#coveragetermination" class="toc-h2 toc-link" data-title="CoverageTermination">CoverageTermination</a>
+                    <a href="#demographicchange" class="toc-h2 toc-link" data-title="DemographicChange">DemographicChange</a>
                   </li>
                   <li>
-                    <a href="#formsmanagement" class="toc-h2 toc-link" data-title="FormsManagement">FormsManagement</a>
+                    <a href="#employmenttermination" class="toc-h2 toc-link" data-title="EmploymentTermination">EmploymentTermination</a>
                   </li>
                   <li>
-                    <a href="#issue-age" class="toc-h2 toc-link" data-title="Issue Age">Issue Age</a>
+                    <a href="#rehire" class="toc-h2 toc-link" data-title="Rehire">Rehire</a>
                   </li>
                   <li>
-                    <a href="#noncoveragedemographicchange" class="toc-h2 toc-link" data-title="NonCoverageDemographicChange">NonCoverageDemographicChange</a>
+                    <a href="#newhirerehire" class="toc-h2 toc-link" data-title="NewHireRehire">NewHireRehire</a>
                   </li>
                   <li>
-                    <a href="#response" class="toc-h2 toc-link" data-title="Response">Response</a>
+                    <a href="#demographicchange-2" class="toc-h2 toc-link" data-title="DemographicChange">DemographicChange</a>
+                  </li>
+                  <li>
+                    <a href="#employmenttermination-2" class="toc-h2 toc-link" data-title="EmploymentTermination">EmploymentTermination</a>
+                  </li>
+                  <li>
+                    <a href="#newhirerehire-2" class="toc-h2 toc-link" data-title="NewHireRehire">NewHireRehire</a>
+                  </li>
+                  <li>
+                    <a href="#demographicchange-3" class="toc-h2 toc-link" data-title="DemographicChange">DemographicChange</a>
+                  </li>
+                  <li>
+                    <a href="#employmenttermination-3" class="toc-h2 toc-link" data-title="EmploymentTermination">EmploymentTermination</a>
+                  </li>
+                  <li>
+                    <a href="#serviceadministrationtermination" class="toc-h2 toc-link" data-title="ServiceAdministrationTermination">ServiceAdministrationTermination</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#coveragechanges" class="toc-h1 toc-link" data-title="CoverageChanges">CoverageChanges</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#newhirecoveragechanges" class="toc-h2 toc-link" data-title="NewHireCoverageChanges">NewHireCoverageChanges</a>
+                  </li>
+                  <li>
+                    <a href="#openenrollmentcoveragechanges" class="toc-h2 toc-link" data-title="OpenEnrollmentCoverageChanges">OpenEnrollmentCoverageChanges</a>
+                  </li>
+                  <li>
+                    <a href="#qualifyinglifeeventcoveragechanges" class="toc-h2 toc-link" data-title="QualifyingLifeEventCoverageChanges">QualifyingLifeEventCoverageChanges</a>
+                  </li>
+                  <li>
+                    <a href="#qualifyinglifeeventcoveragechanges-cobra" class="toc-h2 toc-link" data-title="QualifyingLifeEventCoverageChanges-Cobra">QualifyingLifeEventCoverageChanges-Cobra</a>
+                  </li>
+                  <li>
+                    <a href="#accountstructurechange" class="toc-h2 toc-link" data-title="AccountStructureChange">AccountStructureChange</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#carrierinitiated-coveragereductionemployee" class="toc-h1 toc-link" data-title="CarrierInitiated-CoverageReductionEmployee">CarrierInitiated-CoverageReductionEmployee</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#carrierinitiated-coverageincreaseemployee" class="toc-h2 toc-link" data-title="CarrierInitiated-CoverageIncreaseEmployee">CarrierInitiated-CoverageIncreaseEmployee</a>
+                  </li>
+                  <li>
+                    <a href="#carrierinitiated-coveragereductionemployee-2" class="toc-h2 toc-link" data-title="CarrierInitiated-CoverageReductionEmployee">CarrierInitiated-CoverageReductionEmployee</a>
+                  </li>
+                  <li>
+                    <a href="#carrierinitiated-coverageincreaseemployee-2" class="toc-h2 toc-link" data-title="CarrierInitiated-CoverageIncreaseEmployee">CarrierInitiated-CoverageIncreaseEmployee</a>
+                  </li>
+                  <li>
+                    <a href="#carrierinitiated-coveragereductiondependent" class="toc-h2 toc-link" data-title="CarrierInitiated-CoverageReductionDependent">CarrierInitiated-CoverageReductionDependent</a>
+                  </li>
+                  <li>
+                    <a href="#carrierinitiated-coverageincreasedependent" class="toc-h2 toc-link" data-title="CarrierInitiated-CoverageIncreaseDependent">CarrierInitiated-CoverageIncreaseDependent</a>
+                  </li>
+                  <li>
+                    <a href="#carrierinitiated-coveragereductiondependent-2" class="toc-h2 toc-link" data-title="CarrierInitiated-CoverageReductionDependent">CarrierInitiated-CoverageReductionDependent</a>
+                  </li>
+                  <li>
+                    <a href="#carrierinitiated-coverageincreasedependent-2" class="toc-h2 toc-link" data-title="CarrierInitiated-CoverageIncreaseDependent">CarrierInitiated-CoverageIncreaseDependent</a>
+                  </li>
+                  <li>
+                    <a href="#carrierinitiated-employeereinstatescoverage" class="toc-h2 toc-link" data-title="CarrierInitiated-EmployeeReinstatesCoverage">CarrierInitiated-EmployeeReinstatesCoverage</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#coverageelection" class="toc-h1 toc-link" data-title="CoverageElection">CoverageElection</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#newhirecoverageelections" class="toc-h2 toc-link" data-title="NewHireCoverageElections">NewHireCoverageElections</a>
+                  </li>
+                  <li>
+                    <a href="#newhirecoverageelections-legal" class="toc-h2 toc-link" data-title="NewHireCoverageElections-Legal">NewHireCoverageElections-Legal</a>
+                  </li>
+                  <li>
+                    <a href="#openenrollmentcoverageelections" class="toc-h2 toc-link" data-title="OpenEnrollmentCoverageElections">OpenEnrollmentCoverageElections</a>
+                  </li>
+                  <li>
+                    <a href="#openenrollmentcoverageelections-idtheft" class="toc-h2 toc-link" data-title="OpenEnrollmentCoverageElections-IDTheft">OpenEnrollmentCoverageElections-IDTheft</a>
+                  </li>
+                  <li>
+                    <a href="#openenrollmentcoverageelections-medical" class="toc-h2 toc-link" data-title="OpenEnrollmentCoverageElections-Medical">OpenEnrollmentCoverageElections-Medical</a>
+                  </li>
+                  <li>
+                    <a href="#qualifyinglifeeventcoverageelections" class="toc-h2 toc-link" data-title="QualifyingLifeEventCoverageElections">QualifyingLifeEventCoverageElections</a>
+                  </li>
+                  <li>
+                    <a href="#qualifyinglifeeventcoverageelections-idtheft" class="toc-h2 toc-link" data-title="QualifyingLifeEventCoverageElections-IDTheft">QualifyingLifeEventCoverageElections-IDTheft</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#coveragetermination" class="toc-h1 toc-link" data-title="CoverageTermination">CoverageTermination</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#carrierinitiated-employeecancelsterminatescoverage" class="toc-h2 toc-link" data-title="CarrierInitiated-EmployeeCancelsTerminatesCoverage">CarrierInitiated-EmployeeCancelsTerminatesCoverage</a>
+                  </li>
+                  <li>
+                    <a href="#openenrollmentcoverageterminations" class="toc-h2 toc-link" data-title="OpenEnrollmentCoverageTerminations">OpenEnrollmentCoverageTerminations</a>
+                  </li>
+                  <li>
+                    <a href="#openenrollmentcoverageterminations-legal" class="toc-h2 toc-link" data-title="OpenEnrollmentCoverageTerminations-legal">OpenEnrollmentCoverageTerminations-legal</a>
+                  </li>
+                  <li>
+                    <a href="#qleperpetualenrollmentcoverageterminations" class="toc-h2 toc-link" data-title="QLEPerpetualEnrollmentCoverageTerminations">QLEPerpetualEnrollmentCoverageTerminations</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#formsmanagement" class="toc-h1 toc-link" data-title="FormsManagement">FormsManagement</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#embeddedform" class="toc-h2 toc-link" data-title="EmbeddedForm">EmbeddedForm</a>
+                  </li>
+                  <li>
+                    <a href="#linkedform" class="toc-h2 toc-link" data-title="LinkedForm">LinkedForm</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#issue-age" class="toc-h1 toc-link" data-title="Issue Age">Issue Age</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#stackedelection" class="toc-h2 toc-link" data-title="StackedElection">StackedElection</a>
+                  </li>
+                  <li>
+                    <a href="#downgrade" class="toc-h2 toc-link" data-title="Downgrade">Downgrade</a>
+                  </li>
+                  <li>
+                    <a href="#termination" class="toc-h2 toc-link" data-title="Termination">Termination</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#noncoveragedemographicchange" class="toc-h1 toc-link" data-title="NonCoverageDemographicChange">NonCoverageDemographicChange</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#carrierinitiated-demographicchangeemployee" class="toc-h2 toc-link" data-title="CarrierInitiated-DemographicChangeEmployee">CarrierInitiated-DemographicChangeEmployee</a>
+                  </li>
+                  <li>
+                    <a href="#carrierinitiated-demographicchangedependent" class="toc-h2 toc-link" data-title="CarrierInitiated-DemographicChangeDependent">CarrierInitiated-DemographicChangeDependent</a>
+                  </li>
+                  <li>
+                    <a href="#noncoveragedemographicchange-personalinformation" class="toc-h2 toc-link" data-title="NonCoverageDemographicChange-PersonalInformation">NonCoverageDemographicChange-PersonalInformation</a>
+                  </li>
+                  <li>
+                    <a href="#noncoveragedemographicchange-employmentinformation" class="toc-h2 toc-link" data-title="NonCoverageDemographicChange-EmploymentInformation">NonCoverageDemographicChange-EmploymentInformation</a>
+                  </li>
+                  <li>
+                    <a href="#noncoveragedemographicchange-employmentinformation-idtheftlegal" class="toc-h2 toc-link" data-title="NonCoverageDemographicChange-EmploymentInformation-IDTheftLegal">NonCoverageDemographicChange-EmploymentInformation-IDTheftLegal</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#response" class="toc-h1 toc-link" data-title="Response">Response</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#auditinformation" class="toc-h2 toc-link" data-title="AuditInformation">AuditInformation</a>
+                  </li>
+                  <li>
+                    <a href="#invalidsender" class="toc-h2 toc-link" data-title="InvalidSender">InvalidSender</a>
+                  </li>
+                  <li>
+                    <a href="#memberlevel" class="toc-h2 toc-link" data-title="MemberLevel">MemberLevel</a>
+                  </li>
+                  <li>
+                    <a href="#memberlevelcoveragechange" class="toc-h2 toc-link" data-title="MemberLevelCoverageChange">MemberLevelCoverageChange</a>
+                  </li>
+                  <li>
+                    <a href="#memberlevelmultiremarks" class="toc-h2 toc-link" data-title="MemberLevelMultiRemarks">MemberLevelMultiRemarks</a>
+                  </li>
+                  <li>
+                    <a href="#memberlevelsalarychange" class="toc-h2 toc-link" data-title="MemberLevelSalaryChange">MemberLevelSalaryChange</a>
+                  </li>
+                  <li>
+                    <a href="#schemavalidation" class="toc-h2 toc-link" data-title="SchemaValidation">SchemaValidation</a>
+                  </li>
+                  <li>
+                    <a href="#transmissionsuccess" class="toc-h2 toc-link" data-title="TransmissionSuccess">TransmissionSuccess</a>
+                  </li>
+                  <li>
+                    <a href="#unabletocancelorterminatecoverage" class="toc-h2 toc-link" data-title="UnableToCancelOrTerminateCoverage">UnableToCancelOrTerminateCoverage</a>
+                  </li>
+                  <li>
+                    <a href="#unabletoprocessbeneficiarychange" class="toc-h2 toc-link" data-title="UnableToProcessBeneficiaryChange">UnableToProcessBeneficiaryChange</a>
+                  </li>
+                  <li>
+                    <a href="#unabletoprocesscoveragedecrease" class="toc-h2 toc-link" data-title="UnableToProcessCoverageDecrease">UnableToProcessCoverageDecrease</a>
+                  </li>
+                  <li>
+                    <a href="#unabletoprocesscoverageincrease" class="toc-h2 toc-link" data-title="UnableToProcessCoverageIncrease">UnableToProcessCoverageIncrease</a>
+                  </li>
+                  <li>
+                    <a href="#unabletoprocessdemographicchange" class="toc-h2 toc-link" data-title="UnableToProcessDemographicChange">UnableToProcessDemographicChange</a>
+                  </li>
+                  <li>
+                    <a href="#unabletoreinstatecoverage" class="toc-h2 toc-link" data-title="UnableToReinstateCoverage">UnableToReinstateCoverage</a>
                   </li>
                   <li>
                     <a href="#savingsandspendingaccounts" class="toc-h2 toc-link" data-title="SavingsandSpendingAccounts">SavingsandSpendingAccounts</a>
@@ -366,46 +593,84 @@
                   <li>
                     <a href="#post" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
                   </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#eois-usecases" class="toc-h1 toc-link" data-title="EOIS usecases">EOIS usecases</a>
+          </li>
+          <li>
+            <a href="#evidence-of-insurability-application-status-request-by-ben-admin" class="toc-h1 toc-link" data-title="Evidence of Insurability Application Status Request by Ben Admin">Evidence of Insurability Application Status Request by Ben Admin</a>
+              <ul class="toc-list-h2">
                   <li>
-                    <a href="#evidence-of-insurability-application-status-request-by-ben-admin" class="toc-h2 toc-link" data-title="Evidence of Insurability Application Status Request by Ben Admin">Evidence of Insurability Application Status Request by Ben Admin</a>
+                    <a href="#evidence-of-insurability-request-not-started-no-record" class="toc-h2 toc-link" data-title="Evidence of Insurability Request - Not started no record">Evidence of Insurability Request - Not started no record</a>
                   </li>
                   <li>
-                    <a href="#evidence-of-insurability-application-status-push-to-ben-admin-by-carrier" class="toc-h2 toc-link" data-title="Evidence of Insurability Application Status Push to Ben Admin by Carrier">Evidence of Insurability Application Status Push to Ben Admin by Carrier</a>
+                    <a href="#evidence-of-insurability-request-not-started-on-file" class="toc-h2 toc-link" data-title="Evidence of Insurability request - Not Started on file">Evidence of Insurability request - Not Started on file</a>
                   </li>
                   <li>
-                    <a href="#evidence-of-insurability-decision-carrier-initiated" class="toc-h2 toc-link" data-title="Evidence of Insurability Decision (Carrier-initiated)">Evidence of Insurability Decision (Carrier-initiated)</a>
+                    <a href="#evidence-of-insurability-request-not-submitted" class="toc-h2 toc-link" data-title="Evidence of Insurability request - Not Submitted">Evidence of Insurability request - Not Submitted</a>
+                  </li>
+                  <li>
+                    <a href="#evidence-of-insurability-request-pending" class="toc-h2 toc-link" data-title="Evidence of Insurability request - Pending">Evidence of Insurability request - Pending</a>
+                  </li>
+                  <li>
+                    <a href="#evidence-of-insurability-request-completed" class="toc-h2 toc-link" data-title="Evidence of Insurability request - Completed">Evidence of Insurability request - Completed</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#evidence-of-insurability-application-status-push-to-ben-admin-by-carrier" class="toc-h1 toc-link" data-title="Evidence of Insurability Application Status Push to Ben Admin by Carrier">Evidence of Insurability Application Status Push to Ben Admin by Carrier</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#evidence-of-insurability-push-update-not-started-on-file" class="toc-h2 toc-link" data-title="Evidence of Insurability Push Update- Not Started on file">Evidence of Insurability Push Update- Not Started on file</a>
+                  </li>
+                  <li>
+                    <a href="#evidence-of-insurability-push-update-not-submitted" class="toc-h2 toc-link" data-title="Evidence of Insurability Push Update- Not Submitted">Evidence of Insurability Push Update- Not Submitted</a>
+                  </li>
+                  <li>
+                    <a href="#evidence-of-insurability-push-update-pending" class="toc-h2 toc-link" data-title="Evidence of Insurability Push Update - Pending">Evidence of Insurability Push Update - Pending</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#evidence-of-insurability-decision-carrier-initiated" class="toc-h1 toc-link" data-title="Evidence of Insurability Decision (Carrier-initiated)">Evidence of Insurability Decision (Carrier-initiated)</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#evidence-of-insurability-decision-carrier-initiated-2" class="toc-h2 toc-link" data-title="Evidence of Insurability Decision (Carrier-initiated)">Evidence of Insurability Decision (Carrier-initiated)</a>
+                  </li>
+                  <li>
+                    <a href="#evidence-of-insurability-decision-carrier-eoi-full-approval" class="toc-h2 toc-link" data-title="Evidence of Insurability Decision (Carrier) - EOI full approval">Evidence of Insurability Decision (Carrier) - EOI full approval</a>
+                  </li>
+                  <li>
+                    <a href="#evidence-of-insurability-decision-carrier-eoi-partial-approval" class="toc-h2 toc-link" data-title="Evidence of Insurability Decision (Carrier) - EOI partial approval">Evidence of Insurability Decision (Carrier) - EOI partial approval</a>
+                  </li>
+                  <li>
+                    <a href="#evidence-of-insurability-decision-carrier-eoi-decline" class="toc-h2 toc-link" data-title="Evidence of Insurability Decision (Carrier) - EOI Decline">Evidence of Insurability Decision (Carrier) - EOI Decline</a>
+                  </li>
+                  <li>
+                    <a href="#evidence-of-insurability-decision-carrier-eoi-closed" class="toc-h2 toc-link" data-title="Evidence of Insurability Decision (Carrier) - EOI Closed">Evidence of Insurability Decision (Carrier) - EOI Closed</a>
                   </li>
               </ul>
           </li>
       </ul>
-        <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/lavkumarv'>Documentation Powered by lav</a></li>
-        </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <p><hr></p>
+        <h1 id='bem'>BEM</h1><h2 id='post'>POST</h2><h1 id='eois'>EOIS</h1><h2 id='post-2'>POST</h2><h1 id='rsp'>RSP</h1><h2 id='post-3'>POST</h2>
+<p><hr></p>
 
 <p>title: LDExBEM REST API</p>
 
-<h1 id='benifitsenrollmentmanagement'>BenifitsEnrollmentManagement</h1>
-
-<p>search: true</p>
-
+<h1 id='benifitsenrollmentmanagement'>BenifitsEnrollmentManagement</h1><h2 id='overview'>Overview</h2>
 <p>Introduction</p>
 
 <p>Simple API for exchanging LDExBEM payloads. The API describes transmission of an LDExBEM payload in two parts: 1) Metadata describing the payload (unique ID, sender, receiver, payload type, and spec version) and 2) payload in the LDExBEM format (JSON or XML).</p>
 
 <p><strong>Version:</strong> 1.0.2021.07.30</p>
-
 <h2 id='post'><strong><em>POST</em></strong></h2><h2 id='authentication'>Authentication</h2>
-
 <p>Each customer account has a unique pair of API credentials. Contact Noyo support to receive an CLIENT_ID, CLIENT_SECRET pair as part the initial onboarding.</p>
-
 <h2 id='summary'>Summary</h2>
-
 <p><strong>Description:</strong> Process enrollment, demographic, coverage changes etc. sent in LDExBEM payload</p>
 
 <p>HTTP Request
@@ -513,7 +778,6 @@
 </tbody></table>
 
 <!-- Converted with the swagger-to-slate https://github.com/lavkumarv/swagger-to-slate -->
-
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="nl">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft/2020-12/schema"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LDExBEM"</span><span class="p">,</span><span class="w">
@@ -571,8 +835,7 @@
 
 
 </span></code></pre></div>
-
-<p><h1 id='bem-api-specs'>BEM API Specs</h1><h2 id='benificiarymanagement'>BenificiaryManagement</h2><h3 id='beneficiaryadd'>BeneficiaryAdd</h3>
+<p><h1 id='bem-api-specs'>BEM API Specs</h1><h1 id='benificiarymanagement'>BenificiaryManagement</h1><h2 id='beneficiaryadd'>BeneficiaryAdd</h2>
 <p>Description:</p></p>
 
 <p>A beneficiary is added in target platform and passed through to receiving system with all required data and for selected coverage and percentage total equals 100%.</p>
@@ -663,7 +926,7 @@
                     </span><span class="nl">&quot;DependentTobaccoUseCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;N&quot;</span><span class="p">,</span><span class="w">
                     </span><span class="nl">&quot;DependentEventID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NHEVT1234&quot;</span><span class="w">
                 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='beneficiarychange'>BeneficiaryChange</h3>
+</span></code></pre></div><h2 id='beneficiarychange'>BeneficiaryChange</h2>
 <p>Description:
 A beneficiary change to an existing beneficiary designation is to be made; alternatively, an existing coverage election is having a beneficiary designation added for the first time.</p></p>
 
@@ -1045,7 +1308,7 @@ A beneficiary change to an existing beneficiary designation is to be made; alter
     </span><span class="p">}</span><span class="w">
   </span><span class="err">}</span><span class="w">
 </span><span class="err">}</span><span class="w">
-</span></code></pre></div><h3 id='beneficiaryallocationchange'>BeneficiaryAllocationChange</h3>
+</span></code></pre></div><h2 id='beneficiaryallocationchange'>BeneficiaryAllocationChange</h2>
 <p>Description:
 A beneficiary change to the percent allocation for one or more beneficiaries designated for one or more products</p></p>
 
@@ -1076,7 +1339,7 @@ A beneficiary change to the percent allocation for one or more beneficiaries des
 </tr>
 </tbody></table>
 
-<h3 id='beneficiarytypechange'>BeneficiaryTypeChange</h3>
+<h2 id='beneficiarytypechange'>BeneficiaryTypeChange</h2>
 
 <p>Description:
 A beneficiary change to an existing beneficiary designation is to be made; alternatively, an existing beneficiary designation is changing from primary to contingent, or vice versa</p>
@@ -1108,19 +1371,16 @@ A beneficiary change to an existing beneficiary designation is to be made; alter
 </tr>
 </tbody></table>
 
-<h3 id='beneficiarychangeemployee'>BeneficiaryChangeEmployee</h3><h3 id='beneficiarychangedependent'>BeneficiaryChangeDependent</h3>
-
-<p><h2 id='benificiaryeligibilitymanagement'>BenificiaryEligibilityManagement</h2><h3 id='leavemanagementfml-newhire'>LeaveManagementFML-NewHire</h3><h3 id='leavemanagementfml-demographicchange'>LeaveManagementFML-DemographicChange</h3><h3 id='leavemanagementfml-employmenttermination'>LeaveManagementFML-EmploymentTermination</h3><h3 id='leavemanagementfml-rehire'>LeaveManagementFML-Rehire</h3><h3 id='leavemanagementeap-newhirerehire'>LeaveManagementEAP-NewHireRehire</h3><h3 id='leavemanagementeap-demographicchange'>LeaveManagementEAP-DemographicChange</h3><h3 id='leavemanagementeap-employmenttermination'>LeaveManagementEAP-EmploymentTermination</h3><h3 id='leavemanagementpfl-newhirerehire'>LeaveManagementPFL-NewHireRehire</h3><h3 id='leavemanagementpfl-demographicchange'>LeaveManagementPFL-DemographicChange</h3><h3 id='leavemanagementpfl-employmenttermination'>LeaveManagementPFL-EmploymentTermination</h3><h3 id='leavemanagementpfl-serviceadministrationtermination'>LeaveManagementPFL-ServiceAdministrationTermination</h3>
-<h2 id='coveragechanges'>CoverageChanges</h2><h3 id='newhirecoveragechanges'>NewHireCoverageChanges</h3><h3 id='openenrollmentcoveragechanges'>OpenEnrollmentCoverageChanges</h3><h3 id='qualifyinglifeeventcoveragechanges'>QualifyingLifeEventCoverageChanges</h3><h3 id='qualifyinglifeeventcoveragechanges-cobra'>QualifyingLifeEventCoverageChanges-Cobra</h3><h3 id='accountstructurechange'>AccountStructureChange</h3><h3 id='carrierinitiated-coveragereductionemployee'>CarrierInitiated-CoverageReductionEmployee</h3><h3 id='carrierinitiated-coverageincreaseemployee'>CarrierInitiated-CoverageIncreaseEmployee</h3><h3 id='carrierinitiated-coveragereductionemployee-2'>CarrierInitiated-CoverageReductionEmployee</h3><h3 id='carrierinitiated-coverageincreaseemployee-2'>CarrierInitiated-CoverageIncreaseEmployee</h3><h3 id='carrierinitiated-coveragereductiondependent'>CarrierInitiated-CoverageReductionDependent</h3><h3 id='carrierinitiated-coverageincreasedependent'>CarrierInitiated-CoverageIncreaseDependent</h3><h3 id='carrierinitiated-coveragereductiondependent-2'>CarrierInitiated-CoverageReductionDependent</h3><h3 id='carrierinitiated-coverageincreasedependent-2'>CarrierInitiated-CoverageIncreaseDependent</h3><h3 id='carrierinitiated-employeereinstatescoverage'>CarrierInitiated-EmployeeReinstatesCoverage</h3>
-<h2 id='coverageelection'>CoverageElection</h2><h3 id='newhirecoverageelections'>NewHireCoverageElections</h3><h3 id='newhirecoverageelections-legal'>NewHireCoverageElections-Legal</h3><h3 id='openenrollmentcoverageelections'>OpenEnrollmentCoverageElections</h3><h3 id='openenrollmentcoverageelections-idtheft'>OpenEnrollmentCoverageElections-IDTheft</h3><h3 id='openenrollmentcoverageelections-medical'>OpenEnrollmentCoverageElections-Medical</h3><h3 id='qualifyinglifeeventcoverageelections'>QualifyingLifeEventCoverageElections</h3><h3 id='qualifyinglifeeventcoverageelections-idtheft'>QualifyingLifeEventCoverageElections-IDTheft</h3>
-<h2 id='coveragetermination'>CoverageTermination</h2><h3 id='carrierinitiated-employeecancelsterminatescoverage'>CarrierInitiated-EmployeeCancelsTerminatesCoverage</h3><h3 id='openenrollmentcoverageterminations'>OpenEnrollmentCoverageTerminations</h3><h3 id='openenrollmentcoverageterminations-legal'>OpenEnrollmentCoverageTerminations-legal</h3><h3 id='qleperpetualenrollmentcoverageterminations'>QLEPerpetualEnrollmentCoverageTerminations</h3>
-<h2 id='formsmanagement'>FormsManagement</h2><h3 id='embeddedform'>EmbeddedForm</h3><h3 id='linkedform'>LinkedForm</h3>
-<h2 id='issue-age'>Issue Age</h2><h3 id='stackedelection'>StackedElection</h3><h3 id='downgrade'>Downgrade</h3><h3 id='termination'>Termination</h3>
-<h2 id='noncoveragedemographicchange'>NonCoverageDemographicChange</h2><h3 id='carrierinitiated-demographicchangeemployee'>CarrierInitiated-DemographicChangeEmployee</h3><h3 id='carrierinitiated-demographicchangedependent'>CarrierInitiated-DemographicChangeDependent</h3><h3 id='noncoveragedemographicchange-personalinformation'>NonCoverageDemographicChange-PersonalInformation</h3><h3 id='noncoveragedemographicchange-employmentinformation'>NonCoverageDemographicChange-EmploymentInformation</h3><h3 id='noncoveragedemographicchange-employmentinformation-idtheftlegal'>NonCoverageDemographicChange-EmploymentInformation-IDTheftLegal</h3>
-<h2 id='response'>Response</h2><h3 id='auditinformation'>AuditInformation</h3>
+<p><h1 id='benificiaryeligibilitymanagement'>BenificiaryEligibilityManagement</h1><h2 id='newhire'>NewHire</h2><h2 id='demographicchange'>DemographicChange</h2><h2 id='employmenttermination'>EmploymentTermination</h2><h2 id='rehire'>Rehire</h2><h2 id='newhirerehire'>NewHireRehire</h2><h2 id='demographicchange-2'>DemographicChange</h2><h2 id='employmenttermination-2'>EmploymentTermination</h2><h2 id='newhirerehire-2'>NewHireRehire</h2><h2 id='demographicchange-3'>DemographicChange</h2><h2 id='employmenttermination-3'>EmploymentTermination</h2><h2 id='serviceadministrationtermination'>ServiceAdministrationTermination</h2>
+<h1 id='coveragechanges'>CoverageChanges</h1><h2 id='newhirecoveragechanges'>NewHireCoverageChanges</h2><h2 id='openenrollmentcoveragechanges'>OpenEnrollmentCoverageChanges</h2><h2 id='qualifyinglifeeventcoveragechanges'>QualifyingLifeEventCoverageChanges</h2><h2 id='qualifyinglifeeventcoveragechanges-cobra'>QualifyingLifeEventCoverageChanges-Cobra</h2><h2 id='accountstructurechange'>AccountStructureChange</h2><h1 id='carrierinitiated-coveragereductionemployee'>CarrierInitiated-CoverageReductionEmployee</h1><h2 id='carrierinitiated-coverageincreaseemployee'>CarrierInitiated-CoverageIncreaseEmployee</h2><h2 id='carrierinitiated-coveragereductionemployee-2'>CarrierInitiated-CoverageReductionEmployee</h2><h2 id='carrierinitiated-coverageincreaseemployee-2'>CarrierInitiated-CoverageIncreaseEmployee</h2><h2 id='carrierinitiated-coveragereductiondependent'>CarrierInitiated-CoverageReductionDependent</h2><h2 id='carrierinitiated-coverageincreasedependent'>CarrierInitiated-CoverageIncreaseDependent</h2><h2 id='carrierinitiated-coveragereductiondependent-2'>CarrierInitiated-CoverageReductionDependent</h2><h2 id='carrierinitiated-coverageincreasedependent-2'>CarrierInitiated-CoverageIncreaseDependent</h2><h2 id='carrierinitiated-employeereinstatescoverage'>CarrierInitiated-EmployeeReinstatesCoverage</h2>
+<h1 id='coverageelection'>CoverageElection</h1><h2 id='newhirecoverageelections'>NewHireCoverageElections</h2><h2 id='newhirecoverageelections-legal'>NewHireCoverageElections-Legal</h2><h2 id='openenrollmentcoverageelections'>OpenEnrollmentCoverageElections</h2><h2 id='openenrollmentcoverageelections-idtheft'>OpenEnrollmentCoverageElections-IDTheft</h2><h2 id='openenrollmentcoverageelections-medical'>OpenEnrollmentCoverageElections-Medical</h2><h2 id='qualifyinglifeeventcoverageelections'>QualifyingLifeEventCoverageElections</h2><h2 id='qualifyinglifeeventcoverageelections-idtheft'>QualifyingLifeEventCoverageElections-IDTheft</h2>
+<h1 id='coveragetermination'>CoverageTermination</h1><h2 id='carrierinitiated-employeecancelsterminatescoverage'>CarrierInitiated-EmployeeCancelsTerminatesCoverage</h2><h2 id='openenrollmentcoverageterminations'>OpenEnrollmentCoverageTerminations</h2><h2 id='openenrollmentcoverageterminations-legal'>OpenEnrollmentCoverageTerminations-legal</h2><h2 id='qleperpetualenrollmentcoverageterminations'>QLEPerpetualEnrollmentCoverageTerminations</h2>
+<h1 id='formsmanagement'>FormsManagement</h1><h2 id='embeddedform'>EmbeddedForm</h2><h2 id='linkedform'>LinkedForm</h2>
+<h1 id='issue-age'>Issue Age</h1><h2 id='stackedelection'>StackedElection</h2><h2 id='downgrade'>Downgrade</h2><h2 id='termination'>Termination</h2>
+<h1 id='noncoveragedemographicchange'>NonCoverageDemographicChange</h1><h2 id='carrierinitiated-demographicchangeemployee'>CarrierInitiated-DemographicChangeEmployee</h2><h2 id='carrierinitiated-demographicchangedependent'>CarrierInitiated-DemographicChangeDependent</h2><h2 id='noncoveragedemographicchange-personalinformation'>NonCoverageDemographicChange-PersonalInformation</h2><h2 id='noncoveragedemographicchange-employmentinformation'>NonCoverageDemographicChange-EmploymentInformation</h2><h2 id='noncoveragedemographicchange-employmentinformation-idtheftlegal'>NonCoverageDemographicChange-EmploymentInformation-IDTheftLegal</h2>
+<h1 id='response'>Response</h1><h2 id='auditinformation'>AuditInformation</h2>
 <p><strong><em>Here is the example response</em></strong></p>
-
-<p><div class="highlight"><pre class="highlight json tab-json"><code><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="w">
 </span><span class="p">{</span><span class="w">
   </span><span class="nl">&quot;TransmissionResponse&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">&quot;TransmissionGUID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TransmissionGUID&quot;</span><span class="p">,</span><span class="w">
@@ -1157,12 +1417,13 @@ A beneficiary change to an existing beneficiary designation is to be made; alter
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='invalidsender'>InvalidSender</h3><h3 id='memberlevel'>MemberLevel</h3><h3 id='memberlevelcoveragechange'>MemberLevelCoverageChange</h3><h3 id='memberlevelmultiremarks'>MemberLevelMultiRemarks</h3><h3 id='memberlevelsalarychange'>MemberLevelSalaryChange</h3><h3 id='schemavalidation'>SchemaValidation</h3><h3 id='transmissionsuccess'>TransmissionSuccess</h3><h3 id='unabletocancelorterminatecoverage'>UnableToCancelOrTerminateCoverage</h3><h3 id='unabletoprocessbeneficiarychange'>UnableToProcessBeneficiaryChange</h3><h3 id='unabletoprocesscoveragedecrease'>UnableToProcessCoverageDecrease</h3><h3 id='unabletoprocesscoverageincrease'>UnableToProcessCoverageIncrease</h3><h3 id='unabletoprocessdemographicchange'>UnableToProcessDemographicChange</h3><h3 id='unabletoreinstatecoverage'>UnableToReinstateCoverage</h3>
-<h2 id='savingsandspendingaccounts'>SavingsandSpendingAccounts</h2><h3 id='newelection'>NewElection</h3><h3 id='changeelection'>ChangeElection</h3><h3 id='existingcoveragecancelationtermination'>ExistingCoverageCancelationTermination</h3></p></p>
+</span></code></pre></div><h2 id='invalidsender'>InvalidSender</h2><h2 id='memberlevel'>MemberLevel</h2><h2 id='memberlevelcoveragechange'>MemberLevelCoverageChange</h2><h2 id='memberlevelmultiremarks'>MemberLevelMultiRemarks</h2><h2 id='memberlevelsalarychange'>MemberLevelSalaryChange</h2><h2 id='schemavalidation'>SchemaValidation</h2><h2 id='transmissionsuccess'>TransmissionSuccess</h2><h2 id='unabletocancelorterminatecoverage'>UnableToCancelOrTerminateCoverage</h2><h2 id='unabletoprocessbeneficiarychange'>UnableToProcessBeneficiaryChange</h2><h2 id='unabletoprocesscoveragedecrease'>UnableToProcessCoverageDecrease</h2><h2 id='unabletoprocesscoverageincrease'>UnableToProcessCoverageIncrease</h2><h2 id='unabletoprocessdemographicchange'>UnableToProcessDemographicChange</h2><h2 id='unabletoreinstatecoverage'>UnableToReinstateCoverage</h2>
+<h2 id='savingsandspendingaccounts'>SavingsandSpendingAccounts</h2><h3 id='newelection'>NewElection</h3><h3 id='changeelection'>ChangeElection</h3><h3 id='existingcoveragecancelationtermination'>ExistingCoverageCancelationTermination</h3></p>
 
-<p><hr>
+<hr>
 <h1 id='evidenceofinsurabilitystatus'>EvidenceOfInsurabilityStatus</h1>
-<p>title: LDExEOIS REST API</p></p>
+
+<p>title: LDExEOIS REST API</p>
 
 <p><hr>
 <h2 id='introduction'>Introduction</h2>
@@ -1281,46 +1542,10 @@ A beneficiary change to an existing beneficiary designation is to be made; alter
 
 <!-- Converted with the swagger-to-slate https://github.com/lavkumarv/swagger-to-slate -->
 
-<p><h2 id='evidence-of-insurability-application-status-request-by-ben-admin'>Evidence of Insurability Application Status Request by Ben Admin</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">&quot;Transmission&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">&quot;TransmissionGUID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c9fcc147-2b65-48cb-925c-9f898a381815&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nl">&quot;SenderName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ABC Tech Partner&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nl">&quot;SenderPlatformName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ABC Platform&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nl">&quot;ReceiverName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;XYZ Carrier&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nl">&quot;CreationDateTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-01-17T21:56:36.2619791Z&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nl">&quot;TestProductionCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Production&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nl">&quot;TransmissionTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ChangesOnly&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nl">&quot;SchemaVersionIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.3.2022.01.01&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nl">&quot;Carrier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">&quot;CarrierID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1234</span><span class="p">,</span><span class="w">
-      </span><span class="nl">&quot;CarrierName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;XYZ Carrier&quot;</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">&quot;Employer&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">&quot;EmployerPartyID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">9999</span><span class="p">,</span><span class="w">
-      </span><span class="nl">&quot;FederalEmployerIdentificationNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;99-9999999&quot;</span><span class="p">,</span><span class="w">
-      </span><span class="nl">&quot;CarrierMasterAgreementNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">&quot;CarrierMasterAgreementNumberID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AS-M009-87788&quot;</span><span class="p">,</span><span class="w">
-        </span><span class="nl">&quot;MasterAgreementNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;M009-87788&quot;</span><span class="p">,</span><span class="w">
-        </span><span class="nl">&quot;CarrierID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1234</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nl">&quot;EmployerName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sweet Insurance 4 U&quot;</span><span class="p">,</span><span class="w">
-      </span><span class="nl">&quot;EmployerAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">&quot;FirstLineAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3345 East 45th Street&quot;</span><span class="p">,</span><span class="w">
-        </span><span class="nl">&quot;CityName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Oklahoma City&quot;</span><span class="p">,</span><span class="w">
-        </span><span class="nl">&quot;StateProvinceCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="w">
-        </span><span class="nl">&quot;PostalCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">73112</span><span class="w">
-      </span><span class="p">},</span><span class="w"></p>
-
-<p></span></code></pre></div><h3 id='evidence-of-insurability-request-not-started-no-record'>Evidence of Insurability Request - Not started no record</h3><h3 id='evidence-of-insurability-request-not-started-on-file'>Evidence of Insurability request - Not Started on file</h3><h3 id='evidence-of-insurability-request-not-submitted'>Evidence of Insurability request - Not Submitted</h3><h3 id='evidence-of-insurability-request-pending'>Evidence of Insurability request - Pending</h3><h3 id='evidence-of-insurability-request-completed'>Evidence of Insurability request - Completed</h3><h2 id='evidence-of-insurability-application-status-push-to-ben-admin-by-carrier'>Evidence of Insurability Application Status Push to Ben Admin by Carrier</h2><h3 id='evidence-of-insurability-push-update-not-started-on-file'>Evidence of Insurability Push Update- Not Started on file</h3><h3 id='evidence-of-insurability-push-update-not-submitted'>Evidence of Insurability Push Update- Not Submitted</h3><h3 id='evidence-of-insurability-push-update-pending'>Evidence of Insurability Push Update - Pending</h3><h3 id='evidence-of-insurability-push-update-completed'>Evidence of Insurability Push Update - Completed</h3><h2 id='evidence-of-insurability-decision-carrier-initiated'>Evidence of Insurability Decision (Carrier-initiated)</h2><h3 id='evidence-of-insurability-decision-carrier-eoi-full-approval'>Evidence of Insurability Decision (Carrier) - EOI full approval</h3><h3 id='evidence-of-insurability-decision-carrier-eoi-partial-approval'>Evidence of Insurability Decision (Carrier) - EOI partial approval</h3><h3 id='evidence-of-insurability-decision-carrier-eoi-decline'>Evidence of Insurability Decision (Carrier) - EOI Decline</h3><h3 id='evidence-of-insurability-decision-carrier-eoi-closed'>Evidence of Insurability Decision (Carrier) - EOI Closed</h3></p>
+<p><h1 id='eois-usecases'>EOIS usecases</h1><h1 id='evidence-of-insurability-application-status-request-by-ben-admin'>Evidence of Insurability Application Status Request by Ben Admin</h1><h2 id='evidence-of-insurability-request-not-started-no-record'>Evidence of Insurability Request - Not started no record</h2><h2 id='evidence-of-insurability-request-not-started-on-file'>Evidence of Insurability request - Not Started on file</h2><h2 id='evidence-of-insurability-request-not-submitted'>Evidence of Insurability request - Not Submitted</h2><h2 id='evidence-of-insurability-request-pending'>Evidence of Insurability request - Pending</h2><h2 id='evidence-of-insurability-request-completed'>Evidence of Insurability request - Completed</h2><h1 id='evidence-of-insurability-application-status-push-to-ben-admin-by-carrier'>Evidence of Insurability Application Status Push to Ben Admin by Carrier</h1><h2 id='evidence-of-insurability-push-update-not-started-on-file'>Evidence of Insurability Push Update- Not Started on file</h2><h2 id='evidence-of-insurability-push-update-not-submitted'>Evidence of Insurability Push Update- Not Submitted</h2><h2 id='evidence-of-insurability-push-update-pending'>Evidence of Insurability Push Update - Pending</h2><h3 id='evidence-of-insurability-push-update-completed'>Evidence of Insurability Push Update - Completed</h3><h1 id='evidence-of-insurability-decision-carrier-initiated'>Evidence of Insurability Decision (Carrier-initiated)</h1><h2 id='evidence-of-insurability-decision-carrier-initiated-2'>Evidence of Insurability Decision (Carrier-initiated)</h2><h2 id='evidence-of-insurability-decision-carrier-eoi-full-approval'>Evidence of Insurability Decision (Carrier) - EOI full approval</h2><h2 id='evidence-of-insurability-decision-carrier-eoi-partial-approval'>Evidence of Insurability Decision (Carrier) - EOI partial approval</h2><h2 id='evidence-of-insurability-decision-carrier-eoi-decline'>Evidence of Insurability Decision (Carrier) - EOI Decline</h2><h2 id='evidence-of-insurability-decision-carrier-eoi-closed'>Evidence of Insurability Decision (Carrier) - EOI Closed</h2></p>
 
       </div>
       <div class="dark-box">
-          <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="php">php</a>
-          </div>
       </div>
     </div>
   </body>
