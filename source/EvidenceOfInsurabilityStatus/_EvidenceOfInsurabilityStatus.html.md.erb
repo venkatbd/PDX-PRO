@@ -1,0 +1,76 @@
+---
+#EvidenceOfInsurabilityStatus
+title: LDExEOIS REST API
+
+---
+
+##Introduction
+
+Simple API for exchanging LDExEOIS payloads. The API describes transmission of an LDExEOIS payload in two parts: 1) Metadata describing the payload (unique ID, sender, receiver, payload type, and spec version) and 2) payload in the LDExEOIS format (JSON or XML).
+
+Evidence of Insurability (EOI) API facilitate EOI form submission for Group insurance products for partners, and provide status of the submitted EOI transaction using transaction ID.
+**Version:** 1.0.2022.01.01
+
+
+##***POST***
+
+**Description:** Process evidence of insurability status and decision sent in LDExEOIS payload
+
+HTTP Request
+`***POST*** /eois`
+
+**Parameters**
+
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| eoisMetadata | formData | Meta data describing LDExEOIS payload. Describes payload type (XML or JSON), spec version, and information about the sender and receiver. Must conform to definition of definitions/eoisMetadata. | Yes | string (json) |
+| eoisPayload | formData | The LDExEOIS payload (XML or JSON) | Yes | binary |
+
+**Responses**
+
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad request - Payload rejected. |
+| 401 | Unauthorized - action requires user authentication. |
+| 403 | Forbidden - user does not have permission to upload this payload. |
+| 404 | Not Found - resource not found. |
+| 405 | Not Allowed - method not allowed on this resource. |
+| 406 | Unacceptable - payload content type is not supported. |
+| 411 | Length Required - server needs to know the size of the entity body. Specify in Content-Length header. |
+| 413 | Payload too large - payload exceeds size limit (too many employees or too many employers). |
+| 415 | Unsupported media type - payload type unsupported. |
+| 422 | Unprocessable entity - request body failed business validation. |
+| 429 | Too many requests - number of requests exceeds limit |
+| 500 | Internal Server Error - fatal error during processing of request |
+| 501 | Not implemented - EIOS upload is not supported |
+| 502 | Bad Gateway - the server received an invalid response from an upstream server. |
+| 503 | Service Unavailable - unable to process request at this time. Try again later. |
+
+<!-- Converted with the swagger-to-slate https://github.com/lavkumarv/swagger-to-slate -->
+
+#EOIS usecases
+
+# Evidence of Insurability Application Status Request by Ben Admin
+
+
+##Evidence of Insurability Request - Not started no record
+##Evidence of Insurability request - Not Started on file
+##Evidence of Insurability request - Not Submitted
+##Evidence of Insurability request - Pending
+##Evidence of Insurability request - Completed
+
+#Evidence of Insurability Application Status Push to Ben Admin by Carrier
+##Evidence of Insurability Push Update- Not Started on file
+##Evidence of Insurability Push Update- Not Submitted
+##Evidence of Insurability Push Update - Pending
+###Evidence of Insurability Push Update - Completed
+
+#Evidence of Insurability Decision (Carrier-initiated)
+## Evidence of Insurability Decision (Carrier-initiated)
+##Evidence of Insurability Decision (Carrier) - EOI full approval
+##Evidence of Insurability Decision (Carrier) - EOI partial approval
+##Evidence of Insurability Decision (Carrier) - EOI Decline
+##Evidence of Insurability Decision (Carrier) - EOI Closed
+
+

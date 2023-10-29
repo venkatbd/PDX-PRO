@@ -1,0 +1,465 @@
+#BEM API Specs
+#BenificiaryManagement
+##BeneficiaryAdd
+
+Description:
+
+A beneficiary is added in target platform and passed through to receiving system with all required data and for selected coverage and percentage total equals 100%.
+
+**Parameters**
+
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| Transmission | SenderPlatformName | ReceiverNameIdentifies the transmission. Must conform to definition of definitions/enrollmentMetadata. | Yes | string (json) |
+| TransmissionGUID | formData | Global Unique identifier created by the originator for this instance of the electronic transmission | Yes | binary |
+| SenderName |  formData | Name of the company sending electronic benefit records on behalf of a group. | Yes | binary |
+| SenderPlatformName | formData | Identifies the Senders system that is providing the data for this data set. | Yes | binary |
+| ReceiverName | formData |  Name of the company receiving electronic benefit records on behalf of a  group. | Yes | binary |
+
+
+
+```json
+
+"Event": {
+                    "EventID": "NHEVT1234",
+                    "EventTypeCode": "Coverage",
+                    "EventTypeReasonCode": "NewHireEnrollment",
+                    "EventDate": "2020-02-10",
+                    "TransactionDate": "2020-02-05"
+                },
+                "EmployeeEventID": "NHEVT1234",
+                "Dependent": {
+                    "DependentPartyID": "1522222",
+                    "DependentSocialSecurityNumber": "997-87-8712",
+                    "DependentIdentifier": null,
+                    "DependentName": {
+                        "FirstName": "Roger",
+                        "LastName": "Baldwin"
+                    },
+                    "DependentRelationshipTypeCode": "Spouse",
+                    "DependentGenderCode": "Male",
+                    "DependentBirthDate": "1970-01-01",
+                    "DependentHomePhone": "2153654587",
+                    "DependentWorkPhone": "6325698745",
+                    "DependentMobilePhone": "2014587965",
+                    "DependentMailingAddress": {
+                        "FirstLineAddress": "4 Thresa Blvd",
+                        "SecondLineAddress": "Apt 4",
+                        "ThirdLineAddress": "Box 3",
+                        "CityName": "Atlanta",
+                        "StateProvinceCode": "GA",
+                        "PostalCode": "30334",
+                        "CountryCode": "USA"
+                    },
+                    "DependentHomeEmail": "someone@flexer.com",
+                    "DisabilityIndicator": "0",
+                    "StudentStatusCode": "PartTime",
+                    "DependentTobaccoUseCode": "N",
+                    "DependentEventID": "NHEVT1234"
+                }
+```
+
+##BeneficiaryChange
+
+Description:
+A beneficiary change to an existing beneficiary designation is to be made; alternatively, an existing coverage election is having a beneficiary designation added for the first time.
+
+**Parameters**
+
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| SenderName | SenderPlatformName | ReceiverName. Describes payload type (XML or JSON), spec version, and information about the sender and receiver. Must conform to definition of definitions/enrollmentMetadata. | Yes | string (json) |
+| enrollmentPayload | formData | The LDExBEM payload (XML or JSON) | Yes | binary |
+
+```json
+{
+  "Transmission": {
+    "TransmissionGUID": "c9fcc147-2b65-48cb-925c-9f898a381815",
+    "SenderName": "ABC Tech Partner",
+    "SenderPlatformName": "ABC Platform",
+    "ReceiverName": "XYZ Carrier",
+    "CreationDateTime": "2020-01-17T21:56:36.2619791Z",
+    "TestProductionCode": "Production",
+    "TransmissionTypeCode": "ChangesOnly",
+    "SchemaVersionIdentifier": "1.3.2022.01.01",
+    "Carrier": {
+      "CarrierID": 1234,
+      "CarrierName": "XYZ Carrier"
+    },
+    "Employer": {
+      "EmployerPartyID": 9999,
+      "FederalEmployerIdentificationNumber": "99-9999999",
+      "CarrierMasterAgreementNumber": {
+        "CarrierMasterAgreementNumberID": "AS-M009-87788",
+        "MasterAgreementNumber": "M009-87788",
+        "CarrierID": 1234
+      },
+      "EmployerName": "Sweet Insurance 4 U",
+      "EmployerAddress": {
+        "FirstLineAddress": "3345 East 45th Street",
+        "CityName": "Oklahoma City",
+        "StateProvinceCode": "OK",
+        "PostalCode": 73112
+      },
+      "Employee": {
+        "EmployeePartyID": 45,
+        "EmployeeSocialSecurityNumber": "998-70-0423",
+        "EmployeeIdentifier": 42,
+        "EmployeeName": {
+          "FirstName": "Sylvia",
+          "LastName": "Baldwin"
+        },
+        "EmployeeGenderCode": "Female",
+        "EmployeeBirthDate": "2000-02-08",
+        "MaritalStatusCode": "Married",
+        "EmployeeTobaccoUseCode": "N",
+        "EmployeeHomePhone": 8005257897,
+        "EmployeeWorkPhone": 4051234567,
+        "EmployeeMobilePhone": 8005257897,
+        "EmployeeMailingAddress": {
+          "FirstLineAddress": "4 Thresa Blvd",
+          "CityName": "Atlanta",
+          "StateProvinceCode": "GA",
+          "PostalCode": 30334
+        },
+        "EmployeeHomeAddress": {
+          "FirstLineAddress": "4 Thresa Blvd",
+          "CityName": "Atlanta",
+          "StateProvinceCode": "GA",
+          "PostalCode": 30334
+        },
+        "EmployeeWorkAddress": {
+          "FirstLineAddress": "62 Salt Mine Way",
+          "CityName": "Salt Lake City",
+          "StateProvinceCode": "UT",
+          "PostalCode": 84044
+        },
+        "EmployeeEmail": "s.baldwin@saltmine.com",
+        "EmployeeAlternateEmail": "s.baldwin@saltmine2.com",
+        "EmploymentInformation": {
+          "OriginalHireDate": "2018-08-27",
+          "MostRecentHireDate": "2018-08-27",
+          "ExemptCode": "Exempt",
+          "EmploymentTypeCode": "FullTime",
+          "EmploymentStatusCode": "Active",
+          "JobTitleText": "Head Custodial Engineer",
+          "OccupationText": "Head Custodial Engineer",
+          "WorkHoursQuantity": 40,
+          "WorkHoursFrequencyCode": "Weekly",
+          "WorkLocationText": "Corporate",
+          "PayrollDeductionFrequencyQuantity": 26,
+          "PayrollFrequencyQuantity": 26,
+          "UnionIndicator": false,
+          "EmploymentIncome": {
+            "IncomeTypeCode": "BenefitSalary",
+            "IncomeAmount": 100000,
+            "IncomeModeCode": "Annual",
+            "IncomeEffectiveDate": "2019-03-20"
+          }
+        },
+        "Event": {
+          "EventID": "BENEFCH1234",
+          "EventTypeCode": "Coverage",
+          "EventTypeReasonCode": "BeneficiaryChange",
+          "EventDate": "2020-02-10",
+          "TransactionDate": "2020-02-05"
+        },
+
+          "DependentEventID": "BENEFCH1234"
+        },
+        "OtherParty": [
+          {
+            "OtherPartyID": 12001,
+            "OtherPartyFederalEmployerIdentificationNumber": "99-9999999",
+            "OtherPartySocialSecurityNumber": 256588923,
+            "OtherPartyOrganizationName": "Family",
+            "OtherPartyPersonName": {
+              "FirstName": "Ben",
+              "LastName": "Hosper"
+            },
+
+            "OtherPartyHomeAddress": {
+              "FirstLineAddress": "1234 Bona Blvd",
+              "SecondLineAddress": "Apt3454",
+              "ThirdLineAddress": "Box 5",
+              "CityName": "Atlanta",
+              "StateProvinceCode": "GA",
+              "PostalCode": 30334,
+              "CountryCode": "USA"
+            },
+            "OtherPartyHomeEmail": "At.Home@monsure.com",
+            "OtherPartyWorkEmail": "At.Work@monsure.com",
+            "OtherPartyEventID": "BENEFCH1234"
+          },
+          {
+            "OtherPartyID": "TT254",
+            "OtherPartyFederalEmployerIdentificationNumber": "99-9999999",
+            "OtherPartySocialSecurityNumber": 288956523,
+            "OtherPartyOrganizationName": "Family",
+            "OtherPartyPersonName": {
+              "FirstName": "Shelby",
+              "LastName": "Cuisine"
+            },
+            "OtherPartyRelationshipTypeCode": "Cousin",
+            "OtherPartyTypeCode": "Estate",
+            "OtherPartyGenderCode": "Female",
+            "OtherPartyBirthDate": "1999-05-15",
+            "OtherPartyHomePhone": 2058954876,
+            "OtherPartyWorkPhone": 2544588757,
+            "OtherPartyMobilePhone": 2049615425,
+            "OtherPartyMailingAddress": {
+              "FirstLineAddress": "568 Climate Dr",
+              "SecondLineAddress": "",
+              "ThirdLineAddress": "",
+              "CityName": "Atlanta",
+              "StateProvinceCode": "GA",
+              "PostalCode": 30334,
+              "CountryCode": "USA"
+            },
+            "OtherPartyHomeAddress": {
+              "FirstLineAddress": "1234 Bona Blvd",
+              "SecondLineAddress": "Apt3454",
+              "ThirdLineAddress": "Box 5",
+              "CityName": "Atlanta",
+              "StateProvinceCode": "GA",
+              "PostalCode": 30334,
+              "CountryCode": "USA"
+
+        "BeneficiaryGroup": [
+          {
+            "BeneficiaryGroupID": "UC0014",
+            "Beneficiary": {
+              "BeneficiaryPartyID": 45,
+              "BeneficiaryPartyTypeCode": "Employee",
+              "BeneficiaryPercent": 100,
+              "BeneficiaryTypeCode": "Primary"
+            }
+          },
+          {
+            "BeneficiaryGroupID": 2500014,
+            "Beneficiary": {
+              "BeneficiaryPartyID": 1522222,
+              "BeneficiaryPartyTypeCode": "Dependent",
+              "BeneficiaryPercent": 100,
+              "BeneficiaryTypeCode": "Primary"
+            }
+          },
+          {
+            "BeneficiaryGroupID": 1773200,
+            "Beneficiary": [
+              {
+                "BeneficiaryPartyID": 1522222,
+                "BeneficiaryPartyTypeCode": "Dependent",
+                "BeneficiaryPercent": 75,
+                "BeneficiaryTypeCode": "Primary"
+              },
+              {
+                "BeneficiaryPartyID": 12001,
+                "BeneficiaryPartyTypeCode": "OtherParty",
+                "BeneficiaryPercent": 25,
+                "BeneficiaryTypeCode": "Primary"
+              }
+            ]
+          },
+          {
+            "BeneficiaryGroupID": 2773201,
+            "Beneficiary": [
+              {
+                "BeneficiaryPartyID": "TT254",
+                "BeneficiaryPartyTypeCode": "Dependent",
+                "BeneficiaryPercent": 100,
+                "BeneficiaryTypeCode": "Primary"
+              },
+              {
+                "BeneficiaryPartyID": 12001,
+                "BeneficiaryPartyTypeCode": "OtherParty",
+                "BeneficiaryPercent": 100,
+                "BeneficiaryTypeCode": "Secondary"
+              }
+            ]
+          }
+        ],
+        "Coverage": [
+          {
+            "CoverageID": 2397070,
+            "GroupPolicyNumber": "P123344",
+            "ProductTypeCode": "Life",
+            "BenefitPlanIdentifier": "BlueCross BlueShield Life",
+            "BenefitClassIdentifier": 1,
+            "BenefitSubClassIdentifier": 3,
+            "BillGroupIdentifier": 1,
+            "OriginalCoverageEffectiveDate": "2019-09-01",
+            "CoverageEffectiveDate": "2019-09-01",
+            "CoverageTierCode": "SpouseOnly",
+            "BenefitCalculationMethodCode": "FlatAmount",
+            "BenefitAmount": 20000,
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 3.31,
+            "EmployerPremiumContributionAmount": 0,
+            "TotalPlanPremiumAmount": 3.31,
+            "PaymentMethodCode": "PayrollDeduction",
+            "PremiumModeQuantity": 26,
+            "PreTaxCode": "PostTax",
+            "TobaccoUseIndicator": 1,
+            "TakeOverCoverageIndicator": 1,
+            "BeneficiaryGroupID": "UC0014",
+            "CarrierID": 1234,
+            "ElectedCoverage": {
+              "ElectedBenefitCalculationMethodCode": "FlatAmount",
+              "ElectedEmployeeContributionCode": "EmployeePaid",
+              "ElectedTotalPlanPremiumAmount": 3.31,
+              "ElectedCoverageInsured": {
+                "InsuredPartyID": 45,
+                "PrimaryInsuredIndicator": 1,
+                "InsuredCoverageEffectiveDate": "2019-09-01"
+              }
+            },
+            "CoverageInsured": {
+              "InsuredPartyID": 45,
+              "PrimaryInsuredIndicator": 1,
+              "TobaccoUseIndicator": 0,
+              "InsuredCoverageEffectiveDate": "2019-09-01"
+            },
+            "CoverageEventID": "BENEFCH1234"
+          },
+          {
+            "CoverageID": 2397071,
+            "GroupPolicyNumber": "P123345",
+            "ProductTypeCode": "CriticalIllness",
+            "BenefitPlanIdentifier": "BlueCross CI",
+            "BenefitClassIdentifier": 1,
+            "BenefitSubClassIdentifier": 3,
+            "BillGroupIdentifier": 1,
+            "OriginalCoverageEffectiveDate": "2019-09-01",
+            "CoverageEffectiveDate": "2019-09-01",
+            "CoverageTierCode": "Employee",
+            "BenefitCalculationMethodCode": "FlatAmount",
+            "BenefitAmount": 20000,
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 3.31,
+            "EmployerPremiumContributionAmount": 0,
+            "TotalPlanPremiumAmount": 3.31,
+            "PaymentMethodCode": "PayrollDeduction",
+            "PremiumModeQuantity": 26,
+            "PreTaxCode": "PostTax",
+            "TobaccoUseIndicator": 0,
+            "TakeOverCoverageIndicator": 0,
+            "BeneficiaryGroupID": "",
+            "CarrierID": 1234,
+            "ElectedCoverage": {
+              "ElectedBenefitCalculationMethodCode": "FlatAmount",
+              "ElectedEmployeeContributionCode": "EmployeePaid",
+              "ElectedTotalPlanPremiumAmount": 3.31,
+              "ElectedCoverageInsured": {
+                "InsuredPartyID": 45,
+                "PrimaryInsuredIndicator": 1,
+                "InsuredCoverageEffectiveDate": "2019-09-01"
+              }
+            },
+            "CoverageInsured": {
+              "InsuredPartyID": 0,
+              "PrimaryInsuredIndicator": 1,
+              "TobaccoUseIndicator": 0,
+              "InsuredCoverageEffectiveDate": "2019-09-01"
+            },
+            "CoverageEventID": ""
+          },
+          {
+            "CoverageID": 2397072,
+            "GroupPolicyNumber": "P983346",
+            "ProductTypeCode": "Accident",
+            "BenefitPlanIdentifier": "BlueCross Hospital",
+            "BenefitClassIdentifier": 1,
+            "BenefitSubClassIdentifier": 3,
+            "BillGroupIdentifier": 1,
+            "OriginalCoverageEffectiveDate": "2019-09-01",
+            "CoverageEffectiveDate": "2019-09-01",
+            "CoverageTierCode": "SpouseOnly",
+            "BenefitCalculationMethodCode": "FlatAmount",
+            "BenefitAmount": 20000,
+            "EmployeeContributionCode": "EmployeePaid",
+            "EmployeePremiumContributionAmount": 3.31,
+            "EmployerPremiumContributionAmount": 0,
+            "TotalPlanPremiumAmount": 3.31,
+            "PaymentMethodCode": "PayrollDeduction",
+            "PremiumModeQuantity": 26,
+            "PreTaxCode": "PostTax",
+            "TobaccoUseIndicator": 0,
+            "TakeOverCoverageIndicator": 0,
+            "BeneficiaryGroupID": 2773201,
+            "CarrierID": 1234,
+            "ElectedCoverage": {
+              "ElectedBenefitCalculationMethodCode": "FlatAmount",
+              "ElectedEmployeeContributionCode": "EmployeePaid",
+              "ElectedTotalPlanPremiumAmount": 3.31,
+              "ElectedCoverageInsured": {
+                "InsuredPartyID": 45,
+                "PrimaryInsuredIndicator": 1,
+                "InsuredCoverageEffectiveDate": "2019-09-01"
+              }
+            },
+            "CoverageInsured": {
+              "InsuredPartyID": 0,
+              "PrimaryInsuredIndicator": 1,
+              "TobaccoUseIndicator": 0,
+              "InsuredCoverageEffectiveDate": "2019-09-01"
+            },
+            "CoverageEventID": "BENEFCH1234"
+          }
+        ]
+      }
+    },
+    "Audit": {
+      "AuditID": "Audit1234",
+      "CarrierRecordQuantity": 1,
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 1,
+      "DependentRecordQuantity": 1,
+      "OtherPartyRecordQuantity": 2,
+      "BeneficiaryGroupRecordQuantity": 3,
+      "EventRecordQuantity": 1,
+      "CoverageRecordQuantity": 3,
+      "CoverageRiderRecordQuantity": 0
+    }
+  }
+}
+```
+
+##BeneficiaryAllocationChange
+
+Description:
+A beneficiary change to the percent allocation for one or more beneficiaries designated for one or more products
+
+**Parameters**
+
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| SenderName | SenderPlatformName | ReceiverName. Describes payload type (XML or JSON), spec version, and information about the sender and receiver. Must conform to definition of definitions/enrollmentMetadata. | Yes | string (json) |
+| enrollmentPayload | formData | The LDExBEM payload (XML or JSON) | Yes | binary |
+
+
+##BeneficiaryTypeChange
+
+Description:
+A beneficiary change to an existing beneficiary designation is to be made; alternatively, an existing beneficiary designation is changing from primary to contingent, or vice versa
+
+**Parameters**
+
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| SenderName | SenderPlatformName | ReceiverName. Describes payload type (XML or JSON), spec version, and information about the sender and receiver. Must conform to definition of definitions/enrollmentMetadata. | Yes | string (json) |
+| enrollmentPayload | formData | The LDExBEM payload (XML or JSON) | Yes | binary |
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+
+#Response
+
+##AuditInformation
+
+***Here is the example response***
+
+```json
+
+{
+  "TransmissionResponse": {
+    "TransmissionGUID": "TransmissionGUID",
+    "TransmissionStatusCode": "Failure",
+    "CreationDateTime": "2001-12-31T12:00:00",
+    "TransmissionRemark": [
+      {
+        "EntityCode": "Audit",
+        "EntityReferenceID": "AuditID",
+        "FieldName": "EmployeeRecordQuantity",
+        "RemarkStatusCode": "Error",
+        "MessageTypeCode": "InvalidAuditQuantity",
+        "MessageText": "EmployeeRecordQuantity is not matching"
+      },
+      {
+        "EntityCode": "Audit",
+        "EntityReferenceID": "AuditID",
+        "FieldName": "CoverageRecordQuantity",
+        "RemarkStatusCode": "Error",
+        "MessageTypeCode": "InvalidAuditQuantity",
+        "MessageText": "CoverageRecordQuantity is not matching"
+      }
+    ],
+    "Audit": {
+      "AuditID": "String",
+      "EmployerRecordQuantity": 1,
+      "EmployeeRecordQuantity": 0,
+      "DependentRecordQuantity": 0,
+      "OtherPartyRecordQuantity": 0,
+      "BeneficiaryGroupRecordQuantity": 0,
+      "EventRecordQuantity": 0,
+      "CoverageRecordQuantity": 1,
+      "CoverageRiderRecordQuantity": 0
+    }
+  }
+}
+```
+##InvalidSender
+##MemberLevel
+##MemberLevelCoverageChange
+##MemberLevelMultiRemarks
+##MemberLevelSalaryChange
+##SchemaValidation
+##TransmissionSuccess
+##UnableToCancelOrTerminateCoverage
+##UnableToProcessBeneficiaryChange
+##UnableToProcessCoverageDecrease
+##UnableToProcessCoverageIncrease
+##UnableToProcessDemographicChange
+##UnableToReinstateCoverage
+
+
+

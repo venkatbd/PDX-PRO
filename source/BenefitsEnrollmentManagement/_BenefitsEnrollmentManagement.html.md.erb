@@ -1,0 +1,124 @@
+---
+
+title: LDExBEM REST API
+
+#BenifitsEnrollmentManagement
+
+##Overview
+Introduction
+
+Simple API for exchanging LDExBEM payloads. The API describes transmission of an LDExBEM payload in two parts: 1) Metadata describing the payload (unique ID, sender, receiver, payload type, and spec version) and 2) payload in the LDExBEM format (JSON or XML).
+
+**Version:** 1.0.2021.07.30
+
+##***POST***
+##Authentication
+
+  Each customer account has a unique pair of API credentials. Contact Noyo support to receive an CLIENT_ID, CLIENT_SECRET pair as part the initial onboarding.
+##Summary
+**Description:** Process enrollment, demographic, coverage changes etc. sent in LDExBEM payload
+
+HTTP Request
+`***POST*** /bem`
+
+**Parameters**
+
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| enrollmentMetadata | formData | Meta data describing LDExBEM payload. Describes payload type (XML or JSON), spec version, and information about the sender and receiver. Must conform to definition of definitions/enrollmentMetadata. | Yes | string (json) |
+| enrollmentPayload | formData | The LDExBEM payload (XML or JSON) | Yes | binary |
+
+**Responses**
+
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad request - Payload rejected. |
+| 401 | Unauthorized - action requires user authentication. |
+| 403 | Forbidden - user does not have permission to upload this payload. |
+| 404 | Not Found - resource not found. |
+| 405 | Not Allowed - method not allowed on this resource. |
+| 406 | Unacceptable - payload content type is not supported. |
+| 411 | Length Required - server needs to know the size of the entity body. Specify in Content-Length header. |
+| 413 | Payload too large - payload exceeds size limit (too many employees or too many employers). |
+| 415 | Unsupported media type - payload type unsupported. |
+| 422 | Unprocessable entity - request body failed business validation. |
+| 429 | Too many requests - number of requests exceeds limit. |
+| 500 | Internal Server Error - fatal error during processing of request. |
+| 501 | Not implemented - BEM upload is not supported. |
+| 502 | Bad Gateway - the server received an invalid response from an upstream server. |
+| 503 | Service Unavailable - unable to process request at this time. Try again later. |
+
+<!-- Converted with the swagger-to-slate https://github.com/lavkumarv/swagger-to-slate -->
+
+```json
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "title": "LDExBEM",
+    "description": "1.3.2022.12.31",
+    "anyOf": [
+        {
+            "type": "object",
+            "properties": {
+                "transmission": {"$ref": "#/$defs/Transmission"}
+            }
+        }
+    ],
+    "$defs": {
+        "Carrier": {
+            "type": "object",
+            "required": [
+                "carrierID",
+                "carrierName"
+            ],
+            "properties": {
+                "carrierID": {"type": "string"},
+                "carrierName": {"type": "string"}
+            }
+        },
+        "CarrierMasterAgreementNumber": {
+            "type": "object",
+            "required": [
+                "carrierMasterAgreementNumberID",
+                "masterAgreementNumber",
+                "carrierID"
+            ],
+            "properties": {
+                "carrierMasterAgreementNumberID": {"type": "string"},
+                "masterAgreementNumber": {"type": "string"},
+                "carrierID": {"type": "string"}
+            }
+        },
+        "PostalAddress": {
+            "type": "object",
+            "required": [
+                "firstLineAddress",
+                "cityName",
+                "postalCode"
+            ],
+            "properties": {
+                "firstLineAddress": {"type": "string"},
+                "secondLineAddress": {"type": "string"},
+                "thirdLineAddress": {"type": "string"},
+                "cityName": {"type": "string"},
+                "stateProvinceCode": {"$ref": "#/$defs/StateProvince"},
+                "postalCode": {"type": "string"},
+                "countryCode": {"$ref": "#/$defs/Country"}
+            }
+        },
+
+
+```
+
+
+
+<%= partial "./BenefitsEnrollmentManagement/BeneficiaryManagement/BeneficiaryManagement.html.md.erb" %>
+<%= partial "./BenefitsEnrollmentManagement/BeneficiaryEligibilityManagement/BeneficiaryEligibilityManagement.html.md.erb" %>
+<%= partial "./BenefitsEnrollmentManagement/CoverageChange/CoverageChange.html.md.erb" %>
+<%= partial "./BenefitsEnrollmentManagement/CoverageElection/CoverageElection.html.md.erb" %>
+<%= partial "./BenefitsEnrollmentManagement/CoverageTermination/CoverageTermination.html.md.erb" %>
+<%= partial "./BenefitsEnrollmentManagement/FormsManagement/FormsManagement.html.md.erb" %>
+<%= partial "./BenefitsEnrollmentManagement/IssueAge/IssueAge.html.md.erb" %>
+<%= partial "./BenefitsEnrollmentManagement/NonCoverageDemographicChange/NonCoverageDemographicChange.html.md.erb" %>
+<%= partial "./BenefitsEnrollmentManagement/Response/Response.html.md.erb" %>
+<%= partial "./BenefitsEnrollmentManagement/SavingsAndSpendingAccounts/SavingsAndSpendingAccounts.html.md.erb" %>

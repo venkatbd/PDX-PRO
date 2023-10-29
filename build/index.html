@@ -1,0 +1,1327 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>PDX APIS</title>
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sa {
+  color: #6c71c4;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="stylesheets/screen-9c19b03a.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-966d6edc.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-b12a2749.js"></script>
+
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;php&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo-5ce5ae27.png" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+              <a href="#" data-language-name="ruby">ruby</a>
+              <a href="#" data-language-name="python">python</a>
+              <a href="#" data-language-name="php">php</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#benifitsenrollmentmanagement" class="toc-h1 toc-link" data-title="BenifitsEnrollmentManagement">BenifitsEnrollmentManagement</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#authentication" class="toc-h2 toc-link" data-title="Authentication">Authentication</a>
+                  </li>
+                  <li>
+                    <a href="#summary" class="toc-h2 toc-link" data-title="Summary">Summary</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#bem-api-specs" class="toc-h1 toc-link" data-title="BEM API Specs">BEM API Specs</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#benificiarymanagement" class="toc-h2 toc-link" data-title="BenificiaryManagement">BenificiaryManagement</a>
+                  </li>
+                  <li>
+                    <a href="#benificiaryeligibilitymanagement" class="toc-h2 toc-link" data-title="BenificiaryEligibilityManagement">BenificiaryEligibilityManagement</a>
+                  </li>
+                  <li>
+                    <a href="#coveragechanges" class="toc-h2 toc-link" data-title="CoverageChanges">CoverageChanges</a>
+                  </li>
+                  <li>
+                    <a href="#coverageelection" class="toc-h2 toc-link" data-title="CoverageElection">CoverageElection</a>
+                  </li>
+                  <li>
+                    <a href="#coveragetermination" class="toc-h2 toc-link" data-title="CoverageTermination">CoverageTermination</a>
+                  </li>
+                  <li>
+                    <a href="#formsmanagement" class="toc-h2 toc-link" data-title="FormsManagement">FormsManagement</a>
+                  </li>
+                  <li>
+                    <a href="#issue-age" class="toc-h2 toc-link" data-title="Issue Age">Issue Age</a>
+                  </li>
+                  <li>
+                    <a href="#noncoveragedemographicchange" class="toc-h2 toc-link" data-title="NonCoverageDemographicChange">NonCoverageDemographicChange</a>
+                  </li>
+                  <li>
+                    <a href="#response" class="toc-h2 toc-link" data-title="Response">Response</a>
+                  </li>
+                  <li>
+                    <a href="#savingsandspendingaccounts" class="toc-h2 toc-link" data-title="SavingsandSpendingAccounts">SavingsandSpendingAccounts</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#evidenceofinsurabilitystatus" class="toc-h1 toc-link" data-title="EvidenceOfInsurabilityStatus">EvidenceOfInsurabilityStatus</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#introduction" class="toc-h2 toc-link" data-title="Introduction">Introduction</a>
+                  </li>
+                  <li>
+                    <a href="#post" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#evidence-of-insurability-application-status-request-by-ben-admin" class="toc-h2 toc-link" data-title="Evidence of Insurability Application Status Request by Ben Admin">Evidence of Insurability Application Status Request by Ben Admin</a>
+                  </li>
+                  <li>
+                    <a href="#evidence-of-insurability-application-status-push-to-ben-admin-by-carrier" class="toc-h2 toc-link" data-title="Evidence of Insurability Application Status Push to Ben Admin by Carrier">Evidence of Insurability Application Status Push to Ben Admin by Carrier</a>
+                  </li>
+                  <li>
+                    <a href="#evidence-of-insurability-decision-carrier-initiated" class="toc-h2 toc-link" data-title="Evidence of Insurability Decision (Carrier-initiated)">Evidence of Insurability Decision (Carrier-initiated)</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://github.com/lavkumarv'>Documentation Powered by lav</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <p><hr></p>
+
+<p>title: LDExBEM REST API</p>
+
+<h1 id='benifitsenrollmentmanagement'>BenifitsEnrollmentManagement</h1>
+
+<p>search: true</p>
+
+<p>Introduction</p>
+
+<p>Simple API for exchanging LDExBEM payloads. The API describes transmission of an LDExBEM payload in two parts: 1) Metadata describing the payload (unique ID, sender, receiver, payload type, and spec version) and 2) payload in the LDExBEM format (JSON or XML).</p>
+
+<p><strong>Version:</strong> 1.0.2021.07.30</p>
+
+<h2 id='post'><strong><em>POST</em></strong></h2><h2 id='authentication'>Authentication</h2>
+
+<p>Each customer account has a unique pair of API credentials. Contact Noyo support to receive an CLIENT_ID, CLIENT_SECRET pair as part the initial onboarding.</p>
+
+<h2 id='summary'>Summary</h2>
+
+<p><strong>Description:</strong> Process enrollment, demographic, coverage changes etc. sent in LDExBEM payload</p>
+
+<p>HTTP Request
+<code>***POST*** /bem</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>enrollmentMetadata</td>
+<td>formData</td>
+<td>Meta data describing LDExBEM payload. Describes payload type (XML or JSON), spec version, and information about the sender and receiver. Must conform to definition of definitions/enrollmentMetadata.</td>
+<td>Yes</td>
+<td>string (json)</td>
+</tr>
+<tr>
+<td>enrollmentPayload</td>
+<td>formData</td>
+<td>The LDExBEM payload (XML or JSON)</td>
+<td>Yes</td>
+<td>binary</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Bad request - Payload rejected.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized - action requires user authentication.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden - user does not have permission to upload this payload.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found - resource not found.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Not Allowed - method not allowed on this resource.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Unacceptable - payload content type is not supported.</td>
+</tr>
+<tr>
+<td>411</td>
+<td>Length Required - server needs to know the size of the entity body. Specify in Content-Length header.</td>
+</tr>
+<tr>
+<td>413</td>
+<td>Payload too large - payload exceeds size limit (too many employees or too many employers).</td>
+</tr>
+<tr>
+<td>415</td>
+<td>Unsupported media type - payload type unsupported.</td>
+</tr>
+<tr>
+<td>422</td>
+<td>Unprocessable entity - request body failed business validation.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too many requests - number of requests exceeds limit.</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error - fatal error during processing of request.</td>
+</tr>
+<tr>
+<td>501</td>
+<td>Not implemented - BEM upload is not supported.</td>
+</tr>
+<tr>
+<td>502</td>
+<td>Bad Gateway - the server received an invalid response from an upstream server.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable - unable to process request at this time. Try again later.</td>
+</tr>
+</tbody></table>
+
+<!-- Converted with the swagger-to-slate https://github.com/lavkumarv/swagger-to-slate -->
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft/2020-12/schema"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LDExBEM"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.3.2022.12.31"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"anyOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"transmission"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"$ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#/$defs/Transmission"</span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"$defs"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"Carrier"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"carrierID"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"carrierName"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"carrierID"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">},</span><span class="w">
+                </span><span class="nl">"carrierName"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"CarrierMasterAgreementNumber"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"carrierMasterAgreementNumberID"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"masterAgreementNumber"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"carrierID"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"carrierMasterAgreementNumberID"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">},</span><span class="w">
+                </span><span class="nl">"masterAgreementNumber"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">},</span><span class="w">
+                </span><span class="nl">"carrierID"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"PostalAddress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"firstLineAddress"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"cityName"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"postalCode"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"firstLineAddress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">},</span><span class="w">
+                </span><span class="nl">"secondLineAddress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">},</span><span class="w">
+                </span><span class="nl">"thirdLineAddress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">},</span><span class="w">
+                </span><span class="nl">"cityName"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">},</span><span class="w">
+                </span><span class="nl">"stateProvinceCode"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"$ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#/$defs/StateProvince"</span><span class="p">},</span><span class="w">
+                </span><span class="nl">"postalCode"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">},</span><span class="w">
+                </span><span class="nl">"countryCode"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"$ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#/$defs/Country"</span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+
+
+</span></code></pre></div>
+
+<p><h1 id='bem-api-specs'>BEM API Specs</h1><h2 id='benificiarymanagement'>BenificiaryManagement</h2><h3 id='beneficiaryadd'>BeneficiaryAdd</h3>
+<p>Description:</p></p>
+
+<p>A beneficiary is added in target platform and passed through to receiving system with all required data and for selected coverage and percentage total equals 100%.</p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Transmission</td>
+<td>SenderPlatformName</td>
+<td>ReceiverNameIdentifies the transmission. Must conform to definition of definitions/enrollmentMetadata.</td>
+<td>Yes</td>
+<td>string (json)</td>
+</tr>
+<tr>
+<td>TransmissionGUID</td>
+<td>formData</td>
+<td>Global Unique identifier created by the originator for this instance of the electronic transmission</td>
+<td>Yes</td>
+<td>binary</td>
+</tr>
+<tr>
+<td>SenderName</td>
+<td>formData</td>
+<td>Name of the company sending electronic benefit records on behalf of a group.</td>
+<td>Yes</td>
+<td>binary</td>
+</tr>
+<tr>
+<td>SenderPlatformName</td>
+<td>formData</td>
+<td>Identifies the Senders system that is providing the data for this data set.</td>
+<td>Yes</td>
+<td>binary</td>
+</tr>
+<tr>
+<td>ReceiverName</td>
+<td>formData</td>
+<td>Name of the company receiving electronic benefit records on behalf of a  group.</td>
+<td>Yes</td>
+<td>binary</td>
+</tr>
+</tbody></table>
+
+<p><div class="highlight"><pre class="highlight json tab-json"><code><span class="w">
+</span><span class="nl">&quot;Event&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">&quot;EventID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NHEVT1234&quot;</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">&quot;EventTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Coverage&quot;</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">&quot;EventTypeReasonCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NewHireEnrollment&quot;</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">&quot;EventDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-02-10&quot;</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">&quot;TransactionDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-02-05&quot;</span><span class="w">
+                </span><span class="p">}</span><span class="err">,</span><span class="w">
+                </span><span class="nl">&quot;EmployeeEventID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NHEVT1234&quot;</span><span class="err">,</span><span class="w">
+                </span><span class="nl">&quot;Dependent&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">&quot;DependentPartyID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1522222&quot;</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">&quot;DependentSocialSecurityNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;997-87-8712&quot;</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">&quot;DependentIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">&quot;DependentName&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">&quot;FirstName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Roger&quot;</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">&quot;LastName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Baldwin&quot;</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="nl">&quot;DependentRelationshipTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Spouse&quot;</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">&quot;DependentGenderCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Male&quot;</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">&quot;DependentBirthDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1970-01-01&quot;</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">&quot;DependentHomePhone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2153654587&quot;</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">&quot;DependentWorkPhone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;6325698745&quot;</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">&quot;DependentMobilePhone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2014587965&quot;</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">&quot;DependentMailingAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">&quot;FirstLineAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4 Thresa Blvd&quot;</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">&quot;SecondLineAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Apt 4&quot;</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">&quot;ThirdLineAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Box 3&quot;</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">&quot;CityName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Atlanta&quot;</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">&quot;StateProvinceCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GA&quot;</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">&quot;PostalCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;30334&quot;</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">&quot;CountryCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;USA&quot;</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="nl">&quot;DependentHomeEmail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;someone@flexer.com&quot;</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">&quot;DisabilityIndicator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">&quot;StudentStatusCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PartTime&quot;</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">&quot;DependentTobaccoUseCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;N&quot;</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">&quot;DependentEventID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NHEVT1234&quot;</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='beneficiarychange'>BeneficiaryChange</h3>
+<p>Description:
+A beneficiary change to an existing beneficiary designation is to be made; alternatively, an existing coverage election is having a beneficiary designation added for the first time.</p></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SenderName</td>
+<td>SenderPlatformName</td>
+<td>ReceiverName. Describes payload type (XML or JSON), spec version, and information about the sender and receiver. Must conform to definition of definitions/enrollmentMetadata.</td>
+<td>Yes</td>
+<td>string (json)</td>
+</tr>
+<tr>
+<td>enrollmentPayload</td>
+<td>formData</td>
+<td>The LDExBEM payload (XML or JSON)</td>
+<td>Yes</td>
+<td>binary</td>
+</tr>
+</tbody></table>
+
+<p><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">&quot;Transmission&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">&quot;TransmissionGUID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c9fcc147-2b65-48cb-925c-9f898a381815&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;SenderName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ABC Tech Partner&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;SenderPlatformName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ABC Platform&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;ReceiverName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;XYZ Carrier&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;CreationDateTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-01-17T21:56:36.2619791Z&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;TestProductionCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Production&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;TransmissionTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ChangesOnly&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;SchemaVersionIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.3.2022.01.01&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;Carrier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">&quot;CarrierID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1234</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;CarrierName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;XYZ Carrier&quot;</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">&quot;Employer&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">&quot;EmployerPartyID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">9999</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;FederalEmployerIdentificationNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;99-9999999&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;CarrierMasterAgreementNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">&quot;CarrierMasterAgreementNumberID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AS-M009-87788&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;MasterAgreementNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;M009-87788&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;CarrierID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1234</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">&quot;EmployerName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sweet Insurance 4 U&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;EmployerAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">&quot;FirstLineAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3345 East 45th Street&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;CityName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Oklahoma City&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;StateProvinceCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;PostalCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">73112</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">&quot;Employee&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">&quot;EmployeePartyID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;EmployeeSocialSecurityNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;998-70-0423&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;EmployeeIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;EmployeeName&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">&quot;FirstName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sylvia&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;LastName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Baldwin&quot;</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">&quot;EmployeeGenderCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Female&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;EmployeeBirthDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2000-02-08&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;MaritalStatusCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Married&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;EmployeeTobaccoUseCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;N&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;EmployeeHomePhone&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">8005257897</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;EmployeeWorkPhone&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4051234567</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;EmployeeMobilePhone&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">8005257897</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;EmployeeMailingAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">&quot;FirstLineAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4 Thresa Blvd&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;CityName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Atlanta&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;StateProvinceCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GA&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;PostalCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30334</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">&quot;EmployeeHomeAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">&quot;FirstLineAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4 Thresa Blvd&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;CityName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Atlanta&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;StateProvinceCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GA&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;PostalCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30334</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">&quot;EmployeeWorkAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">&quot;FirstLineAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;62 Salt Mine Way&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;CityName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Salt Lake City&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;StateProvinceCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UT&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;PostalCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">84044</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">&quot;EmployeeEmail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s.baldwin@saltmine.com&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;EmployeeAlternateEmail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s.baldwin@saltmine2.com&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;EmploymentInformation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">&quot;OriginalHireDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2018-08-27&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;MostRecentHireDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2018-08-27&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;ExemptCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Exempt&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;EmploymentTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FullTime&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;EmploymentStatusCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Active&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;JobTitleText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Head Custodial Engineer&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;OccupationText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Head Custodial Engineer&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;WorkHoursQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;WorkHoursFrequencyCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Weekly&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;WorkLocationText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Corporate&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;PayrollDeductionFrequencyQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;PayrollFrequencyQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;UnionIndicator&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;EmploymentIncome&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">&quot;IncomeTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BenefitSalary&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;IncomeAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;IncomeModeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Annual&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;IncomeEffectiveDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2019-03-20&quot;</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">&quot;Event&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">&quot;EventID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BENEFCH1234&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;EventTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Coverage&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;EventTypeReasonCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BeneficiaryChange&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;EventDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-02-10&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;TransactionDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-02-05&quot;</span><span class="w">
+        </span><span class="p">},</span><span class="w"></p>
+
+<p></span><span class="nl">&quot;DependentEventID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BENEFCH1234&quot;</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">&quot;OtherParty&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">&quot;OtherPartyID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12001</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;OtherPartyFederalEmployerIdentificationNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;99-9999999&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;OtherPartySocialSecurityNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">256588923</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;OtherPartyOrganizationName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Family&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;OtherPartyPersonName&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">&quot;FirstName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ben&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;LastName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hosper&quot;</span><span class="w">
+            </span><span class="p">},</span><span class="w"></p>
+
+<p></span><span class="nl">&quot;OtherPartyHomeAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">&quot;FirstLineAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1234 Bona Blvd&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;SecondLineAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Apt3454&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;ThirdLineAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Box 5&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;CityName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Atlanta&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;StateProvinceCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GA&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;PostalCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30334</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;CountryCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;USA&quot;</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">&quot;OtherPartyHomeEmail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;At.Home@monsure.com&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;OtherPartyWorkEmail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;At.Work@monsure.com&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;OtherPartyEventID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BENEFCH1234&quot;</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">&quot;OtherPartyID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TT254&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;OtherPartyFederalEmployerIdentificationNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;99-9999999&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;OtherPartySocialSecurityNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">288956523</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;OtherPartyOrganizationName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Family&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;OtherPartyPersonName&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">&quot;FirstName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shelby&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;LastName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Cuisine&quot;</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">&quot;OtherPartyRelationshipTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Cousin&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;OtherPartyTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Estate&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;OtherPartyGenderCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Female&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;OtherPartyBirthDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1999-05-15&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;OtherPartyHomePhone&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2058954876</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;OtherPartyWorkPhone&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2544588757</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;OtherPartyMobilePhone&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2049615425</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;OtherPartyMailingAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">&quot;FirstLineAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;568 Climate Dr&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;SecondLineAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;ThirdLineAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;CityName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Atlanta&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;StateProvinceCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GA&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;PostalCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30334</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;CountryCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;USA&quot;</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">&quot;OtherPartyHomeAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">&quot;FirstLineAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1234 Bona Blvd&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;SecondLineAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Apt3454&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;ThirdLineAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Box 5&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;CityName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Atlanta&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;StateProvinceCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GA&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;PostalCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30334</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;CountryCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;USA&quot;</span><span class="w"></p>
+
+<p></span><span class="nl">&quot;BeneficiaryGroup&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">&quot;BeneficiaryGroupID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UC0014&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;Beneficiary&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">&quot;BeneficiaryPartyID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;BeneficiaryPartyTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Employee&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;BeneficiaryPercent&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;BeneficiaryTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Primary&quot;</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">&quot;BeneficiaryGroupID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2500014</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;Beneficiary&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">&quot;BeneficiaryPartyID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1522222</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;BeneficiaryPartyTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dependent&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;BeneficiaryPercent&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;BeneficiaryTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Primary&quot;</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">&quot;BeneficiaryGroupID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1773200</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;Beneficiary&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nl">&quot;BeneficiaryPartyID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1522222</span><span class="p">,</span><span class="w">
+                </span><span class="nl">&quot;BeneficiaryPartyTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dependent&quot;</span><span class="p">,</span><span class="w">
+                </span><span class="nl">&quot;BeneficiaryPercent&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span><span class="w">
+                </span><span class="nl">&quot;BeneficiaryTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Primary&quot;</span><span class="w">
+              </span><span class="p">},</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nl">&quot;BeneficiaryPartyID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12001</span><span class="p">,</span><span class="w">
+                </span><span class="nl">&quot;BeneficiaryPartyTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OtherParty&quot;</span><span class="p">,</span><span class="w">
+                </span><span class="nl">&quot;BeneficiaryPercent&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+                </span><span class="nl">&quot;BeneficiaryTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Primary&quot;</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">&quot;BeneficiaryGroupID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2773201</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;Beneficiary&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nl">&quot;BeneficiaryPartyID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TT254&quot;</span><span class="p">,</span><span class="w">
+                </span><span class="nl">&quot;BeneficiaryPartyTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dependent&quot;</span><span class="p">,</span><span class="w">
+                </span><span class="nl">&quot;BeneficiaryPercent&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+                </span><span class="nl">&quot;BeneficiaryTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Primary&quot;</span><span class="w">
+              </span><span class="p">},</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nl">&quot;BeneficiaryPartyID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12001</span><span class="p">,</span><span class="w">
+                </span><span class="nl">&quot;BeneficiaryPartyTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OtherParty&quot;</span><span class="p">,</span><span class="w">
+                </span><span class="nl">&quot;BeneficiaryPercent&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+                </span><span class="nl">&quot;BeneficiaryTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Secondary&quot;</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">&quot;Coverage&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">&quot;CoverageID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2397070</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;GroupPolicyNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;P123344&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;ProductTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Life&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;BenefitPlanIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BlueCross BlueShield Life&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;BenefitClassIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;BenefitSubClassIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;BillGroupIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;OriginalCoverageEffectiveDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2019-09-01&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;CoverageEffectiveDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2019-09-01&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;CoverageTierCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SpouseOnly&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;BenefitCalculationMethodCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FlatAmount&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;BenefitAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20000</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;EmployeeContributionCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;EmployeePaid&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;EmployeePremiumContributionAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">3.31</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;EmployerPremiumContributionAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;TotalPlanPremiumAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">3.31</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;PaymentMethodCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PayrollDeduction&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;PremiumModeQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;PreTaxCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PostTax&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;TobaccoUseIndicator&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;TakeOverCoverageIndicator&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;BeneficiaryGroupID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UC0014&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;CarrierID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1234</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;ElectedCoverage&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">&quot;ElectedBenefitCalculationMethodCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FlatAmount&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;ElectedEmployeeContributionCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;EmployeePaid&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;ElectedTotalPlanPremiumAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">3.31</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;ElectedCoverageInsured&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">&quot;InsuredPartyID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w">
+                </span><span class="nl">&quot;PrimaryInsuredIndicator&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="nl">&quot;InsuredCoverageEffectiveDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2019-09-01&quot;</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">&quot;CoverageInsured&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">&quot;InsuredPartyID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;PrimaryInsuredIndicator&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;TobaccoUseIndicator&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;InsuredCoverageEffectiveDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2019-09-01&quot;</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">&quot;CoverageEventID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BENEFCH1234&quot;</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">&quot;CoverageID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2397071</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;GroupPolicyNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;P123345&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;ProductTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CriticalIllness&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;BenefitPlanIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BlueCross CI&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;BenefitClassIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;BenefitSubClassIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;BillGroupIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;OriginalCoverageEffectiveDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2019-09-01&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;CoverageEffectiveDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2019-09-01&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;CoverageTierCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Employee&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;BenefitCalculationMethodCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FlatAmount&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;BenefitAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20000</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;EmployeeContributionCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;EmployeePaid&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;EmployeePremiumContributionAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">3.31</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;EmployerPremiumContributionAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;TotalPlanPremiumAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">3.31</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;PaymentMethodCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PayrollDeduction&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;PremiumModeQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;PreTaxCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PostTax&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;TobaccoUseIndicator&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;TakeOverCoverageIndicator&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;BeneficiaryGroupID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;CarrierID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1234</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;ElectedCoverage&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">&quot;ElectedBenefitCalculationMethodCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FlatAmount&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;ElectedEmployeeContributionCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;EmployeePaid&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;ElectedTotalPlanPremiumAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">3.31</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;ElectedCoverageInsured&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">&quot;InsuredPartyID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w">
+                </span><span class="nl">&quot;PrimaryInsuredIndicator&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="nl">&quot;InsuredCoverageEffectiveDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2019-09-01&quot;</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">&quot;CoverageInsured&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">&quot;InsuredPartyID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;PrimaryInsuredIndicator&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;TobaccoUseIndicator&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;InsuredCoverageEffectiveDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2019-09-01&quot;</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">&quot;CoverageEventID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">&quot;CoverageID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2397072</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;GroupPolicyNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;P983346&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;ProductTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Accident&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;BenefitPlanIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BlueCross Hospital&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;BenefitClassIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;BenefitSubClassIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;BillGroupIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;OriginalCoverageEffectiveDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2019-09-01&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;CoverageEffectiveDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2019-09-01&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;CoverageTierCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SpouseOnly&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;BenefitCalculationMethodCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FlatAmount&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;BenefitAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20000</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;EmployeeContributionCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;EmployeePaid&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;EmployeePremiumContributionAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">3.31</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;EmployerPremiumContributionAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;TotalPlanPremiumAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">3.31</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;PaymentMethodCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PayrollDeduction&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;PremiumModeQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;PreTaxCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PostTax&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;TobaccoUseIndicator&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;TakeOverCoverageIndicator&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;BeneficiaryGroupID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2773201</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;CarrierID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1234</span><span class="p">,</span><span class="w">
+            </span><span class="nl">&quot;ElectedCoverage&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">&quot;ElectedBenefitCalculationMethodCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FlatAmount&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;ElectedEmployeeContributionCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;EmployeePaid&quot;</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;ElectedTotalPlanPremiumAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">3.31</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;ElectedCoverageInsured&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">&quot;InsuredPartyID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w">
+                </span><span class="nl">&quot;PrimaryInsuredIndicator&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="nl">&quot;InsuredCoverageEffectiveDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2019-09-01&quot;</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">&quot;CoverageInsured&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">&quot;InsuredPartyID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;PrimaryInsuredIndicator&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;TobaccoUseIndicator&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">&quot;InsuredCoverageEffectiveDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2019-09-01&quot;</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">&quot;CoverageEventID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BENEFCH1234&quot;</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">&quot;Audit&quot;</span><span class="err">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">&quot;AuditID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Audit1234&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;CarrierRecordQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;EmployerRecordQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;EmployeeRecordQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;DependentRecordQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;OtherPartyRecordQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;BeneficiaryGroupRecordQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;EventRecordQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;CoverageRecordQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;CoverageRiderRecordQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="err">}</span><span class="w">
+</span><span class="err">}</span><span class="w">
+</span></code></pre></div><h3 id='beneficiaryallocationchange'>BeneficiaryAllocationChange</h3>
+<p>Description:
+A beneficiary change to the percent allocation for one or more beneficiaries designated for one or more products</p></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SenderName</td>
+<td>SenderPlatformName</td>
+<td>ReceiverName. Describes payload type (XML or JSON), spec version, and information about the sender and receiver. Must conform to definition of definitions/enrollmentMetadata.</td>
+<td>Yes</td>
+<td>string (json)</td>
+</tr>
+<tr>
+<td>enrollmentPayload</td>
+<td>formData</td>
+<td>The LDExBEM payload (XML or JSON)</td>
+<td>Yes</td>
+<td>binary</td>
+</tr>
+</tbody></table>
+
+<h3 id='beneficiarytypechange'>BeneficiaryTypeChange</h3>
+
+<p>Description:
+A beneficiary change to an existing beneficiary designation is to be made; alternatively, an existing beneficiary designation is changing from primary to contingent, or vice versa</p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SenderName</td>
+<td>SenderPlatformName</td>
+<td>ReceiverName. Describes payload type (XML or JSON), spec version, and information about the sender and receiver. Must conform to definition of definitions/enrollmentMetadata.</td>
+<td>Yes</td>
+<td>string (json)</td>
+</tr>
+<tr>
+<td>enrollmentPayload</td>
+<td>formData</td>
+<td>The LDExBEM payload (XML or JSON)</td>
+<td>Yes</td>
+<td>binary</td>
+</tr>
+</tbody></table>
+
+<h3 id='beneficiarychangeemployee'>BeneficiaryChangeEmployee</h3><h3 id='beneficiarychangedependent'>BeneficiaryChangeDependent</h3>
+
+<p><h2 id='benificiaryeligibilitymanagement'>BenificiaryEligibilityManagement</h2><h3 id='leavemanagementfml-newhire'>LeaveManagementFML-NewHire</h3><h3 id='leavemanagementfml-demographicchange'>LeaveManagementFML-DemographicChange</h3><h3 id='leavemanagementfml-employmenttermination'>LeaveManagementFML-EmploymentTermination</h3><h3 id='leavemanagementfml-rehire'>LeaveManagementFML-Rehire</h3><h3 id='leavemanagementeap-newhirerehire'>LeaveManagementEAP-NewHireRehire</h3><h3 id='leavemanagementeap-demographicchange'>LeaveManagementEAP-DemographicChange</h3><h3 id='leavemanagementeap-employmenttermination'>LeaveManagementEAP-EmploymentTermination</h3><h3 id='leavemanagementpfl-newhirerehire'>LeaveManagementPFL-NewHireRehire</h3><h3 id='leavemanagementpfl-demographicchange'>LeaveManagementPFL-DemographicChange</h3><h3 id='leavemanagementpfl-employmenttermination'>LeaveManagementPFL-EmploymentTermination</h3><h3 id='leavemanagementpfl-serviceadministrationtermination'>LeaveManagementPFL-ServiceAdministrationTermination</h3>
+<h2 id='coveragechanges'>CoverageChanges</h2><h3 id='newhirecoveragechanges'>NewHireCoverageChanges</h3><h3 id='openenrollmentcoveragechanges'>OpenEnrollmentCoverageChanges</h3><h3 id='qualifyinglifeeventcoveragechanges'>QualifyingLifeEventCoverageChanges</h3><h3 id='qualifyinglifeeventcoveragechanges-cobra'>QualifyingLifeEventCoverageChanges-Cobra</h3><h3 id='accountstructurechange'>AccountStructureChange</h3><h3 id='carrierinitiated-coveragereductionemployee'>CarrierInitiated-CoverageReductionEmployee</h3><h3 id='carrierinitiated-coverageincreaseemployee'>CarrierInitiated-CoverageIncreaseEmployee</h3><h3 id='carrierinitiated-coveragereductionemployee-2'>CarrierInitiated-CoverageReductionEmployee</h3><h3 id='carrierinitiated-coverageincreaseemployee-2'>CarrierInitiated-CoverageIncreaseEmployee</h3><h3 id='carrierinitiated-coveragereductiondependent'>CarrierInitiated-CoverageReductionDependent</h3><h3 id='carrierinitiated-coverageincreasedependent'>CarrierInitiated-CoverageIncreaseDependent</h3><h3 id='carrierinitiated-coveragereductiondependent-2'>CarrierInitiated-CoverageReductionDependent</h3><h3 id='carrierinitiated-coverageincreasedependent-2'>CarrierInitiated-CoverageIncreaseDependent</h3><h3 id='carrierinitiated-employeereinstatescoverage'>CarrierInitiated-EmployeeReinstatesCoverage</h3>
+<h2 id='coverageelection'>CoverageElection</h2><h3 id='newhirecoverageelections'>NewHireCoverageElections</h3><h3 id='newhirecoverageelections-legal'>NewHireCoverageElections-Legal</h3><h3 id='openenrollmentcoverageelections'>OpenEnrollmentCoverageElections</h3><h3 id='openenrollmentcoverageelections-idtheft'>OpenEnrollmentCoverageElections-IDTheft</h3><h3 id='openenrollmentcoverageelections-medical'>OpenEnrollmentCoverageElections-Medical</h3><h3 id='qualifyinglifeeventcoverageelections'>QualifyingLifeEventCoverageElections</h3><h3 id='qualifyinglifeeventcoverageelections-idtheft'>QualifyingLifeEventCoverageElections-IDTheft</h3>
+<h2 id='coveragetermination'>CoverageTermination</h2><h3 id='carrierinitiated-employeecancelsterminatescoverage'>CarrierInitiated-EmployeeCancelsTerminatesCoverage</h3><h3 id='openenrollmentcoverageterminations'>OpenEnrollmentCoverageTerminations</h3><h3 id='openenrollmentcoverageterminations-legal'>OpenEnrollmentCoverageTerminations-legal</h3><h3 id='qleperpetualenrollmentcoverageterminations'>QLEPerpetualEnrollmentCoverageTerminations</h3>
+<h2 id='formsmanagement'>FormsManagement</h2><h3 id='embeddedform'>EmbeddedForm</h3><h3 id='linkedform'>LinkedForm</h3>
+<h2 id='issue-age'>Issue Age</h2><h3 id='stackedelection'>StackedElection</h3><h3 id='downgrade'>Downgrade</h3><h3 id='termination'>Termination</h3>
+<h2 id='noncoveragedemographicchange'>NonCoverageDemographicChange</h2><h3 id='carrierinitiated-demographicchangeemployee'>CarrierInitiated-DemographicChangeEmployee</h3><h3 id='carrierinitiated-demographicchangedependent'>CarrierInitiated-DemographicChangeDependent</h3><h3 id='noncoveragedemographicchange-personalinformation'>NonCoverageDemographicChange-PersonalInformation</h3><h3 id='noncoveragedemographicchange-employmentinformation'>NonCoverageDemographicChange-EmploymentInformation</h3><h3 id='noncoveragedemographicchange-employmentinformation-idtheftlegal'>NonCoverageDemographicChange-EmploymentInformation-IDTheftLegal</h3>
+<h2 id='response'>Response</h2><h3 id='auditinformation'>AuditInformation</h3>
+<p><strong><em>Here is the example response</em></strong></p>
+
+<p><div class="highlight"><pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">&quot;TransmissionResponse&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">&quot;TransmissionGUID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TransmissionGUID&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;TransmissionStatusCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Failure&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;CreationDateTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2001-12-31T12:00:00&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;TransmissionRemark&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">&quot;EntityCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Audit&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;EntityReferenceID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AuditID&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;FieldName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;EmployeeRecordQuantity&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;RemarkStatusCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Error&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;MessageTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;InvalidAuditQuantity&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;MessageText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;EmployeeRecordQuantity is not matching&quot;</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">&quot;EntityCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Audit&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;EntityReferenceID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AuditID&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;FieldName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CoverageRecordQuantity&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;RemarkStatusCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Error&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;MessageTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;InvalidAuditQuantity&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;MessageText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CoverageRecordQuantity is not matching&quot;</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">&quot;Audit&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">&quot;AuditID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;String&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;EmployerRecordQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;EmployeeRecordQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;DependentRecordQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;OtherPartyRecordQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;BeneficiaryGroupRecordQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;EventRecordQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;CoverageRecordQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;CoverageRiderRecordQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='invalidsender'>InvalidSender</h3><h3 id='memberlevel'>MemberLevel</h3><h3 id='memberlevelcoveragechange'>MemberLevelCoverageChange</h3><h3 id='memberlevelmultiremarks'>MemberLevelMultiRemarks</h3><h3 id='memberlevelsalarychange'>MemberLevelSalaryChange</h3><h3 id='schemavalidation'>SchemaValidation</h3><h3 id='transmissionsuccess'>TransmissionSuccess</h3><h3 id='unabletocancelorterminatecoverage'>UnableToCancelOrTerminateCoverage</h3><h3 id='unabletoprocessbeneficiarychange'>UnableToProcessBeneficiaryChange</h3><h3 id='unabletoprocesscoveragedecrease'>UnableToProcessCoverageDecrease</h3><h3 id='unabletoprocesscoverageincrease'>UnableToProcessCoverageIncrease</h3><h3 id='unabletoprocessdemographicchange'>UnableToProcessDemographicChange</h3><h3 id='unabletoreinstatecoverage'>UnableToReinstateCoverage</h3>
+<h2 id='savingsandspendingaccounts'>SavingsandSpendingAccounts</h2><h3 id='newelection'>NewElection</h3><h3 id='changeelection'>ChangeElection</h3><h3 id='existingcoveragecancelationtermination'>ExistingCoverageCancelationTermination</h3></p></p>
+
+<p><hr>
+<h1 id='evidenceofinsurabilitystatus'>EvidenceOfInsurabilityStatus</h1>
+<p>title: LDExEOIS REST API</p></p>
+
+<p><hr>
+<h2 id='introduction'>Introduction</h2>
+<p>Simple API for exchanging LDExEOIS payloads. The API describes transmission of an LDExEOIS payload in two parts: 1) Metadata describing the payload (unique ID, sender, receiver, payload type, and spec version) and 2) payload in the LDExEOIS format (JSON or XML).</p></p>
+
+<p>Evidence of Insurability (EOI) API facilitate EOI form submission for Group insurance products for partners, and provide status of the submitted EOI transaction using transaction ID.
+<strong>Version:</strong> 1.0.2022.01.01</p>
+
+<h2 id='post'><strong><em>POST</em></strong></h2>
+
+<p><strong>Description:</strong> Process evidence of insurability status and decision sent in LDExEOIS payload</p>
+
+<p>HTTP Request
+<code>***POST*** /eois</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>eoisMetadata</td>
+<td>formData</td>
+<td>Meta data describing LDExEOIS payload. Describes payload type (XML or JSON), spec version, and information about the sender and receiver. Must conform to definition of definitions/eoisMetadata.</td>
+<td>Yes</td>
+<td>string (json)</td>
+</tr>
+<tr>
+<td>eoisPayload</td>
+<td>formData</td>
+<td>The LDExEOIS payload (XML or JSON)</td>
+<td>Yes</td>
+<td>binary</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Bad request - Payload rejected.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized - action requires user authentication.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden - user does not have permission to upload this payload.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found - resource not found.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Not Allowed - method not allowed on this resource.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Unacceptable - payload content type is not supported.</td>
+</tr>
+<tr>
+<td>411</td>
+<td>Length Required - server needs to know the size of the entity body. Specify in Content-Length header.</td>
+</tr>
+<tr>
+<td>413</td>
+<td>Payload too large - payload exceeds size limit (too many employees or too many employers).</td>
+</tr>
+<tr>
+<td>415</td>
+<td>Unsupported media type - payload type unsupported.</td>
+</tr>
+<tr>
+<td>422</td>
+<td>Unprocessable entity - request body failed business validation.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too many requests - number of requests exceeds limit</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error - fatal error during processing of request</td>
+</tr>
+<tr>
+<td>501</td>
+<td>Not implemented - EIOS upload is not supported</td>
+</tr>
+<tr>
+<td>502</td>
+<td>Bad Gateway - the server received an invalid response from an upstream server.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable - unable to process request at this time. Try again later.</td>
+</tr>
+</tbody></table>
+
+<!-- Converted with the swagger-to-slate https://github.com/lavkumarv/swagger-to-slate -->
+
+<p><h2 id='evidence-of-insurability-application-status-request-by-ben-admin'>Evidence of Insurability Application Status Request by Ben Admin</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">&quot;Transmission&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">&quot;TransmissionGUID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c9fcc147-2b65-48cb-925c-9f898a381815&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;SenderName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ABC Tech Partner&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;SenderPlatformName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ABC Platform&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;ReceiverName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;XYZ Carrier&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;CreationDateTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-01-17T21:56:36.2619791Z&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;TestProductionCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Production&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;TransmissionTypeCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ChangesOnly&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;SchemaVersionIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.3.2022.01.01&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;Carrier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">&quot;CarrierID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1234</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;CarrierName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;XYZ Carrier&quot;</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">&quot;Employer&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">&quot;EmployerPartyID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">9999</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;FederalEmployerIdentificationNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;99-9999999&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;CarrierMasterAgreementNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">&quot;CarrierMasterAgreementNumberID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AS-M009-87788&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;MasterAgreementNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;M009-87788&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;CarrierID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1234</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">&quot;EmployerName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sweet Insurance 4 U&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;EmployerAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">&quot;FirstLineAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3345 East 45th Street&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;CityName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Oklahoma City&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;StateProvinceCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;PostalCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">73112</span><span class="w">
+      </span><span class="p">},</span><span class="w"></p>
+
+<p></span></code></pre></div><h3 id='evidence-of-insurability-request-not-started-no-record'>Evidence of Insurability Request - Not started no record</h3><h3 id='evidence-of-insurability-request-not-started-on-file'>Evidence of Insurability request - Not Started on file</h3><h3 id='evidence-of-insurability-request-not-submitted'>Evidence of Insurability request - Not Submitted</h3><h3 id='evidence-of-insurability-request-pending'>Evidence of Insurability request - Pending</h3><h3 id='evidence-of-insurability-request-completed'>Evidence of Insurability request - Completed</h3><h2 id='evidence-of-insurability-application-status-push-to-ben-admin-by-carrier'>Evidence of Insurability Application Status Push to Ben Admin by Carrier</h2><h3 id='evidence-of-insurability-push-update-not-started-on-file'>Evidence of Insurability Push Update- Not Started on file</h3><h3 id='evidence-of-insurability-push-update-not-submitted'>Evidence of Insurability Push Update- Not Submitted</h3><h3 id='evidence-of-insurability-push-update-pending'>Evidence of Insurability Push Update - Pending</h3><h3 id='evidence-of-insurability-push-update-completed'>Evidence of Insurability Push Update - Completed</h3><h2 id='evidence-of-insurability-decision-carrier-initiated'>Evidence of Insurability Decision (Carrier-initiated)</h2><h3 id='evidence-of-insurability-decision-carrier-eoi-full-approval'>Evidence of Insurability Decision (Carrier) - EOI full approval</h3><h3 id='evidence-of-insurability-decision-carrier-eoi-partial-approval'>Evidence of Insurability Decision (Carrier) - EOI partial approval</h3><h3 id='evidence-of-insurability-decision-carrier-eoi-decline'>Evidence of Insurability Decision (Carrier) - EOI Decline</h3><h3 id='evidence-of-insurability-decision-carrier-eoi-closed'>Evidence of Insurability Decision (Carrier) - EOI Closed</h3></p>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+                <a href="#" data-language-name="ruby">ruby</a>
+                <a href="#" data-language-name="python">python</a>
+                <a href="#" data-language-name="php">php</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
