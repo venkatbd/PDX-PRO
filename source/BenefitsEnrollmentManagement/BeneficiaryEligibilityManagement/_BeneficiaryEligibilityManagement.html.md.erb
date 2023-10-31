@@ -1,10 +1,149 @@
+#BenefitsEligibilityManagement
 
-#BenificiaryEligibilityManagement
 ##NewHire
 
+**Description**
+
+Communicate newly hired employees for Family and Medical Leave (FMLA) services
+
+**Parameters**
+
+
+| Name                                | Type                 | Description                                                                                         |
+|:------------------------------------|:---------------------|:----------------------------------------------------------------------------------------------------|
+| TransmissionGUID                    | string               | Global Unique identifier created by the originator for this instance of                             |
+|                                     |                      |             the electronic transmission.                                                            |
+| SenderName                          | string               | Name of the company sending electronic benefit records on behalf of a                               |
+|                                     |                      |             group.                                                                                  |
+| SenderPlatformName                  | string               | Identifies the Senders system that is providing the data for this data                             |
+|                                     |                      |             set.                                                                                    |
+| ReceiverName                        | string               | Name of the company receiving electronic benefit records on behalf of a                             |
+|                                     |                      |             group.                                                                                  |
+| CreationDateTime                    | dateTime             | UTC date and time the transmission was created.                                                     |
+| TestProductionCode                  | TestProduction       | Indicates the elements contained in this data set are production or                                 |
+|                                     |                      |             test data.                                                                              |
+| TransmissionTypeCode                | TransmissionType     | The type of data contained within the data set.                                                     |
+| SchemaVersionIdentifier             | SchemaVersionNumber  | Identifies the version of the standard that is being adhered to in this                             |
+|                                     |                      |             data set.                                                                               |
+| Carrier                             | Object               | Carrier Object                                                                                      |
+| CarrierID                           | string               | An unique identifier for each instance of an object established within                              |
+|                                     |                      |             the context of a given transaction.                                                     |
+| CarrierName                         | string               | The distinctive designation of the entity sending or receiving the data                             |
+|                                     |                      |             in this transmission.                                                                   |
+| Employer                            | Object               | Employer Object                                                                                     |
+| EmployerPartyID                     | string               | An unique identifier for each instance of an object established within                              |
+|                                     |                      |             the context of a given transaction.                                                     |
+| FederalEmployerIdentificationNumber | string               | A nine-digit unique number assigned by the Internal Revenue Service                                 |
+|                                     |                      |             (IRS) to businesses operating in the United States.                                     |
+| CarrierMasterAgreementNumber        | Object               | CarrierMasterAgreementNumber Object                                                                 |
+| CarrierMasterAgreementNumberID      | string               | An unique identifier for each instance of an object established within                              |
+|                                     |                      |             the context of a given transaction.                                                     |
+| MasterAgreementNumber               | string               | Carrier assigned group number. All individual policies or certificates                              |
+|                                     |                      |             at the group level would roll up to this master group number. This may be the same as   |
+|                                     |                      |             the agreement (aka policy) number for some carriers.                                    |
+| CarrierID                           | string               | An unique identifier for each instance of an object established within                              |
+|                                     |                      |             the context of a given transaction.                                                     |
+| EmployerName                        | string               | This is a representation of the organizational entitys name.                                       |
+| EmployerAddress                     | PostalAddress        | An address used for the delivery of letters and packages by an external                             |
+|                                     |                      |             mailing or packaging service, for the Employer (aka Plan Sponsor).                      |
+| FirstLineAddress                    | string               | The first line of a formatted address - e.g., Street Number + Street                                |
+|                                     |                      |             Name, P.O. Box, etc.                                                                    |
+| CityName                            | string               | The city where the address is located.                                                              |
+| StateProvinceCode                   | StateProvince        | The region (depending on the country, this could be the state or                                    |
+|                                     |                      |             province) where the address is located.                                                 |
+| PostalCode                          | string               | The unique identifier used to associate postal deliveries. This may                                 |
+|                                     |                      |             also be referred to as zip code or post code where the address is located.              |
+| CountryCode                         | Country              | The country where the address is located.                                                           |
+| Employee                            | Object               | Employee Object                                                                                     |
+| EmployeePartyID                     | string               | An unique identifier for each instance of an object established within                              |
+|                                     |                      |             the context of a given transaction.                                                     |
+| EmployeeSocialSecurityNumber        | string               | A numerical identifier assigned to U.S. citizens and some residents to                              |
+|                                     |                      |             track their income.                                                                     |
+| EmployeeIdentifier                  | string               | Employer or Plan Sponsor Issued Identifier.                                                         |
+| EmployeeName                        | StructuredPersonName | This is a representation of the person entitys name. MiddleName -                                  |
+|                                     |                      |             Optional - can be just a middle initial.                                                |
+| FirstName                           | string               | The persons name normally preceding the last name and typically used                               |
+|                                     |                      |             to refer to the person in both formal and/or informal circumstances.                    |
+| LastName                            | string               | The part of a persons name arising from family identifications.                                    |
+| EmployeeGenderCode                  | Gender               | Value designating the range of characteristics pertaining to, and                                   |
+|                                     |                      |             differentiating between, masculinity and femininity. Depending on the context, these    |
+|                                     |                      |             characteristics may include biological sex, sex-based social structures, or gender      |
+|                                     |                      |             identity.                                                                               |
+| EmployeeBirthDate                   | date                 | The date on which a person was born.                                                                |
+| MaritalStatusCode                   | MaritalStatus        | Any of several distinct options that describe a persons relationship                               |
+|                                     |                      |             with a significant other - e.g., married, single, divorced, and widowed are examples of |
+|                                     |                      |             civil status.                                                                           |
+| EmployeeHomePhone                   | string               | An entitys home communication point, as defined by the                                             |
+|                                     |                      |             telecommunication services. It includes voice telephone communication.                  |
+| EmployeeMailingAddress              | PostalAddress        | An address used for the delivery of letters and packages by an external                             |
+|                                     |                      |             mailing or packaging service, at a place where the recipient usually lives or works.    |
+| FirstLineAddress                    | string               | The first line of a formatted address - e.g., Street Number + Street                                |
+|                                     |                      |             Name, P.O. Box, etc.                                                                    |
+| CityName                            | string               | The city where the address is located.                                                              |
+| StateProvinceCode                   | StateProvince        | The region (depending on the country, this could be the state or                                    |
+|                                     |                      |             province) where the address is located.                                                 |
+| PostalCode                          | string               | The unique identifier used to associate postal deliveries. This may                                 |
+|                                     |                      |             also be referred to as zip code or post code where the address is located.              |
+| CountryCode                         | Country              | The country where the address is located.                                                           |
+| EmployeeEmail                       | string               | A message distributed by electronic means from one computer user to one                             |
+|                                     |                      |             or more recipients via a network.                                                       |
+| EmploymentInformation               | Object               | EmploymentInformation Object                                                                        |
+| OriginalHireDate                    | date                 | First date the Employee was actively at work with their employer.                                   |
+| EmploymentTypeCode                  | EmploymentType       | Describes the Type of Employment for the employee (e.g. FT, PT,                                     |
+|                                     |                      |             Seasonal).                                                                              |
+| EmploymentStatusCode                | EmploymentStatus     | Identifies the state of the members employment (e.g. Active,                                       |
+|                                     |                      |             Terminated, Leave, Retiree).                                                            |
+| OccupationText                      | string               | A job or profession.                                                                                |
+| WorkHoursFrequencyCode              | WorkHoursFrequency   | Mode in which Number of hours worked is calculated. DEPRECATED ELEMENT                              |
+| UnionIndicator                      | boolean              | Indicates whether the Employee is a member of the Union or not.                                     |
+| UnionLocalName                      | string               | The name of a locally-based group of workers with a charter from a                                  |
+|                                     |                      |             national or international union.                                                        |
+| UnionLocalNumber                    | string               | The number for the locally-based group of workers with a charter from a                             |
+|                                     |                      |             national or international union.                                                        |
+| UnionMemberNumber                   | string               | An identifier for a person belonging to a Union Local.                                              |
+| Rule50_75Indicator                  | boolean              | To be eligible for Family and Medical Leave Act (FMLA), an employee                                 |
+|                                     |                      |             must work at a location that has 50 employees within a 75-mile radius. This is a simple |
+|                                     |                      |             indicator as to whether the individual meets this requirement (or not).                 |
+| WorkStateCode                       | StateProvince        | The actual state in which the Employee works.                                                       |
+| KeyEmployeeIndicator                | boolean              | Signifies the employee to be within the highest paid 10% of employees                               |
+|                                     |                      |             and within 75 miles of the employees work state.                                       |
+| EmploymentContact                   | Object               | EmploymentContact Object                                                                            |
+| ContactTypeCode                     | ContactType          | Identifies the type of Employee contact.                                                            |
+| ContactName                         | StructuredPersonName | The name of the Employees contact.                                                                 |
+| PrefixCode                          | Prefix               | A letter or group of letters that is added at the beginning of a Name -                             |
+|                                     |                      |             e.g., Mr., Mrs., Ms., etc.                                                              |
+| FirstName                           | string               | The persons name normally preceding the last name and typically used                               |
+|                                     |                      |             to refer to the person in both formal and/or informal circumstances.                    |
+| LastName                            | string               | The part of a persons name arising from family identifications.                                    |
+| SuffixCode                          | Suffix               | The titles, qualifications, or positions that follow the persons name                              |
+|                                     |                      |             when addressing her formally or professionally, usually when writing - e.g., Sr., Jr.,  |
+|                                     |                      |             etc.                                                                                    |
+| ContactSocialSecurityNumber         | string               | The US government issued identifier for the Employees Contact.                                     |
+| ContactIdentifier                   | string               | The Employer or Plan Sponsor Issued Identifier for the Employees                                   |
+|                                     |                      |             Contact.                                                                                |
+| ContactEmail                        | string               | The electronic address for the Employees contact.                                                  |
+| EmploymentSchedule                  | Object               | EmploymentSchedule Object                                                                           |
+| ScheduledHoursQuantity              | decimal              | The number of hours scheduled to work.                                                              |
+| Last12MonthsWorkHoursQuantity       | decimal              | The number of hours worked during the last 12 months.                                               |
+| PerWeekWorkedHoursQuantity          | decimal              | The number of hours worked per week.                                                                |
+| WorkSchedule                        | Object               | WorkSchedule Object                                                                                 |
+| WorkShiftCode                       | WorkShift            | The time period during which an Employee is at work.                                                |
+| WorkScheduleTypeCode                | WorkScheduleType     | Indicates the type of work week.                                                                    |
+| WeeklyWorkedHoursQuantity           | decimal              | The number of hours worked in a given week.                                                         |
+| Audit                               | Object               | Audit Object                                                                                        |
+| AuditID                             | string               | Unique identifier created by the originator for this instance of the                                |
+|                                     |                      |             electronic transmission.                                                                |
+| CarrierRecordQuantity               | int                  | A count of Carrier records included in the electronic transmission.                                 |
+| EmployerRecordQuantity              | int                  | A count of Employer records included in the electronic transmission.                                |
+| EmployeeRecordQuantity              | int                  | A count of Employee records included in the electronic transmission.                                |
+
 ```json
+
 {
-  "Transmission": {
+  "bem:Transmission": {
+    "@xmlns:bem": "https://ldex.limra.com/xsd/1.0/LDExBEM",
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "@xsi:schemaLocation": "https://ldex.limra.com/xsd/1.0/LDExBEM_1.3.2022.01.01.xsd",
     "TransmissionGUID": "2020-08-06-16.24.25.063000",
     "SenderName": "ADPSLC",
     "SenderPlatformName": "CES 6.2",
@@ -30,13 +169,13 @@
         "FirstLineAddress": "24490 Eureka Ave",
         "CityName": "Warren",
         "StateProvinceCode": "MI",
-        "PostalCode": 48091,
+        "PostalCode": "48091",
         "CountryCode": "US"
       },
       "Employee": {
-        "EmployeePartyID": 211713,
-        "EmployeeSocialSecurityNumber": 999909999,
-        "EmployeeIdentifier": 985603,
+        "EmployeePartyID": "211713",
+        "EmployeeSocialSecurityNumber": "999909999",
+        "EmployeeIdentifier": "985603",
         "EmployeeName": {
           "FirstName": "CAROLYN",
           "LastName": "OWENSTEST"
@@ -44,12 +183,12 @@
         "EmployeeGenderCode": "Female",
         "EmployeeBirthDate": "1976-05-05",
         "MaritalStatusCode": "Married",
-        "EmployeeHomePhone": 4695551212,
+        "EmployeeHomePhone": "4695551212",
         "EmployeeMailingAddress": {
           "FirstLineAddress": "2402 Main Street",
           "CityName": "AUSTIN",
           "StateProvinceCode": "TX",
-          "PostalCode": 75082,
+          "PostalCode": "75082",
           "CountryCode": "US"
         },
         "EmployeeEmail": "carolyn.owenstest@my_employer.com",
@@ -59,13 +198,13 @@
           "EmploymentStatusCode": "Active",
           "OccupationText": "RocketScientist",
           "WorkHoursFrequencyCode": "Weekly",
-          "UnionIndicator": true,
+          "UnionIndicator": "true",
           "UnionLocalName": "AmalgamatedRocketScientists",
-          "UnionLocalNumber": 123,
-          "UnionMemberNumber": 10,
-          "Rule50_75Indicator": true,
+          "UnionLocalNumber": "123",
+          "UnionMemberNumber": "10",
+          "Rule50_75Indicator": "true",
           "WorkStateCode": "TX",
-          "KeyEmployeeIndicator": true,
+          "KeyEmployeeIndicator": "true",
           "EmploymentContact": {
             "ContactTypeCode": "BenefitsCoordinator",
             "ContactName": {
@@ -74,18 +213,18 @@
               "LastName": "Smith",
               "SuffixCode": "Jr"
             },
-            "ContactSocialSecurityNumber": 987654321,
-            "ContactIdentifier": 123456,
+            "ContactSocialSecurityNumber": "987654321",
+            "ContactIdentifier": "123456",
             "ContactEmail": "sam.smith@my_employer.com"
           },
           "EmploymentSchedule": {
-            "ScheduledHoursQuantity": 40,
-            "Last12MonthsWorkHoursQuantity": 2080,
-            "PerWeekWorkedHoursQuantity": 40,
+            "ScheduledHoursQuantity": "40.0",
+            "Last12MonthsWorkHoursQuantity": "2080.0",
+            "PerWeekWorkedHoursQuantity": "40.0",
             "WorkSchedule": {
               "WorkShiftCode": "First",
               "WorkScheduleTypeCode": "Weekly",
-              "WeeklyWorkedHoursQuantity": 40
+              "WeeklyWorkedHoursQuantity": "40.0"
             }
           }
         }
@@ -93,18 +232,168 @@
     },
     "Audit": {
       "AuditID": "2020-08-06-16.24.25.063000",
-      "CarrierRecordQuantity": 1,
-      "EmployerRecordQuantity": 1,
-      "EmployeeRecordQuantity": 1
+      "CarrierRecordQuantity": "1",
+      "EmployerRecordQuantity": "1",
+      "EmployeeRecordQuantity": "1"
     }
   }
 }
-
 ```
+
 ##DemographicChange
+**Description**
+
+Communicate demographic changes for existing employees for Family and Medical Leave (FMLA) services.
+
+
+**Parameters**
+
+
+| Name                                     | Type                 | Description                                                                                         |
+|:-----------------------------------------|:---------------------|:----------------------------------------------------------------------------------------------------|
+| TransmissionGUID                         | string               | Global Unique identifier created by the originator for this instance of                             |
+|                                          |                      |             the electronic transmission.                                                            |
+| SenderName                               | string               | Name of the company sending electronic benefit records on behalf of a                               |
+|                                          |                      |             group.                                                                                  |
+| SenderPlatformName                       | string               | Identifies the Senders system that is providing the data for this data                             |
+|                                          |                      |             set.                                                                                    |
+| ReceiverName                             | string               | Name of the company receiving electronic benefit records on behalf of a                             |
+|                                          |                      |             group.                                                                                  |
+| CreationDateTime                         | dateTime             | UTC date and time the transmission was created.                                                     |
+| TestProductionCode                       | TestProduction       | Indicates the elements contained in this data set are production or                                 |
+|                                          |                      |             test data.                                                                              |
+| TransmissionTypeCode                     | TransmissionType     | The type of data contained within the data set.                                                     |
+| SchemaVersionIdentifier                  | SchemaVersionNumber  | Identifies the version of the standard that is being adhered to in this                             |
+|                                          |                      |             data set.                                                                               |
+| Carrier                                  | Object               | Carrier Object                                                                                      |
+| CarrierID                                | string               | An unique identifier for each instance of an object established within                              |
+|                                          |                      |             the context of a given transaction.                                                     |
+| CarrierName                              | string               | The distinctive designation of the entity sending or receiving the data                             |
+|                                          |                      |             in this transmission.                                                                   |
+| Employer                                 | Object               | Employer Object                                                                                     |
+| EmployerPartyID                          | string               | An unique identifier for each instance of an object established within                              |
+|                                          |                      |             the context of a given transaction.                                                     |
+| FederalEmployerIdentificationNumber      | string               | A nine-digit unique number assigned by the Internal Revenue Service                                 |
+|                                          |                      |             (IRS) to businesses operating in the United States.                                     |
+| CarrierMasterAgreementNumber             | Object               | CarrierMasterAgreementNumber Object                                                                 |
+| CarrierMasterAgreementNumberID           | string               | An unique identifier for each instance of an object established within                              |
+|                                          |                      |             the context of a given transaction.                                                     |
+| MasterAgreementNumber                    | string               | Carrier assigned group number. All individual policies or certificates                              |
+|                                          |                      |             at the group level would roll up to this master group number. This may be the same as   |
+|                                          |                      |             the agreement (aka policy) number for some carriers.                                    |
+| CarrierID                                | string               | An unique identifier for each instance of an object established within                              |
+|                                          |                      |             the context of a given transaction.                                                     |
+| EmployerName                             | string               | This is a representation of the organizational entitys name.                                       |
+| EmployerAddress                          | PostalAddress        | An address used for the delivery of letters and packages by an external                             |
+|                                          |                      |             mailing or packaging service, for the Employer (aka Plan Sponsor).                      |
+| FirstLineAddress                         | string               | The first line of a formatted address - e.g., Street Number + Street                                |
+|                                          |                      |             Name, P.O. Box, etc.                                                                    |
+| CityName                                 | string               | The city where the address is located.                                                              |
+| StateProvinceCode                        | StateProvince        | The region (depending on the country, this could be the state or                                    |
+|                                          |                      |             province) where the address is located.                                                 |
+| PostalCode                               | string               | The unique identifier used to associate postal deliveries. This may                                 |
+|                                          |                      |             also be referred to as zip code or post code where the address is located.              |
+| CountryCode                              | Country              | The country where the address is located.                                                           |
+| Employee                                 | Object               | Employee Object                                                                                     |
+| EmployeePartyID                          | string               | An unique identifier for each instance of an object established within                              |
+|                                          |                      |             the context of a given transaction.                                                     |
+| EmployeeSocialSecurityNumber             | string               | A numerical identifier assigned to U.S. citizens and some residents to                              |
+|                                          |                      |             track their income.                                                                     |
+| EmployeeIdentifier                       | string               | Employer or Plan Sponsor Issued Identifier.                                                         |
+| EmployeeName                             | StructuredPersonName | This is a representation of the person entitys name. MiddleName -                                  |
+|                                          |                      |             Optional - can be just a middle initial.                                                |
+| FirstName                                | string               | The persons name normally preceding the last name and typically used                               |
+|                                          |                      |             to refer to the person in both formal and/or informal circumstances.                    |
+| LastName                                 | string               | The part of a persons name arising from family identifications.                                    |
+| EmployeeGenderCode                       | Gender               | Value designating the range of characteristics pertaining to, and                                   |
+|                                          |                      |             differentiating between, masculinity and femininity. Depending on the context, these    |
+|                                          |                      |             characteristics may include biological sex, sex-based social structures, or gender      |
+|                                          |                      |             identity.                                                                               |
+| EmployeeBirthDate                        | date                 | The date on which a person was born.                                                                |
+| MaritalStatusCode                        | MaritalStatus        | Any of several distinct options that describe a persons relationship                               |
+|                                          |                      |             with a significant other - e.g., married, single, divorced, and widowed are examples of |
+|                                          |                      |             civil status.                                                                           |
+| EmployeeHomePhone                        | string               | An entitys home communication point, as defined by the                                             |
+|                                          |                      |             telecommunication services. It includes voice telephone communication.                  |
+| EmployeeMobilePhone                      | string               | An entitys mobile communication point, as defined by the                                           |
+|                                          |                      |             telecommunication services. It includes voice telephone communication.                  |
+| EmployeeMailingAddress                   | PostalAddress        | An address used for the delivery of letters and packages by an external                             |
+|                                          |                      |             mailing or packaging service, at a place where the recipient usually lives or works.    |
+| FirstLineAddress                         | string               | The first line of a formatted address - e.g., Street Number + Street                                |
+|                                          |                      |             Name, P.O. Box, etc.                                                                    |
+| SecondLineAddress                        | string               | The second line of a formatted address - e.g., Apartment #, Suite #,                                |
+|                                          |                      |             etc.                                                                                    |
+| CityName                                 | string               | The city where the address is located.                                                              |
+| StateProvinceCode                        | StateProvince        | The region (depending on the country, this could be the state or                                    |
+|                                          |                      |             province) where the address is located.                                                 |
+| PostalCode                               | string               | The unique identifier used to associate postal deliveries. This may                                 |
+|                                          |                      |             also be referred to as zip code or post code where the address is located.              |
+| CountryCode                              | Country              | The country where the address is located.                                                           |
+| EmployeeEmail                            | string               | A message distributed by electronic means from one computer user to one                             |
+|                                          |                      |             or more recipients via a network.                                                       |
+| EmploymentInformation                    | Object               | EmploymentInformation Object                                                                        |
+| OriginalHireDate                         | date                 | First date the Employee was actively at work with their employer.                                   |
+| EmploymentTypeCode                       | EmploymentType       | Describes the Type of Employment for the employee (e.g. FT, PT,                                     |
+|                                          |                      |             Seasonal).                                                                              |
+| EmploymentStatusCode                     | EmploymentStatus     | Identifies the state of the members employment (e.g. Active,                                       |
+|                                          |                      |             Terminated, Leave, Retiree).                                                            |
+| OccupationText                           | string               | A job or profession.                                                                                |
+| WorkHoursFrequencyCode                   | WorkHoursFrequency   | Mode in which Number of hours worked is calculated. DEPRECATED ELEMENT                              |
+| UnionIndicator                           | boolean              | Indicates whether the Employee is a member of the Union or not.                                     |
+| UnionLocalName                           | string               | The name of a locally-based group of workers with a charter from a                                  |
+|                                          |                      |             national or international union.                                                        |
+| UnionLocalNumber                         | string               | The number for the locally-based group of workers with a charter from a                             |
+|                                          |                      |             national or international union.                                                        |
+| UnionMemberNumber                        | string               | An identifier for a person belonging to a Union Local.                                              |
+| EmploymentInformationUserDefinedCategory | Object               | EmploymentInformationUserDefinedCategory Object                                                     |
+| CategoryName                             | string               | The name of the user defined data point associated with a given                                     |
+|                                          |                      |             Employees employment.                                                                  |
+| CategoryValueString                      | string               | The string (textual) actual content for the user defined data point                                 |
+|                                          |                      |             associated with a given Employees employment.                                          |
+| CategoryTypeCode                         | CategoryType         | Identifies the category of user defined elements being defined.                                     |
+| Rule50_75Indicator                       | boolean              | To be eligible for Family and Medical Leave Act (FMLA), an employee                                 |
+|                                          |                      |             must work at a location that has 50 employees within a 75-mile radius. This is a simple |
+|                                          |                      |             indicator as to whether the individual meets this requirement (or not).                 |
+| WorkStateCode                            | StateProvince        | The actual state in which the Employee works.                                                       |
+| KeyEmployeeIndicator                     | boolean              | Signifies the employee to be within the highest paid 10% of employees                               |
+|                                          |                      |             and within 75 miles of the employees work state.                                       |
+| EmploymentContact                        | Object               | EmploymentContact Object                                                                            |
+| ContactTypeCode                          | ContactType          | Identifies the type of Employee contact.                                                            |
+| ContactName                              | StructuredPersonName | The name of the Employees contact.                                                                 |
+| PrefixCode                               | Prefix               | A letter or group of letters that is added at the beginning of a Name -                             |
+|                                          |                      |             e.g., Mr., Mrs., Ms., etc.                                                              |
+| FirstName                                | string               | The persons name normally preceding the last name and typically used                               |
+|                                          |                      |             to refer to the person in both formal and/or informal circumstances.                    |
+| LastName                                 | string               | The part of a persons name arising from family identifications.                                    |
+| SuffixCode                               | Suffix               | The titles, qualifications, or positions that follow the persons name                              |
+|                                          |                      |             when addressing her formally or professionally, usually when writing - e.g., Sr., Jr.,  |
+|                                          |                      |             etc.                                                                                    |
+| ContactSocialSecurityNumber              | string               | The US government issued identifier for the Employees Contact.                                     |
+| ContactIdentifier                        | string               | The Employer or Plan Sponsor Issued Identifier for the Employees                                   |
+|                                          |                      |             Contact.                                                                                |
+| ContactEmail                             | string               | The electronic address for the Employees contact.                                                  |
+| EmploymentSchedule                       | Object               | EmploymentSchedule Object                                                                           |
+| ScheduledHoursQuantity                   | decimal              | The number of hours scheduled to work.                                                              |
+| Last12MonthsWorkHoursQuantity            | decimal              | The number of hours worked during the last 12 months.                                               |
+| PerWeekWorkedHoursQuantity               | decimal              | The number of hours worked per week.                                                                |
+| WorkSchedule                             | Object               | WorkSchedule Object                                                                                 |
+| WorkShiftCode                            | WorkShift            | The time period during which an Employee is at work.                                                |
+| WorkScheduleTypeCode                     | WorkScheduleType     | Indicates the type of work week.                                                                    |
+| WeeklyWorkedHoursQuantity                | decimal              | The number of hours worked in a given week.                                                         |
+| Audit                                    | Object               | Audit Object                                                                                        |
+| AuditID                                  | string               | Unique identifier created by the originator for this instance of the                                |
+|                                          |                      |             electronic transmission.                                                                |
+| CarrierRecordQuantity                    | int                  | A count of Carrier records included in the electronic transmission.                                 |
+| EmployerRecordQuantity                   | int                  | A count of Employer records included in the electronic transmission.                                |
+| EmployeeRecordQuantity                   | int                  | A count of Employee records included in the electronic transmission.                                |
+
 ```json
+
 {
-  "Transmission": {
+  "bem:Transmission": {
+    "@xmlns:bem": "https://ldex.limra.com/xsd/1.0/LDExBEM",
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "@xsi:schemaLocation": "https://ldex.limra.com/xsd/1.0/LDExBEM_1.3.2022.01.01.xsd",
     "TransmissionGUID": "2020-08-06-16.24.25.063000",
     "SenderName": "ADPSLC",
     "SenderPlatformName": "CES 6.2",
@@ -130,13 +419,13 @@
         "FirstLineAddress": "24490 Eureka Ave",
         "CityName": "Warren",
         "StateProvinceCode": "MI",
-        "PostalCode": 48091,
+        "PostalCode": "48091",
         "CountryCode": "US"
       },
       "Employee": {
-        "EmployeePartyID": 211713,
-        "EmployeeSocialSecurityNumber": 999909999,
-        "EmployeeIdentifier": 985603,
+        "EmployeePartyID": "211713",
+        "EmployeeSocialSecurityNumber": "999909999",
+        "EmployeeIdentifier": "985603",
         "EmployeeName": {
           "FirstName": "CAROLYN",
           "LastName": "OWENSTEST"
@@ -144,14 +433,14 @@
         "EmployeeGenderCode": "Female",
         "EmployeeBirthDate": "1976-05-05",
         "MaritalStatusCode": "Married",
-        "EmployeeHomePhone": 4695551212,
-        "EmployeeMobilePhone": 4696661212,
+        "EmployeeHomePhone": "4695551212",
+        "EmployeeMobilePhone": "4696661212",
         "EmployeeMailingAddress": {
           "FirstLineAddress": "2402 Main Street",
           "SecondLineAddress": "Apt 1A",
           "CityName": "AUSTIN",
           "StateProvinceCode": "TX",
-          "PostalCode": 75082,
+          "PostalCode": "75082",
           "CountryCode": "US"
         },
         "EmployeeEmail": "carolyn.owenstest@my_employer.com",
@@ -161,18 +450,18 @@
           "EmploymentStatusCode": "Active",
           "OccupationText": "RocketScientist",
           "WorkHoursFrequencyCode": "Weekly",
-          "UnionIndicator": true,
+          "UnionIndicator": "true",
           "UnionLocalName": "AmalgamatedRocketScientists",
-          "UnionLocalNumber": 123,
-          "UnionMemberNumber": 10,
+          "UnionLocalNumber": "123",
+          "UnionMemberNumber": "10",
           "EmploymentInformationUserDefinedCategory": {
             "CategoryName": "FMLA_Eligibile",
-            "CategoryValueString": true,
+            "CategoryValueString": "true",
             "CategoryTypeCode": "Reporting"
           },
-          "Rule50_75Indicator": true,
+          "Rule50_75Indicator": "true",
           "WorkStateCode": "TX",
-          "KeyEmployeeIndicator": true,
+          "KeyEmployeeIndicator": "true",
           "EmploymentContact": {
             "ContactTypeCode": "BenefitsCoordinator",
             "ContactName": {
@@ -181,18 +470,18 @@
               "LastName": "Smith",
               "SuffixCode": "Jr"
             },
-            "ContactSocialSecurityNumber": 987654321,
-            "ContactIdentifier": 123456,
+            "ContactSocialSecurityNumber": "987654321",
+            "ContactIdentifier": "123456",
             "ContactEmail": "sam.smith@my_employer.com"
           },
           "EmploymentSchedule": {
-            "ScheduledHoursQuantity": 40,
-            "Last12MonthsWorkHoursQuantity": 2080,
-            "PerWeekWorkedHoursQuantity": 40,
+            "ScheduledHoursQuantity": "40.0",
+            "Last12MonthsWorkHoursQuantity": "2080.0",
+            "PerWeekWorkedHoursQuantity": "40.0",
             "WorkSchedule": {
               "WorkShiftCode": "First",
               "WorkScheduleTypeCode": "Weekly",
-              "WeeklyWorkedHoursQuantity": 40
+              "WeeklyWorkedHoursQuantity": "40.0"
             }
           }
         }
@@ -200,126 +489,171 @@
     },
     "Audit": {
       "AuditID": "2020-08-06-16.24.25.063000",
-      "CarrierRecordQuantity": 1,
-      "EmployerRecordQuantity": 1,
-      "EmployeeRecordQuantity": 1
+      "CarrierRecordQuantity": "1",
+      "EmployerRecordQuantity": "1",
+      "EmployeeRecordQuantity": "1"
     }
   }
 }
 ```
+
+
+
 ##EmploymentTermination
+**Description**
+
+Communicate employment terminations for employees for Family and Medical Leave (FMLA) services.
+
+**Parameters**
+
+
+| Name                                     | Type                 | Description                                                                                         |
+|:-----------------------------------------|:---------------------|:----------------------------------------------------------------------------------------------------|
+| TransmissionGUID                         | string               | Global Unique identifier created by the originator for this instance of                             |
+|                                          |                      |             the electronic transmission.                                                            |
+| SenderName                               | string               | Name of the company sending electronic benefit records on behalf of a                               |
+|                                          |                      |             group.                                                                                  |
+| SenderPlatformName                       | string               | Identifies the Senders system that is providing the data for this data                             |
+|                                          |                      |             set.                                                                                    |
+| ReceiverName                             | string               | Name of the company receiving electronic benefit records on behalf of a                             |
+|                                          |                      |             group.                                                                                  |
+| CreationDateTime                         | dateTime             | UTC date and time the transmission was created.                                                     |
+| TestProductionCode                       | TestProduction       | Indicates the elements contained in this data set are production or                                 |
+|                                          |                      |             test data.                                                                              |
+| TransmissionTypeCode                     | TransmissionType     | The type of data contained within the data set.                                                     |
+| SchemaVersionIdentifier                  | SchemaVersionNumber  | Identifies the version of the standard that is being adhered to in this                             |
+|                                          |                      |             data set.                                                                               |
+| Carrier                                  | Object               | Carrier Object                                                                                      |
+| CarrierID                                | string               | An unique identifier for each instance of an object established within                              |
+|                                          |                      |             the context of a given transaction.                                                     |
+| CarrierName                              | string               | The distinctive designation of the entity sending or receiving the data                             |
+|                                          |                      |             in this transmission.                                                                   |
+| Employer                                 | Object               | Employer Object                                                                                     |
+| EmployerPartyID                          | string               | An unique identifier for each instance of an object established within                              |
+|                                          |                      |             the context of a given transaction.                                                     |
+| FederalEmployerIdentificationNumber      | string               | A nine-digit unique number assigned by the Internal Revenue Service                                 |
+|                                          |                      |             (IRS) to businesses operating in the United States.                                     |
+| CarrierMasterAgreementNumber             | Object               | CarrierMasterAgreementNumber Object                                                                 |
+| CarrierMasterAgreementNumberID           | string               | An unique identifier for each instance of an object established within                              |
+|                                          |                      |             the context of a given transaction.                                                     |
+| MasterAgreementNumber                    | string               | Carrier assigned group number. All individual policies or certificates                              |
+|                                          |                      |             at the group level would roll up to this master group number. This may be the same as   |
+|                                          |                      |             the agreement (aka policy) number for some carriers.                                    |
+| CarrierID                                | string               | An unique identifier for each instance of an object established within                              |
+|                                          |                      |             the context of a given transaction.                                                     |
+| EmployerName                             | string               | This is a representation of the organizational entitys name.                                       |
+| EmployerAddress                          | PostalAddress        | An address used for the delivery of letters and packages by an external                             |
+|                                          |                      |             mailing or packaging service, for the Employer (aka Plan Sponsor).                      |
+| FirstLineAddress                         | string               | The first line of a formatted address - e.g., Street Number + Street                                |
+|                                          |                      |             Name, P.O. Box, etc.                                                                    |
+| CityName                                 | string               | The city where the address is located.                                                              |
+| StateProvinceCode                        | StateProvince        | The region (depending on the country, this could be the state or                                    |
+|                                          |                      |             province) where the address is located.                                                 |
+| PostalCode                               | string               | The unique identifier used to associate postal deliveries. This may                                 |
+|                                          |                      |             also be referred to as zip code or post code where the address is located.              |
+| CountryCode                              | Country              | The country where the address is located.                                                           |
+| Employee                                 | Object               | Employee Object                                                                                     |
+| EmployeePartyID                          | string               | An unique identifier for each instance of an object established within                              |
+|                                          |                      |             the context of a given transaction.                                                     |
+| EmployeeSocialSecurityNumber             | string               | A numerical identifier assigned to U.S. citizens and some residents to                              |
+|                                          |                      |             track their income.                                                                     |
+| EmployeeIdentifier                       | string               | Employer or Plan Sponsor Issued Identifier.                                                         |
+| EmployeeName                             | StructuredPersonName | This is a representation of the person entitys name. MiddleName -                                  |
+|                                          |                      |             Optional - can be just a middle initial.                                                |
+| FirstName                                | string               | The persons name normally preceding the last name and typically used                               |
+|                                          |                      |             to refer to the person in both formal and/or informal circumstances.                    |
+| LastName                                 | string               | The part of a persons name arising from family identifications.                                    |
+| EmployeeGenderCode                       | Gender               | Value designating the range of characteristics pertaining to, and                                   |
+|                                          |                      |             differentiating between, masculinity and femininity. Depending on the context, these    |
+|                                          |                      |             characteristics may include biological sex, sex-based social structures, or gender      |
+|                                          |                      |             identity.                                                                               |
+| EmployeeBirthDate                        | date                 | The date on which a person was born.                                                                |
+| MaritalStatusCode                        | MaritalStatus        | Any of several distinct options that describe a persons relationship                               |
+|                                          |                      |             with a significant other - e.g., married, single, divorced, and widowed are examples of |
+|                                          |                      |             civil status.                                                                           |
+| EmployeeHomePhone                        | string               | An entitys home communication point, as defined by the                                             |
+|                                          |                      |             telecommunication services. It includes voice telephone communication.                  |
+| EmployeeMobilePhone                      | string               | An entitys mobile communication point, as defined by the                                           |
+|                                          |                      |             telecommunication services. It includes voice telephone communication.                  |
+| EmployeeMailingAddress                   | PostalAddress        | An address used for the delivery of letters and packages by an external                             |
+|                                          |                      |             mailing or packaging service, at a place where the recipient usually lives or works.    |
+| FirstLineAddress                         | string               | The first line of a formatted address - e.g., Street Number + Street                                |
+|                                          |                      |             Name, P.O. Box, etc.                                                                    |
+| SecondLineAddress                        | string               | The second line of a formatted address - e.g., Apartment #, Suite #,                                |
+|                                          |                      |             etc.                                                                                    |
+| CityName                                 | string               | The city where the address is located.                                                              |
+| StateProvinceCode                        | StateProvince        | The region (depending on the country, this could be the state or                                    |
+|                                          |                      |             province) where the address is located.                                                 |
+| PostalCode                               | string               | The unique identifier used to associate postal deliveries. This may                                 |
+|                                          |                      |             also be referred to as zip code or post code where the address is located.              |
+| CountryCode                              | Country              | The country where the address is located.                                                           |
+| EmployeeEmail                            | string               | A message distributed by electronic means from one computer user to one                             |
+|                                          |                      |             or more recipients via a network.                                                       |
+| EmploymentInformation                    | Object               | EmploymentInformation Object                                                                        |
+| OriginalHireDate                         | date                 | First date the Employee was actively at work with their employer.                                   |
+| EmploymentTypeCode                       | EmploymentType       | Describes the Type of Employment for the employee (e.g. FT, PT,                                     |
+|                                          |                      |             Seasonal).                                                                              |
+| EmploymentStatusCode                     | EmploymentStatus     | Identifies the state of the members employment (e.g. Active,                                       |
+|                                          |                      |             Terminated, Leave, Retiree).                                                            |
+| TerminationDate                          | date                 | The last date of employment for an employee.                                                        |
+| TerminationReasonCode                    | TerminationReason    | Describes why the persons employment was terminated.                                               |
+| OccupationText                           | string               | A job or profession.                                                                                |
+| WorkHoursFrequencyCode                   | WorkHoursFrequency   | Mode in which Number of hours worked is calculated. DEPRECATED ELEMENT                              |
+| UnionIndicator                           | boolean              | Indicates whether the Employee is a member of the Union or not.                                     |
+| UnionLocalName                           | string               | The name of a locally-based group of workers with a charter from a                                  |
+|                                          |                      |             national or international union.                                                        |
+| UnionLocalNumber                         | string               | The number for the locally-based group of workers with a charter from a                             |
+|                                          |                      |             national or international union.                                                        |
+| UnionMemberNumber                        | string               | An identifier for a person belonging to a Union Local.                                              |
+| EmploymentInformationUserDefinedCategory | Object               | EmploymentInformationUserDefinedCategory Object                                                     |
+| CategoryName                             | string               | The name of the user defined data point associated with a given                                     |
+|                                          |                      |             Employees employment.                                                                  |
+| CategoryValueString                      | string               | The string (textual) actual content for the user defined data point                                 |
+|                                          |                      |             associated with a given Employees employment.                                          |
+| CategoryTypeCode                         | CategoryType         | Identifies the category of user defined elements being defined.                                     |
+| Rule50_75Indicator                       | boolean              | To be eligible for Family and Medical Leave Act (FMLA), an employee                                 |
+|                                          |                      |             must work at a location that has 50 employees within a 75-mile radius. This is a simple |
+|                                          |                      |             indicator as to whether the individual meets this requirement (or not).                 |
+| WorkStateCode                            | StateProvince        | The actual state in which the Employee works.                                                       |
+| KeyEmployeeIndicator                     | boolean              | Signifies the employee to be within the highest paid 10% of employees                               |
+|                                          |                      |             and within 75 miles of the employees work state.                                       |
+| EmploymentContact                        | Object               | EmploymentContact Object                                                                            |
+| ContactTypeCode                          | ContactType          | Identifies the type of Employee contact.                                                            |
+| ContactName                              | StructuredPersonName | The name of the Employees contact.                                                                 |
+| PrefixCode                               | Prefix               | A letter or group of letters that is added at the beginning of a Name -                             |
+|                                          |                      |             e.g., Mr., Mrs., Ms., etc.                                                              |
+| FirstName                                | string               | The persons name normally preceding the last name and typically used                               |
+|                                          |                      |             to refer to the person in both formal and/or informal circumstances.                    |
+| LastName                                 | string               | The part of a persons name arising from family identifications.                                    |
+| SuffixCode                               | Suffix               | The titles, qualifications, or positions that follow the persons name                              |
+|                                          |                      |             when addressing her formally or professionally, usually when writing - e.g., Sr., Jr.,  |
+|                                          |                      |             etc.                                                                                    |
+| ContactSocialSecurityNumber              | string               | The US government issued identifier for the Employees Contact.                                     |
+| ContactIdentifier                        | string               | The Employer or Plan Sponsor Issued Identifier for the Employees                                   |
+|                                          |                      |             Contact.                                                                                |
+| ContactEmail                             | string               | The electronic address for the Employees contact.                                                  |
+| EmploymentSchedule                       | Object               | EmploymentSchedule Object                                                                           |
+| ScheduledHoursQuantity                   | decimal              | The number of hours scheduled to work.                                                              |
+| Last12MonthsWorkHoursQuantity            | decimal              | The number of hours worked during the last 12 months.                                               |
+| PerWeekWorkedHoursQuantity               | decimal              | The number of hours worked per week.                                                                |
+| WorkSchedule                             | Object               | WorkSchedule Object                                                                                 |
+| WorkShiftCode                            | WorkShift            | The time period during which an Employee is at work.                                                |
+| WorkScheduleTypeCode                     | WorkScheduleType     | Indicates the type of work week.                                                                    |
+| WeeklyWorkedHoursQuantity                | decimal              | The number of hours worked in a given week.                                                         |
+| Audit                                    | Object               | Audit Object                                                                                        |
+| AuditID                                  | string               | Unique identifier created by the originator for this instance of the                                |
+|                                          |                      |             electronic transmission.                                                                |
+| CarrierRecordQuantity                    | int                  | A count of Carrier records included in the electronic transmission.                                 |
+| EmployerRecordQuantity                   | int                  | A count of Employer records included in the electronic transmission.                                |
+| EmployeeRecordQuantity                   | int                  | A count of Employee records included in the electronic transmission.                                |
 
 ```json
-<bem:Transmission xmlns:bem="https://ldex.limra.com/xsd/1.0/LDExBEM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ldex.limra.com/xsd/1.0/LDExBEM_1.3.2022.01.01.xsd">
-	<TransmissionGUID>2020-08-06-16.24.25.063000</TransmissionGUID>
-	<SenderName>ADPSLC</SenderName>
-	<SenderPlatformName>CES 6.2</SenderPlatformName>
-	<ReceiverName>FMLCARRIER</ReceiverName>
-	<CreationDateTime>2020-08-06T16:24:25</CreationDateTime>
-	<TestProductionCode>Test</TestProductionCode>
-	<TransmissionTypeCode>FullFile</TransmissionTypeCode>
-	<SchemaVersionIdentifier>1.3.2022.01.01</SchemaVersionIdentifier>
-	<Carrier>
-		<CarrierID>FMLCARRIER_ID</CarrierID>
-		<CarrierName>FMLCARRIER</CarrierName>
-	</Carrier>
-	<Employer>
-		<EmployerPartyID>PartyID</EmployerPartyID>
-		<FederalEmployerIdentificationNumber>12-3456789</FederalEmployerIdentificationNumber>
-		<CarrierMasterAgreementNumber>
-			<CarrierMasterAgreementNumberID>TBD</CarrierMasterAgreementNumberID>
-			<MasterAgreementNumber>FML-123456</MasterAgreementNumber>
-			<CarrierID>MyCarrier_ID</CarrierID>
-		</CarrierMasterAgreementNumber>
-		<EmployerName>My Employer</EmployerName>
-		<EmployerAddress>
-			<FirstLineAddress>24490 Eureka Ave</FirstLineAddress>
-			<CityName>Warren</CityName>
-			<StateProvinceCode>MI</StateProvinceCode>
-			<PostalCode>48091</PostalCode>
-			<CountryCode>US</CountryCode>
-		</EmployerAddress>
-		<Employee>
-			<EmployeePartyID>211713</EmployeePartyID>
-			<EmployeeSocialSecurityNumber>999909999</EmployeeSocialSecurityNumber>
-			<EmployeeIdentifier>985603</EmployeeIdentifier>
-			<EmployeeName>
-				<FirstName>CAROLYN</FirstName>
-				<LastName>OWENSTEST</LastName>
-			</EmployeeName>
-			<EmployeeGenderCode>Female</EmployeeGenderCode>
-			<EmployeeBirthDate>1976-05-05</EmployeeBirthDate>
-			<MaritalStatusCode>Married</MaritalStatusCode>
-			<EmployeeHomePhone>4695551212</EmployeeHomePhone>
-			<EmployeeMobilePhone>4696661212</EmployeeMobilePhone>
-			<EmployeeMailingAddress>
-				<FirstLineAddress>2402 Main Street</FirstLineAddress>
-				<SecondLineAddress>Apt 1A</SecondLineAddress>
-				<CityName>AUSTIN</CityName>
-				<StateProvinceCode>TX</StateProvinceCode>
-				<PostalCode>75082</PostalCode>
-				<CountryCode>US</CountryCode>
-			</EmployeeMailingAddress>
-			<EmployeeEmail>carolyn.owenstest@my_employer.com</EmployeeEmail>
-			<EmploymentInformation>
-				<OriginalHireDate>2017-06-05</OriginalHireDate>
-				<EmploymentTypeCode>FullTime</EmploymentTypeCode>
-				<!-- Added Termination Information -->
-				<EmploymentStatusCode>Terminated</EmploymentStatusCode>
-				<TerminationDate>2020-07-31</TerminationDate>
-				<TerminationReasonCode>Termination</TerminationReasonCode>
-				<OccupationText>RocketScientist</OccupationText>
-				<WorkHoursFrequencyCode>Weekly</WorkHoursFrequencyCode>
-				<UnionIndicator>true</UnionIndicator>
-				<UnionLocalName>AmalgamatedRocketScientists</UnionLocalName>
-				<UnionLocalNumber>123</UnionLocalNumber>
-				<UnionMemberNumber>10</UnionMemberNumber>
-				<EmploymentInformationUserDefinedCategory>
-					<CategoryName>FMLA_Eligibile</CategoryName>
-					<CategoryValueString>true</CategoryValueString>
-					<CategoryTypeCode>Reporting</CategoryTypeCode>
-				</EmploymentInformationUserDefinedCategory>
-				<Rule50_75Indicator>true</Rule50_75Indicator>
-				<WorkStateCode>TX</WorkStateCode>
-				<KeyEmployeeIndicator>true</KeyEmployeeIndicator>
-				<EmploymentContact>
-					<ContactTypeCode>BenefitsCoordinator</ContactTypeCode>
-					<ContactName>
-						<PrefixCode>Mr</PrefixCode>
-						<FirstName>Sam</FirstName>
-						<LastName>Smith</LastName>
-						<SuffixCode>Jr</SuffixCode>
-					</ContactName>
-					<ContactSocialSecurityNumber>987654321</ContactSocialSecurityNumber>
-					<ContactIdentifier>123456</ContactIdentifier>
-					<ContactEmail>sam.smith@my_employer.com</ContactEmail>
-				</EmploymentContact>
-				<EmploymentSchedule>
-					<ScheduledHoursQuantity>40.0</ScheduledHoursQuantity>
-					<Last12MonthsWorkHoursQuantity>2080.0</Last12MonthsWorkHoursQuantity>
-					<PerWeekWorkedHoursQuantity>40.0</PerWeekWorkedHoursQuantity>
-					<WorkSchedule>
-						<WorkShiftCode>First</WorkShiftCode>
-						<WorkScheduleTypeCode>Weekly</WorkScheduleTypeCode>
-						<WeeklyWorkedHoursQuantity>40.0</WeeklyWorkedHoursQuantity>
-					</WorkSchedule>
-				</EmploymentSchedule>
-			</EmploymentInformation>
-		</Employee>
-	</Employer>
-	<Audit>
-		<AuditID>2020-08-06-16.24.25.063000</AuditID>
-		<CarrierRecordQuantity>1</CarrierRecordQuantity>
-		<EmployerRecordQuantity>1</EmployerRecordQuantity>
-		<EmployeeRecordQuantity>1</EmployeeRecordQuantity>
-	</Audit>
-</bem:Transmission>
-```
-##Rehire
 
-```json
 {
-  "Transmission": {
+  "bem:Transmission": {
+    "@xmlns:bem": "https://ldex.limra.com/xsd/1.0/LDExBEM",
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "@xsi:schemaLocation": "https://ldex.limra.com/xsd/1.0/LDExBEM_1.3.2022.01.01.xsd",
     "TransmissionGUID": "2020-08-06-16.24.25.063000",
     "SenderName": "ADPSLC",
     "SenderPlatformName": "CES 6.2",
@@ -345,13 +679,13 @@
         "FirstLineAddress": "24490 Eureka Ave",
         "CityName": "Warren",
         "StateProvinceCode": "MI",
-        "PostalCode": 48091,
+        "PostalCode": "48091",
         "CountryCode": "US"
       },
       "Employee": {
-        "EmployeePartyID": 211713,
-        "EmployeeSocialSecurityNumber": 999909999,
-        "EmployeeIdentifier": 985603,
+        "EmployeePartyID": "211713",
+        "EmployeeSocialSecurityNumber": "999909999",
+        "EmployeeIdentifier": "985603",
         "EmployeeName": {
           "FirstName": "CAROLYN",
           "LastName": "OWENSTEST"
@@ -359,14 +693,14 @@
         "EmployeeGenderCode": "Female",
         "EmployeeBirthDate": "1976-05-05",
         "MaritalStatusCode": "Married",
-        "EmployeeHomePhone": 4695551212,
-        "EmployeeMobilePhone": 4696661212,
+        "EmployeeHomePhone": "4695551212",
+        "EmployeeMobilePhone": "4696661212",
         "EmployeeMailingAddress": {
           "FirstLineAddress": "2402 Main Street",
           "SecondLineAddress": "Apt 1A",
           "CityName": "AUSTIN",
           "StateProvinceCode": "TX",
-          "PostalCode": 75082,
+          "PostalCode": "75082",
           "CountryCode": "US"
         },
         "EmployeeEmail": "carolyn.owenstest@my_employer.com",
@@ -378,18 +712,18 @@
           "TerminationReasonCode": "Termination",
           "OccupationText": "RocketScientist",
           "WorkHoursFrequencyCode": "Weekly",
-          "UnionIndicator": true,
+          "UnionIndicator": "true",
           "UnionLocalName": "AmalgamatedRocketScientists",
-          "UnionLocalNumber": 123,
-          "UnionMemberNumber": 10,
+          "UnionLocalNumber": "123",
+          "UnionMemberNumber": "10",
           "EmploymentInformationUserDefinedCategory": {
             "CategoryName": "FMLA_Eligibile",
-            "CategoryValueString": true,
+            "CategoryValueString": "true",
             "CategoryTypeCode": "Reporting"
           },
-          "Rule50_75Indicator": true,
+          "Rule50_75Indicator": "true",
           "WorkStateCode": "TX",
-          "KeyEmployeeIndicator": true,
+          "KeyEmployeeIndicator": "true",
           "EmploymentContact": {
             "ContactTypeCode": "BenefitsCoordinator",
             "ContactName": {
@@ -398,18 +732,18 @@
               "LastName": "Smith",
               "SuffixCode": "Jr"
             },
-            "ContactSocialSecurityNumber": 987654321,
-            "ContactIdentifier": 123456,
+            "ContactSocialSecurityNumber": "987654321",
+            "ContactIdentifier": "123456",
             "ContactEmail": "sam.smith@my_employer.com"
           },
           "EmploymentSchedule": {
-            "ScheduledHoursQuantity": 40,
-            "Last12MonthsWorkHoursQuantity": 2080,
-            "PerWeekWorkedHoursQuantity": 40,
+            "ScheduledHoursQuantity": "40.0",
+            "Last12MonthsWorkHoursQuantity": "2080.0",
+            "PerWeekWorkedHoursQuantity": "40.0",
             "WorkSchedule": {
               "WorkShiftCode": "First",
               "WorkScheduleTypeCode": "Weekly",
-              "WeeklyWorkedHoursQuantity": 40
+              "WeeklyWorkedHoursQuantity": "40.0"
             }
           }
         }
@@ -417,18 +751,160 @@
     },
     "Audit": {
       "AuditID": "2020-08-06-16.24.25.063000",
-      "CarrierRecordQuantity": 1,
-      "EmployerRecordQuantity": 1,
-      "EmployeeRecordQuantity": 1
+      "CarrierRecordQuantity": "1",
+      "EmployerRecordQuantity": "1",
+      "EmployeeRecordQuantity": "1"
     }
   }
 }
 ```
-##NewHireRehire
+
+##Rehire
+
+**Description**
+
+Communicate re-hired employees for Family and Medical Leave (FMLA) services
+
+
+**Parameters**
+
+
+| Name                                | Type                 | Description                                                                                         |
+|:------------------------------------|:---------------------|:----------------------------------------------------------------------------------------------------|
+| TransmissionGUID                    | string               | Global Unique identifier created by the originator for this instance of                             |
+|                                     |                      |             the electronic transmission.                                                            |
+| SenderName                          | string               | Name of the company sending electronic benefit records on behalf of a                               |
+|                                     |                      |             group.                                                                                  |
+| SenderPlatformName                  | string               | Identifies the Senders system that is providing the data for this data                             |
+|                                     |                      |             set.                                                                                    |
+| ReceiverName                        | string               | Name of the company receiving electronic benefit records on behalf of a                             |
+|                                     |                      |             group.                                                                                  |
+| CreationDateTime                    | dateTime             | UTC date and time the transmission was created.                                                     |
+| TestProductionCode                  | TestProduction       | Indicates the elements contained in this data set are production or                                 |
+|                                     |                      |             test data.                                                                              |
+| TransmissionTypeCode                | TransmissionType     | The type of data contained within the data set.                                                     |
+| SchemaVersionIdentifier             | SchemaVersionNumber  | Identifies the version of the standard that is being adhered to in this                             |
+|                                     |                      |             data set.                                                                               |
+| Carrier                             | Object               | Carrier Object                                                                                      |
+| CarrierID                           | string               | An unique identifier for each instance of an object established within                              |
+|                                     |                      |             the context of a given transaction.                                                     |
+| CarrierName                         | string               | The distinctive designation of the entity sending or receiving the data                             |
+|                                     |                      |             in this transmission.                                                                   |
+| Employer                            | Object               | Employer Object                                                                                     |
+| EmployerPartyID                     | string               | An unique identifier for each instance of an object established within                              |
+|                                     |                      |             the context of a given transaction.                                                     |
+| FederalEmployerIdentificationNumber | string               | A nine-digit unique number assigned by the Internal Revenue Service                                 |
+|                                     |                      |             (IRS) to businesses operating in the United States.                                     |
+| CarrierMasterAgreementNumber        | Object               | CarrierMasterAgreementNumber Object                                                                 |
+| CarrierMasterAgreementNumberID      | string               | An unique identifier for each instance of an object established within                              |
+|                                     |                      |             the context of a given transaction.                                                     |
+| MasterAgreementNumber               | string               | Carrier assigned group number. All individual policies or certificates                              |
+|                                     |                      |             at the group level would roll up to this master group number. This may be the same as   |
+|                                     |                      |             the agreement (aka policy) number for some carriers.                                    |
+| CarrierID                           | string               | An unique identifier for each instance of an object established within                              |
+|                                     |                      |             the context of a given transaction.                                                     |
+| EmployerName                        | string               | This is a representation of the organizational entitys name.                                       |
+| EmployerAddress                     | PostalAddress        | An address used for the delivery of letters and packages by an external                             |
+|                                     |                      |             mailing or packaging service, for the Employer (aka Plan Sponsor).                      |
+| FirstLineAddress                    | string               | The first line of a formatted address - e.g., Street Number + Street                                |
+|                                     |                      |             Name, P.O. Box, etc.                                                                    |
+| CityName                            | string               | The city where the address is located.                                                              |
+| StateProvinceCode                   | StateProvince        | The region (depending on the country, this could be the state or                                    |
+|                                     |                      |             province) where the address is located.                                                 |
+| PostalCode                          | string               | The unique identifier used to associate postal deliveries. This may                                 |
+|                                     |                      |             also be referred to as zip code or post code where the address is located.              |
+| CountryCode                         | Country              | The country where the address is located.                                                           |
+| Employee                            | Object               | Employee Object                                                                                     |
+| EmployeePartyID                     | string               | An unique identifier for each instance of an object established within                              |
+|                                     |                      |             the context of a given transaction.                                                     |
+| EmployeeSocialSecurityNumber        | string               | A numerical identifier assigned to U.S. citizens and some residents to                              |
+|                                     |                      |             track their income.                                                                     |
+| EmployeeIdentifier                  | string               | Employer or Plan Sponsor Issued Identifier.                                                         |
+| EmployeeName                        | StructuredPersonName | This is a representation of the person entitys name. MiddleName -                                  |
+|                                     |                      |             Optional - can be just a middle initial.                                                |
+| FirstName                           | string               | The persons name normally preceding the last name and typically used                               |
+|                                     |                      |             to refer to the person in both formal and/or informal circumstances.                    |
+| LastName                            | string               | The part of a persons name arising from family identifications.                                    |
+| EmployeeGenderCode                  | Gender               | Value designating the range of characteristics pertaining to, and                                   |
+|                                     |                      |             differentiating between, masculinity and femininity. Depending on the context, these    |
+|                                     |                      |             characteristics may include biological sex, sex-based social structures, or gender      |
+|                                     |                      |             identity.                                                                               |
+| EmployeeBirthDate                   | date                 | The date on which a person was born.                                                                |
+| MaritalStatusCode                   | MaritalStatus        | Any of several distinct options that describe a persons relationship                               |
+|                                     |                      |             with a significant other - e.g., married, single, divorced, and widowed are examples of |
+|                                     |                      |             civil status.                                                                           |
+| EmployeeHomePhone                   | string               | An entitys home communication point, as defined by the                                             |
+|                                     |                      |             telecommunication services. It includes voice telephone communication.                  |
+| EmployeeMailingAddress              | PostalAddress        | An address used for the delivery of letters and packages by an external                             |
+|                                     |                      |             mailing or packaging service, at a place where the recipient usually lives or works.    |
+| FirstLineAddress                    | string               | The first line of a formatted address - e.g., Street Number + Street                                |
+|                                     |                      |             Name, P.O. Box, etc.                                                                    |
+| CityName                            | string               | The city where the address is located.                                                              |
+| StateProvinceCode                   | StateProvince        | The region (depending on the country, this could be the state or                                    |
+|                                     |                      |             province) where the address is located.                                                 |
+| PostalCode                          | string               | The unique identifier used to associate postal deliveries. This may                                 |
+|                                     |                      |             also be referred to as zip code or post code where the address is located.              |
+| CountryCode                         | Country              | The country where the address is located.                                                           |
+| EmployeeEmail                       | string               | A message distributed by electronic means from one computer user to one                             |
+|                                     |                      |             or more recipients via a network.                                                       |
+| EmploymentInformation               | Object               | EmploymentInformation Object                                                                        |
+| OriginalHireDate                    | date                 | First date the Employee was actively at work with their employer.                                   |
+| MostRecentHireDate                  | date                 | The latest date the Employee was hired.                                                             |
+| EmploymentTypeCode                  | EmploymentType       | Describes the Type of Employment for the employee (e.g. FT, PT,                                     |
+|                                     |                      |             Seasonal).                                                                              |
+| EmploymentStatusCode                | EmploymentStatus     | Identifies the state of the members employment (e.g. Active,                                       |
+|                                     |                      |             Terminated, Leave, Retiree).                                                            |
+| OccupationText                      | string               | A job or profession.                                                                                |
+| WorkHoursFrequencyCode              | WorkHoursFrequency   | Mode in which Number of hours worked is calculated. DEPRECATED ELEMENT                              |
+| UnionIndicator                      | boolean              | Indicates whether the Employee is a member of the Union or not.                                     |
+| UnionLocalName                      | string               | The name of a locally-based group of workers with a charter from a                                  |
+|                                     |                      |             national or international union.                                                        |
+| UnionLocalNumber                    | string               | The number for the locally-based group of workers with a charter from a                             |
+|                                     |                      |             national or international union.                                                        |
+| UnionMemberNumber                   | string               | An identifier for a person belonging to a Union Local.                                              |
+| Rule50_75Indicator                  | boolean              | To be eligible for Family and Medical Leave Act (FMLA), an employee                                 |
+|                                     |                      |             must work at a location that has 50 employees within a 75-mile radius. This is a simple |
+|                                     |                      |             indicator as to whether the individual meets this requirement (or not).                 |
+| WorkStateCode                       | StateProvince        | The actual state in which the Employee works.                                                       |
+| KeyEmployeeIndicator                | boolean              | Signifies the employee to be within the highest paid 10% of employees                               |
+|                                     |                      |             and within 75 miles of the employees work state.                                       |
+| EmploymentContact                   | Object               | EmploymentContact Object                                                                            |
+| ContactTypeCode                     | ContactType          | Identifies the type of Employee contact.                                                            |
+| ContactName                         | StructuredPersonName | The name of the Employees contact.                                                                 |
+| PrefixCode                          | Prefix               | A letter or group of letters that is added at the beginning of a Name -                             |
+|                                     |                      |             e.g., Mr., Mrs., Ms., etc.                                                              |
+| FirstName                           | string               | The persons name normally preceding the last name and typically used                               |
+|                                     |                      |             to refer to the person in both formal and/or informal circumstances.                    |
+| LastName                            | string               | The part of a persons name arising from family identifications.                                    |
+| SuffixCode                          | Suffix               | The titles, qualifications, or positions that follow the persons name                              |
+|                                     |                      |             when addressing her formally or professionally, usually when writing - e.g., Sr., Jr.,  |
+|                                     |                      |             etc.                                                                                    |
+| ContactSocialSecurityNumber         | string               | The US government issued identifier for the Employees Contact.                                     |
+| ContactIdentifier                   | string               | The Employer or Plan Sponsor Issued Identifier for the Employees                                   |
+|                                     |                      |             Contact.                                                                                |
+| ContactEmail                        | string               | The electronic address for the Employees contact.                                                  |
+| EmploymentSchedule                  | Object               | EmploymentSchedule Object                                                                           |
+| ScheduledHoursQuantity              | decimal              | The number of hours scheduled to work.                                                              |
+| Last12MonthsWorkHoursQuantity       | decimal              | The number of hours worked during the last 12 months.                                               |
+| PerWeekWorkedHoursQuantity          | decimal              | The number of hours worked per week.                                                                |
+| WorkSchedule                        | Object               | WorkSchedule Object                                                                                 |
+| WorkShiftCode                       | WorkShift            | The time period during which an Employee is at work.                                                |
+| WorkScheduleTypeCode                | WorkScheduleType     | Indicates the type of work week.                                                                    |
+| WeeklyWorkedHoursQuantity           | decimal              | The number of hours worked in a given week.                                                         |
+| Audit                               | Object               | Audit Object                                                                                        |
+| AuditID                             | string               | Unique identifier created by the originator for this instance of the                                |
+|                                     |                      |             electronic transmission.                                                                |
+| CarrierRecordQuantity               | int                  | A count of Carrier records included in the electronic transmission.                                 |
+| EmployerRecordQuantity              | int                  | A count of Employer records included in the electronic transmission.                                |
+| EmployeeRecordQuantity              | int                  | A count of Employee records included in the electronic transmission.                                |
 
 ```json
+
 {
-  "Transmission": {
+  "bem:Transmission": {
+    "@xmlns:bem": "https://ldex.limra.com/xsd/1.0/LDExBEM",
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "@xsi:schemaLocation": "https://ldex.limra.com/xsd/1.0/LDExBEM_1.3.2022.01.01.xsd",
     "TransmissionGUID": "2020-08-06-16.24.25.063000",
     "SenderName": "ADPSLC",
     "SenderPlatformName": "CES 6.2",
@@ -454,13 +930,13 @@
         "FirstLineAddress": "24490 Eureka Ave",
         "CityName": "Warren",
         "StateProvinceCode": "MI",
-        "PostalCode": 48091,
+        "PostalCode": "48091",
         "CountryCode": "US"
       },
       "Employee": {
-        "EmployeePartyID": 211713,
-        "EmployeeSocialSecurityNumber": 999909999,
-        "EmployeeIdentifier": 985603,
+        "EmployeePartyID": "211713",
+        "EmployeeSocialSecurityNumber": "999909999",
+        "EmployeeIdentifier": "985603",
         "EmployeeName": {
           "FirstName": "CAROLYN",
           "LastName": "OWENSTEST"
@@ -468,12 +944,12 @@
         "EmployeeGenderCode": "Female",
         "EmployeeBirthDate": "1976-05-05",
         "MaritalStatusCode": "Married",
-        "EmployeeHomePhone": 4695551212,
+        "EmployeeHomePhone": "4695551212",
         "EmployeeMailingAddress": {
           "FirstLineAddress": "2402 Main Street",
           "CityName": "AUSTIN",
           "StateProvinceCode": "TX",
-          "PostalCode": 75082,
+          "PostalCode": "75082",
           "CountryCode": "US"
         },
         "EmployeeEmail": "carolyn.owenstest@my_employer.com",
@@ -484,13 +960,13 @@
           "EmploymentStatusCode": "Active",
           "OccupationText": "RocketScientist",
           "WorkHoursFrequencyCode": "Weekly",
-          "UnionIndicator": true,
+          "UnionIndicator": "true",
           "UnionLocalName": "AmalgamatedRocketScientists",
-          "UnionLocalNumber": 123,
-          "UnionMemberNumber": 10,
-          "Rule50_75Indicator": true,
+          "UnionLocalNumber": "123",
+          "UnionMemberNumber": "10",
+          "Rule50_75Indicator": "true",
           "WorkStateCode": "TX",
-          "KeyEmployeeIndicator": true,
+          "KeyEmployeeIndicator": "true",
           "EmploymentContact": {
             "ContactTypeCode": "BenefitsCoordinator",
             "ContactName": {
@@ -499,18 +975,18 @@
               "LastName": "Smith",
               "SuffixCode": "Jr"
             },
-            "ContactSocialSecurityNumber": 987654321,
-            "ContactIdentifier": 123456,
+            "ContactSocialSecurityNumber": "987654321",
+            "ContactIdentifier": "123456",
             "ContactEmail": "sam.smith@my_employer.com"
           },
           "EmploymentSchedule": {
-            "ScheduledHoursQuantity": 40,
-            "Last12MonthsWorkHoursQuantity": 1213.33,
-            "PerWeekWorkedHoursQuantity": 40,
+            "ScheduledHoursQuantity": "40.0",
+            "Last12MonthsWorkHoursQuantity": "1213.33",
+            "PerWeekWorkedHoursQuantity": "40.0",
             "WorkSchedule": {
               "WorkShiftCode": "First",
               "WorkScheduleTypeCode": "Weekly",
-              "WeeklyWorkedHoursQuantity": 40
+              "WeeklyWorkedHoursQuantity": "40.0"
             }
           }
         }
@@ -518,250 +994,183 @@
     },
     "Audit": {
       "AuditID": "2020-08-06-16.24.25.063000",
-      "CarrierRecordQuantity": 1,
-      "EmployerRecordQuantity": 1,
-      "EmployeeRecordQuantity": 1
+      "CarrierRecordQuantity": "1",
+      "EmployerRecordQuantity": "1",
+      "EmployeeRecordQuantity": "1"
     }
   }
 }
 ```
 
 
-##DemographicChange
-
-```json
-{
-  "Transmission": {
-    "TransmissionGUID": "2020-08-06-16.24.25.063000",
-    "SenderName": "ADPSLC",
-    "SenderPlatformName": "CES 6.2",
-    "ReceiverName": "EAPCARRIER",
-    "CreationDateTime": "2020-08-06T16:24:25",
-    "TestProductionCode": "Test",
-    "TransmissionTypeCode": "FullFile",
-    "SchemaVersionIdentifier": "1.3.2022.01.01",
-    "Carrier": {
-      "CarrierID": "EAPCARRIER_ID",
-      "CarrierName": "EAPCARRIER"
-    },
-    "Employer": {
-      "EmployerPartyID": "PartyID",
-      "FederalEmployerIdentificationNumber": "34-5678901",
-      "CarrierMasterAgreementNumber": {
-        "CarrierMasterAgreementNumberID": "TBD",
-        "MasterAgreementNumber": "EAP-123456",
-        "CarrierID": "MyCarrier_ID"
-      },
-      "EmployerName": "My Employer",
-      "EmployerAddress": {
-        "FirstLineAddress": "24490 Eureka Ave",
-        "CityName": "Warren",
-        "StateProvinceCode": "MI",
-        "PostalCode": 48091,
-        "CountryCode": "US"
-      },
-      "Employee": [
-        {
-          "EmployeePartyID": 211713,
-          "EmployeeSocialSecurityNumber": 999909999,
-          "EmployeeIdentifier": 985603,
-          "EmployeeName": {
-            "FirstName": "CAROLYN",
-            "MiddleName": "BETSY",
-            "LastName": "OWENSTEST"
-          },
-          "EmployeeGenderCode": "Female",
-          "EmployeeBirthDate": "1976-05-05",
-          "MaritalStatusCode": "Married",
-          "EmployeeHomePhone": 4695551212,
-          "EmployeeMobilePhone": 4691011234,
-          "EmployeeMailingAddress": {
-            "FirstLineAddress": "PO Box 820467",
-            "CityName": "AUSTIN",
-            "StateProvinceCode": "TX",
-            "PostalCode": "75082-0467",
-            "CountryCode": "US"
-          },
-          "EmployeeHomeAddress": {
-            "FirstLineAddress": "2402 Main Street",
-            "CityName": "AUSTIN",
-            "StateProvinceCode": "TX",
-            "PostalCode": "75082-1234",
-            "CountryCode": "US"
-          },
-          "EmployeeEmail": "carolyn.owenstest@my_employer.com",
-          "EmploymentInformation": {
-            "OriginalHireDate": "2017-06-05",
-            "EmploymentTypeCode": "FullTime",
-            "EmploymentStatusCode": "Active",
-            "OccupationText": "RocketScientist",
-            "WorkHoursFrequencyCode": "Weekly"
-          }
-        },
-        {
-          "EmployeePartyID": 916061,
-          "EmployeeSocialSecurityNumber": 111101111,
-          "EmployeeIdentifier": 569842,
-          "EmployeeName": {
-            "FirstName": "COOPER",
-            "MiddleName": "D",
-            "LastName": "HERNANDEZTEST"
-          },
-          "EmployeeGenderCode": "Male",
-          "EmployeeBirthDate": "1992-06-13",
-          "MaritalStatusCode": "Married",
-          "EmployeeHomePhone": 6830001234,
-          "EmployeeMailingAddress": {
-            "FirstLineAddress": "2409 Main Street",
-            "SecondLineAddress": "Apt 3B",
-            "CityName": "TALAHASSEE",
-            "StateProvinceCode": "FL",
-            "PostalCode": "33844-1234",
-            "CountryCode": "US"
-          },
-          "EmployeeEmail": "cooper.hernandeztest@myemployer.com",
-          "EmploymentInformation": {
-            "OriginalHireDate": "2016-06-13",
-            "ExemptCode": "Nonexempt",
-            "EmploymentTypeCode": "PerDiem",
-            "EmploymentStatusCode": "Active",
-            "OccupationText": "KitchenStaff",
-            "WorkHoursFrequencyCode": "Weekly"
-          }
-        }
-      ]
-    },
-    "Audit": {
-      "AuditID": "2020-08-06-16.24.25.063000",
-      "CarrierRecordQuantity": 1,
-      "EmployerRecordQuantity": 1,
-      "EmployeeRecordQuantity": 2
-    }
-  }
-}
-```
-##EmploymentTermination
-
-```json
-{
-  "Transmission": {
-    "TransmissionGUID": "2020-08-06-16.24.25.063000",
-    "SenderName": "ADPSLC",
-    "SenderPlatformName": "CES 6.2",
-    "ReceiverName": "EAPCARRIER",
-    "CreationDateTime": "2020-08-06T16:24:25",
-    "TestProductionCode": "Test",
-    "TransmissionTypeCode": "FullFile",
-    "SchemaVersionIdentifier": "1.3.2022.01.01",
-    "Carrier": {
-      "CarrierID": "EAPCARRIER_ID",
-      "CarrierName": "EAPCARRIER"
-    },
-    "Employer": {
-      "EmployerPartyID": "PartyID",
-      "FederalEmployerIdentificationNumber": "34-5678901",
-      "CarrierMasterAgreementNumber": {
-        "CarrierMasterAgreementNumberID": "TBD",
-        "MasterAgreementNumber": "EAP-123456",
-        "CarrierID": "MyCarrier_ID"
-      },
-      "EmployerName": "My Employer",
-      "EmployerAddress": {
-        "FirstLineAddress": "24490 Eureka Ave",
-        "CityName": "Warren",
-        "StateProvinceCode": "MI",
-        "PostalCode": 48091,
-        "CountryCode": "US"
-      },
-      "Employee": [
-        {
-          "EmployeePartyID": 211713,
-          "EmployeeSocialSecurityNumber": 999909999,
-          "EmployeeIdentifier": 985603,
-          "EmployeeName": {
-            "FirstName": "CAROLYN",
-            "MiddleName": "BETSY",
-            "LastName": "OWENSTEST"
-          },
-          "EmployeeGenderCode": "Female",
-          "EmployeeBirthDate": "1976-05-05",
-          "MaritalStatusCode": "Married",
-          "EmployeeHomePhone": 4695551212,
-          "EmployeeMailingAddress": {
-            "FirstLineAddress": "PO Box 820467",
-            "CityName": "AUSTIN",
-            "StateProvinceCode": "TX",
-            "PostalCode": "75082-0467",
-            "CountryCode": "US"
-          },
-          "EmployeeHomeAddress": {
-            "FirstLineAddress": "2402 Main Street",
-            "CityName": "AUSTIN",
-            "StateProvinceCode": "TX",
-            "PostalCode": 75082,
-            "CountryCode": "US"
-          },
-          "EmployeeEmail": "carolyn.owenstest@my_employer.com",
-          "EmploymentInformation": {
-            "OriginalHireDate": "2017-06-05",
-            "EmploymentTypeCode": "FullTime",
-            "EmploymentStatusCode": "Terminated",
-            "TerminationDate": "2020-07-31",
-            "TerminationReasonCode": "Termination",
-            "OccupationText": "RocketScientist",
-            "WorkHoursFrequencyCode": "Weekly"
-          }
-        },
-        {
-          "EmployeePartyID": 916061,
-          "EmployeeSocialSecurityNumber": 111101111,
-          "EmployeeIdentifier": 569842,
-          "EmployeeName": {
-            "FirstName": "COOPER",
-            "MiddleName": "D",
-            "LastName": "HERNANDEZTEST"
-          },
-          "EmployeeGenderCode": "Male",
-          "EmployeeBirthDate": "1992-06-13",
-          "MaritalStatusCode": "Married",
-          "EmployeeHomePhone": 6830001234,
-          "EmployeeMailingAddress": {
-            "FirstLineAddress": "2409 Main Street",
-            "CityName": "TALAHASSEE",
-            "StateProvinceCode": "FL",
-            "PostalCode": 33844,
-            "CountryCode": "US"
-          },
-          "EmployeeEmail": "cooper.hernandeztest@myemployer.com",
-          "EmploymentInformation": {
-            "OriginalHireDate": "2016-06-13",
-            "MostRecentHireDate": "2020-08-01",
-            "AdjustedServiceDate": "2016-06-13",
-            "ExemptCode": "Nonexempt",
-            "EmploymentTypeCode": "PerDiem",
-            "EmploymentStatusCode": "Terminated",
-            "TerminationDate": "2020-07-21",
-            "TerminationReasonCode": "Death",
-            "OccupationText": "KitchenStaff",
-            "WorkHoursFrequencyCode": "Weekly"
-          }
-        }
-      ]
-    },
-    "Audit": {
-      "AuditID": "2020-08-06-16.24.25.063000",
-      "CarrierRecordQuantity": 1,
-      "EmployerRecordQuantity": 1,
-      "EmployeeRecordQuantity": 2
-    }
-  }
-}
-```
 ##NewHireRehire
 
+**Description**
+Communicate newly hired ore rehired employees for Employee Assistance Program (EAP) services.
+
+
+
+**Parameters**
+
+
+| Name                                | Type                 | Description                                                                                         |
+|:------------------------------------|:---------------------|:----------------------------------------------------------------------------------------------------|
+| TransmissionGUID                    | string               | Global Unique identifier created by the originator for this instance of                             |
+|                                     |                      |             the electronic transmission.                                                            |
+| SenderName                          | string               | Name of the company sending electronic benefit records on behalf of a                               |
+|                                     |                      |             group.                                                                                  |
+| SenderPlatformName                  | string               | Identifies the Senders system that is providing the data for this data                             |
+|                                     |                      |             set.                                                                                    |
+| ReceiverName                        | string               | Name of the company receiving electronic benefit records on behalf of a                             |
+|                                     |                      |             group.                                                                                  |
+| CreationDateTime                    | dateTime             | UTC date and time the transmission was created.                                                     |
+| TestProductionCode                  | TestProduction       | Indicates the elements contained in this data set are production or                                 |
+|                                     |                      |             test data.                                                                              |
+| TransmissionTypeCode                | TransmissionType     | The type of data contained within the data set.                                                     |
+| SchemaVersionIdentifier             | SchemaVersionNumber  | Identifies the version of the standard that is being adhered to in this                             |
+|                                     |                      |             data set.                                                                               |
+| Carrier                             | Object               | Carrier Object                                                                                      |
+| CarrierID                           | string               | An unique identifier for each instance of an object established within                              |
+|                                     |                      |             the context of a given transaction.                                                     |
+| CarrierName                         | string               | The distinctive designation of the entity sending or receiving the data                             |
+|                                     |                      |             in this transmission.                                                                   |
+| Employer                            | Object               | Employer Object                                                                                     |
+| EmployerPartyID                     | string               | An unique identifier for each instance of an object established within                              |
+|                                     |                      |             the context of a given transaction.                                                     |
+| FederalEmployerIdentificationNumber | string               | A nine-digit unique number assigned by the Internal Revenue Service                                 |
+|                                     |                      |             (IRS) to businesses operating in the United States.                                     |
+| CarrierMasterAgreementNumber        | Object               | CarrierMasterAgreementNumber Object                                                                 |
+| CarrierMasterAgreementNumberID      | string               | An unique identifier for each instance of an object established within                              |
+|                                     |                      |             the context of a given transaction.                                                     |
+| MasterAgreementNumber               | string               | Carrier assigned group number. All individual policies or certificates                              |
+|                                     |                      |             at the group level would roll up to this master group number. This may be the same as   |
+|                                     |                      |             the agreement (aka policy) number for some carriers.                                    |
+| CarrierID                           | string               | An unique identifier for each instance of an object established within                              |
+|                                     |                      |             the context of a given transaction.                                                     |
+| EmployerName                        | string               | This is a representation of the organizational entitys name.                                       |
+| EmployerAddress                     | PostalAddress        | An address used for the delivery of letters and packages by an external                             |
+|                                     |                      |             mailing or packaging service, for the Employer (aka Plan Sponsor).                      |
+| FirstLineAddress                    | string               | The first line of a formatted address - e.g., Street Number + Street                                |
+|                                     |                      |             Name, P.O. Box, etc.                                                                    |
+| CityName                            | string               | The city where the address is located.                                                              |
+| StateProvinceCode                   | StateProvince        | The region (depending on the country, this could be the state or                                    |
+|                                     |                      |             province) where the address is located.                                                 |
+| PostalCode                          | string               | The unique identifier used to associate postal deliveries. This may                                 |
+|                                     |                      |             also be referred to as zip code or post code where the address is located.              |
+| CountryCode                         | Country              | The country where the address is located.                                                           |
+| Employee                            | Object               | Employee Object                                                                                     |
+| EmployeePartyID                     | string               | An unique identifier for each instance of an object established within                              |
+|                                     |                      |             the context of a given transaction.                                                     |
+| EmployeeSocialSecurityNumber        | string               | A numerical identifier assigned to U.S. citizens and some residents to                              |
+|                                     |                      |             track their income.                                                                     |
+| EmployeeIdentifier                  | string               | Employer or Plan Sponsor Issued Identifier.                                                         |
+| EmployeeName                        | StructuredPersonName | This is a representation of the person entitys name. MiddleName -                                  |
+|                                     |                      |             Optional - can be just a middle initial.                                                |
+| FirstName                           | string               | The persons name normally preceding the last name and typically used                               |
+|                                     |                      |             to refer to the person in both formal and/or informal circumstances.                    |
+| LastName                            | string               | The part of a persons name arising from family identifications.                                    |
+| EmployeeGenderCode                  | Gender               | Value designating the range of characteristics pertaining to, and                                   |
+|                                     |                      |             differentiating between, masculinity and femininity. Depending on the context, these    |
+|                                     |                      |             characteristics may include biological sex, sex-based social structures, or gender      |
+|                                     |                      |             identity.                                                                               |
+| EmployeeBirthDate                   | date                 | The date on which a person was born.                                                                |
+| MaritalStatusCode                   | MaritalStatus        | Any of several distinct options that describe a persons relationship                               |
+|                                     |                      |             with a significant other - e.g., married, single, divorced, and widowed are examples of |
+|                                     |                      |             civil status.                                                                           |
+| EmployeeHomePhone                   | string               | An entitys home communication point, as defined by the                                             |
+|                                     |                      |             telecommunication services. It includes voice telephone communication.                  |
+| EmployeeMailingAddress              | PostalAddress        | An address used for the delivery of letters and packages by an external                             |
+|                                     |                      |             mailing or packaging service, at a place where the recipient usually lives or works.    |
+| FirstLineAddress                    | string               | The first line of a formatted address - e.g., Street Number + Street                                |
+|                                     |                      |             Name, P.O. Box, etc.                                                                    |
+| CityName                            | string               | The city where the address is located.                                                              |
+| StateProvinceCode                   | StateProvince        | The region (depending on the country, this could be the state or                                    |
+|                                     |                      |             province) where the address is located.                                                 |
+| PostalCode                          | string               | The unique identifier used to associate postal deliveries. This may                                 |
+|                                     |                      |             also be referred to as zip code or post code where the address is located.              |
+| CountryCode                         | Country              | The country where the address is located.                                                           |
+| EmployeeHomeAddress                 | PostalAddress        | An address used for the delivery of letters and packages by an external                             |
+|                                     |                      |             mailing or packaging service, at a place where the recipient lives.                     |
+| FirstLineAddress                    | string               | The first line of a formatted address - e.g., Street Number + Street                                |
+|                                     |                      |             Name, P.O. Box, etc.                                                                    |
+| CityName                            | string               | The city where the address is located.                                                              |
+| StateProvinceCode                   | StateProvince        | The region (depending on the country, this could be the state or                                    |
+|                                     |                      |             province) where the address is located.                                                 |
+| PostalCode                          | string               | The unique identifier used to associate postal deliveries. This may                                 |
+|                                     |                      |             also be referred to as zip code or post code where the address is located.              |
+| CountryCode                         | Country              | The country where the address is located.                                                           |
+| EmployeeEmail                       | string               | A message distributed by electronic means from one computer user to one                             |
+|                                     |                      |             or more recipients via a network.                                                       |
+| EmploymentInformation               | Object               | EmploymentInformation Object                                                                        |
+| OriginalHireDate                    | date                 | First date the Employee was actively at work with their employer.                                   |
+| EmploymentTypeCode                  | EmploymentType       | Describes the Type of Employment for the employee (e.g. FT, PT,                                     |
+|                                     |                      |             Seasonal).                                                                              |
+| EmploymentStatusCode                | EmploymentStatus     | Identifies the state of the members employment (e.g. Active,                                       |
+|                                     |                      |             Terminated, Leave, Retiree).                                                            |
+| OccupationText                      | string               | A job or profession.                                                                                |
+| WorkHoursFrequencyCode              | WorkHoursFrequency   | Mode in which Number of hours worked is calculated. DEPRECATED ELEMENT                              |
+| EmployeePartyID                     | string               | An unique identifier for each instance of an object established within                              |
+|                                     |                      |             the context of a given transaction.                                                     |
+| EmployeeSocialSecurityNumber        | string               | A numerical identifier assigned to U.S. citizens and some residents to                              |
+|                                     |                      |             track their income.                                                                     |
+| EmployeeIdentifier                  | string               | Employer or Plan Sponsor Issued Identifier.                                                         |
+| EmployeeName                        | StructuredPersonName | This is a representation of the person entitys name. MiddleName -                                  |
+|                                     |                      |             Optional - can be just a middle initial.                                                |
+| FirstName                           | string               | The persons name normally preceding the last name and typically used                               |
+|                                     |                      |             to refer to the person in both formal and/or informal circumstances.                    |
+| MiddleName                          | string               | The additional names given to a person, usually at birth, and which                                 |
+|                                     |                      |             appear sequentially between the first name and last name.                               |
+| LastName                            | string               | The part of a persons name arising from family identifications.                                    |
+| EmployeeGenderCode                  | Gender               | Value designating the range of characteristics pertaining to, and                                   |
+|                                     |                      |             differentiating between, masculinity and femininity. Depending on the context, these    |
+|                                     |                      |             characteristics may include biological sex, sex-based social structures, or gender      |
+|                                     |                      |             identity.                                                                               |
+| EmployeeBirthDate                   | date                 | The date on which a person was born.                                                                |
+| MaritalStatusCode                   | MaritalStatus        | Any of several distinct options that describe a persons relationship                               |
+|                                     |                      |             with a significant other - e.g., married, single, divorced, and widowed are examples of |
+|                                     |                      |             civil status.                                                                           |
+| EmployeeHomePhone                   | string               | An entitys home communication point, as defined by the                                             |
+|                                     |                      |             telecommunication services. It includes voice telephone communication.                  |
+| EmployeeMailingAddress              | PostalAddress        | An address used for the delivery of letters and packages by an external                             |
+|                                     |                      |             mailing or packaging service, at a place where the recipient usually lives or works.    |
+| FirstLineAddress                    | string               | The first line of a formatted address - e.g., Street Number + Street                                |
+|                                     |                      |             Name, P.O. Box, etc.                                                                    |
+| CityName                            | string               | The city where the address is located.                                                              |
+| StateProvinceCode                   | StateProvince        | The region (depending on the country, this could be the state or                                    |
+|                                     |                      |             province) where the address is located.                                                 |
+| PostalCode                          | string               | The unique identifier used to associate postal deliveries. This may                                 |
+|                                     |                      |             also be referred to as zip code or post code where the address is located.              |
+| CountryCode                         | Country              | The country where the address is located.                                                           |
+| EmployeeEmail                       | string               | A message distributed by electronic means from one computer user to one                             |
+|                                     |                      |             or more recipients via a network.                                                       |
+| EmploymentInformation               | Object               | EmploymentInformation Object                                                                        |
+| OriginalHireDate                    | date                 | First date the Employee was actively at work with their employer.                                   |
+| MostRecentHireDate                  | date                 | The latest date the Employee was hired.                                                             |
+| AdjustedServiceDate                 | date                 | A rehired employee’s company service date, when recognition of prior                                |
+|                                     |                      |             service is granted. For example, Employee A is rehired on June 1, 2019 and is credited  |
+|                                     |                      |             for 5 years and 1 month of prior service so their AdjustedServiceDate is May 1, 2014.   |
+| ExemptCode                          | Exempt               | Employee is exempt (not eligible) vs. nonexempt (eligible) from                                     |
+|                                     |                      |             overtime.                                                                               |
+| EmploymentTypeCode                  | EmploymentType       | Describes the Type of Employment for the employee (e.g. FT, PT,                                     |
+|                                     |                      |             Seasonal).                                                                              |
+| EmploymentStatusCode                | EmploymentStatus     | Identifies the state of the members employment (e.g. Active,                                       |
+|                                     |                      |             Terminated, Leave, Retiree).                                                            |
+| OccupationText                      | string               | A job or profession.                                                                                |
+| WorkHoursFrequencyCode              | WorkHoursFrequency   | Mode in which Number of hours worked is calculated. DEPRECATED ELEMENT                              |
+| Audit                               | Object               | Audit Object                                                                                        |
+| AuditID                             | string               | Unique identifier created by the originator for this instance of the                                |
+|                                     |                      |             electronic transmission.                                                                |
+| CarrierRecordQuantity               | int                  | A count of Carrier records included in the electronic transmission.                                 |
+| EmployerRecordQuantity              | int                  | A count of Employer records included in the electronic transmission.                                |
+| EmployeeRecordQuantity              | int                  | A count of Employee records included in the electronic transmission.                                |
+
 ```json
+
 {
-  "Transmission": {
+  "bem:Transmission": {
+    "@xmlns:bem": "https://ldex.limra.com/xsd/1.0/LDExBEM",
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "@xsi:schemaLocation": "https://ldex.limra.com/xsd/1.0/LDExBEM_1.3.2022.01.01.xsd",
     "TransmissionGUID": "2020-08-06-16.24.25.063000",
     "SenderName": "ADPSLC",
     "SenderPlatformName": "CES 6.2",
@@ -787,52 +1196,49 @@
         "FirstLineAddress": "24490 Eureka Ave",
         "CityName": "Warren",
         "StateProvinceCode": "MI",
-        "PostalCode": 48091,
+        "PostalCode": "48091",
         "CountryCode": "US"
       },
       "Employee": [
         {
-          "EmployeePartyID": 211713,
-          "EmployeeSocialSecurityNumber": 999909999,
-          "EmployeeIdentifier": 985603,
+          "EmployeePartyID": "211713",
+          "EmployeeSocialSecurityNumber": "999909999",
+          "EmployeeIdentifier": "985603",
           "EmployeeName": {
             "FirstName": "CAROLYN",
-            "MiddleName": "BETSY",
             "LastName": "OWENSTEST"
           },
           "EmployeeGenderCode": "Female",
           "EmployeeBirthDate": "1976-05-05",
           "MaritalStatusCode": "Married",
-          "EmployeeHomePhone": 4695551212,
+          "EmployeeHomePhone": "4695551212",
           "EmployeeMailingAddress": {
-            "FirstLineAddress": "PO Box 820467",
+            "FirstLineAddress": "2402 Main Street",
             "CityName": "AUSTIN",
             "StateProvinceCode": "TX",
-            "PostalCode": "75082-0467",
+            "PostalCode": "75082",
             "CountryCode": "US"
           },
           "EmployeeHomeAddress": {
             "FirstLineAddress": "2402 Main Street",
             "CityName": "AUSTIN",
             "StateProvinceCode": "TX",
-            "PostalCode": 75082,
+            "PostalCode": "75082",
             "CountryCode": "US"
           },
           "EmployeeEmail": "carolyn.owenstest@my_employer.com",
           "EmploymentInformation": {
-            "OriginalHireDate": "2017-06-05",
+            "OriginalHireDate": "2020-08-01",
             "EmploymentTypeCode": "FullTime",
-            "EmploymentStatusCode": "Terminated",
-            "TerminationDate": "2020-07-31",
-            "TerminationReasonCode": "Termination",
+            "EmploymentStatusCode": "Active",
             "OccupationText": "RocketScientist",
             "WorkHoursFrequencyCode": "Weekly"
           }
         },
         {
-          "EmployeePartyID": 916061,
-          "EmployeeSocialSecurityNumber": 111101111,
-          "EmployeeIdentifier": 569842,
+          "EmployeePartyID": "916061",
+          "EmployeeSocialSecurityNumber": "111101111",
+          "EmployeeIdentifier": "569842",
           "EmployeeName": {
             "FirstName": "COOPER",
             "MiddleName": "D",
@@ -841,12 +1247,12 @@
           "EmployeeGenderCode": "Male",
           "EmployeeBirthDate": "1992-06-13",
           "MaritalStatusCode": "Married",
-          "EmployeeHomePhone": 6830001234,
+          "EmployeeHomePhone": "6830001234",
           "EmployeeMailingAddress": {
             "FirstLineAddress": "2409 Main Street",
             "CityName": "TALAHASSEE",
             "StateProvinceCode": "FL",
-            "PostalCode": 33844,
+            "PostalCode": "33844",
             "CountryCode": "US"
           },
           "EmployeeEmail": "cooper.hernandeztest@myemployer.com",
@@ -856,121 +1262,6 @@
             "AdjustedServiceDate": "2016-06-13",
             "ExemptCode": "Nonexempt",
             "EmploymentTypeCode": "PerDiem",
-            "EmploymentStatusCode": "Terminated",
-            "TerminationDate": "2020-07-21",
-            "TerminationReasonCode": "Death",
-            "OccupationText": "KitchenStaff",
-            "WorkHoursFrequencyCode": "Weekly"
-          }
-        }
-      ]
-    },
-    "Audit": {
-      "AuditID": "2020-08-06-16.24.25.063000",
-      "CarrierRecordQuantity": 1,
-      "EmployerRecordQuantity": 1,
-      "EmployeeRecordQuantity": 2
-    }
-  }
-}
-```
-##DemographicChange
-
-```json
-{
-  "Transmission": {
-    "TransmissionGUID": "2020-08-06-16.24.25.063000",
-    "SenderName": "ADPSLC",
-    "SenderPlatformName": "CES 6.2",
-    "ReceiverName": "EAPCARRIER",
-    "CreationDateTime": "2020-08-06T16:24:25",
-    "TestProductionCode": "Test",
-    "TransmissionTypeCode": "FullFile",
-    "SchemaVersionIdentifier": "1.3.2022.01.01",
-    "Carrier": {
-      "CarrierID": "EAPCARRIER_ID",
-      "CarrierName": "EAPCARRIER"
-    },
-    "Employer": {
-      "EmployerPartyID": "PartyID",
-      "FederalEmployerIdentificationNumber": "34-5678901",
-      "CarrierMasterAgreementNumber": {
-        "CarrierMasterAgreementNumberID": "TBD",
-        "MasterAgreementNumber": "EAP-123456",
-        "CarrierID": "MyCarrier_ID"
-      },
-      "EmployerName": "My Employer",
-      "EmployerAddress": {
-        "FirstLineAddress": "24490 Eureka Ave",
-        "CityName": "Warren",
-        "StateProvinceCode": "MI",
-        "PostalCode": 48091,
-        "CountryCode": "US"
-      },
-      "Employee": [
-        {
-          "EmployeePartyID": 211713,
-          "EmployeeSocialSecurityNumber": 999909999,
-          "EmployeeIdentifier": 985603,
-          "EmployeeName": {
-            "FirstName": "CAROLYN",
-            "MiddleName": "BETSY",
-            "LastName": "OWENSTEST"
-          },
-          "EmployeeGenderCode": "Female",
-          "EmployeeBirthDate": "1976-05-05",
-          "MaritalStatusCode": "Married",
-          "EmployeeHomePhone": 4695551212,
-          "EmployeeMobilePhone": 4691011234,
-          "EmployeeMailingAddress": {
-            "FirstLineAddress": "PO Box 820467",
-            "CityName": "AUSTIN",
-            "StateProvinceCode": "TX",
-            "PostalCode": "75082-0467",
-            "CountryCode": "US"
-          },
-          "EmployeeHomeAddress": {
-            "FirstLineAddress": "2402 Main Street",
-            "CityName": "AUSTIN",
-            "StateProvinceCode": "TX",
-            "PostalCode": "75082-1234",
-            "CountryCode": "US"
-          },
-          "EmployeeEmail": "carolyn.owenstest@my_employer.com",
-          "EmploymentInformation": {
-            "OriginalHireDate": "2017-06-05",
-            "EmploymentTypeCode": "FullTime",
-            "EmploymentStatusCode": "Active",
-            "OccupationText": "RocketScientist",
-            "WorkHoursFrequencyCode": "Weekly"
-          }
-        },
-        {
-          "EmployeePartyID": 916061,
-          "EmployeeSocialSecurityNumber": 111101111,
-          "EmployeeIdentifier": 569842,
-          "EmployeeName": {
-            "FirstName": "COOPER",
-            "MiddleName": "D",
-            "LastName": "HERNANDEZTEST"
-          },
-          "EmployeeGenderCode": "Male",
-          "EmployeeBirthDate": "1992-06-13",
-          "MaritalStatusCode": "Married",
-          "EmployeeHomePhone": 6830001234,
-          "EmployeeMailingAddress": {
-            "FirstLineAddress": "2409 Main Street",
-            "SecondLineAddress": "Apt 3B",
-            "CityName": "TALAHASSEE",
-            "StateProvinceCode": "FL",
-            "PostalCode": "33844-1234",
-            "CountryCode": "US"
-          },
-          "EmployeeEmail": "cooper.hernandeztest@myemployer.com",
-          "EmploymentInformation": {
-            "OriginalHireDate": "2016-06-13",
-            "ExemptCode": "Nonexempt",
-            "EmploymentTypeCode": "PerDiem",
             "EmploymentStatusCode": "Active",
             "OccupationText": "KitchenStaff",
             "WorkHoursFrequencyCode": "Weekly"
@@ -980,242 +1271,13 @@
     },
     "Audit": {
       "AuditID": "2020-08-06-16.24.25.063000",
-      "CarrierRecordQuantity": 1,
-      "EmployerRecordQuantity": 1,
-      "EmployeeRecordQuantity": 2
+      "CarrierRecordQuantity": "1",
+      "EmployerRecordQuantity": "1",
+      "EmployeeRecordQuantity": "2"
     }
   }
 }
 ```
-##EmploymentTermination
-
-```json
-<bem:Transmission xmlns:bem="https://ldex.limra.com/xsd/1.0/LDExBEM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ldex.limra.com/xsd/1.0/LDExBEM_1.3.2022.01.01.xsd">
-	<TransmissionGUID>2020-08-06-16.24.25.063000</TransmissionGUID>
-	<SenderName>ADPSLC</SenderName>
-	<SenderPlatformName>CES 6.2</SenderPlatformName>
-	<ReceiverName>EAPCARRIER</ReceiverName>
-	<CreationDateTime>2020-08-06T16:24:25</CreationDateTime>
-	<TestProductionCode>Test</TestProductionCode>
-	<TransmissionTypeCode>FullFile</TransmissionTypeCode>
-	<SchemaVersionIdentifier>1.3.2022.01.01</SchemaVersionIdentifier>
-	<Carrier>
-		<CarrierID>EAPCARRIER_ID</CarrierID>
-		<CarrierName>EAPCARRIER</CarrierName>
-	</Carrier>
-	<Employer>
-		<EmployerPartyID>PartyID</EmployerPartyID>
-		<FederalEmployerIdentificationNumber>34-5678901</FederalEmployerIdentificationNumber>
-		<CarrierMasterAgreementNumber>
-			<CarrierMasterAgreementNumberID>TBD</CarrierMasterAgreementNumberID>
-			<MasterAgreementNumber>EAP-123456</MasterAgreementNumber>
-			<CarrierID>MyCarrier_ID</CarrierID>
-		</CarrierMasterAgreementNumber>
-		<EmployerName>My Employer</EmployerName>
-		<EmployerAddress>
-			<FirstLineAddress>24490 Eureka Ave</FirstLineAddress>
-			<CityName>Warren</CityName>
-			<StateProvinceCode>MI</StateProvinceCode>
-			<PostalCode>48091</PostalCode>
-			<CountryCode>US</CountryCode>
-		</EmployerAddress>
-		<Employee>
-			<EmployeePartyID>211713</EmployeePartyID>
-			<EmployeeSocialSecurityNumber>999909999</EmployeeSocialSecurityNumber>
-			<EmployeeIdentifier>985603</EmployeeIdentifier>
-			<EmployeeName>
-				<FirstName>CAROLYN</FirstName>
-				<MiddleName>BETSY</MiddleName>
-				<LastName>OWENSTEST</LastName>
-			</EmployeeName>
-			<EmployeeGenderCode>Female</EmployeeGenderCode>
-			<EmployeeBirthDate>1976-05-05</EmployeeBirthDate>
-			<MaritalStatusCode>Married</MaritalStatusCode>
-			<EmployeeHomePhone>4695551212</EmployeeHomePhone>
-			<EmployeeMailingAddress>
-				<FirstLineAddress>PO Box 820467</FirstLineAddress>
-				<CityName>AUSTIN</CityName>
-				<StateProvinceCode>TX</StateProvinceCode>
-				<PostalCode>75082-0467</PostalCode>
-				<CountryCode>US</CountryCode>
-			</EmployeeMailingAddress>
-			<EmployeeHomeAddress>
-				<FirstLineAddress>2402 Main Street</FirstLineAddress>
-				<CityName>AUSTIN</CityName>
-				<StateProvinceCode>TX</StateProvinceCode>
-				<PostalCode>75082</PostalCode>
-				<CountryCode>US</CountryCode>
-			</EmployeeHomeAddress>
-			<EmployeeEmail>carolyn.owenstest@my_employer.com</EmployeeEmail>
-			<EmploymentInformation>
-				<OriginalHireDate>2017-06-05</OriginalHireDate>
-				<EmploymentTypeCode>FullTime</EmploymentTypeCode>
-				<!-- Add Termination Information -->
-				<EmploymentStatusCode>Terminated</EmploymentStatusCode>
-				<TerminationDate>2020-07-31</TerminationDate>
-				<TerminationReasonCode>Termination</TerminationReasonCode>
-				<OccupationText>RocketScientist</OccupationText>
-				<WorkHoursFrequencyCode>Weekly</WorkHoursFrequencyCode>
-			</EmploymentInformation>
-		</Employee>
-		<Employee>
-			<EmployeePartyID>916061</EmployeePartyID>
-			<EmployeeSocialSecurityNumber>111101111</EmployeeSocialSecurityNumber>
-			<EmployeeIdentifier>569842</EmployeeIdentifier>
-			<EmployeeName>
-				<FirstName>COOPER</FirstName>
-				<MiddleName>D</MiddleName>
-				<LastName>HERNANDEZTEST</LastName>
-			</EmployeeName>
-			<EmployeeGenderCode>Male</EmployeeGenderCode>
-			<EmployeeBirthDate>1992-06-13</EmployeeBirthDate>
-			<MaritalStatusCode>Married</MaritalStatusCode>
-			<EmployeeHomePhone>6830001234</EmployeeHomePhone>
-			<EmployeeMailingAddress>
-				<FirstLineAddress>2409 Main Street</FirstLineAddress>
-				<CityName>TALAHASSEE</CityName>
-				<StateProvinceCode>FL</StateProvinceCode>
-				<PostalCode>33844</PostalCode>
-				<CountryCode>US</CountryCode>
-			</EmployeeMailingAddress>
-			<EmployeeEmail>cooper.hernandeztest@myemployer.com</EmployeeEmail>
-			<EmploymentInformation>
-				<OriginalHireDate>2016-06-13</OriginalHireDate>
-				<MostRecentHireDate>2020-08-01</MostRecentHireDate>
-				<AdjustedServiceDate>2016-06-13</AdjustedServiceDate>
-				<ExemptCode>Nonexempt</ExemptCode>
-				<EmploymentTypeCode>PerDiem</EmploymentTypeCode>
-				<EmploymentStatusCode>Terminated</EmploymentStatusCode>
-				<!-- Add Termination Information -->
-				<TerminationDate>2020-07-21</TerminationDate>
-				<TerminationReasonCode>Death</TerminationReasonCode>
-				<OccupationText>KitchenStaff</OccupationText>
-				<WorkHoursFrequencyCode>Weekly</WorkHoursFrequencyCode>
-			</EmploymentInformation>
-		</Employee>
-	</Employer>
-	<Audit>
-		<AuditID>2020-08-06-16.24.25.063000</AuditID>
-		<CarrierRecordQuantity>1</CarrierRecordQuantity>
-		<EmployerRecordQuantity>1</EmployerRecordQuantity>
-		<EmployeeRecordQuantity>2</EmployeeRecordQuantity>
-	</Audit>
-</bem:Transmission>
-```
-##ServiceAdministrationTermination
-```json
-{
-  "Transmission": {
-    "TransmissionGUID": "2020-06-06-16.24.25.063000",
-    "SenderName": "ADPSLC",
-    "SenderPlatformName": "CES 6.2",
-    "ReceiverName": "PFLCARRIER",
-    "CreationDateTime": "2020-06-06T16:24:25",
-    "TestProductionCode": "Test",
-    "TransmissionTypeCode": "FullFile",
-    "SchemaVersionIdentifier": "1.3.2022.01.01",
-    "Carrier": {
-      "CarrierID": "PFLCARRIER_ID",
-      "CarrierName": "PFLCARRIER"
-    },
-    "Employer": {
-      "EmployerPartyID": 8745612,
-      "FederalEmployerIdentificationNumber": "12-3456789",
-      "CarrierMasterAgreementNumber": {
-        "CarrierMasterAgreementNumberID": "TBD",
-        "MasterAgreementNumber": "PFL-123456",
-        "CarrierID": "PFLCARRIER_ID"
-      },
-      "EmployerName": "My Employer",
-      "EmployerAddress": {
-        "FirstLineAddress": "555 West Street",
-        "CityName": "San Jose",
-        "StateProvinceCode": "CA",
-        "PostalCode": 94088,
-        "CountryCode": "US"
-      },
-      "Employee": {
-        "EmployeePartyID": 211713,
-        "EmployeeSocialSecurityNumber": 999909998,
-        "EmployeeIdentifier": 985603,
-        "EmployeeName": {
-          "FirstName": "CAROLYN",
-          "LastName": "SMITH"
-        },
-        "EmployeeGenderCode": "Female",
-        "EmployeeBirthDate": "1976-05-05",
-        "MaritalStatusCode": "Married",
-        "EmployeeHomePhone": 4695551212,
-        "EmployeeMobilePhone": 4696661212,
-        "EmployeeMailingAddress": {
-          "FirstLineAddress": "2402 Main Street",
-          "SecondLineAddress": "Apt 1A",
-          "CityName": "Cupertino",
-          "StateProvinceCode": "CA",
-          "PostalCode": 95014,
-          "CountryCode": "US"
-        },
-        "EmployeeEmail": "carolyn.owens@my_employer.com",
-        "EmploymentInformation": {
-          "OriginalHireDate": "2017-06-05",
-          "EmploymentTypeCode": "FullTime",
-          "EmploymentStatusCode": "Active",
-          "OccupationText": "RocketScientist",
-          "WorkHoursFrequencyCode": "Weekly",
-          "UnionIndicator": true,
-          "UnionLocalName": "AmalgamatedRocketScientists",
-          "UnionLocalNumber": 123,
-          "UnionMemberNumber": 10,
-          "Rule50_75Indicator": true,
-          "WorkStateCode": "CA",
-          "KeyEmployeeIndicator": true
-        },
-        "Event": {
-          "EventID": 12345,
-          "EventTypeCode": "Coverage",
-          "EventTypeReasonCode": "VoluntaryCancel",
-          "EventDate": "2020-05-10"
-        },
-        "Coverage": {
-          "CoverageID": 876543,
-          "GroupPolicyNumber": 302321,
-          "ProductTypeCode": "PFL",
-          "BenefitPlanIdentifier": "PFL01",
-          "BenefitClassIdentifier": 1,
-          "BillGroupIdentifier": 10331,
-          "CoverageEffectiveDate": "2020-01-01",
-          "CoverageTerminationDate": "2020-05-31",
-          "CarrierID": "PFLCARRIER_ID",
-          "CoverageInsured": {
-            "InsuredPartyID": 211713,
-            "PrimaryInsuredIndicator": true,
-            "InsuredCoverageEffectiveDate": "2020-01-01",
-            "InsuredCoverageTerminationDate": "2020-05-31"
-          },
-          "CoverageEventID": 12345
-        }
-      }
-    },
-    "Audit": {
-      "AuditID": "2020-06-06-16.24.25.063000",
-      "CarrierRecordQuantity": 1,
-      "EmployerRecordQuantity": 1,
-      "EmployeeRecordQuantity": 1,
-      "EventRecordQuantity": 1,
-      "CoverageRecordQuantity": 1
-    }
-  }
-}
-```
-
-
-
-
-
-
-
-
-
 
 
 

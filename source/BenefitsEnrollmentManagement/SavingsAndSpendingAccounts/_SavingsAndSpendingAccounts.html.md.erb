@@ -1,8 +1,357 @@
 #SavingsandSpendingAccounts
-##NewElection
+
+##New Election
+
+**Description**
+
+Communicate a newly elected SavingsSpendingAccount for the first time during a given plan year.  The election may apply to any type of SavingsSpendingAccount plan type, including (but not limited to): FSA, HSA, and/or HRA.
+
+
+
+
+
+**Parameters**
+
+
+| Name                                | Type                      | Description                                                                                          |
+|:------------------------------------|:--------------------------|:-----------------------------------------------------------------------------------------------------|
+| TransmissionGUID                    | string                    | Global Unique identifier created by the originator for this instance of                              |
+|                                     |                           |             the electronic transmission.                                                             |
+| SenderName                          | string                    | Name of the company sending electronic benefit records on behalf of a                                |
+|                                     |                           |             group.                                                                                   |
+| SenderPlatformName                  | string                    | Identifies the Senders system that is providing the data for this data                              |
+|                                     |                           |             set.                                                                                     |
+| ReceiverName                        | string                    | Name of the company receiving electronic benefit records on behalf of a                              |
+|                                     |                           |             group.                                                                                   |
+| CreationDateTime                    | dateTime                  | UTC date and time the transmission was created.                                                      |
+| TestProductionCode                  | TestProduction            | Indicates the elements contained in this data set are production or                                  |
+|                                     |                           |             test data.                                                                               |
+| TransmissionTypeCode                | TransmissionType          | The type of data contained within the data set.                                                      |
+| SchemaVersionIdentifier             | SchemaVersionNumber       | Identifies the version of the standard that is being adhered to in this                              |
+|                                     |                           |             data set.                                                                                |
+| Carrier                             | Object                    | Carrier Object                                                                                       |
+| CarrierID                           | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CarrierName                         | string                    | The distinctive designation of the entity sending or receiving the data                              |
+|                                     |                           |             in this transmission.                                                                    |
+| Employer                            | Object                    | Employer Object                                                                                      |
+| EmployerPartyID                     | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| FederalEmployerIdentificationNumber | string                    | A nine-digit unique number assigned by the Internal Revenue Service                                  |
+|                                     |                           |             (IRS) to businesses operating in the United States.                                      |
+| CarrierMasterAgreementNumber        | Object                    | CarrierMasterAgreementNumber Object                                                                  |
+| CarrierMasterAgreementNumberID      | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| MasterAgreementNumber               | string                    | Carrier assigned group number. All individual policies or certificates                               |
+|                                     |                           |             at the group level would roll up to this master group number. This may be the same as    |
+|                                     |                           |             the agreement (aka policy) number for some carriers.                                     |
+| CarrierID                           | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| EmployerName                        | string                    | This is a representation of the organizational entitys name.                                        |
+| EmployerAddress                     | PostalAddress             | An address used for the delivery of letters and packages by an external                              |
+|                                     |                           |             mailing or packaging service, for the Employer (aka Plan Sponsor).                       |
+| FirstLineAddress                    | string                    | The first line of a formatted address - e.g., Street Number + Street                                 |
+|                                     |                           |             Name, P.O. Box, etc.                                                                     |
+| CityName                            | string                    | The city where the address is located.                                                               |
+| StateProvinceCode                   | StateProvince             | The region (depending on the country, this could be the state or                                     |
+|                                     |                           |             province) where the address is located.                                                  |
+| PostalCode                          | string                    | The unique identifier used to associate postal deliveries. This may                                  |
+|                                     |                           |             also be referred to as zip code or post code where the address is located.               |
+| CountryCode                         | Country                   | The country where the address is located.                                                            |
+| Employee                            | Object                    | Employee Object                                                                                      |
+| EmployeePartyID                     | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| EmployeeSocialSecurityNumber        | string                    | A numerical identifier assigned to U.S. citizens and some residents to                               |
+|                                     |                           |             track their income.                                                                      |
+| EmployeeIdentifier                  | string                    | Employer or Plan Sponsor Issued Identifier.                                                          |
+| EmployeeName                        | StructuredPersonName      | This is a representation of the person entitys name. MiddleName -                                   |
+|                                     |                           |             Optional - can be just a middle initial.                                                 |
+| FirstName                           | string                    | The persons name normally preceding the last name and typically used                                |
+|                                     |                           |             to refer to the person in both formal and/or informal circumstances.                     |
+| LastName                            | string                    | The part of a persons name arising from family identifications.                                     |
+| EmployeeGenderCode                  | Gender                    | Value designating the range of characteristics pertaining to, and                                    |
+|                                     |                           |             differentiating between, masculinity and femininity. Depending on the context, these     |
+|                                     |                           |             characteristics may include biological sex, sex-based social structures, or gender       |
+|                                     |                           |             identity.                                                                                |
+| EmployeeBirthDate                   | date                      | The date on which a person was born.                                                                 |
+| MaritalStatusCode                   | MaritalStatus             | Any of several distinct options that describe a persons relationship                                |
+|                                     |                           |             with a significant other - e.g., married, single, divorced, and widowed are examples of  |
+|                                     |                           |             civil status.                                                                            |
+| EmployeeMailingAddress              | PostalAddress             | An address used for the delivery of letters and packages by an external                              |
+|                                     |                           |             mailing or packaging service, at a place where the recipient usually lives or works.     |
+| FirstLineAddress                    | string                    | The first line of a formatted address - e.g., Street Number + Street                                 |
+|                                     |                           |             Name, P.O. Box, etc.                                                                     |
+| CityName                            | string                    | The city where the address is located.                                                               |
+| StateProvinceCode                   | StateProvince             | The region (depending on the country, this could be the state or                                     |
+|                                     |                           |             province) where the address is located.                                                  |
+| PostalCode                          | string                    | The unique identifier used to associate postal deliveries. This may                                  |
+|                                     |                           |             also be referred to as zip code or post code where the address is located.               |
+| CountryCode                         | Country                   | The country where the address is located.                                                            |
+| EmployeeHomeAddress                 | PostalAddress             | An address used for the delivery of letters and packages by an external                              |
+|                                     |                           |             mailing or packaging service, at a place where the recipient lives.                      |
+| FirstLineAddress                    | string                    | The first line of a formatted address - e.g., Street Number + Street                                 |
+|                                     |                           |             Name, P.O. Box, etc.                                                                     |
+| CityName                            | string                    | The city where the address is located.                                                               |
+| StateProvinceCode                   | StateProvince             | The region (depending on the country, this could be the state or                                     |
+|                                     |                           |             province) where the address is located.                                                  |
+| PostalCode                          | string                    | The unique identifier used to associate postal deliveries. This may                                  |
+|                                     |                           |             also be referred to as zip code or post code where the address is located.               |
+| CountryCode                         | Country                   | The country where the address is located.                                                            |
+| EmployeeWorkAddress                 | PostalAddress             | An address used for the delivery of letters and packages by an external                              |
+|                                     |                           |             mailing or packaging service, at a place where the recipient works.                      |
+| FirstLineAddress                    | string                    | The first line of a formatted address - e.g., Street Number + Street                                 |
+|                                     |                           |             Name, P.O. Box, etc.                                                                     |
+| CityName                            | string                    | The city where the address is located.                                                               |
+| StateProvinceCode                   | StateProvince             | The region (depending on the country, this could be the state or                                     |
+|                                     |                           |             province) where the address is located.                                                  |
+| PostalCode                          | string                    | The unique identifier used to associate postal deliveries. This may                                  |
+|                                     |                           |             also be referred to as zip code or post code where the address is located.               |
+| CountryCode                         | Country                   | The country where the address is located.                                                            |
+| EmployeeEmail                       | string                    | A message distributed by electronic means from one computer user to one                              |
+|                                     |                           |             or more recipients via a network.                                                        |
+| EmploymentInformation               | Object                    | EmploymentInformation Object                                                                         |
+| OriginalHireDate                    | date                      | First date the Employee was actively at work with their employer.                                    |
+| MostRecentHireDate                  | date                      | The latest date the Employee was hired.                                                              |
+| EmploymentTypeCode                  | EmploymentType            | Describes the Type of Employment for the employee (e.g. FT, PT,                                      |
+|                                     |                           |             Seasonal).                                                                               |
+| EmploymentStatusCode                | EmploymentStatus          | Identifies the state of the members employment (e.g. Active,                                        |
+|                                     |                           |             Terminated, Leave, Retiree).                                                             |
+| JobTitleText                        | string                    | The position held by an employee.                                                                    |
+| OccupationText                      | string                    | A job or profession.                                                                                 |
+| WorkLocationText                    | string                    | Group/Department Location Name for Billing Purposes.                                                 |
+| PayrollDeductionFrequencyQuantity   | integer                   | Number of scheduled Deductions per year.                                                             |
+| PayrollFrequencyQuantity            | int                       | Number of scheduled Pay Periods per year.                                                            |
+| EmploymentIncome                    | Object                    | EmploymentIncome Object                                                                              |
+| IncomeTypeCode                      | IncomeType                | Describes the type of income - e.g., base salary, commission, bonus.                                 |
+| IncomeAmount                        | decimal                   | The actual dollar amount.                                                                            |
+| IncomeModeCode                      | ModeType                  | Frequency in which Income is received.                                                               |
+| IncomeEffectiveDate                 | date                      | Date Employee started earning that the reflected salary.                                             |
+| IncomeTypeCode                      | IncomeType                | Describes the type of income - e.g., base salary, commission, bonus.                                 |
+| IncomeAmount                        | decimal                   | The actual dollar amount.                                                                            |
+| IncomeModeCode                      | ModeType                  | Frequency in which Income is received.                                                               |
+| IncomeEffectiveDate                 | date                      | Date Employee started earning that the reflected salary.                                             |
+| EnrollmentInformation               | Object                    | EnrollmentInformation Object                                                                         |
+| EnrollmentInformationID             | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| EnrollmentMethodCode                | EnrollmentMethod          | List of ways members enroll into the benefit.                                                        |
+| EnrollmentCityName                  | string                    | The city for the enrollment.                                                                         |
+| EnrollmentStateProvinceCode         | StateProvince             | The state/province for the enrollment.                                                               |
+| Event                               | Object                    | Event Object                                                                                         |
+| EventID                             | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| EventTypeCode                       | EventType                 | It describes the things that are happening / taking place that are of                                |
+|                                     |                           |             importance.                                                                              |
+| EventTypeReasonCode                 | EventTypeReason           | A cause, explanation, or justification for an action or event.                                       |
+| EventDate                           | date                      | The date on which a specific occurrence took place.                                                  |
+| TransactionDate                     | date                      | Date the employee enrolled and saved their elections in the enrollment                               |
+|                                     |                           |             system.                                                                                  |
+| EventID                             | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| EventTypeCode                       | EventType                 | It describes the things that are happening / taking place that are of                                |
+|                                     |                           |             importance.                                                                              |
+| Coverage                            | Object                    | Coverage Object                                                                                      |
+| EventTypeReasonCode                 | EventTypeReason           | A cause, explanation, or justification for an action or event.                                       |
+| EventDate                           | date                      | The date on which a specific occurrence took place.                                                  |
+| TransactionDate                     | date                      | Date the employee enrolled and saved their elections in the enrollment                               |
+|                                     |                           |             system.                                                                                  |
+| EmployeeEventID                     | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| Producer                            | Object                    | Producer Object                                                                                      |
+| ProducerPartyID                     | string                    | Unique identifier created by the originator for this instance of the                                 |
+|                                     |                           |             electronic transmission.                                                                 |
+| ProducerFirstName                   | string                    | The given first name of a Producer (also known as Enroller, Agent,                                   |
+|                                     |                           |             Broker, etc.).                                                                           |
+| ProducerLastName                    | string                    | The surname of the Producer (also known as Enroller, Agent, Broker,                                  |
+|                                     |                           |             etc.).                                                                                   |
+| ProducerLicense                     | Object                    | ProducerLicense Object                                                                               |
+| ProducerLicenseID                   | string                    | Unique identifier created by the originator for this instance of the                                 |
+|                                     |                           |             electronic transmission.                                                                 |
+| ProducerLicenseTypeCode             | ProducerLicenseType       | The category of insurance covered under the assigned license.                                        |
+| ProducerLicenseStateProvinceCode    | StateProvince             | The state in which the license was issued.                                                           |
+| ProducerLicenseNumber               | string                    | The number issued by the States Insurance division or department to                                 |
+|                                     |                           |             sell insurance in that state.                                                            |
+| Coverage                            | Object                    | Coverage Object                                                                                      |
+| CoverageID                          | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| GroupPolicyNumber                   | string                    | Carrier assigned number for the group policy / agreement for which the                               |
+|                                     |                           |             coverage may be associated.                                                              |
+| ProductTypeCode                     | ProductType               | Universal identifier for a specific logical product group that may be                                |
+|                                     |                           |             elected by a member.                                                                     |
+| BenefitPlanIdentifier               | string                    | Carrier specific identifier used to denote the plan being elected by                                 |
+|                                     |                           |             the member based on the product being purchased.                                         |
+| BenefitClassIdentifier              | string                    | A categorization of employees mutually agreed upon between the                                       |
+|                                     |                           |             insurance carrier and the group with similar employment information that are all offered |
+|                                     |                           |             the same insurance plan configuration.                                                   |
+| BillGroupIdentifier                 | string                    | Carrier assigned code to tie the coverage back to a billing                                          |
+|                                     |                           |             arrangement.                                                                             |
+| CoverageEffectiveDate               | date                      | Date of the latest change to the current active Coverage. May reflect                                |
+|                                     |                           | 		    initial coverage or coverage changes such as those impacting ElectedCoverage,                  |
+|                                     |                           | 			BenefitPlanIdentifier, CoverageTierCode, BenefitAmount, EmployeePremiumContributionAmount,        |
+|                                     |                           | 			EmployerPremiumContributionAmount, etc.                                                           |
+| CoverageTierCode                    | CoverageTier              | Universal level of coverage being elected by the employee (including                                 |
+|                                     |                           |             dependents) or provided by the group based on the selected benefit plan type.            |
+| Employee                            | Object                    | Employee Object                                                                                      |
+| EmployeeContributionCode            | EmployeeContribution      | Indicates the employee contribution towards the product coverage                                     |
+|                                     |                           |             premium.                                                                                 |
+| EmployeePremiumContributionAmount   | decimal                   | The amount of rider premium contribution from the employee.                                          |
+| EmployerPremiumContributionAmount   | decimal                   | The amount of rider premium contribution from the employer.                                          |
+| TotalPlanPremiumAmount              | decimal                   | The total premium paid by both the employer and employee.                                            |
+| PremiumModeQuantity                 | integer                   | The frequency of premium and contribution payment by a Employee or                                   |
+|                                     |                           |             Employee.                                                                                |
+| PreTaxCode                          | PreTax                    | Indicates whether employee product premium is pre-tax or post-tax,                                   |
+|                                     |                           |             based on IRS guidelines.                                                                 |
+| CarrierID                           | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CoverageInsured                     | Object                    | CoverageInsured Object                                                                               |
+| InsuredPartyID                      | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| PrimaryInsuredIndicator             | boolean                   | A flag that indicates whether the Insured associated with the Benefit                                |
+|                                     |                           |             Plan is the primary insured.                                                             |
+| InsuredCoverageEffectiveDate        | date                      | Earliest date of continuous coverage for this insured in the associated                              |
+|                                     |                           | 		    benefit plan. Separate benefit effective dates must be sent for each dependent covered under   |
+|                                     |                           | 			the benefit plan.                                                                                 |
+| CoverageEventID                     | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CoverageQuestionAnswer              | Object                    | CoverageQuestionAnswer Object                                                                        |
+| CoverageQuestionAnswerID            | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| QuestionIdentifier                  | string                    | Unique identifier defined by the carrier with the actual question                                    |
+|                                     |                           |             presented to the employee.                                                               |
+| AnswerText                          | string                    | The actual textual response to a question.                                                           |
+| AnswerPartyID                       | string                    | A unique identifier for each instance of an object established within                                |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CoverageQuestionAnswerID            | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| QuestionIdentifier                  | string                    | Unique identifier defined by the carrier with the actual question                                    |
+|                                     |                           |             presented to the employee.                                                               |
+| AnswerIndicator                     | boolean                   | A flag response to a question.                                                                       |
+| AnswerPartyID                       | string                    | A unique identifier for each instance of an object established within                                |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CoverageQuestionAnswerID            | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| QuestionIdentifier                  | string                    | Unique identifier defined by the carrier with the actual question                                    |
+|                                     |                           |             presented to the employee.                                                               |
+| AnswerText                          | string                    | The actual textual response to a question.                                                           |
+| AnswerPartyID                       | string                    | A unique identifier for each instance of an object established within                                |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CoverageQuestionAnswerID            | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| QuestionIdentifier                  | string                    | Unique identifier defined by the carrier with the actual question                                    |
+|                                     |                           |             presented to the employee.                                                               |
+| AnswerText                          | string                    | The actual textual response to a question.                                                           |
+| AnswerPartyID                       | string                    | A unique identifier for each instance of an object established within                                |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CoverageQuestionAnswerID            | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| QuestionIdentifier                  | string                    | Unique identifier defined by the carrier with the actual question                                    |
+|                                     |                           |             presented to the employee.                                                               |
+| AnswerIndicator                     | boolean                   | A flag response to a question.                                                                       |
+| AnswerPartyID                       | string                    | A unique identifier for each instance of an object established within                                |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CoverageQuestionAnswerID            | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| QuestionIdentifier                  | string                    | Unique identifier defined by the carrier with the actual question                                    |
+|                                     |                           |             presented to the employee.                                                               |
+| AnswerText                          | string                    | The actual textual response to a question.                                                           |
+| AnswerPartyID                       | string                    | A unique identifier for each instance of an object established within                                |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CoverageQuestionAnswerID            | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| QuestionIdentifier                  | string                    | Unique identifier defined by the carrier with the actual question                                    |
+|                                     |                           |             presented to the employee.                                                               |
+| AnswerText                          | string                    | The actual textual response to a question.                                                           |
+| AnswerPartyID                       | string                    | A unique identifier for each instance of an object established within                                |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CoverageQuestionAnswerID            | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| QuestionIdentifier                  | string                    | Unique identifier defined by the carrier with the actual question                                    |
+|                                     |                           |             presented to the employee.                                                               |
+| AnswerText                          | string                    | The actual textual response to a question.                                                           |
+| AnswerPartyID                       | string                    | A unique identifier for each instance of an object established within                                |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CoverageQuestionAnswerID            | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| QuestionIdentifier                  | string                    | Unique identifier defined by the carrier with the actual question                                    |
+|                                     |                           |             presented to the employee.                                                               |
+| AnswerText                          | string                    | The actual textual response to a question.                                                           |
+| AnswerPartyID                       | string                    | A unique identifier for each instance of an object established within                                |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CoverageQuestionAnswerID            | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| QuestionIdentifier                  | string                    | Unique identifier defined by the carrier with the actual question                                    |
+|                                     |                           |             presented to the employee.                                                               |
+| AnswerText                          | string                    | The actual textual response to a question.                                                           |
+| AnswerPartyID                       | string                    | A unique identifier for each instance of an object established within                                |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CoverageQuestionAnswerID            | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| QuestionIdentifier                  | string                    | Unique identifier defined by the carrier with the actual question                                    |
+|                                     |                           |             presented to the employee.                                                               |
+| AnswerText                          | string                    | The actual textual response to a question.                                                           |
+| AnswerPartyID                       | string                    | A unique identifier for each instance of an object established within                                |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CoverageQuestionAnswerID            | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| QuestionIdentifier                  | string                    | Unique identifier defined by the carrier with the actual question                                    |
+|                                     |                           |             presented to the employee.                                                               |
+| AnswerText                          | string                    | The actual textual response to a question.                                                           |
+| AnswerPartyID                       | string                    | A unique identifier for each instance of an object established within                                |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CoverageQuestionAnswerID            | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| QuestionIdentifier                  | string                    | Unique identifier defined by the carrier with the actual question                                    |
+|                                     |                           |             presented to the employee.                                                               |
+| AnswerText                          | string                    | The actual textual response to a question.                                                           |
+| AnswerPartyID                       | string                    | A unique identifier for each instance of an object established within                                |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CoverageQuestionAnswerID            | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| QuestionIdentifier                  | string                    | Unique identifier defined by the carrier with the actual question                                    |
+|                                     |                           |             presented to the employee.                                                               |
+| AnswerIndicator                     | boolean                   | A flag response to a question.                                                                       |
+| AnswerPartyID                       | string                    | A unique identifier for each instance of an object established within                                |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CoverageCommissionSplit             | CoverageCompensationSplit | The premium percentages that are retained and allocated to producers in                              |
+|                                     |                           |             the form of commission.                                                                  |
+| CarrierProducerNumberID             | string                    | Unique identifier created by the originator for this instance of the                                 |
+|                                     |                           |             electronic transmission.                                                                 |
+| CompensationSplitPercent            | decimal                   | The premium percentages that are retained and allocated to producers in                              |
+|                                     |                           |             the form of commission.                                                                  |
+| EnrollmentInformationID             | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CoverageContribution                | Object                    | CoverageContribution Object                                                                          |
+| ContributionLimitTypeCode           | ContributionLimitType     | The contribution limits used to determine maximum limit.                                             |
+| PlanYearEmployeeContributionAmount  | decimal                   | Total amount expected to be contributed during a plan year by the                                    |
+|                                     |                           |             Employee. Note that in some instances a plan year may be less or more than 12 months.    |
+| PlanYearEmployerContributionAmount  | decimal                   | Total amount expected to be contributed during a plan year by the                                    |
+|                                     |                           |             Employer. Note that in some instances a plan year may be less or more than 12 months.    |
+| ToDateEmployeeContributionAmount    | decimal                   | The dollar amount to date at time of the transmission contributed to                                 |
+|                                     |                           |             the saving or spending account by the Employee.                                          |
+| ToDateEmployerContributionAmount    | decimal                   | The dollar amount to date at time of the transmission contributed to                                 |
+|                                     |                           |             the saving or spending account by the Employer.                                          |
+| ContributionsRemainingQuantity      | int                       | The number of contributions still to be made.                                                        |
+| Audit                               | Object                    | Audit Object                                                                                         |
+| AuditID                             | string                    | Unique identifier created by the originator for this instance of the                                 |
+|                                     |                           |             electronic transmission.                                                                 |
+| CarrierRecordQuantity               | int                       | A count of Carrier records included in the electronic transmission.                                  |
+| EmployerRecordQuantity              | int                       | A count of Employer records included in the electronic transmission.                                 |
+| EmployeeRecordQuantity              | int                       | A count of Employee records included in the electronic transmission.                                 |
+| DependentRecordQuantity             | int                       | A count of Dependent records included in the electronic transmission.                                |
+| OtherPartyRecordQuantity            | int                       | A count of Other Party records included in the electronic transmission.                              |
+| BeneficiaryGroupRecordQuantity      | int                       | A count of Beneficiary Group records included in the electronic                                      |
+|                                     |                           |             transmission.                                                                            |
+| EventRecordQuantity                 | int                       | A count of Event records included in the electronic transmission.                                    |
+| CoverageRecordQuantity              | int                       | A count of Coverage records included in the electronic transmission.                                 |
+| CoverageRiderRecordQuantity         | int                       | A count of Coverage Rider records included in the electronic                                         |
+|                                     |                           |             transmission.                                                                            |
+
 ```json
+
 {
-  "Transmission": {
+  "bem:Transmission": {
+    "@xmlns:bem": "https://ldex.limra.com/xsd/1.0/LDExBEM",
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "@xsi:schemaLocation": "https://ldex.limra.com/xsd/1.0/LDExBEM_1.3.2022.01.01.xsd",
     "TransmissionGUID": "f63b0b96-1fe1-4325-81ef-ae4412bf4665",
     "SenderName": "SELERIX",
     "SenderPlatformName": "BenSelect",
@@ -12,29 +361,29 @@
     "TransmissionTypeCode": "ChangesOnly",
     "SchemaVersionIdentifier": "1.3.2022.01.01",
     "Carrier": {
-      "CarrierID": 46,
+      "CarrierID": "46",
       "CarrierName": "OptumHealth Bank"
     },
     "Employer": {
-      "EmployerPartyID": 1597,
-      "FederalEmployerIdentificationNumber": 456789999,
+      "EmployerPartyID": "1597",
+      "FederalEmployerIdentificationNumber": "456789999",
       "CarrierMasterAgreementNumber": {
-        "CarrierMasterAgreementNumberID": 46,
+        "CarrierMasterAgreementNumberID": "46",
         "MasterAgreementNumber": "US878234",
-        "CarrierID": 46
+        "CarrierID": "46"
       },
       "EmployerName": "National Health ACA",
       "EmployerAddress": {
         "FirstLineAddress": "2851 Craig Dr.",
         "CityName": "McKinney",
         "StateProvinceCode": "TX",
-        "PostalCode": 75070,
+        "PostalCode": "75070",
         "CountryCode": "USA"
       },
       "Employee": {
-        "EmployeePartyID": 1801408,
-        "EmployeeSocialSecurityNumber": 998780394,
-        "EmployeeIdentifier": 80395,
+        "EmployeePartyID": "1801408",
+        "EmployeeSocialSecurityNumber": "998780394",
+        "EmployeeIdentifier": "80395",
         "EmployeeName": {
           "FirstName": "Vivian",
           "LastName": "Blunt"
@@ -46,21 +395,21 @@
           "FirstLineAddress": "2 N Erman Hwy",
           "CityName": "Denver",
           "StateProvinceCode": "CO",
-          "PostalCode": 80203,
+          "PostalCode": "80203",
           "CountryCode": "USA"
         },
         "EmployeeHomeAddress": {
           "FirstLineAddress": "2 N Erman Hwy",
           "CityName": "Denver",
           "StateProvinceCode": "CO",
-          "PostalCode": 80203,
+          "PostalCode": "80203",
           "CountryCode": "USA"
         },
         "EmployeeWorkAddress": {
           "FirstLineAddress": "6 Main St.",
           "CityName": "Denver",
           "StateProvinceCode": "CO",
-          "PostalCode": 98343,
+          "PostalCode": "98343",
           "CountryCode": "USA"
         },
         "EmployeeEmail": "Vivian.Blunt@demo-me.com",
@@ -72,25 +421,25 @@
           "JobTitleText": "Nurse-Charge",
           "OccupationText": "Nurse-Charge",
           "WorkLocationText": "COLORADO",
-          "PayrollDeductionFrequencyQuantity": 24,
-          "PayrollFrequencyQuantity": 26,
+          "PayrollDeductionFrequencyQuantity": "24",
+          "PayrollFrequencyQuantity": "26",
           "EmploymentIncome": [
             {
               "IncomeTypeCode": "Salary",
-              "IncomeAmount": 51625,
+              "IncomeAmount": "51625",
               "IncomeModeCode": "Annual",
               "IncomeEffectiveDate": "1997-09-29"
             },
             {
               "IncomeTypeCode": "BenefitSalary",
-              "IncomeAmount": 51625,
+              "IncomeAmount": "51625",
               "IncomeModeCode": "Annual",
               "IncomeEffectiveDate": "1997-09-29"
             }
           ]
         },
         "EnrollmentInformation": {
-          "EnrollmentInformationID": 1007820,
+          "EnrollmentInformationID": "1007820",
           "EnrollmentMethodCode": "HumanResources",
           "EnrollmentCityName": "Denver",
           "EnrollmentStateProvinceCode": "CO"
@@ -113,7 +462,7 @@
         ],
         "EmployeeEventID": "EE758067",
         "Producer": {
-          "ProducerPartyID": 15,
+          "ProducerPartyID": "15",
           "ProducerFirstName": "Lyle",
           "ProducerLastName": "Griffin",
           "ProducerLicense": {
@@ -124,151 +473,390 @@
           }
         },
         "Coverage": {
-          "CoverageID": 2427302,
-          "GroupPolicyNumber": 87898,
+          "CoverageID": "2427302",
+          "GroupPolicyNumber": "87898",
           "ProductTypeCode": "SavingsSpendingAccounts",
           "BenefitPlanIdentifier": "HSA",
-          "BenefitClassIdentifier": 1,
-          "BillGroupIdentifier": 1,
+          "BenefitClassIdentifier": "01",
+          "BillGroupIdentifier": "01",
           "CoverageEffectiveDate": "2020-10-01",
           "CoverageTierCode": "Employee",
           "EmployeeContributionCode": "EmployeePartial",
-          "EmployeePremiumContributionAmount": 180,
-          "EmployerPremiumContributionAmount": 50,
-          "TotalPlanPremiumAmount": 230,
-          "PremiumModeQuantity": 24,
+          "EmployeePremiumContributionAmount": "180",
+          "EmployerPremiumContributionAmount": "50",
+          "TotalPlanPremiumAmount": "230",
+          "PremiumModeQuantity": "24",
           "PreTaxCode": "PreTax",
-          "CarrierID": 46,
+          "CarrierID": "46",
           "CoverageInsured": {
-            "InsuredPartyID": 1801408,
-            "PrimaryInsuredIndicator": true,
+            "InsuredPartyID": "1801408",
+            "PrimaryInsuredIndicator": "true",
             "InsuredCoverageEffectiveDate": "2020-10-01"
           },
           "CoverageEventID": "CE2921619",
           "CoverageQuestionAnswer": [
             {
-              "CoverageQuestionAnswerID": 1000871,
+              "CoverageQuestionAnswerID": "1000871",
               "QuestionIdentifier": "OHB_045_0130_Verification_Code",
               "AnswerText": "Jones",
-              "AnswerPartyID": 1801408
+              "AnswerPartyID": "1801408"
             },
             {
-              "CoverageQuestionAnswerID": 1000872,
+              "CoverageQuestionAnswerID": "1000872",
               "QuestionIdentifier": "OHB_045_0130_Card2",
-              "AnswerIndicator": false,
-              "AnswerPartyID": 1801408
+              "AnswerIndicator": "false",
+              "AnswerPartyID": "1801408"
             },
             {
-              "CoverageQuestionAnswerID": 1000885,
+              "CoverageQuestionAnswerID": "1000885",
               "QuestionIdentifier": "OHB_045_0130_HDHP_Carrier",
               "AnswerText": "United Healthcare",
-              "AnswerPartyID": 1801408
+              "AnswerPartyID": "1801408"
             },
             {
-              "CoverageQuestionAnswerID": 1000886,
+              "CoverageQuestionAnswerID": "1000886",
               "QuestionIdentifier": "OHB_045_0130_HDHP_Group_Number",
-              "AnswerText": 123456,
-              "AnswerPartyID": 1801408
+              "AnswerText": "123456",
+              "AnswerPartyID": "1801408"
             },
             {
-              "CoverageQuestionAnswerID": 1000887,
+              "CoverageQuestionAnswerID": "1000887",
               "QuestionIdentifier": "OHB_045_0130_HDHP_Through_ER",
-              "AnswerIndicator": true,
-              "AnswerPartyID": 1801408
+              "AnswerIndicator": "true",
+              "AnswerPartyID": "1801408"
             },
             {
-              "CoverageQuestionAnswerID": 1000888,
+              "CoverageQuestionAnswerID": "1000888",
               "QuestionIdentifier": "OHB_045_0130_HDHP_MemberID",
               "AnswerText": "None",
-              "AnswerPartyID": 1801408
+              "AnswerPartyID": "1801408"
             },
             {
-              "CoverageQuestionAnswerID": 1000889,
+              "CoverageQuestionAnswerID": "1000889",
               "QuestionIdentifier": "OHB_045_0130_HDHP_Eff",
               "AnswerText": "10/1/2020 12:00:00 AM",
-              "AnswerPartyID": 1801408
+              "AnswerPartyID": "1801408"
             },
             {
-              "CoverageQuestionAnswerID": 1000890,
+              "CoverageQuestionAnswerID": "1000890",
               "QuestionIdentifier": "OHB_045_0130_HDHP_Tier",
               "AnswerText": "Family",
-              "AnswerPartyID": 1801408
+              "AnswerPartyID": "1801408"
             },
             {
-              "CoverageQuestionAnswerID": 1000891,
+              "CoverageQuestionAnswerID": "1000891",
               "QuestionIdentifier": "OHB_045_0130_HDHP_Employer",
               "AnswerText": "National Health ACA",
-              "AnswerPartyID": 1801408
+              "AnswerPartyID": "1801408"
             },
             {
-              "CoverageQuestionAnswerID": 1000893,
+              "CoverageQuestionAnswerID": "1000893",
               "QuestionIdentifier": "OHB_045_0130_HDHP_IdentificationNo",
-              "AnswerText": 879987872,
-              "AnswerPartyID": 1801408
+              "AnswerText": "879987872",
+              "AnswerPartyID": "1801408"
             },
             {
-              "CoverageQuestionAnswerID": 1000894,
+              "CoverageQuestionAnswerID": "1000894",
               "QuestionIdentifier": "OHB_045_0130_HDHP_IssueState",
               "AnswerText": "GA",
-              "AnswerPartyID": 1801408
+              "AnswerPartyID": "1801408"
             },
             {
-              "CoverageQuestionAnswerID": 1000895,
+              "CoverageQuestionAnswerID": "1000895",
               "QuestionIdentifier": "OHB_045_0130_Identification_Type",
               "AnswerText": "DL",
-              "AnswerPartyID": 1801408
+              "AnswerPartyID": "1801408"
             },
             {
-              "CoverageQuestionAnswerID": 1000897,
+              "CoverageQuestionAnswerID": "1000897",
               "QuestionIdentifier": "OHB_045_0130_DepositAmt",
-              "AnswerText": 0,
-              "AnswerPartyID": 1801408
+              "AnswerText": "0",
+              "AnswerPartyID": "1801408"
             },
             {
-              "CoverageQuestionAnswerID": 1000898,
+              "CoverageQuestionAnswerID": "1000898",
               "QuestionIdentifier": "OHB_045_0130_OpeningDepositEnclosed",
-              "AnswerIndicator": false,
-              "AnswerPartyID": 1801408
+              "AnswerIndicator": "false",
+              "AnswerPartyID": "1801408"
             }
           ],
           "CoverageCommissionSplit": {
             "CarrierProducerNumberID": "46_15",
-            "CompensationSplitPercent": 100
+            "CompensationSplitPercent": "100"
           },
-          "EnrollmentInformationID": 1007820,
+          "EnrollmentInformationID": "1007820",
           "CoverageContribution": {
             "ContributionLimitTypeCode": "Single",
-            "PlanYearEmployeeContributionAmount": 4320,
-            "PlanYearEmployerContributionAmount": 1200,
-            "ToDateEmployeeContributionAmount": 0,
-            "ToDateEmployerContributionAmount": 0,
-            "ContributionsRemainingQuantity": 24
+            "PlanYearEmployeeContributionAmount": "4320",
+            "PlanYearEmployerContributionAmount": "1200",
+            "ToDateEmployeeContributionAmount": "0",
+            "ToDateEmployerContributionAmount": "0",
+            "ContributionsRemainingQuantity": "24"
           }
         }
       }
     },
     "Audit": {
-      "AuditID": 21946,
-      "CarrierRecordQuantity": 1,
-      "EmployerRecordQuantity": 1,
-      "EmployeeRecordQuantity": 1,
-      "DependentRecordQuantity": 0,
-      "OtherPartyRecordQuantity": 0,
-      "BeneficiaryGroupRecordQuantity": 0,
-      "EventRecordQuantity": 2,
-      "CoverageRecordQuantity": 1,
-      "CoverageRiderRecordQuantity": 0
+      "AuditID": "21946",
+      "CarrierRecordQuantity": "1",
+      "EmployerRecordQuantity": "1",
+      "EmployeeRecordQuantity": "1",
+      "DependentRecordQuantity": "0",
+      "OtherPartyRecordQuantity": "0",
+      "BeneficiaryGroupRecordQuantity": "0",
+      "EventRecordQuantity": "2",
+      "CoverageRecordQuantity": "1",
+      "CoverageRiderRecordQuantity": "0"
     }
   }
 }
 ```
+##Change Election
+
+**Description**
+
+ Communicate changes that do not result in a cancellation / termination to a currently elected SavingsSpendingAccount during a given plan year.  The election may apply to any type of SavingsSpendingAccount plan type, including (but not limited to): FSA, HSA, and/or HRA.
 
 
-##ChangeElection
+**Parameters**
+
+
+| Name                                | Type                      | Description                                                                                          |
+|:------------------------------------|:--------------------------|:-----------------------------------------------------------------------------------------------------|
+| TransmissionGUID                    | string                    | Global Unique identifier created by the originator for this instance of                              |
+|                                     |                           |             the electronic transmission.                                                             |
+| SenderName                          | string                    | Name of the company sending electronic benefit records on behalf of a                                |
+|                                     |                           |             group.                                                                                   |
+| SenderPlatformName                  | string                    | Identifies the Senders system that is providing the data for this data                              |
+|                                     |                           |             set.                                                                                     |
+| ReceiverName                        | string                    | Name of the company receiving electronic benefit records on behalf of a                              |
+|                                     |                           |             group.                                                                                   |
+| CreationDateTime                    | dateTime                  | UTC date and time the transmission was created.                                                      |
+| TestProductionCode                  | TestProduction            | Indicates the elements contained in this data set are production or                                  |
+|                                     |                           |             test data.                                                                               |
+| TransmissionTypeCode                | TransmissionType          | The type of data contained within the data set.                                                      |
+| SchemaVersionIdentifier             | SchemaVersionNumber       | Identifies the version of the standard that is being adhered to in this                              |
+|                                     |                           |             data set.                                                                                |
+| Carrier                             | Object                    | Carrier Object                                                                                       |
+| CarrierID                           | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CarrierName                         | string                    | The distinctive designation of the entity sending or receiving the data                              |
+|                                     |                           |             in this transmission.                                                                    |
+| Employer                            | Object                    | Employer Object                                                                                      |
+| EmployerPartyID                     | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| FederalEmployerIdentificationNumber | string                    | A nine-digit unique number assigned by the Internal Revenue Service                                  |
+|                                     |                           |             (IRS) to businesses operating in the United States.                                      |
+| CarrierMasterAgreementNumber        | Object                    | CarrierMasterAgreementNumber Object                                                                  |
+| CarrierMasterAgreementNumberID      | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| MasterAgreementNumber               | string                    | Carrier assigned group number. All individual policies or certificates                               |
+|                                     |                           |             at the group level would roll up to this master group number. This may be the same as    |
+|                                     |                           |             the agreement (aka policy) number for some carriers.                                     |
+| CarrierID                           | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| EmployerName                        | string                    | This is a representation of the organizational entitys name.                                        |
+| EmployerAddress                     | PostalAddress             | An address used for the delivery of letters and packages by an external                              |
+|                                     |                           |             mailing or packaging service, for the Employer (aka Plan Sponsor).                       |
+| FirstLineAddress                    | string                    | The first line of a formatted address - e.g., Street Number + Street                                 |
+|                                     |                           |             Name, P.O. Box, etc.                                                                     |
+| CityName                            | string                    | The city where the address is located.                                                               |
+| StateProvinceCode                   | StateProvince             | The region (depending on the country, this could be the state or                                     |
+|                                     |                           |             province) where the address is located.                                                  |
+| PostalCode                          | string                    | The unique identifier used to associate postal deliveries. This may                                  |
+|                                     |                           |             also be referred to as zip code or post code where the address is located.               |
+| CountryCode                         | Country                   | The country where the address is located.                                                            |
+| Employee                            | Object                    | Employee Object                                                                                      |
+| EmployeePartyID                     | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| EmployeeSocialSecurityNumber        | string                    | A numerical identifier assigned to U.S. citizens and some residents to                               |
+|                                     |                           |             track their income.                                                                      |
+| EmployeeIdentifier                  | string                    | Employer or Plan Sponsor Issued Identifier.                                                          |
+| EmployeeName                        | StructuredPersonName      | This is a representation of the person entitys name. MiddleName -                                   |
+|                                     |                           |             Optional - can be just a middle initial.                                                 |
+| FirstName                           | string                    | The persons name normally preceding the last name and typically used                                |
+|                                     |                           |             to refer to the person in both formal and/or informal circumstances.                     |
+| LastName                            | string                    | The part of a persons name arising from family identifications.                                     |
+| EmployeeGenderCode                  | Gender                    | Value designating the range of characteristics pertaining to, and                                    |
+|                                     |                           |             differentiating between, masculinity and femininity. Depending on the context, these     |
+|                                     |                           |             characteristics may include biological sex, sex-based social structures, or gender       |
+|                                     |                           |             identity.                                                                                |
+| EmployeeBirthDate                   | date                      | The date on which a person was born.                                                                 |
+| MaritalStatusCode                   | MaritalStatus             | Any of several distinct options that describe a persons relationship                                |
+|                                     |                           |             with a significant other - e.g., married, single, divorced, and widowed are examples of  |
+|                                     |                           |             civil status.                                                                            |
+| EmployeeMailingAddress              | PostalAddress             | An address used for the delivery of letters and packages by an external                              |
+|                                     |                           |             mailing or packaging service, at a place where the recipient usually lives or works.     |
+| FirstLineAddress                    | string                    | The first line of a formatted address - e.g., Street Number + Street                                 |
+|                                     |                           |             Name, P.O. Box, etc.                                                                     |
+| CityName                            | string                    | The city where the address is located.                                                               |
+| StateProvinceCode                   | StateProvince             | The region (depending on the country, this could be the state or                                     |
+|                                     |                           |             province) where the address is located.                                                  |
+| PostalCode                          | string                    | The unique identifier used to associate postal deliveries. This may                                  |
+|                                     |                           |             also be referred to as zip code or post code where the address is located.               |
+| CountryCode                         | Country                   | The country where the address is located.                                                            |
+| EmployeeHomeAddress                 | PostalAddress             | An address used for the delivery of letters and packages by an external                              |
+|                                     |                           |             mailing or packaging service, at a place where the recipient lives.                      |
+| FirstLineAddress                    | string                    | The first line of a formatted address - e.g., Street Number + Street                                 |
+|                                     |                           |             Name, P.O. Box, etc.                                                                     |
+| CityName                            | string                    | The city where the address is located.                                                               |
+| StateProvinceCode                   | StateProvince             | The region (depending on the country, this could be the state or                                     |
+|                                     |                           |             province) where the address is located.                                                  |
+| PostalCode                          | string                    | The unique identifier used to associate postal deliveries. This may                                  |
+|                                     |                           |             also be referred to as zip code or post code where the address is located.               |
+| CountryCode                         | Country                   | The country where the address is located.                                                            |
+| EmployeeWorkAddress                 | PostalAddress             | An address used for the delivery of letters and packages by an external                              |
+|                                     |                           |             mailing or packaging service, at a place where the recipient works.                      |
+| FirstLineAddress                    | string                    | The first line of a formatted address - e.g., Street Number + Street                                 |
+|                                     |                           |             Name, P.O. Box, etc.                                                                     |
+| CityName                            | string                    | The city where the address is located.                                                               |
+| StateProvinceCode                   | StateProvince             | The region (depending on the country, this could be the state or                                     |
+|                                     |                           |             province) where the address is located.                                                  |
+| PostalCode                          | string                    | The unique identifier used to associate postal deliveries. This may                                  |
+|                                     |                           |             also be referred to as zip code or post code where the address is located.               |
+| CountryCode                         | Country                   | The country where the address is located.                                                            |
+| EmployeeEmail                       | string                    | A message distributed by electronic means from one computer user to one                              |
+|                                     |                           |             or more recipients via a network.                                                        |
+| EmploymentInformation               | Object                    | EmploymentInformation Object                                                                         |
+| OriginalHireDate                    | date                      | First date the Employee was actively at work with their employer.                                    |
+| MostRecentHireDate                  | date                      | The latest date the Employee was hired.                                                              |
+| EmploymentTypeCode                  | EmploymentType            | Describes the Type of Employment for the employee (e.g. FT, PT,                                      |
+|                                     |                           |             Seasonal).                                                                               |
+| EmploymentStatusCode                | EmploymentStatus          | Identifies the state of the members employment (e.g. Active,                                        |
+|                                     |                           |             Terminated, Leave, Retiree).                                                             |
+| JobTitleText                        | string                    | The position held by an employee.                                                                    |
+| OccupationText                      | string                    | A job or profession.                                                                                 |
+| WorkLocationText                    | string                    | Group/Department Location Name for Billing Purposes.                                                 |
+| PayrollDeductionFrequencyQuantity   | integer                   | Number of scheduled Deductions per year.                                                             |
+| PayrollFrequencyQuantity            | int                       | Number of scheduled Pay Periods per year.                                                            |
+| EmploymentIncome                    | Object                    | EmploymentIncome Object                                                                              |
+| IncomeTypeCode                      | IncomeType                | Describes the type of income - e.g., base salary, commission, bonus.                                 |
+| IncomeAmount                        | decimal                   | The actual dollar amount.                                                                            |
+| IncomeModeCode                      | ModeType                  | Frequency in which Income is received.                                                               |
+| IncomeEffectiveDate                 | date                      | Date Employee started earning that the reflected salary.                                             |
+| IncomeTypeCode                      | IncomeType                | Describes the type of income - e.g., base salary, commission, bonus.                                 |
+| IncomeAmount                        | decimal                   | The actual dollar amount.                                                                            |
+| IncomeModeCode                      | ModeType                  | Frequency in which Income is received.                                                               |
+| IncomeEffectiveDate                 | date                      | Date Employee started earning that the reflected salary.                                             |
+| EnrollmentInformation               | Object                    | EnrollmentInformation Object                                                                         |
+| EnrollmentInformationID             | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| EnrollmentMethodCode                | EnrollmentMethod          | List of ways members enroll into the benefit.                                                        |
+| EnrollmentCityName                  | string                    | The city for the enrollment.                                                                         |
+| EnrollmentStateProvinceCode         | StateProvince             | The state/province for the enrollment.                                                               |
+| Event                               | Object                    | Event Object                                                                                         |
+| EventID                             | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| EventTypeCode                       | EventType                 | It describes the things that are happening / taking place that are of                                |
+|                                     |                           |             importance.                                                                              |
+| Coverage                            | Object                    | Coverage Object                                                                                      |
+| EventTypeReasonCode                 | EventTypeReason           | A cause, explanation, or justification for an action or event.                                       |
+| EventDate                           | date                      | The date on which a specific occurrence took place.                                                  |
+| TransactionDate                     | date                      | Date the employee enrolled and saved their elections in the enrollment                               |
+|                                     |                           |             system.                                                                                  |
+| Producer                            | Object                    | Producer Object                                                                                      |
+| ProducerPartyID                     | string                    | Unique identifier created by the originator for this instance of the                                 |
+|                                     |                           |             electronic transmission.                                                                 |
+| ProducerFirstName                   | string                    | The given first name of a Producer (also known as Enroller, Agent,                                   |
+|                                     |                           |             Broker, etc.).                                                                           |
+| ProducerLastName                    | string                    | The surname of the Producer (also known as Enroller, Agent, Broker,                                  |
+|                                     |                           |             etc.).                                                                                   |
+| ProducerLicense                     | Object                    | ProducerLicense Object                                                                               |
+| ProducerLicenseID                   | string                    | Unique identifier created by the originator for this instance of the                                 |
+|                                     |                           |             electronic transmission.                                                                 |
+| ProducerLicenseTypeCode             | ProducerLicenseType       | The category of insurance covered under the assigned license.                                        |
+| ProducerLicenseStateProvinceCode    | StateProvince             | The state in which the license was issued.                                                           |
+| ProducerLicenseNumber               | string                    | The number issued by the States Insurance division or department to                                 |
+|                                     |                           |             sell insurance in that state.                                                            |
+| Coverage                            | Object                    | Coverage Object                                                                                      |
+| CoverageID                          | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| GroupPolicyNumber                   | string                    | Carrier assigned number for the group policy / agreement for which the                               |
+|                                     |                           |             coverage may be associated.                                                              |
+| ProductTypeCode                     | ProductType               | Universal identifier for a specific logical product group that may be                                |
+|                                     |                           |             elected by a member.                                                                     |
+| BenefitPlanIdentifier               | string                    | Carrier specific identifier used to denote the plan being elected by                                 |
+|                                     |                           |             the member based on the product being purchased.                                         |
+| BenefitClassIdentifier              | string                    | A categorization of employees mutually agreed upon between the                                       |
+|                                     |                           |             insurance carrier and the group with similar employment information that are all offered |
+|                                     |                           |             the same insurance plan configuration.                                                   |
+| BillGroupIdentifier                 | string                    | Carrier assigned code to tie the coverage back to a billing                                          |
+|                                     |                           |             arrangement.                                                                             |
+| OriginalCoverageEffectiveDate       | date                      | Initial coverage effective date for the enrollment in the associated                                 |
+|                                     |                           | 		    benefit plan. Date will not change as long as policy remains in force.                         |
+| CoverageEffectiveDate               | date                      | Date of the latest change to the current active Coverage. May reflect                                |
+|                                     |                           | 		    initial coverage or coverage changes such as those impacting ElectedCoverage,                  |
+|                                     |                           | 			BenefitPlanIdentifier, CoverageTierCode, BenefitAmount, EmployeePremiumContributionAmount,        |
+|                                     |                           | 			EmployerPremiumContributionAmount, etc.                                                           |
+| CoverageTierCode                    | CoverageTier              | Universal level of coverage being elected by the employee (including                                 |
+|                                     |                           |             dependents) or provided by the group based on the selected benefit plan type.            |
+| Employee                            | Object                    | Employee Object                                                                                      |
+| BenefitCalculationMethodCode        | BenefitCalculationMethod  | Describes how the value of coverage is calculated; percentage of                                     |
+|                                     |                           |             earnings, increments, or flat/incremental amount.                                        |
+| BenefitAmount                       | decimal                   | Value of rider that has been approved based on the defined plan rules                                |
+|                                     |                           |             for the enrolling person.                                                                |
+| EmployeeContributionCode            | EmployeeContribution      | Indicates the employee contribution towards the product coverage                                     |
+|                                     |                           |             premium.                                                                                 |
+| EmployeePremiumContributionAmount   | decimal                   | The amount of rider premium contribution from the employee.                                          |
+| EmployerPremiumContributionAmount   | decimal                   | The amount of rider premium contribution from the employer.                                          |
+| TotalPlanPremiumAmount              | decimal                   | The total premium paid by both the employer and employee.                                            |
+| PremiumModeQuantity                 | integer                   | The frequency of premium and contribution payment by a Employee or                                   |
+|                                     |                           |             Employee.                                                                                |
+| PreTaxCode                          | PreTax                    | Indicates whether employee product premium is pre-tax or post-tax,                                   |
+|                                     |                           |             based on IRS guidelines.                                                                 |
+| CarrierID                           | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CoverageInsured                     | Object                    | CoverageInsured Object                                                                               |
+| InsuredPartyID                      | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| PrimaryInsuredIndicator             | boolean                   | A flag that indicates whether the Insured associated with the Benefit                                |
+|                                     |                           |             Plan is the primary insured.                                                             |
+| InsuredCoverageEffectiveDate        | date                      | Earliest date of continuous coverage for this insured in the associated                              |
+|                                     |                           | 		    benefit plan. Separate benefit effective dates must be sent for each dependent covered under   |
+|                                     |                           | 			the benefit plan.                                                                                 |
+| CoverageEventID                     | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CoverageCommissionSplit             | CoverageCompensationSplit | The premium percentages that are retained and allocated to producers in                              |
+|                                     |                           |             the form of commission.                                                                  |
+| CarrierProducerNumberID             | string                    | Unique identifier created by the originator for this instance of the                                 |
+|                                     |                           |             electronic transmission.                                                                 |
+| CompensationSplitPercent            | decimal                   | The premium percentages that are retained and allocated to producers in                              |
+|                                     |                           |             the form of commission.                                                                  |
+| EnrollmentInformationID             | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CoverageContribution                | Object                    | CoverageContribution Object                                                                          |
+| ContributionLimitTypeCode           | ContributionLimitType     | The contribution limits used to determine maximum limit.                                             |
+| PlanYearEmployeeContributionAmount  | decimal                   | Total amount expected to be contributed during a plan year by the                                    |
+|                                     |                           |             Employee. Note that in some instances a plan year may be less or more than 12 months.    |
+| PlanYearEmployerContributionAmount  | decimal                   | Total amount expected to be contributed during a plan year by the                                    |
+|                                     |                           |             Employer. Note that in some instances a plan year may be less or more than 12 months.    |
+| ToDateEmployeeContributionAmount    | decimal                   | The dollar amount to date at time of the transmission contributed to                                 |
+|                                     |                           |             the saving or spending account by the Employee.                                          |
+| ToDateEmployerContributionAmount    | decimal                   | The dollar amount to date at time of the transmission contributed to                                 |
+|                                     |                           |             the saving or spending account by the Employer.                                          |
+| ContributionsRemainingQuantity      | int                       | The number of contributions still to be made.                                                        |
+| Audit                               | Object                    | Audit Object                                                                                         |
+| AuditID                             | string                    | Unique identifier created by the originator for this instance of the                                 |
+|                                     |                           |             electronic transmission.                                                                 |
+| CarrierRecordQuantity               | int                       | A count of Carrier records included in the electronic transmission.                                  |
+| EmployerRecordQuantity              | int                       | A count of Employer records included in the electronic transmission.                                 |
+| EmployeeRecordQuantity              | int                       | A count of Employee records included in the electronic transmission.                                 |
+| DependentRecordQuantity             | int                       | A count of Dependent records included in the electronic transmission.                                |
+| OtherPartyRecordQuantity            | int                       | A count of Other Party records included in the electronic transmission.                              |
+| BeneficiaryGroupRecordQuantity      | int                       | A count of Beneficiary Group records included in the electronic                                      |
+|                                     |                           |             transmission.                                                                            |
+| EventRecordQuantity                 | int                       | A count of Event records included in the electronic transmission.                                    |
+| CoverageRecordQuantity              | int                       | A count of Coverage records included in the electronic transmission.                                 |
+| CoverageRiderRecordQuantity         | int                       | A count of Coverage Rider records included in the electronic                                         |
+|                                     |                           |             transmission.                                                                            |
 
 ```json
+
 {
-  "Transmission": {
+  "bem:Transmission": {
+    "@xmlns:bem": "https://ldex.limra.com/xsd/1.0/LDExBEM",
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "@xsi:schemaLocation": "https://ldex.limra.com/xsd/1.0/LDExBEM_1.3.2022.01.01.xsd",
     "TransmissionGUID": "f26e1b60-ad0c-47cd-946a-3ed08c044401",
     "SenderName": "SELERIX",
     "SenderPlatformName": "BenSelect",
@@ -278,29 +866,29 @@
     "TransmissionTypeCode": "ChangesOnly",
     "SchemaVersionIdentifier": "1.3.2022.01.01",
     "Carrier": {
-      "CarrierID": 22,
+      "CarrierID": "22",
       "CarrierName": "Flex America"
     },
     "Employer": {
-      "EmployerPartyID": 1597,
-      "FederalEmployerIdentificationNumber": 456789999,
+      "EmployerPartyID": "1597",
+      "FederalEmployerIdentificationNumber": "456789999",
       "CarrierMasterAgreementNumber": {
-        "CarrierMasterAgreementNumberID": 22,
-        "MasterAgreementNumber": "",
-        "CarrierID": 22
+        "CarrierMasterAgreementNumberID": "22",
+        "MasterAgreementNumber": null,
+        "CarrierID": "22"
       },
       "EmployerName": "National Health ACA",
       "EmployerAddress": {
         "FirstLineAddress": "2851 Craig Dr.",
         "CityName": "McKinney",
         "StateProvinceCode": "TX",
-        "PostalCode": 75070,
+        "PostalCode": "75070",
         "CountryCode": "USA"
       },
       "Employee": {
-        "EmployeePartyID": 1801316,
-        "EmployeeSocialSecurityNumber": 998781568,
-        "EmployeeIdentifier": 81569,
+        "EmployeePartyID": "1801316",
+        "EmployeeSocialSecurityNumber": "998781568",
+        "EmployeeIdentifier": "81569",
         "EmployeeName": {
           "FirstName": "Bertha",
           "LastName": "Bachus"
@@ -312,21 +900,21 @@
           "FirstLineAddress": "1102 N Ralph Hwy",
           "CityName": "Salt Lake City",
           "StateProvinceCode": "UT",
-          "PostalCode": 84114,
+          "PostalCode": "84114",
           "CountryCode": "USA"
         },
         "EmployeeHomeAddress": {
           "FirstLineAddress": "1102 N Ralph Hwy",
           "CityName": "Salt Lake City",
           "StateProvinceCode": "UT",
-          "PostalCode": 84114,
+          "PostalCode": "84114",
           "CountryCode": "USA"
         },
         "EmployeeWorkAddress": {
           "FirstLineAddress": "34 Main St.",
           "CityName": "Salt Lake City",
           "StateProvinceCode": "UT",
-          "PostalCode": 87348,
+          "PostalCode": "87348",
           "CountryCode": "USA"
         },
         "EmployeeEmail": "Bertha.Bachus@demo-me.com",
@@ -338,25 +926,25 @@
           "JobTitleText": "Rad Tech",
           "OccupationText": "Rad Tech",
           "WorkLocationText": "UTAH",
-          "PayrollDeductionFrequencyQuantity": 24,
-          "PayrollFrequencyQuantity": 26,
+          "PayrollDeductionFrequencyQuantity": "24",
+          "PayrollFrequencyQuantity": "26",
           "EmploymentIncome": [
             {
               "IncomeTypeCode": "Salary",
-              "IncomeAmount": 41600,
+              "IncomeAmount": "41600",
               "IncomeModeCode": "Annual",
               "IncomeEffectiveDate": "1978-06-03"
             },
             {
               "IncomeTypeCode": "BenefitSalary",
-              "IncomeAmount": 41600,
+              "IncomeAmount": "41600",
               "IncomeModeCode": "Annual",
               "IncomeEffectiveDate": "1978-06-03"
             }
           ]
         },
         "EnrollmentInformation": {
-          "EnrollmentInformationID": 1009480,
+          "EnrollmentInformationID": "1009480",
           "EnrollmentMethodCode": "HumanResources",
           "EnrollmentCityName": "Salt Lake City",
           "EnrollmentStateProvinceCode": "UT"
@@ -369,7 +957,7 @@
           "TransactionDate": "2020-06-26"
         },
         "Producer": {
-          "ProducerPartyID": 15,
+          "ProducerPartyID": "15",
           "ProducerFirstName": "Lyle",
           "ProducerLastName": "Griffin",
           "ProducerLicense": {
@@ -380,66 +968,303 @@
           }
         },
         "Coverage": {
-          "CoverageID": 2427308,
-          "GroupPolicyNumber": 2348752,
+          "CoverageID": "2427308",
+          "GroupPolicyNumber": "2348752",
           "ProductTypeCode": "SavingsSpendingAccounts",
           "BenefitPlanIdentifier": "DFSA",
-          "BenefitClassIdentifier": 1,
-          "BillGroupIdentifier": 1,
+          "BenefitClassIdentifier": "01",
+          "BillGroupIdentifier": "01",
           "OriginalCoverageEffectiveDate": "2019-10-01",
           "CoverageEffectiveDate": "2020-07-01",
           "CoverageTierCode": "Employee",
           "BenefitCalculationMethodCode": "FlatAmount",
-          "BenefitAmount": 1025,
+          "BenefitAmount": "1025",
           "EmployeeContributionCode": "EmployeePartial",
-          "EmployeePremiumContributionAmount": 25,
-          "EmployerPremiumContributionAmount": 1.5,
-          "TotalPlanPremiumAmount": 26.5,
-          "PremiumModeQuantity": 24,
+          "EmployeePremiumContributionAmount": "25",
+          "EmployerPremiumContributionAmount": "1.5",
+          "TotalPlanPremiumAmount": "26.5",
+          "PremiumModeQuantity": "24",
           "PreTaxCode": "PreTax",
-          "CarrierID": 22,
+          "CarrierID": "22",
           "CoverageInsured": {
-            "InsuredPartyID": 1801316,
-            "PrimaryInsuredIndicator": true,
+            "InsuredPartyID": "1801316",
+            "PrimaryInsuredIndicator": "true",
             "InsuredCoverageEffectiveDate": "2019-10-01"
           },
           "CoverageEventID": "CE2921626",
           "CoverageCommissionSplit": {
             "CarrierProducerNumberID": "22_15",
-            "CompensationSplitPercent": 100
+            "CompensationSplitPercent": "100"
           },
-          "EnrollmentInformationID": 1009480,
+          "EnrollmentInformationID": "1009480",
           "CoverageContribution": {
             "ContributionLimitTypeCode": "Single",
-            "PlanYearEmployeeContributionAmount": 600,
-            "PlanYearEmployerContributionAmount": 36,
-            "ToDateEmployeeContributionAmount": 475,
-            "ToDateEmployerContributionAmount": 28.5,
-            "ContributionsRemainingQuantity": 5
+            "PlanYearEmployeeContributionAmount": "600",
+            "PlanYearEmployerContributionAmount": "36",
+            "ToDateEmployeeContributionAmount": "475",
+            "ToDateEmployerContributionAmount": "28.5",
+            "ContributionsRemainingQuantity": "5"
           }
         }
       }
     },
     "Audit": {
-      "AuditID": 21949,
-      "CarrierRecordQuantity": 1,
-      "EmployerRecordQuantity": 1,
-      "EmployeeRecordQuantity": 1,
-      "DependentRecordQuantity": 0,
-      "OtherPartyRecordQuantity": 0,
-      "BeneficiaryGroupRecordQuantity": 0,
-      "EventRecordQuantity": 1,
-      "CoverageRecordQuantity": 1,
-      "CoverageRiderRecordQuantity": 0
+      "AuditID": "21949",
+      "CarrierRecordQuantity": "1",
+      "EmployerRecordQuantity": "1",
+      "EmployeeRecordQuantity": "1",
+      "DependentRecordQuantity": "0",
+      "OtherPartyRecordQuantity": "0",
+      "BeneficiaryGroupRecordQuantity": "0",
+      "EventRecordQuantity": "1",
+      "CoverageRecordQuantity": "1",
+      "CoverageRiderRecordQuantity": "0"
     }
   }
 }
 ```
-##ExistingCoverageCancelationTermination
+##Existing Account Cancelation / Termination
+
+
+**Description**
+
+ Communicate cancellation / termination elections for a SavingsSpendingAccount during a given plan year.  The election may apply to any type of SavingsSpendingAccount plan type, including (but not limited to): FSA, HSA, and/or HRA.
+
+
+
+**Parameters**
+
+
+| Name                                | Type                      | Description                                                                                          |
+|:------------------------------------|:--------------------------|:-----------------------------------------------------------------------------------------------------|
+| TransmissionGUID                    | string                    | Global Unique identifier created by the originator for this instance of                              |
+|                                     |                           |             the electronic transmission.                                                             |
+| SenderName                          | string                    | Name of the company sending electronic benefit records on behalf of a                                |
+|                                     |                           |             group.                                                                                   |
+| SenderPlatformName                  | string                    | Identifies the Senders system that is providing the data for this data                              |
+|                                     |                           |             set.                                                                                     |
+| ReceiverName                        | string                    | Name of the company receiving electronic benefit records on behalf of a                              |
+|                                     |                           |             group.                                                                                   |
+| CreationDateTime                    | dateTime                  | UTC date and time the transmission was created.                                                      |
+| TestProductionCode                  | TestProduction            | Indicates the elements contained in this data set are production or                                  |
+|                                     |                           |             test data.                                                                               |
+| TransmissionTypeCode                | TransmissionType          | The type of data contained within the data set.                                                      |
+| SchemaVersionIdentifier             | SchemaVersionNumber       | Identifies the version of the standard that is being adhered to in this                              |
+|                                     |                           |             data set.                                                                                |
+| Carrier                             | Object                    | Carrier Object                                                                                       |
+| CarrierID                           | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CarrierName                         | string                    | The distinctive designation of the entity sending or receiving the data                              |
+|                                     |                           |             in this transmission.                                                                    |
+| Employer                            | Object                    | Employer Object                                                                                      |
+| EmployerPartyID                     | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| FederalEmployerIdentificationNumber | string                    | A nine-digit unique number assigned by the Internal Revenue Service                                  |
+|                                     |                           |             (IRS) to businesses operating in the United States.                                      |
+| CarrierMasterAgreementNumber        | Object                    | CarrierMasterAgreementNumber Object                                                                  |
+| CarrierMasterAgreementNumberID      | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| MasterAgreementNumber               | string                    | Carrier assigned group number. All individual policies or certificates                               |
+|                                     |                           |             at the group level would roll up to this master group number. This may be the same as    |
+|                                     |                           |             the agreement (aka policy) number for some carriers.                                     |
+| CarrierID                           | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| EmployerName                        | string                    | This is a representation of the organizational entitys name.                                        |
+| EmployerAddress                     | PostalAddress             | An address used for the delivery of letters and packages by an external                              |
+|                                     |                           |             mailing or packaging service, for the Employer (aka Plan Sponsor).                       |
+| FirstLineAddress                    | string                    | The first line of a formatted address - e.g., Street Number + Street                                 |
+|                                     |                           |             Name, P.O. Box, etc.                                                                     |
+| CityName                            | string                    | The city where the address is located.                                                               |
+| StateProvinceCode                   | StateProvince             | The region (depending on the country, this could be the state or                                     |
+|                                     |                           |             province) where the address is located.                                                  |
+| PostalCode                          | string                    | The unique identifier used to associate postal deliveries. This may                                  |
+|                                     |                           |             also be referred to as zip code or post code where the address is located.               |
+| CountryCode                         | Country                   | The country where the address is located.                                                            |
+| Employee                            | Object                    | Employee Object                                                                                      |
+| EmployeePartyID                     | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| EmployeeSocialSecurityNumber        | string                    | A numerical identifier assigned to U.S. citizens and some residents to                               |
+|                                     |                           |             track their income.                                                                      |
+| EmployeeIdentifier                  | string                    | Employer or Plan Sponsor Issued Identifier.                                                          |
+| EmployeeName                        | StructuredPersonName      | This is a representation of the person entitys name. MiddleName -                                   |
+|                                     |                           |             Optional - can be just a middle initial.                                                 |
+| FirstName                           | string                    | The persons name normally preceding the last name and typically used                                |
+|                                     |                           |             to refer to the person in both formal and/or informal circumstances.                     |
+| LastName                            | string                    | The part of a persons name arising from family identifications.                                     |
+| EmployeeGenderCode                  | Gender                    | Value designating the range of characteristics pertaining to, and                                    |
+|                                     |                           |             differentiating between, masculinity and femininity. Depending on the context, these     |
+|                                     |                           |             characteristics may include biological sex, sex-based social structures, or gender       |
+|                                     |                           |             identity.                                                                                |
+| EmployeeBirthDate                   | date                      | The date on which a person was born.                                                                 |
+| MaritalStatusCode                   | MaritalStatus             | Any of several distinct options that describe a persons relationship                                |
+|                                     |                           |             with a significant other - e.g., married, single, divorced, and widowed are examples of  |
+|                                     |                           |             civil status.                                                                            |
+| EmployeeMailingAddress              | PostalAddress             | An address used for the delivery of letters and packages by an external                              |
+|                                     |                           |             mailing or packaging service, at a place where the recipient usually lives or works.     |
+| FirstLineAddress                    | string                    | The first line of a formatted address - e.g., Street Number + Street                                 |
+|                                     |                           |             Name, P.O. Box, etc.                                                                     |
+| CityName                            | string                    | The city where the address is located.                                                               |
+| StateProvinceCode                   | StateProvince             | The region (depending on the country, this could be the state or                                     |
+|                                     |                           |             province) where the address is located.                                                  |
+| PostalCode                          | string                    | The unique identifier used to associate postal deliveries. This may                                  |
+|                                     |                           |             also be referred to as zip code or post code where the address is located.               |
+| CountryCode                         | Country                   | The country where the address is located.                                                            |
+| EmployeeHomeAddress                 | PostalAddress             | An address used for the delivery of letters and packages by an external                              |
+|                                     |                           |             mailing or packaging service, at a place where the recipient lives.                      |
+| FirstLineAddress                    | string                    | The first line of a formatted address - e.g., Street Number + Street                                 |
+|                                     |                           |             Name, P.O. Box, etc.                                                                     |
+| CityName                            | string                    | The city where the address is located.                                                               |
+| StateProvinceCode                   | StateProvince             | The region (depending on the country, this could be the state or                                     |
+|                                     |                           |             province) where the address is located.                                                  |
+| PostalCode                          | string                    | The unique identifier used to associate postal deliveries. This may                                  |
+|                                     |                           |             also be referred to as zip code or post code where the address is located.               |
+| CountryCode                         | Country                   | The country where the address is located.                                                            |
+| EmployeeWorkAddress                 | PostalAddress             | An address used for the delivery of letters and packages by an external                              |
+|                                     |                           |             mailing or packaging service, at a place where the recipient works.                      |
+| FirstLineAddress                    | string                    | The first line of a formatted address - e.g., Street Number + Street                                 |
+|                                     |                           |             Name, P.O. Box, etc.                                                                     |
+| CityName                            | string                    | The city where the address is located.                                                               |
+| StateProvinceCode                   | StateProvince             | The region (depending on the country, this could be the state or                                     |
+|                                     |                           |             province) where the address is located.                                                  |
+| PostalCode                          | string                    | The unique identifier used to associate postal deliveries. This may                                  |
+|                                     |                           |             also be referred to as zip code or post code where the address is located.               |
+| CountryCode                         | Country                   | The country where the address is located.                                                            |
+| EmployeeEmail                       | string                    | A message distributed by electronic means from one computer user to one                              |
+|                                     |                           |             or more recipients via a network.                                                        |
+| EmploymentInformation               | Object                    | EmploymentInformation Object                                                                         |
+| OriginalHireDate                    | date                      | First date the Employee was actively at work with their employer.                                    |
+| MostRecentHireDate                  | date                      | The latest date the Employee was hired.                                                              |
+| EmploymentTypeCode                  | EmploymentType            | Describes the Type of Employment for the employee (e.g. FT, PT,                                      |
+|                                     |                           |             Seasonal).                                                                               |
+| EmploymentStatusCode                | EmploymentStatus          | Identifies the state of the members employment (e.g. Active,                                        |
+|                                     |                           |             Terminated, Leave, Retiree).                                                             |
+| TerminationDate                     | date                      | The last date of employment for an employee.                                                         |
+| TerminationReasonCode               | TerminationReason         | Describes why the persons employment was terminated.                                                |
+| JobTitleText                        | string                    | The position held by an employee.                                                                    |
+| OccupationText                      | string                    | A job or profession.                                                                                 |
+| WorkLocationText                    | string                    | Group/Department Location Name for Billing Purposes.                                                 |
+| PayrollDeductionFrequencyQuantity   | integer                   | Number of scheduled Deductions per year.                                                             |
+| PayrollFrequencyQuantity            | int                       | Number of scheduled Pay Periods per year.                                                            |
+| EmploymentIncome                    | Object                    | EmploymentIncome Object                                                                              |
+| IncomeTypeCode                      | IncomeType                | Describes the type of income - e.g., base salary, commission, bonus.                                 |
+| IncomeAmount                        | decimal                   | The actual dollar amount.                                                                            |
+| IncomeModeCode                      | ModeType                  | Frequency in which Income is received.                                                               |
+| IncomeEffectiveDate                 | date                      | Date Employee started earning that the reflected salary.                                             |
+| IncomeTypeCode                      | IncomeType                | Describes the type of income - e.g., base salary, commission, bonus.                                 |
+| IncomeAmount                        | decimal                   | The actual dollar amount.                                                                            |
+| IncomeModeCode                      | ModeType                  | Frequency in which Income is received.                                                               |
+| IncomeEffectiveDate                 | date                      | Date Employee started earning that the reflected salary.                                             |
+| EnrollmentInformation               | Object                    | EnrollmentInformation Object                                                                         |
+| EnrollmentInformationID             | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| EnrollmentMethodCode                | EnrollmentMethod          | List of ways members enroll into the benefit.                                                        |
+| Event                               | Object                    | Event Object                                                                                         |
+| EventID                             | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| EventTypeCode                       | EventType                 | It describes the things that are happening / taking place that are of                                |
+|                                     |                           |             importance.                                                                              |
+| EventTypeReasonCode                 | EventTypeReason           | A cause, explanation, or justification for an action or event.                                       |
+| EventDate                           | date                      | The date on which a specific occurrence took place.                                                  |
+| TransactionDate                     | date                      | Date the employee enrolled and saved their elections in the enrollment                               |
+|                                     |                           |             system.                                                                                  |
+| EmployeeEventID                     | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| Producer                            | Object                    | Producer Object                                                                                      |
+| ProducerPartyID                     | string                    | Unique identifier created by the originator for this instance of the                                 |
+|                                     |                           |             electronic transmission.                                                                 |
+| ProducerFirstName                   | string                    | The given first name of a Producer (also known as Enroller, Agent,                                   |
+|                                     |                           |             Broker, etc.).                                                                           |
+| ProducerLastName                    | string                    | The surname of the Producer (also known as Enroller, Agent, Broker,                                  |
+|                                     |                           |             etc.).                                                                                   |
+| Coverage                            | Object                    | Coverage Object                                                                                      |
+| CoverageID                          | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| GroupPolicyNumber                   | string                    | Carrier assigned number for the group policy / agreement for which the                               |
+|                                     |                           |             coverage may be associated.                                                              |
+| ProductTypeCode                     | ProductType               | Universal identifier for a specific logical product group that may be                                |
+|                                     |                           |             elected by a member.                                                                     |
+| BenefitPlanIdentifier               | string                    | Carrier specific identifier used to denote the plan being elected by                                 |
+|                                     |                           |             the member based on the product being purchased.                                         |
+| BenefitClassIdentifier              | string                    | A categorization of employees mutually agreed upon between the                                       |
+|                                     |                           |             insurance carrier and the group with similar employment information that are all offered |
+|                                     |                           |             the same insurance plan configuration.                                                   |
+| BillGroupIdentifier                 | string                    | Carrier assigned code to tie the coverage back to a billing                                          |
+|                                     |                           |             arrangement.                                                                             |
+| CoverageEffectiveDate               | date                      | Date of the latest change to the current active Coverage. May reflect                                |
+|                                     |                           | 		    initial coverage or coverage changes such as those impacting ElectedCoverage,                  |
+|                                     |                           | 			BenefitPlanIdentifier, CoverageTierCode, BenefitAmount, EmployeePremiumContributionAmount,        |
+|                                     |                           | 			EmployerPremiumContributionAmount, etc.                                                           |
+| CoverageTerminationDate             | date                      | The last date that the coverage is in effect.                                                        |
+| CoverageTierCode                    | CoverageTier              | Universal level of coverage being elected by the employee (including                                 |
+|                                     |                           |             dependents) or provided by the group based on the selected benefit plan type.            |
+| Employee                            | Object                    | Employee Object                                                                                      |
+| BenefitCalculationMethodCode        | BenefitCalculationMethod  | Describes how the value of coverage is calculated; percentage of                                     |
+|                                     |                           |             earnings, increments, or flat/incremental amount.                                        |
+| BenefitAmount                       | decimal                   | Value of rider that has been approved based on the defined plan rules                                |
+|                                     |                           |             for the enrolling person.                                                                |
+| EmployeeContributionCode            | EmployeeContribution      | Indicates the employee contribution towards the product coverage                                     |
+|                                     |                           |             premium.                                                                                 |
+| EmployeePremiumContributionAmount   | decimal                   | The amount of rider premium contribution from the employee.                                          |
+| EmployerPremiumContributionAmount   | decimal                   | The amount of rider premium contribution from the employer.                                          |
+| TotalPlanPremiumAmount              | decimal                   | The total premium paid by both the employer and employee.                                            |
+| PremiumModeQuantity                 | integer                   | The frequency of premium and contribution payment by a Employee or                                   |
+|                                     |                           |             Employee.                                                                                |
+| PreTaxCode                          | PreTax                    | Indicates whether employee product premium is pre-tax or post-tax,                                   |
+|                                     |                           |             based on IRS guidelines.                                                                 |
+| CarrierID                           | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CoverageInsured                     | Object                    | CoverageInsured Object                                                                               |
+| InsuredPartyID                      | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| PrimaryInsuredIndicator             | boolean                   | A flag that indicates whether the Insured associated with the Benefit                                |
+|                                     |                           |             Plan is the primary insured.                                                             |
+| InsuredCoverageEffectiveDate        | date                      | Earliest date of continuous coverage for this insured in the associated                              |
+|                                     |                           | 		    benefit plan. Separate benefit effective dates must be sent for each dependent covered under   |
+|                                     |                           | 			the benefit plan.                                                                                 |
+| InsuredCoverageTerminationDate      | date                      | The last date that the coverage is in effect for a given insured.                                    |
+| CoverageEventID                     | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CoverageCommissionSplit             | CoverageCompensationSplit | The premium percentages that are retained and allocated to producers in                              |
+|                                     |                           |             the form of commission.                                                                  |
+| CarrierProducerNumberID             | string                    | Unique identifier created by the originator for this instance of the                                 |
+|                                     |                           |             electronic transmission.                                                                 |
+| CompensationSplitPercent            | decimal                   | The premium percentages that are retained and allocated to producers in                              |
+|                                     |                           |             the form of commission.                                                                  |
+| EnrollmentInformationID             | string                    | An unique identifier for each instance of an object established within                               |
+|                                     |                           |             the context of a given transaction.                                                      |
+| CoverageContribution                | Object                    | CoverageContribution Object                                                                          |
+| ContributionLimitTypeCode           | ContributionLimitType     | The contribution limits used to determine maximum limit.                                             |
+| PlanYearEmployeeContributionAmount  | decimal                   | Total amount expected to be contributed during a plan year by the                                    |
+|                                     |                           |             Employee. Note that in some instances a plan year may be less or more than 12 months.    |
+| PlanYearEmployerContributionAmount  | decimal                   | Total amount expected to be contributed during a plan year by the                                    |
+|                                     |                           |             Employer. Note that in some instances a plan year may be less or more than 12 months.    |
+| ToDateEmployeeContributionAmount    | decimal                   | The dollar amount to date at time of the transmission contributed to                                 |
+|                                     |                           |             the saving or spending account by the Employee.                                          |
+| ToDateEmployerContributionAmount    | decimal                   | The dollar amount to date at time of the transmission contributed to                                 |
+|                                     |                           |             the saving or spending account by the Employer.                                          |
+| ContributionsRemainingQuantity      | int                       | The number of contributions still to be made.                                                        |
+| Audit                               | Object                    | Audit Object                                                                                         |
+| AuditID                             | string                    | Unique identifier created by the originator for this instance of the                                 |
+|                                     |                           |             electronic transmission.                                                                 |
+| CarrierRecordQuantity               | int                       | A count of Carrier records included in the electronic transmission.                                  |
+| EmployerRecordQuantity              | int                       | A count of Employer records included in the electronic transmission.                                 |
+| EmployeeRecordQuantity              | int                       | A count of Employee records included in the electronic transmission.                                 |
+| DependentRecordQuantity             | int                       | A count of Dependent records included in the electronic transmission.                                |
+| OtherPartyRecordQuantity            | int                       | A count of Other Party records included in the electronic transmission.                              |
+| BeneficiaryGroupRecordQuantity      | int                       | A count of Beneficiary Group records included in the electronic                                      |
+|                                     |                           |             transmission.                                                                            |
+| EventRecordQuantity                 | int                       | A count of Event records included in the electronic transmission.                                    |
+| CoverageRecordQuantity              | int                       | A count of Coverage records included in the electronic transmission.                                 |
+| CoverageRiderRecordQuantity         | int                       | A count of Coverage Rider records included in the electronic                                         |
+|                                     |                           |             transmission.                                                                            |
 
 ```json
+
 {
-  "Transmission": {
+  "bem:Transmission": {
+    "@xmlns:bem": "https://ldex.limra.com/xsd/1.0/LDExBEM",
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "@xsi:schemaLocation": "https://ldex.limra.com/xsd/1.0/LDExBEM_1.3.2022.01.01.xsd",
     "TransmissionGUID": "9824059f-374a-428c-b4da-881cc14807ca",
     "SenderName": "SELERIX",
     "SenderPlatformName": "BenSelect",
@@ -449,29 +1274,29 @@
     "TransmissionTypeCode": "ChangesOnly",
     "SchemaVersionIdentifier": "1.3.2022.01.01",
     "Carrier": {
-      "CarrierID": 22,
+      "CarrierID": "22",
       "CarrierName": "Flex America"
     },
     "Employer": {
-      "EmployerPartyID": 1597,
-      "FederalEmployerIdentificationNumber": 456789999,
+      "EmployerPartyID": "1597",
+      "FederalEmployerIdentificationNumber": "456789999",
       "CarrierMasterAgreementNumber": {
-        "CarrierMasterAgreementNumberID": 22,
-        "MasterAgreementNumber": "",
-        "CarrierID": 22
+        "CarrierMasterAgreementNumberID": "22",
+        "MasterAgreementNumber": null,
+        "CarrierID": "22"
       },
       "EmployerName": "National Health ACA",
       "EmployerAddress": {
         "FirstLineAddress": "2851 Craig Dr.",
         "CityName": "McKinney",
         "StateProvinceCode": "TX",
-        "PostalCode": 75070,
+        "PostalCode": "75070",
         "CountryCode": "USA"
       },
       "Employee": {
-        "EmployeePartyID": 1801424,
-        "EmployeeSocialSecurityNumber": 998780796,
-        "EmployeeIdentifier": 80797,
+        "EmployeePartyID": "1801424",
+        "EmployeeSocialSecurityNumber": "998780796",
+        "EmployeeIdentifier": "80797",
         "EmployeeName": {
           "FirstName": "Laura",
           "LastName": "Bonner"
@@ -483,21 +1308,21 @@
           "FirstLineAddress": "7 S Helmuth St",
           "CityName": "Baton Rouge",
           "StateProvinceCode": "LA",
-          "PostalCode": 70804,
+          "PostalCode": "70804",
           "CountryCode": "USA"
         },
         "EmployeeHomeAddress": {
           "FirstLineAddress": "7 S Helmuth St",
           "CityName": "Baton Rouge",
           "StateProvinceCode": "LA",
-          "PostalCode": 70804,
+          "PostalCode": "70804",
           "CountryCode": "USA"
         },
         "EmployeeWorkAddress": {
           "FirstLineAddress": "987 Main St.",
           "CityName": "Baton Rouge",
           "StateProvinceCode": "LA",
-          "PostalCode": 87348,
+          "PostalCode": "87348",
           "CountryCode": "USA"
         },
         "EmployeeEmail": "Laura.Bonner@demo-me.com",
@@ -511,25 +1336,25 @@
           "JobTitleText": "RN",
           "OccupationText": "RN",
           "WorkLocationText": "LOUISIANA",
-          "PayrollDeductionFrequencyQuantity": 24,
-          "PayrollFrequencyQuantity": 26,
+          "PayrollDeductionFrequencyQuantity": "24",
+          "PayrollFrequencyQuantity": "26",
           "EmploymentIncome": [
             {
               "IncomeTypeCode": "Salary",
-              "IncomeAmount": 31200,
+              "IncomeAmount": "31200",
               "IncomeModeCode": "Annual",
               "IncomeEffectiveDate": "1981-08-17"
             },
             {
               "IncomeTypeCode": "BenefitSalary",
-              "IncomeAmount": 31200,
+              "IncomeAmount": "31200",
               "IncomeModeCode": "Annual",
               "IncomeEffectiveDate": "1981-08-17"
             }
           ]
         },
         "EnrollmentInformation": {
-          "EnrollmentInformationID": 1007055,
+          "EnrollmentInformationID": "1007055",
           "EnrollmentMethodCode": "InternetOrSelfService"
         },
         "Event": {
@@ -541,66 +1366,65 @@
         },
         "EmployeeEventID": "EE758860",
         "Producer": {
-          "ProducerPartyID": 15,
+          "ProducerPartyID": "15",
           "ProducerFirstName": "Lyle",
           "ProducerLastName": "Griffin"
         },
         "Coverage": {
-          "CoverageID": 2424454,
-          "GroupPolicyNumber": 2348752,
+          "CoverageID": "2424454",
+          "GroupPolicyNumber": "2348752",
           "ProductTypeCode": "SavingsSpendingAccounts",
           "BenefitPlanIdentifier": "HFSA",
-          "BenefitClassIdentifier": 1,
-          "BillGroupIdentifier": 1,
+          "BenefitClassIdentifier": "01",
+          "BillGroupIdentifier": "01",
           "CoverageEffectiveDate": "2019-10-01",
           "CoverageTerminationDate": "2020-06-28",
           "CoverageTierCode": "Employee",
           "BenefitCalculationMethodCode": "FlatAmount",
-          "BenefitAmount": 300,
+          "BenefitAmount": "300",
           "EmployeeContributionCode": "EmployeePaid",
-          "EmployeePremiumContributionAmount": 12.5,
-          "EmployerPremiumContributionAmount": 0,
-          "TotalPlanPremiumAmount": 12.5,
-          "PremiumModeQuantity": 24,
+          "EmployeePremiumContributionAmount": "12.5",
+          "EmployerPremiumContributionAmount": "0",
+          "TotalPlanPremiumAmount": "12.5",
+          "PremiumModeQuantity": "24",
           "PreTaxCode": "PreTax",
-          "CarrierID": 22,
+          "CarrierID": "22",
           "CoverageInsured": {
-            "InsuredPartyID": 1801424,
-            "PrimaryInsuredIndicator": true,
+            "InsuredPartyID": "1801424",
+            "PrimaryInsuredIndicator": "true",
             "InsuredCoverageEffectiveDate": "2019-10-01",
             "InsuredCoverageTerminationDate": "2020-06-28"
           },
           "CoverageEventID": "EE758860",
           "CoverageCommissionSplit": {
             "CarrierProducerNumberID": "22_15",
-            "CompensationSplitPercent": 100
+            "CompensationSplitPercent": "100"
           },
-          "EnrollmentInformationID": 1007055,
+          "EnrollmentInformationID": "1007055",
           "CoverageContribution": {
             "ContributionLimitTypeCode": "Single",
-            "PlanYearEmployeeContributionAmount": 300,
-            "PlanYearEmployerContributionAmount": 0,
-            "ToDateEmployeeContributionAmount": 237.5,
-            "ToDateEmployerContributionAmount": 0,
-            "ContributionsRemainingQuantity": 5
+            "PlanYearEmployeeContributionAmount": "300",
+            "PlanYearEmployerContributionAmount": "0",
+            "ToDateEmployeeContributionAmount": "237.5",
+            "ToDateEmployerContributionAmount": "0",
+            "ContributionsRemainingQuantity": "5"
           }
         }
       }
     },
     "Audit": {
-      "AuditID": 21953,
-      "CarrierRecordQuantity": 1,
-      "EmployerRecordQuantity": 1,
-      "EmployeeRecordQuantity": 1,
-      "DependentRecordQuantity": 0,
-      "OtherPartyRecordQuantity": 0,
-      "BeneficiaryGroupRecordQuantity": 0,
-      "EventRecordQuantity": 1,
-      "CoverageRecordQuantity": 1,
-      "CoverageRiderRecordQuantity": 0
+      "AuditID": "21953",
+      "CarrierRecordQuantity": "1",
+      "EmployerRecordQuantity": "1",
+      "EmployeeRecordQuantity": "1",
+      "DependentRecordQuantity": "0",
+      "OtherPartyRecordQuantity": "0",
+      "BeneficiaryGroupRecordQuantity": "0",
+      "EventRecordQuantity": "1",
+      "CoverageRecordQuantity": "1",
+      "CoverageRiderRecordQuantity": "0"
     }
   }
 }
 ```
-
 
