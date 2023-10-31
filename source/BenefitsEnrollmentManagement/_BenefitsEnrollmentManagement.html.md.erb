@@ -2,26 +2,6 @@
 
 title: LDExBEM REST API
 
-#API
-
-##Overview
-Introduction
-
-Simple API for exchanging LDExBEM payloads. The API describes transmission of an LDExBEM payload in two parts: 1) Metadata describing the payload (unique ID, sender, receiver, payload type, and spec version) and 2) payload in the LDExBEM format (JSON or XML).
-
-**Version:** 1.0.2021.07.30
-
-
-##Authentication
-
-  Each customer account has a unique pair of API credentials. Contact Noyo support to receive an CLIENT_ID, CLIENT_SECRET pair as part the initial onboarding.
-
-**Description:** Process enrollment, demographic, coverage changes etc. sent in LDExBEM payload
-
-
-
-HTTP Request
-##***POST*** /bem
 
 **Parameters**
 
@@ -111,7 +91,7 @@ HTTP Request
 
 
 ```
-
+#BEM Usecases
 
 
 <%= partial "./BenefitsEnrollmentManagement/BeneficiaryManagement/BeneficiaryManagement.html.md.erb" %>
